@@ -11,28 +11,54 @@ import Foundation
 typealias TaxonId = Int
 struct Taxon: Codable {
 
-    enum IconicTaxonName: String, Codable {
-        case animalia = "Animalia"
-        case aves = "Aves"
-        case insecta = "Insecta"
+    enum IconicTaxonName: String, Codable, DefaultCaseRepresentable {
         case plantae = "Plantae"
+        case animalia = "Animalia"
+        case mollusca = "Mollusca"
+        case reptilia = "Reptilia"
+        case aves = "Aves"
+        case amphibia = "Amphibia"
+        case actinopterygii = "Actinopterygii"
+        case mammalia = "Mammalia"
+        case insecta = "Insecta"
+        case arachnida = "Arachnida"
+        case fungi = "Fungi"
+        case protozoa = "Protozoa"
+        case chromista = "Chromista"
+        case unknown = "unknown"
+        
+        static let defaultCase = IconicTaxonName.unknown
     }
     
     enum Rank: String, Codable {
-        case family
-        case genus
-        case kingdom
-        case order
         case phylum
-        case rankClass
-        case species
-        case subclass
-        case subfamily
-        case suborder
         case subphylum
-        case subspecies
+        case superclass
+        case `class`
+        case subclass
+        case infraclass
+        case superorder
+        case order
+        case suborder
+        case infraorder
         case superfamily
+        case epifamily
+        case family
+        case subfamily
+        case supertribe
         case tribe
+        case subtribe
+        case genus
+        case genushybrid
+        case subgenus
+        case section
+        case subsection
+        case complex
+        case species
+        case hybrid
+        case subspecies
+        case varietycase
+        case form
     }
 
     let id: TaxonId
@@ -51,7 +77,6 @@ struct Taxon: Codable {
     let ancestorIds: [Int]
     let observationsCount: Int
     let isActive: Bool
-    let flagCounts: FlagCounts
     let rankLevel: Int
     let atlasId: Int?
     let parentId: Int
@@ -66,9 +91,3 @@ struct Taxon: Codable {
     let introduced: Bool?
     let native: Bool?
 }
-
-struct FlagCounts: Codable {
-    let unresolved: Int
-    let resolved: Int
-}
-

@@ -21,6 +21,8 @@
 		0ABA9C6722102B210099F774 /* Taxon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABA9C6622102B210099F774 /* Taxon.swift */; };
 		0ABA9C6922103BDD0099F774 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABA9C6822103BDD0099F774 /* Comment.swift */; };
 		0ABA9C6B2210498A0099F774 /* Fave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABA9C6A2210498A0099F774 /* Fave.swift */; };
+		0ABA9C6E22105FAB0099F774 /* NatAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABA9C6D22105FAB0099F774 /* NatAPI.swift */; };
+		0ABA9C7122109EA60099F774 /* DefaultCaseRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABA9C7022109EA60099F774 /* DefaultCaseRepresentable.swift */; };
 		9F0E766902695A23BFDCB8DF /* Pods_NaturalistApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EFE921A4D01CA1E7FCDC7D1 /* Pods_NaturalistApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,8 @@
 		0ABA9C6622102B210099F774 /* Taxon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taxon.swift; sourceTree = "<group>"; };
 		0ABA9C6822103BDD0099F774 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		0ABA9C6A2210498A0099F774 /* Fave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fave.swift; sourceTree = "<group>"; };
+		0ABA9C6D22105FAB0099F774 /* NatAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatAPI.swift; sourceTree = "<group>"; };
+		0ABA9C7022109EA60099F774 /* DefaultCaseRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCaseRepresentable.swift; sourceTree = "<group>"; };
 		4EFE921A4D01CA1E7FCDC7D1 /* Pods_NaturalistApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NaturalistApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C0C7C3EA1EB43D5D54BFE4 /* Pods-NaturalistApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaturalistApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NaturalistApp/Pods-NaturalistApp.debug.xcconfig"; sourceTree = "<group>"; };
 		9CCC4157664A04B95EE95B14 /* Pods-NaturalistApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaturalistApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-NaturalistApp/Pods-NaturalistApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -96,7 +100,6 @@
 		0A977B5A220E0B8B005D1DC2 = {
 			isa = PBXGroup;
 			children = (
-				0ABA9C5D22101CE40099F774 /* Model */,
 				0A977B65220E0B8B005D1DC2 /* NaturalistApp */,
 				0A977B7A220E0B8C005D1DC2 /* NaturalistAppTests */,
 				0A977B85220E0B8C005D1DC2 /* NaturalistAppUITests */,
@@ -119,6 +122,9 @@
 		0A977B65220E0B8B005D1DC2 /* NaturalistApp */ = {
 			isa = PBXGroup;
 			children = (
+				0ABA9C6F22109E920099F774 /* Extensions */,
+				0ABA9C6C22105F8F0099F774 /* Network */,
+				0ABA9C5D22101CE40099F774 /* Model */,
 				0A977B66220E0B8B005D1DC2 /* AppDelegate.swift */,
 				0A977B68220E0B8B005D1DC2 /* ViewController.swift */,
 				0A977B6A220E0B8B005D1DC2 /* Main.storyboard */,
@@ -159,6 +165,22 @@
 				0ABA9C5E22101D9E0099F774 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		0ABA9C6C22105F8F0099F774 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0ABA9C6D22105FAB0099F774 /* NatAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		0ABA9C6F22109E920099F774 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0ABA9C7022109EA60099F774 /* DefaultCaseRepresentable.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		3905F3500FDDE72FCFB26D1D /* Pods */ = {
@@ -376,6 +398,8 @@
 				0ABA9C6922103BDD0099F774 /* Comment.swift in Sources */,
 				0ABA9C63221029BD0099F774 /* LicenseCode.swift in Sources */,
 				0A977B69220E0B8B005D1DC2 /* ViewController.swift in Sources */,
+				0ABA9C7122109EA60099F774 /* DefaultCaseRepresentable.swift in Sources */,
+				0ABA9C6E22105FAB0099F774 /* NatAPI.swift in Sources */,
 				0ABA9C6B2210498A0099F774 /* Fave.swift in Sources */,
 				0A977B67220E0B8B005D1DC2 /* AppDelegate.swift in Sources */,
 				0ABA9C5F22101D9E0099F774 /* User.swift in Sources */,
