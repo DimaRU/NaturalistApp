@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A451A812211B35400684AC4 /* FreeMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A451A802211B35400684AC4 /* FreeMethods.swift */; };
+		0A451A882211B5B000684AC4 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A451A872211B5B000684AC4 /* Animations.swift */; };
 		0A977B67220E0B8B005D1DC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A977B66220E0B8B005D1DC2 /* AppDelegate.swift */; };
 		0A977B69220E0B8B005D1DC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A977B68220E0B8B005D1DC2 /* ViewController.swift */; };
 		0A977B6C220E0B8B005D1DC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A977B6A220E0B8B005D1DC2 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		0A451A802211B35400684AC4 /* FreeMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeMethods.swift; sourceTree = "<group>"; };
+		0A451A872211B5B000684AC4 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		0A977B63220E0B8B005D1DC2 /* NaturalistApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaturalistApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A977B66220E0B8B005D1DC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A977B68220E0B8B005D1DC2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A451A842211B4EC00684AC4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		0A977B5A220E0B8B005D1DC2 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +137,7 @@
 		0A977B65220E0B8B005D1DC2 /* NaturalistApp */ = {
 			isa = PBXGroup;
 			children = (
+				0A451A842211B4EC00684AC4 /* Controllers */,
 				0ABA9C6F22109E920099F774 /* Extensions */,
 				0ABA9C6C22105F8F0099F774 /* Network */,
 				0ABA9C5D22101CE40099F774 /* Model */,
@@ -138,6 +148,7 @@
 				0A977B6D220E0B8C005D1DC2 /* Assets.xcassets */,
 				0A977B6F220E0B8C005D1DC2 /* LaunchScreen.storyboard */,
 				0A977B72220E0B8C005D1DC2 /* Info.plist */,
+				0A451A872211B5B000684AC4 /* Animations.swift */,
 				0A451A802211B35400684AC4 /* FreeMethods.swift */,
 			);
 			path = NaturalistApp;
@@ -422,6 +433,7 @@
 				0ABA9C6E22105FAB0099F774 /* NatAPI.swift in Sources */,
 				0ABA9C6B2210498A0099F774 /* Fave.swift in Sources */,
 				0A977B67220E0B8B005D1DC2 /* AppDelegate.swift in Sources */,
+				0A451A882211B5B000684AC4 /* Animations.swift in Sources */,
 				0ABA9C5F22101D9E0099F774 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
