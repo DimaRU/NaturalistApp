@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.8.1)
   - KeychainAccess (3.1.2)
   - Keys (1.0.1)
+  - Kingfisher (5.1.0)
   - Moya (12.0.1):
     - Moya/Core (= 12.0.1)
   - Moya/Core (12.0.1):
@@ -25,6 +26,7 @@ PODS:
 DEPENDENCIES:
   - KeychainAccess
   - Keys (from `Pods/CocoaPodsKeys`)
+  - Kingfisher
   - Moya
   - PromiseKit
   - PromiseKit/Alamofire
@@ -34,6 +36,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - KeychainAccess
+    - Kingfisher
     - Moya
     - PromiseKit
     - Result
@@ -47,11 +50,12 @@ SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   KeychainAccess: b3816fddcf28aa29d94b10ec305cd52be14c472b
   Keys: a576f4c9c1c641ca913a959a9c62ed3f215a8de9
+  Kingfisher: fcec238063d17404fca89bf0a850583211c4cbf6
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   PromiseKit: 94c6e781838c5bf4717677d0d882b0e7250c80fc
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   SwiftyUserDefaults: 3d273b1739b68ada3145dc754a70ec775bc5c8be
 
-PODFILE CHECKSUM: d0b6839e3cad8293ed135e5d959eaa1a9cdc48bb
+PODFILE CHECKSUM: 661fee164daf609a0f1b36f374923e6579bc83db
 
 COCOAPODS: 1.6.0

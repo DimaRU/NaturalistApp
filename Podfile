@@ -11,6 +11,7 @@ target 'NaturalistApp' do
   pod 'PromiseKit/Alamofire'
   pod 'KeychainAccess'
   pod 'SwiftyUserDefaults'
+  pod 'Kingfisher'
 
 
 plugin 'cocoapods-keys', {
