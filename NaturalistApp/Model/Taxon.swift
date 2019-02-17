@@ -9,7 +9,7 @@
 import Foundation
 
 typealias TaxonId = Int
-struct Taxon: Codable {
+struct Taxon: ResultsContent {
 
     enum IconicTaxonName: String, Codable, DefaultCaseRepresentable {
         case plantae = "Plantae"

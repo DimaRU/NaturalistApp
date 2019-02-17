@@ -10,7 +10,7 @@ import Foundation
 
 typealias ObservationId = Int
 
-struct Observation: Codable {
+struct Observation: ResultsContent {
     let id: ObservationId
     let user: User
     let identificationsSomeAgree: Bool

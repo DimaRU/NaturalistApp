@@ -10,7 +10,7 @@ import Foundation
 
 typealias UserId = Int
 
-struct User: Codable {
+struct User: ResultsContent {
     let id: UserId
     let login: String
     let spam: Bool
