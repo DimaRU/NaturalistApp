@@ -16,11 +16,14 @@ enum NatAPI: TargetType {
     case apiToken(bearer: String)
     case searchObservations(page: Int, userId: UserId?, havePhoto: Bool?, poular: Bool?)
     case searchTaxon(page: Int, name: String?)
-    case currentUser()
+    case currentUser
     case users(ids: [UserId])
     case taxon(taxonId: TaxonId)
     
-    
+    var apiVersion: String {
+        return "/v1"
+    }
+
     public var baseURL: URL {
         switch self {
         case .authorize,
@@ -38,15 +41,15 @@ enum NatAPI: TargetType {
         case .apiToken:
             return "/users/api_token"
         case .searchObservations:
-            return "/observations"
+            return "\(apiVersion)/observations"
         case .searchTaxon:
-            return "/taxa"
+            return "\(apiVersion)/taxa"
         case .currentUser:
-            return "/users/me"
+            return "\(apiVersion)/users/me"
         case .users(let ids):
-            return "/users/\(ids)"
+            return "\(apiVersion)/users/\(ids)"
         case .taxon(let taxonId):
-            return "/taxa/\(taxonId)"
+            return "\(apiVersion)/taxa/\(taxonId)"
         }
     }
     
@@ -71,7 +74,7 @@ enum NatAPI: TargetType {
         switch self {
         case .authorize(let login, let password):
             parameters["client_id"] = APIKeys.shared.clientId
-            parameters["client_secret"] = APIKeys.shared.clientId
+            parameters["client_secret"] = APIKeys.shared.clientSecret
             parameters["grant_type"] = "password"
             parameters["username"] = login
             parameters["password"] = password
@@ -110,7 +113,7 @@ enum NatAPI: TargetType {
         case .apiToken(let bearer):
             assigned["Authorization"] = "Bearer \(bearer)"
         case .currentUser:
-            assigned["Authorization"] = KeychainService.shared[.accessToken]
+            assigned["Authorization"] = KeychainService.shared[.apiToken]
         case .searchObservations,
              .searchTaxon,
              .users,

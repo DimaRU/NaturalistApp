@@ -10,9 +10,8 @@ import KeychainAccess
 
 class KeychainService {
     public enum KeychainKeys: String {
-        case login
-        case password
-        case accessToken
+        case apiToken
+        case bearer
     }
 
     let keychain: Keychain
