@@ -15,6 +15,7 @@ enum NatAPI: TargetType {
     case authorize(login: String, password: String)
     case apiToken(bearer: String)
     case searchObservations(page: Int, userId: UserId?, havePhoto: Bool?, poular: Bool?)
+    case getObservationsBox(nelat: Double, nelng: Double, swlat: Double, swlng: Double)
     case searchTaxon(page: Int, name: String?)
     case currentUser
     case users(ids: [UserId])
@@ -40,7 +41,8 @@ enum NatAPI: TargetType {
             return "/oauth/token"
         case .apiToken:
             return "/users/api_token"
-        case .searchObservations:
+        case .searchObservations,
+             .getObservationsBox:
             return "\(apiVersion)/observations"
         case .searchTaxon:
             return "\(apiVersion)/taxa"
@@ -60,6 +62,7 @@ enum NatAPI: TargetType {
         case .apiToken:
             return .get
         case .searchObservations,
+             .getObservationsBox,
              .searchTaxon,
              .currentUser,
              .users,
@@ -88,6 +91,13 @@ enum NatAPI: TargetType {
             parameters["photos"] = havePhoto
             parameters["popular"] = poular
             return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
+        case .getObservationsBox(let nelat, let nelng, let swlat, let swlng):
+            parameters["per_page"] = 100
+            parameters["nelat"] = nelat
+            parameters["nelng"] = nelng
+            parameters["swlat"] = swlat
+            parameters["swlng"] = swlng
+            return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
         case .searchTaxon(let page, let name):
             parameters["per_page"] = 20
             parameters["page"] = page
@@ -114,10 +124,7 @@ enum NatAPI: TargetType {
             assigned["Authorization"] = "Bearer \(bearer)"
         case .currentUser:
             assigned["Authorization"] = KeychainService.shared[.apiToken]
-        case .searchObservations,
-             .searchTaxon,
-             .users,
-             .taxon:
+        default:
             break
         }
         return assigned
