@@ -14,13 +14,13 @@
         <!--Feed-->
         <scene sceneID="awf-Ze-gdw">
             <objects>
-                <tableViewController id="x9l-6B-c4o" customClass="FeedTableViewController" customModule="CourseFinalTask" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="x9l-6B-c4o" customClass="FeedTableViewController" customModule="NaturalistApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="350" sectionHeaderHeight="28" sectionFooterHeight="28" id="YgZ-dy-Lyc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FeedTableViewCell" rowHeight="344" id="Ofh-Bs-ynH" customClass="FeedTableViewCell" customModule="CourseFinalTask" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FeedTableViewCell" rowHeight="344" id="Ofh-Bs-ynH" customClass="FeedTableViewCell" customModule="NaturalistApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="320" height="344"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ofh-Bs-ynH" id="5KH-uT-ZNm">
@@ -155,7 +155,7 @@
         <!--UserName-->
         <scene sceneID="h8T-Pk-giY">
             <objects>
-                <collectionViewController storyboardIdentifier="ProfileCollectionViewController" id="VJT-jc-fa5" customClass="ProfileCollectionViewController" customModule="CourseFinalTask" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="ProfileCollectionViewController" id="VJT-jc-fa5" customClass="ProfileCollectionViewController" customModule="NaturalistApp" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="exG-lI-IqY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -167,7 +167,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCollectionViewCell" id="Xn7-Hd-rW1" customClass="ImageCollectionViewCell" customModule="CourseFinalTask" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCollectionViewCell" id="Xn7-Hd-rW1" customClass="ImageCollectionViewCell" customModule="NaturalistApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="86" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -185,7 +185,7 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="ProfileHeaderCollectionReusableView" id="ewM-kE-IlG" customClass="ProfileHeaderCollectionReusableView" customModule="CourseFinalTask" customModuleProvider="target">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="ProfileHeaderCollectionReusableView" id="ewM-kE-IlG" customClass="ProfileHeaderCollectionReusableView" customModule="NaturalistApp" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="86"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
@@ -275,7 +275,7 @@
         <!--Authorize View Controller-->
         <scene sceneID="QB0-Ww-Te7">
             <objects>
-                <viewController id="yna-4j-b98" customClass="AuthorizeViewController" customModule="CourseFinalTask" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yna-4j-b98" customClass="AuthorizeViewController" customModule="NaturalistApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ET7-HB-4Ln">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -343,19 +343,18 @@
             </objects>
             <point key="canvasLocation" x="-1243" y="18"/>
         </scene>
-        <!--Managed Tab Bar Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="XSC-l7-MlM">
             <objects>
-                <tabBarController id="dNA-dv-uTw" customClass="ManagedTabBarController" customModule="CourseFinalTask" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="dNA-dv-uTw" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YaI-rY-yd9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BMv-0o-o4I" kind="relationship" relationship="viewControllers" id="GrG-B8-rP8"/>
-                        <segue destination="6ce-TP-RV2" kind="relationship" relationship="viewControllers" id="HaQ-DQ-MV8"/>
                         <segue destination="jyl-mS-PDh" kind="relationship" relationship="viewControllers" id="mrC-zv-nfW"/>
+                        <segue destination="6ce-TP-RV2" kind="relationship" relationship="viewControllers" id="HaQ-DQ-MV8"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yMF-gm-ZyD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -384,7 +383,7 @@
         <!--New post-->
         <scene sceneID="5us-DC-m4N">
             <objects>
-                <collectionViewController id="OLH-ZI-oJm" customClass="NewPostCollectionViewController" customModule="CourseFinalTask" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="OLH-ZI-oJm" customClass="NewPostCollectionViewController" customModule="NaturalistApp" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="3qu-Bw-ut3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -396,7 +395,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCollectionViewCell" id="wX7-uF-yZh" customClass="ImageCollectionViewCell" customModule="CourseFinalTask" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCollectionViewCell" id="wX7-uF-yZh" customClass="ImageCollectionViewCell" customModule="NaturalistApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -429,7 +428,7 @@
         <!--Filters-->
         <scene sceneID="g8O-S0-yTe">
             <objects>
-                <viewController id="8Mq-Ze-mLE" customClass="FiltersViewController" customModule="CourseFinalTask" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8Mq-Ze-mLE" customClass="FiltersViewController" customModule="NaturalistApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aXO-eR-Qbu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -502,7 +501,7 @@
         <!--Post Description View Controller-->
         <scene sceneID="ddd-0E-7wT">
             <objects>
-                <viewController id="ILw-LP-IBK" customClass="PostDescriptionViewController" customModule="CourseFinalTask" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ILw-LP-IBK" customClass="PostDescriptionViewController" customModule="NaturalistApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cgO-Gf-Hyn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -584,10 +583,10 @@
         <image name="plus" width="20" height="20"/>
         <image name="profile" width="40" height="40"/>
         <namedColor name="FollowButtonBg">
-            <color red="0.0" green="0.58823529411764708" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.58799999952316284" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="LoginButtonUnactiveBg">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="0.30000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.4779999852180481" blue="1" alpha="0.30000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
