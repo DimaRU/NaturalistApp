@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A3139E4221AB315009D87F0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3139E3221AB315009D87F0 /* MapViewController.swift */; };
+		0A3139E6221ABCE9009D87F0 /* MKMapViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3139E5221ABCE9009D87F0 /* MKMapViewExtension.swift */; };
 		0A3F664B2219B750002452B0 /* AuthorizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3F664A2219B750002452B0 /* AuthorizeViewController.swift */; };
 		0A451A812211B35400684AC4 /* FreeMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A451A802211B35400684AC4 /* FreeMethods.swift */; };
 		0A451A882211B5B000684AC4 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A451A872211B5B000684AC4 /* Animations.swift */; };
@@ -54,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A3139E3221AB315009D87F0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		0A3139E5221ABCE9009D87F0 /* MKMapViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKMapViewExtension.swift; sourceTree = "<group>"; };
 		0A3F664A2219B750002452B0 /* AuthorizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizeViewController.swift; sourceTree = "<group>"; };
 		0A451A802211B35400684AC4 /* FreeMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeMethods.swift; sourceTree = "<group>"; };
 		0A451A872211B5B000684AC4 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				0A3F664A2219B750002452B0 /* AuthorizeViewController.swift */,
+				0A3139E3221AB315009D87F0 /* MapViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 		0ABA9C6F22109E920099F774 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0A3139E5221ABCE9009D87F0 /* MKMapViewExtension.swift */,
 				0ABA9C7022109EA60099F774 /* DefaultCaseRepresentable.swift */,
 			);
 			path = Extensions;
@@ -449,6 +455,8 @@
 				0ABA9C61221024A10099F774 /* Observation.swift in Sources */,
 				0ABA9C6922103BDD0099F774 /* Comment.swift in Sources */,
 				0ABA9C63221029BD0099F774 /* LicenseCode.swift in Sources */,
+				0A3139E6221ABCE9009D87F0 /* MKMapViewExtension.swift in Sources */,
+				0A3139E4221AB315009D87F0 /* MapViewController.swift in Sources */,
 				0A9F8C8E2219905500C299C8 /* JWTToken.swift in Sources */,
 				0A451A812211B35400684AC4 /* FreeMethods.swift in Sources */,
 				0ABA9C742210A3EC0099F774 /* KeychainService.swift in Sources */,

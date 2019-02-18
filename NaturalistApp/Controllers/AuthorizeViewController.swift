@@ -37,7 +37,7 @@ class AuthorizeViewController: UIViewController {
             }.done { (paged: PagedResults<User>) -> Void in
                 let user = paged.results.content.first!
                 print(user)
-//                self.performSegue(withIdentifier: "TabbarViewControllerSegue", sender: sender)
+                self.performSegue(withIdentifier: "TabbarViewControllerSegue", sender: nil)
             }.catch { error in
                 print(error)
         }
