@@ -93,6 +93,8 @@ enum NatAPI: TargetType {
             return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
         case .getObservationsBox(let nelat, let nelng, let swlat, let swlng):
             parameters["per_page"] = 100
+            parameters["mappable"] = true
+            parameters["verifiable"] = true
             parameters["nelat"] = nelat
             parameters["nelng"] = nelng
             parameters["swlat"] = swlat
