@@ -9,6 +9,7 @@ target 'NaturalistApp' do
   pod 'Moya'
   pod 'PromiseKit'
   pod 'PromiseKit/Alamofire'
+  pod 'PromiseKit/CoreLocation'
   pod 'KeychainAccess'
   pod 'SwiftyUserDefaults'
   pod 'Kingfisher'

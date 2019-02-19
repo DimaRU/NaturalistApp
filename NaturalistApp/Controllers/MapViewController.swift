@@ -8,18 +8,11 @@
 
 import UIKit
 import MapKit
+import PromiseKit
 
 class MapViewController: UIViewController, MKMapViewDelegate {
     
     let mapView = MKMapView()
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-//        entries = Entry.loadEntries()
-        addAnnotations()
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +20,21 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         setupMapView()
         setupScaleButtons()
         setupMapTypeControl()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        CLLocationManager.requestAuthorization(type: .whenInUse)
+            .then { _ in
+                CLLocationManager.requestLocation()
+            }.done { location in
+                print(location)
+            }.catch { error in
+                print(error)
+        }
+        //        entries = Entry.loadEntries()
+        addAnnotations()
     }
     
     func setupMapView() {
