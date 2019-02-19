@@ -35,7 +35,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         self.view.sendSubviewToBack(mapView)    //  Send it under storyboard controls
         //Размер + положение на экране
         mapView.frame = self.view.bounds
-        //shortest way | old-school
         mapView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         
         
@@ -45,7 +44,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         mapView.userTrackingMode = .follow
         mapView.showsScale = true
         mapView.showsCompass = true
-        mapView.mapType = .standard
+        mapView.mapType = .hybrid
         
     }
     
@@ -104,7 +103,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     
     func setupScaleButtons() {
-        
         let buttonPlus = UIButton(type: .custom)
         buttonPlus.translatesAutoresizingMaskIntoConstraints = false
         
@@ -115,11 +113,12 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         //Trailing edge
         // Up center
-
-        buttonPlus.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 8).isActive = true
-        buttonPlus.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -25).isActive = true
-        buttonPlus.widthAnchor.constraint(equalToConstant: 35)
-        buttonPlus.heightAnchor.constraint(equalToConstant: 35)
+        NSLayoutConstraint.activate([
+            buttonPlus.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -8),
+            buttonPlus.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -25),
+            buttonPlus.widthAnchor.constraint(equalToConstant: 35),
+            buttonPlus.heightAnchor.constraint(equalToConstant: 35)
+            ])
 
         let buttonMinus = UIButton(type: .custom)
         buttonMinus.translatesAutoresizingMaskIntoConstraints = false
@@ -130,20 +129,20 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         self.view.addSubview(buttonMinus)
         
         //Trailing edge
-        buttonMinus.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 8).isActive = true
-        buttonMinus.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 25).isActive = true
-        buttonMinus.widthAnchor.constraint(equalToConstant: 35)
-        buttonMinus.heightAnchor.constraint(equalToConstant: 35)
+        NSLayoutConstraint.activate([
+            buttonMinus.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -8),
+            buttonMinus.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 25),
+            buttonMinus.widthAnchor.constraint(equalToConstant: 35),
+            buttonMinus.heightAnchor.constraint(equalToConstant: 35)
+            ])
     }
     
     @objc func mapTypeCotrolChanged(sender:UISegmentedControl!)
     {
         switch sender.selectedSegmentIndex {
         case 0:
-            mapView.mapType = .standard
-        case 1:
             mapView.mapType = .hybrid
-        case 2:
+        case 1:
             mapView.mapType = .satellite
         default:
             return
@@ -151,18 +150,18 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     
     func setupMapTypeControl() {
+        let mapTypeCotrol = UISegmentedControl(items: ["Hybrid", "Sattelite"])
         
-        let mapTypeCotrol = UISegmentedControl(items: ["Map", "Hybrid", "Sattelite"])
-        
-        mapTypeCotrol.tintColor = UIColor.black
         mapTypeCotrol.selectedSegmentIndex = 0
         mapTypeCotrol.translatesAutoresizingMaskIntoConstraints = false
         
         mapTypeCotrol.addTarget(self, action: #selector(mapTypeCotrolChanged), for: .valueChanged)
         self.view.addSubview(mapTypeCotrol)
         
-        mapTypeCotrol.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 8)
-        mapTypeCotrol.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -8).isActive = true
+        NSLayoutConstraint.activate([
+            mapTypeCotrol.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -8),
+            mapTypeCotrol.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -8)
+            ])
     }
     
 }
