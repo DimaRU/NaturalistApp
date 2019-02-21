@@ -10,16 +10,13 @@ import UIKit
 import MapKit
 import PromiseKit
 
-class MapViewController: UIViewController, MKMapViewDelegate {
+class MapViewController: UIViewController {
     
-    let mapView = MKMapView()
-    
+    @IBOutlet weak var mapView: MKMapView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupMapView()
-        setupScaleButtons()
-        setupMapTypeControl()
+        mapView.setUserTrackingMode(.follow, animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,25 +33,30 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         //        entries = Entry.loadEntries()
         addAnnotations()
     }
-    
-    func setupMapView() {
+
+    @IBAction func tapButtonPlus(_ sender: UIButton) {
         
-        self.view.addSubview(mapView)
-        self.view.sendSubviewToBack(mapView)    //  Send it under storyboard controls
-        //Размер + положение на экране
-        mapView.frame = self.view.bounds
-        mapView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        
-        
-        mapView.delegate = self
-        // Настройки карты
-        mapView.showsUserLocation = true
-        mapView.userTrackingMode = .follow
-        mapView.showsScale = true
-        mapView.showsCompass = true
-        mapView.mapType = .hybrid
-        
+        let zoomLevel = mapView.zoomLevel() + 1
+        mapView.setCenterCoordinate(centerCoordinate: mapView.centerCoordinate, zoomLevel: zoomLevel, animated: true)
     }
+    
+    @IBAction func tapButtonMinus(_ sender: UIButton) {
+        
+        let zoomLevel = mapView.zoomLevel() - 1
+        mapView.setCenterCoordinate(centerCoordinate: mapView.centerCoordinate, zoomLevel: zoomLevel, animated: true)
+    }
+    
+    @IBAction func mapTypeChange(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            mapView.mapType = .hybrid
+        case 1:
+            mapView.mapType = .satellite
+        default:
+            return
+        }
+    }
+
     
     func addAnnotations()  {
         mapView.removeAnnotations(mapView.annotations)
@@ -79,97 +81,30 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
     }
     
+}
+extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation { return nil }
         
-        var view  = mapView.dequeueReusableAnnotationView(withIdentifier: "entry") as? MKPinAnnotationView
-        
+        var view = mapView.dequeueReusableAnnotationView(withIdentifier: "entry") as? MKPinAnnotationView
+
         if view == nil {
             view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "entry")
         } else {
             view!.annotation = annotation
         }
-        
+
         view!.canShowCallout = true
         view!.pinTintColor = UIColor.green
         view!.animatesDrop = true
-        
-        return view!
-        
-    }
-    
-    @objc func tapButtonPlus() {
-        
-        let zoomLevel: Double = mapView.zoomLevel() + 1
-        mapView.setCenterCoordinate(centerCoordinate: mapView.centerCoordinate, zoomLevel: zoomLevel, animated: true)
-    }
-    
-    @objc func tapButtonMinus() {
-        
-        let zoomLevel: Double = mapView.zoomLevel() - 1
-        mapView.setCenterCoordinate(centerCoordinate: mapView.centerCoordinate, zoomLevel: zoomLevel, animated: true)
-    }
-    
-    
-    func setupScaleButtons() {
-        let buttonPlus = UIButton(type: .custom)
-        buttonPlus.translatesAutoresizingMaskIntoConstraints = false
-        
-        buttonPlus.setImage(UIImage(named: "1474761840_add.png"), for: .normal)
-        buttonPlus.addTarget(self, action: #selector(tapButtonPlus), for: .touchUpInside)
-        
-        self.view.addSubview(buttonPlus)
-        
-        //Trailing edge
-        // Up center
-        NSLayoutConstraint.activate([
-            buttonPlus.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -8),
-            buttonPlus.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -25),
-            buttonPlus.widthAnchor.constraint(equalToConstant: 35),
-            buttonPlus.heightAnchor.constraint(equalToConstant: 35)
-            ])
 
-        let buttonMinus = UIButton(type: .custom)
-        buttonMinus.translatesAutoresizingMaskIntoConstraints = false
-        
-        buttonMinus.setImage(UIImage(named: "1474761917_sub.png"), for: .normal)
-        buttonMinus.addTarget(self, action: #selector(tapButtonMinus), for: .touchUpInside)
-        
-        self.view.addSubview(buttonMinus)
-        
-        //Trailing edge
-        NSLayoutConstraint.activate([
-            buttonMinus.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -8),
-            buttonMinus.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 25),
-            buttonMinus.widthAnchor.constraint(equalToConstant: 35),
-            buttonMinus.heightAnchor.constraint(equalToConstant: 35)
-            ])
+        return view!
+
     }
     
-    @objc func mapTypeCotrolChanged(sender:UISegmentedControl!)
-    {
-        switch sender.selectedSegmentIndex {
-        case 0:
-            mapView.mapType = .hybrid
-        case 1:
-            mapView.mapType = .satellite
-        default:
-            return
-        }
+    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        print(mapView.visibleMapRect)
+        let exploreRegion = ExploreRegion(mapRect: mapView.visibleMapRect)
+        print(exploreRegion)
     }
-    
-    func setupMapTypeControl() {
-        let mapTypeCotrol = UISegmentedControl(items: ["Hybrid", "Sattelite"])
-        
-        mapTypeCotrol.selectedSegmentIndex = 0
-        mapTypeCotrol.translatesAutoresizingMaskIntoConstraints = false
-        
-        mapTypeCotrol.addTarget(self, action: #selector(mapTypeCotrolChanged), for: .valueChanged)
-        self.view.addSubview(mapTypeCotrol)
-        
-        NSLayoutConstraint.activate([
-            mapTypeCotrol.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -8),
-            mapTypeCotrol.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -8)
-            ])
-    }
-    
 }

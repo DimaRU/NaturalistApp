@@ -564,10 +564,65 @@
                     <view key="view" contentMode="scaleToFill" id="Ums-iK-aaC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" pitchEnabled="NO" showsUserLocation="YES" showsBuildings="NO" showsPointsOfInterest="NO" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LAO-Mw-Wvb">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2Hw-Uv-fu8" id="Btr-u6-6za"/>
+                                </connections>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcP-bJ-87j">
+                                <rect key="frame" x="282" y="249" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="GGt-VE-qXm"/>
+                                    <constraint firstAttribute="height" constant="30" id="eCb-aY-YA9"/>
+                                </constraints>
+                                <state key="normal" image="1474761840_add"/>
+                                <connections>
+                                    <action selector="tapButtonPlus:" destination="2Hw-Uv-fu8" eventType="touchUpInside" id="8UX-y5-23K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1N-fQ-5gz">
+                                <rect key="frame" x="282" y="289" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5HQ-uN-1yP"/>
+                                    <constraint firstAttribute="width" constant="30" id="gsl-j6-qBL"/>
+                                </constraints>
+                                <state key="normal" image="1474761917_sub"/>
+                                <connections>
+                                    <action selector="tapButtonMinus:" destination="2Hw-Uv-fu8" eventType="touchUpInside" id="kuD-Zh-hex"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eEl-oz-2Ee">
+                                <rect key="frame" x="181" y="483" width="131" height="29"/>
+                                <segments>
+                                    <segment title="Hybrid"/>
+                                    <segment title="Sattelite"/>
+                                </segments>
+                                <connections>
+                                    <action selector="mapTypeChange:" destination="2Hw-Uv-fu8" eventType="valueChanged" id="3E5-ya-3WT"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="K1N-fQ-5gz" firstAttribute="centerY" secondItem="Ums-iK-aaC" secondAttribute="centerY" constant="20" id="6jh-7l-IKp"/>
+                            <constraint firstItem="RSs-BX-ucP" firstAttribute="trailing" secondItem="bcP-bJ-87j" secondAttribute="trailing" constant="8" id="HfM-tv-bYL"/>
+                            <constraint firstItem="LAO-Mw-Wvb" firstAttribute="bottom" secondItem="RSs-BX-ucP" secondAttribute="bottom" id="Kgx-y3-Hpi"/>
+                            <constraint firstItem="bcP-bJ-87j" firstAttribute="centerY" secondItem="Ums-iK-aaC" secondAttribute="centerY" constant="-20" id="Mj4-Oi-HxW"/>
+                            <constraint firstItem="RSs-BX-ucP" firstAttribute="bottom" secondItem="eEl-oz-2Ee" secondAttribute="bottom" constant="8" id="QAX-kJ-53n"/>
+                            <constraint firstAttribute="trailing" secondItem="LAO-Mw-Wvb" secondAttribute="trailing" id="Rer-kT-jwN"/>
+                            <constraint firstItem="RSs-BX-ucP" firstAttribute="trailing" secondItem="eEl-oz-2Ee" secondAttribute="trailing" constant="8" id="Xgx-t8-eDa"/>
+                            <constraint firstItem="LAO-Mw-Wvb" firstAttribute="leading" secondItem="Ums-iK-aaC" secondAttribute="leading" id="ZjJ-OU-d62"/>
+                            <constraint firstItem="RSs-BX-ucP" firstAttribute="trailing" secondItem="K1N-fQ-5gz" secondAttribute="trailing" constant="8" id="llK-kW-RuL"/>
+                            <constraint firstItem="LAO-Mw-Wvb" firstAttribute="top" secondItem="RSs-BX-ucP" secondAttribute="top" id="ovZ-CI-hPN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="RSs-BX-ucP"/>
                     </view>
                     <navigationItem key="navigationItem" id="czm-Le-uxk"/>
+                    <connections>
+                        <outlet property="mapView" destination="LAO-Mw-Wvb" id="dYs-FL-YgQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DEl-47-TPz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -613,6 +668,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1474761840_add" width="128" height="128"/>
+        <image name="1474761917_sub" width="128" height="128"/>
         <image name="bigLike" width="100" height="100"/>
         <image name="feed" width="40" height="40"/>
         <image name="like" width="25" height="25"/>

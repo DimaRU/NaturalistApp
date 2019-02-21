@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A17FB94221EAEFC00124A68 /* ExploreRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A17FB93221EAEFC00124A68 /* ExploreRegion.swift */; };
 		0A3139E4221AB315009D87F0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3139E3221AB315009D87F0 /* MapViewController.swift */; };
 		0A3139E6221ABCE9009D87F0 /* MKMapViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3139E5221ABCE9009D87F0 /* MKMapViewExtension.swift */; };
 		0A3F664B2219B750002452B0 /* AuthorizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3F664A2219B750002452B0 /* AuthorizeViewController.swift */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A17FB93221EAEFC00124A68 /* ExploreRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreRegion.swift; sourceTree = "<group>"; };
 		0A3139E3221AB315009D87F0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0A3139E5221ABCE9009D87F0 /* MKMapViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKMapViewExtension.swift; sourceTree = "<group>"; };
 		0A3F664A2219B750002452B0 /* AuthorizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizeViewController.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 		0ABA9C5D22101CE40099F774 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0A17FB93221EAEFC00124A68 /* ExploreRegion.swift */,
 				0ABA9C6822103BDD0099F774 /* Comment.swift */,
 				0ABA9C6A2210498A0099F774 /* Fave.swift */,
 				0ABA9C62221029BD0099F774 /* LicenseCode.swift */,
@@ -463,6 +466,7 @@
 				0A9F8C862219615C00C299C8 /* PagedResults.swift in Sources */,
 				0ABA9C7122109EA60099F774 /* DefaultCaseRepresentable.swift in Sources */,
 				0ABA9C6E22105FAB0099F774 /* NatAPI.swift in Sources */,
+				0A17FB94221EAEFC00124A68 /* ExploreRegion.swift in Sources */,
 				0ABA9C6B2210498A0099F774 /* Fave.swift in Sources */,
 				0A977B67220E0B8B005D1DC2 /* AppDelegate.swift in Sources */,
 				0A9F8C8A221969E600C299C8 /* NatNetworkError.swift in Sources */,
