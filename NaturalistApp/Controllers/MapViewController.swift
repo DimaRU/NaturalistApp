@@ -13,6 +13,10 @@ import PromiseKit
 class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
+    var observations: [Observation] = []
+    var delayMapChangeTimer: Timer?
+    var fetchPage = 0
+    var exploreRegion: ExploreRegion?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,23 +31,27 @@ class MapViewController: UIViewController {
                 CLLocationManager.requestLocation()
             }.done { location in
                 print(location)
-            }.catch { error in
-                print(error)
-        }
-        //        entries = Entry.loadEntries()
-        addAnnotations()
-    }
+            }.ignoreErrors()
+   }
 
     @IBAction func tapButtonPlus(_ sender: UIButton) {
-        
-        let zoomLevel = mapView.zoomLevel() + 1
+        let zoomLevel = mapView.zoomLevel + 1
         mapView.setCenterCoordinate(centerCoordinate: mapView.centerCoordinate, zoomLevel: zoomLevel, animated: true)
     }
     
     @IBAction func tapButtonMinus(_ sender: UIButton) {
-        
-        let zoomLevel = mapView.zoomLevel() - 1
+        let zoomLevel = mapView.zoomLevel - 1
         mapView.setCenterCoordinate(centerCoordinate: mapView.centerCoordinate, zoomLevel: zoomLevel, animated: true)
+    }
+    
+    @IBAction func tapButtonCenter(_ sender: UIButton) {
+        CLLocationManager.requestAuthorization(type: .whenInUse)
+            .then { _ in
+                CLLocationManager.requestLocation()
+            }.done { location in
+                self.mapView.setCenter(location.last!.coordinate, animated: true)
+            }.ignoreErrors()
+        
     }
     
     @IBAction func mapTypeChange(_ sender: UISegmentedControl) {
@@ -57,54 +65,61 @@ class MapViewController: UIViewController {
         }
     }
 
+    private func fetchObservationsPage(region: ExploreRegion) {
+        guard let region = exploreRegion else { return }
+        let target = NatAPI.getObservationsBox(page: fetchPage,
+                                               nelat: region.neCoord.latitude,
+                                               nelng: region.neCoord.longitude,
+                                               swlat: region.swCoord.latitude,
+                                               swlng: region.swCoord.longitude)
+        NatProvider.shared.request(target)
+            .done { (pagedResult: PagedResults<Observation>) in
+                let observations = pagedResult.results.content
+                self.addAnnotations(observations)
+            }.ignoreErrors()
+        
+    }
     
-    func addAnnotations()  {
-        mapView.removeAnnotations(mapView.annotations)
+    
+    func addAnnotations(_ observations: [Observation])  {
+        guard !observations.isEmpty else { return }
+//        mapView.removeAnnotations(mapView.annotations)
         
-//        for entry in entries {
-//            let annotation = MKPointAnnotation()
-//            annotation.coordinate = CLLocationCoordinate2D(latitude: entry.venue.latitude, longitude: entry.venue.longitude)
-//            annotation.title = "\(entry.category) for \(entry.amount)р"
-//            annotation.subtitle = entry.venue.name
-//
-//            mapView.addAnnotation(annotation)
-//        }
-//
-//        if let entry = entries.first {
-//            let center = CLLocationCoordinate2D(latitude: entry.venue.latitude, longitude: entry.venue.longitude)
-//            let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
-//            let region = MKCoordinateRegion(center: center, span: span)
-//            mapView.region = region
-//
-//            //mapView.showAnnotations([], animated: <#T##Bool#>)
-//        }
-        
+        for observation in observations {
+            let coordinate = CLLocationCoordinate2D(latitude: observation.location.lat,
+                                                    longitude: observation.location.lng)
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = coordinate
+            mapView.addAnnotation(annotation)
+        }
     }
     
 }
+
 extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let AnnotationIdentifier: String = "ObservationAnnotation"
         if annotation is MKUserLocation { return nil }
         
-        var view = mapView.dequeueReusableAnnotationView(withIdentifier: "entry") as? MKPinAnnotationView
+        let view = (mapView.dequeueReusableAnnotationView(withIdentifier: AnnotationIdentifier) as? MKMarkerAnnotationView) ??
+            MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: AnnotationIdentifier)
+        
+//        view.annotation = annotation
+        view.canShowCallout = true
+        view.glyphTintColor = UIColor.green
 
-        if view == nil {
-            view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "entry")
-        } else {
-            view!.annotation = annotation
-        }
-
-        view!.canShowCallout = true
-        view!.pinTintColor = UIColor.green
-        view!.animatesDrop = true
-
-        return view!
-
+        return view
     }
     
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-        print(mapView.visibleMapRect)
-        let exploreRegion = ExploreRegion(mapRect: mapView.visibleMapRect)
-        print(exploreRegion)
+        delayMapChangeTimer?.invalidate()
+        
+        delayMapChangeTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { [weak self] _ in
+            guard let self = self else { return }
+            print("Start map change")
+            self.fetchPage = 1
+            self.exploreRegion = ExploreRegion(mapRect: self.mapView.visibleMapRect)
+            self.fetchObservationsPage(region: self.exploreRegion!)
+        }
     }
 }

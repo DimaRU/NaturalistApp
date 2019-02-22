@@ -21,5 +21,5 @@ struct Photo: Codable {
     let originalDimensions: OriginalDimensions
     let squareUrl: URL?
     let mediumUrl: URL?
-    let licenseCode: LicenseCode?
+    let licenseCode: String?
 }

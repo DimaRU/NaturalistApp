@@ -15,7 +15,7 @@ enum NatAPI: TargetType {
     case authorize(login: String, password: String)
     case apiToken(bearer: String)
     case searchObservations(page: Int, userId: UserId?, havePhoto: Bool?, poular: Bool?)
-    case getObservationsBox(nelat: Double, nelng: Double, swlat: Double, swlng: Double)
+    case getObservationsBox(page: Int, nelat: Double, nelng: Double, swlat: Double, swlng: Double)
     case searchTaxon(page: Int, name: String?)
     case currentUser
     case users(ids: [UserId])
@@ -91,8 +91,9 @@ enum NatAPI: TargetType {
             parameters["photos"] = havePhoto
             parameters["popular"] = poular
             return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
-        case .getObservationsBox(let nelat, let nelng, let swlat, let swlng):
-            parameters["per_page"] = 100
+        case .getObservationsBox(let page, let nelat, let nelng, let swlat, let swlng):
+            parameters["per_page"] = 20
+            parameters["page"] = page
             parameters["mappable"] = true
             parameters["verifiable"] = true
             parameters["nelat"] = nelat

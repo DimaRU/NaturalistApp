@@ -17,9 +17,9 @@ struct User: ResultsContent {
     let suspended: Bool
     let loginAutocomplete: String
     let loginExact: String
-    let name: String
-    let nameAutocomplete: String
-    let icon: URL
+    let name: String?
+    let nameAutocomplete: String?
+    let icon: URL?
     let observationsCount: Int
     let identificationsCount: Int
     let journalPostsCount: Int

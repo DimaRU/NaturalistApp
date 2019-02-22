@@ -95,7 +95,7 @@ extension NatProvider {
     fileprivate func parseData<T: Decodable>(data: Data, seal: Resolver<T>, target: NatAPI) {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
-        decoder.dateDecodingStrategy = .secondsSince1970
+        decoder.dateDecodingStrategy = .iso8601
         
         do {
             let object = try decoder.decode(T.self, from: data)

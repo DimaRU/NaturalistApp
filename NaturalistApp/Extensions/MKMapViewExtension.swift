@@ -9,7 +9,6 @@
 import Foundation
 import MapKit
 
-
 let MERCATOR_OFFSET = 268435456.0
 let MERCATOR_RADIUS = 85445659.44705395
 let DEGREES = 180.0
@@ -83,7 +82,7 @@ extension MKMapView
         }
     }
     
-    func zoomLevel() -> Double
+    var zoomLevel: Double
     {
         return 20 - round(log2(Double(self.region.span.longitudeDelta * MERCATOR_RADIUS * Double.pi) / Double(180.0 * self.bounds.size.width)))
     }

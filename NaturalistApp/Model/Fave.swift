@@ -9,7 +9,7 @@
 import Foundation
 
 typealias FaveId = Int
-struct Fave: Codable {
+struct Fave: Decodable {
     let id: FaveId
     let voteFlag: Bool
     let userId: Int

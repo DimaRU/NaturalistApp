@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ResultsContent: Codable {}
+protocol ResultsContent: Decodable {}
 
 struct Content<T: ResultsContent> {
     let content: [T]

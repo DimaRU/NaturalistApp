@@ -9,7 +9,7 @@
 import Foundation
 
 typealias CommentId = Int
-struct Comment: Codable {
+struct Comment: Decodable {
     let id: CommentId
     let body: String
     let uuid: String

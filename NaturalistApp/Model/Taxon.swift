@@ -32,6 +32,7 @@ struct Taxon: ResultsContent {
     
     enum Rank: String, Codable {
         case phylum
+        case kingdom
         case subphylum
         case superclass
         case `class`
@@ -59,15 +60,16 @@ struct Taxon: ResultsContent {
         case subspecies
         case varietycase
         case form
+        case stateofmatter
     }
 
     let id: TaxonId
     let taxonSchemesCount: Int
-    let ancestry: String
+    let ancestry: String?
     let minSpeciesAncestry: String?
     let wikipediaUrl: String?
     let currentSynonymousTaxonIds: [Int]?
-    let iconicTaxonId: Int
+    let iconicTaxonId: Int?
     let createdAt: Date?
     let taxonChangesCount: Int
     let completeSpeciesCount: Int?
@@ -79,10 +81,10 @@ struct Taxon: ResultsContent {
     let isActive: Bool
     let rankLevel: Int
     let atlasId: Int?
-    let parentId: Int
+    let parentId: Int?
     let name: String
     let defaultPhoto: Photo
-    let iconicTaxonName: IconicTaxonName
+    let iconicTaxonName: IconicTaxonName?
     let preferredCommonName: String?
     let completeRank: Rank?
     let ancestors: [Taxon]?

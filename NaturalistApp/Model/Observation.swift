@@ -37,9 +37,8 @@ struct Observation: ResultsContent {
     let siteId: Int
     let createdTimeZone: String
     let idPlease: Bool
-    let licenseCode: LicenseCode?
+    let licenseCode: String?
     let observedTimeZone: String
-    let qualityMetrics: [QualityMetric]
     let publicPositionalAccuracy: Int?
     let reviewedBy: [Int]
     let oauthApplicationId: Int?
@@ -62,7 +61,7 @@ struct Observation: ResultsContent {
     let obscured: Bool
     let numIdentificationDisagreements: Int
     let geoprivacy: String?
-    let location: String
+    let location: SLocation
     let spam: Bool
 
     struct ObservationPhoto: Codable {
@@ -77,14 +76,6 @@ struct Observation: ResultsContent {
         case needsId = "needs_id"
         case research = "research"
     }
-    
-    struct QualityMetric: Codable {
-        let id: Int
-        let userId: Int
-        let metric: String
-        let agree: Bool
-        let user: User
-    }
 }
 
 struct Details: Codable {
@@ -96,10 +87,6 @@ struct Details: Codable {
     let day: Int
 }
 
-struct Geojson: Codable {
-    let coordinates: [String]
-    let type: String
-}
 
 
 
