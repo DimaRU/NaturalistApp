@@ -18,7 +18,7 @@ struct Photo: Codable {
     let id: PhotoId
     let attribution: String
     let url: URL
-    let originalDimensions: OriginalDimensions
+    let originalDimensions: OriginalDimensions?
     let squareUrl: URL?
     let mediumUrl: URL?
     let licenseCode: String?

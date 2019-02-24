@@ -13,6 +13,17 @@ typealias ObservationId = Int
 struct Observation: ResultsContent {
     let id: ObservationId
     let user: User
+    let location: SLocation
+    let timeZoneOffset: String
+    let observedOn: String?
+    let observedOnString: String?
+    let observedOnDetails: Details?
+    let timeObservedAt: Date?
+    let observedTimeZone: String
+    let createdAt: Date
+    let createdTimeZone: String
+    let createdAtDetails: Details
+    let updatedAt: Date
     let identificationsSomeAgree: Bool
     let projectIdsWithoutCuratorId: [Int]
     let placeGuess: String
@@ -23,37 +34,27 @@ struct Observation: ResultsContent {
     let mappable: Bool
     let outOfRange: Bool?
     let qualityGrade: QualityGrade
-    let timeObservedAt: Date
     let taxonGeoprivacy: String?
     let uuid: String
-    let observedOnDetails: Details
     let cachedVotesTotal: Int
     let identificationsMostAgree: Bool
-    let createdAtDetails: Details
     let speciesGuess: String?
     let identificationsMostDisagree: Bool
     let positionalAccuracy: Int?
     let commentsCount: Int
     let siteId: Int
-    let createdTimeZone: String
     let idPlease: Bool
     let licenseCode: String?
-    let observedTimeZone: String
     let publicPositionalAccuracy: Int?
     let reviewedBy: [Int]
     let oauthApplicationId: Int?
-    let createdAt: Date
     let description: String?
-    let timeZoneOffset: String
-    let observedOn: String
-    let observedOnString: String
-    let updatedAt: Date
     let placeIds: [Int]
     let captive: Bool
     let taxon: Taxon?
     let numIdentificationAgreements: Int
     let comments: [Comment]
-    let uri: URL
+    let uri: URL?
     let communityTaxonId: Int?
     let geojson: Geojson
     let ownersIdentificationFromVision: Bool?
@@ -61,7 +62,6 @@ struct Observation: ResultsContent {
     let obscured: Bool
     let numIdentificationDisagreements: Int
     let geoprivacy: String?
-    let location: SLocation
     let spam: Bool
 
     struct ObservationPhoto: Codable {

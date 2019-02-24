@@ -61,6 +61,7 @@ struct Taxon: ResultsContent {
         case varietycase
         case form
         case stateofmatter
+        case variety
     }
 
     let id: TaxonId
@@ -83,7 +84,7 @@ struct Taxon: ResultsContent {
     let atlasId: Int?
     let parentId: Int?
     let name: String
-    let defaultPhoto: Photo
+    let defaultPhoto: Photo?
     let iconicTaxonName: IconicTaxonName?
     let preferredCommonName: String?
     let completeRank: Rank?

@@ -24,7 +24,7 @@ struct User: ResultsContent {
     let identificationsCount: Int
     let journalPostsCount: Int
     let activityCount: Int
-    let universalSearchRank: Int
+    let universalSearchRank: Int?
     let roles: [String]
     let iconUrl: URL?
     // Private part

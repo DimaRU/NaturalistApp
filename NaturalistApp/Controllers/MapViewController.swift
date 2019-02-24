@@ -13,10 +13,8 @@ import PromiseKit
 class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
-    var observations: [Observation] = []
+    var observations: [ObservationId:Observation] = [:]
     var delayMapChangeTimer: Timer?
-    var fetchPage = 0
-    var exploreRegion: ExploreRegion?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,17 +63,22 @@ class MapViewController: UIViewController {
         }
     }
 
-    private func fetchObservationsPage(region: ExploreRegion) {
-        guard let region = exploreRegion else { return }
-        let target = NatAPI.getObservationsBox(page: fetchPage,
-                                               nelat: region.neCoord.latitude,
-                                               nelng: region.neCoord.longitude,
-                                               swlat: region.swCoord.latitude,
-                                               swlng: region.swCoord.longitude)
+    private func fetchObservationsPage(page: Int, mapRect: MKMapRect) {
+        let (swCoord, neCoord) = mapRect.iNatRegion()
+        let target = NatAPI.getObservationsBox(page: page,
+                                               nelat: neCoord.latitude,
+                                               nelng: neCoord.longitude,
+                                               swlat: swCoord.latitude,
+                                               swlng: swCoord.longitude)
         NatProvider.shared.request(target)
             .done { (pagedResult: PagedResults<Observation>) in
+                print(pagedResult.page, pagedResult.perPage, pagedResult.totalResults)
                 let observations = pagedResult.results.content
                 self.addAnnotations(observations)
+                guard self.mapView.visibleMapRect == mapRect else { return }
+                let fetchedCount = (pagedResult.page - 1) * pagedResult.perPage + observations.count
+                if fetchedCount >= pagedResult.totalResults || fetchedCount >= 100 { return }
+                self.fetchObservationsPage(page: pagedResult.page + 1, mapRect: mapRect)
             }.ignoreErrors()
         
     }
@@ -83,14 +86,18 @@ class MapViewController: UIViewController {
     
     func addAnnotations(_ observations: [Observation])  {
         guard !observations.isEmpty else { return }
-//        mapView.removeAnnotations(mapView.annotations)
+
+        let annotationsToRemove = mapView.annotations.filter{ !mapView.visibleMapRect.contains(coordinate: $0.coordinate) }
+        mapView.removeAnnotations(annotationsToRemove)
         
         for observation in observations {
-            let coordinate = CLLocationCoordinate2D(latitude: observation.location.lat,
-                                                    longitude: observation.location.lng)
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = coordinate
-            mapView.addAnnotation(annotation)
+            if self.observations.updateValue(observation, forKey: observation.id) == nil {
+                let coordinate = CLLocationCoordinate2D(latitude: observation.location.lat,
+                                                        longitude: observation.location.lng)
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = coordinate
+                mapView.addAnnotation(annotation)
+            }
         }
     }
     
@@ -117,9 +124,8 @@ extension MapViewController: MKMapViewDelegate {
         delayMapChangeTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { [weak self] _ in
             guard let self = self else { return }
             print("Start map change")
-            self.fetchPage = 1
-            self.exploreRegion = ExploreRegion(mapRect: self.mapView.visibleMapRect)
-            self.fetchObservationsPage(region: self.exploreRegion!)
+            print(self.mapView.region)
+            self.fetchObservationsPage(page: 1, mapRect: self.mapView.visibleMapRect)
         }
     }
 }
