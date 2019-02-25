@@ -42,7 +42,7 @@ struct Observation: ResultsContent {
     let identificationsMostDisagree: Bool
     let positionalAccuracy: Int?
     let commentsCount: Int
-    let siteId: Int
+    let siteId: Int?
     let idPlease: Bool
     let licenseCode: String?
     let publicPositionalAccuracy: Int?

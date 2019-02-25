@@ -14,6 +14,7 @@
 		0A3F664B2219B750002452B0 /* AuthorizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3F664A2219B750002452B0 /* AuthorizeViewController.swift */; };
 		0A451A812211B35400684AC4 /* FreeMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A451A802211B35400684AC4 /* FreeMethods.swift */; };
 		0A451A882211B5B000684AC4 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A451A872211B5B000684AC4 /* Animations.swift */; };
+		0A5832332224118A0071DEE0 /* ObsAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5832322224118A0071DEE0 /* ObsAnnotation.swift */; };
 		0A93539922207E700067E197 /* CLLocationCoordinate2DExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93539822207E700067E197 /* CLLocationCoordinate2DExtensions.swift */; };
 		0A977B67220E0B8B005D1DC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A977B66220E0B8B005D1DC2 /* AppDelegate.swift */; };
 		0A977B6C220E0B8B005D1DC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A977B6A220E0B8B005D1DC2 /* Main.storyboard */; };
@@ -68,6 +69,7 @@
 		0A3F664A2219B750002452B0 /* AuthorizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizeViewController.swift; sourceTree = "<group>"; };
 		0A451A802211B35400684AC4 /* FreeMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeMethods.swift; sourceTree = "<group>"; };
 		0A451A872211B5B000684AC4 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		0A5832322224118A0071DEE0 /* ObsAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObsAnnotation.swift; sourceTree = "<group>"; };
 		0A93539822207E700067E197 /* CLLocationCoordinate2DExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2DExtensions.swift; sourceTree = "<group>"; };
 		0A977B63220E0B8B005D1DC2 /* NaturalistApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaturalistApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A977B66220E0B8B005D1DC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				0AA5CDAE222044CD000A80BE /* SLocation.swift */,
 				0ABA9C6622102B210099F774 /* Taxon.swift */,
 				0ABA9C5E22101D9E0099F774 /* User.swift */,
+				0A5832322224118A0071DEE0 /* ObsAnnotation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 			files = (
 				0ABA9C6722102B210099F774 /* Taxon.swift in Sources */,
 				0A0B00A5221FD999008E17D9 /* Geojson.swift in Sources */,
+				0A5832332224118A0071DEE0 /* ObsAnnotation.swift in Sources */,
 				0ABA9C65221029EE0099F774 /* Photo.swift in Sources */,
 				0A3F664B2219B750002452B0 /* AuthorizeViewController.swift in Sources */,
 				0A9F8C88221961B200C299C8 /* NatProvider.swift in Sources */,

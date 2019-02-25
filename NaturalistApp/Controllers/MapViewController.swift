@@ -89,16 +89,16 @@ class MapViewController: UIViewController {
 
         let annotationsToRemove = mapView.annotations.filter{ !mapView.visibleMapRect.contains(coordinate: $0.coordinate) }
         mapView.removeAnnotations(annotationsToRemove)
+
         
-        for observation in observations {
+        let annotations = observations.compactMap { (observation) -> ObsAnnotation? in
             if self.observations.updateValue(observation, forKey: observation.id) == nil {
-                let coordinate = CLLocationCoordinate2D(latitude: observation.location.lat,
-                                                        longitude: observation.location.lng)
-                let annotation = MKPointAnnotation()
-                annotation.coordinate = coordinate
-                mapView.addAnnotation(annotation)
+                return ObsAnnotation(observation: observation)
+            } else {
+                return nil
             }
         }
+        mapView.addAnnotations(annotations)
     }
     
 }
@@ -111,7 +111,6 @@ extension MapViewController: MKMapViewDelegate {
         let view = (mapView.dequeueReusableAnnotationView(withIdentifier: AnnotationIdentifier) as? MKMarkerAnnotationView) ??
             MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: AnnotationIdentifier)
         
-//        view.annotation = annotation
         view.canShowCallout = true
         view.glyphTintColor = UIColor.green
 
@@ -123,8 +122,7 @@ extension MapViewController: MKMapViewDelegate {
         
         delayMapChangeTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { [weak self] _ in
             guard let self = self else { return }
-            print("Start map change")
-            print(self.mapView.region)
+            print("Start map change", self.mapView.visibleMapRect)
             self.fetchObservationsPage(page: 1, mapRect: self.mapView.visibleMapRect)
         }
     }
