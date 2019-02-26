@@ -89,7 +89,6 @@ class MapViewController: UIViewController {
 
         let annotationsToRemove = mapView.annotations.filter{ !mapView.visibleMapRect.contains(coordinate: $0.coordinate) }
         mapView.removeAnnotations(annotationsToRemove)
-
         
         let annotations = observations.compactMap { (observation) -> ObsAnnotation? in
             if self.observations.updateValue(observation, forKey: observation.id) == nil {
@@ -105,13 +104,13 @@ class MapViewController: UIViewController {
 
 extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let AnnotationIdentifier: String = "ObservationAnnotationMarkerReuseId"
         if annotation is MKUserLocation { return nil }
+        let AnnotationIdentifier: String = "ObservationAnnotationMarkerReuseId"
         
         let view = mapView.dequeueReusableAnnotationView(withIdentifier: AnnotationIdentifier) ??
             MKAnnotationView(annotation: annotation, reuseIdentifier: AnnotationIdentifier)
         
-        view.image = UIImage(named: "Location")?.withRenderingMode(.alwaysTemplate)
+        view.image = UIImage(named: "Location")?.maskWith(color: .red)
         view.canShowCallout = false
 
         return view

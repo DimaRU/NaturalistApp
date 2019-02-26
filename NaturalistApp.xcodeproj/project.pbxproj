@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A0B00A5221FD999008E17D9 /* Geojson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0B00A4221FD999008E17D9 /* Geojson.swift */; };
+		0A21747B22255487007E4EFC /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A21747A22255487007E4EFC /* UIImageExtensions.swift */; };
 		0A3139E4221AB315009D87F0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3139E3221AB315009D87F0 /* MapViewController.swift */; };
 		0A3139E6221ABCE9009D87F0 /* MKMapViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3139E5221ABCE9009D87F0 /* MKMapViewExtension.swift */; };
 		0A33CA37221F1F1B00BDD802 /* PromiseKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A33CA36221F1F1B00BDD802 /* PromiseKitExtensions.swift */; };
@@ -63,6 +64,7 @@
 
 /* Begin PBXFileReference section */
 		0A0B00A4221FD999008E17D9 /* Geojson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geojson.swift; sourceTree = "<group>"; };
+		0A21747A22255487007E4EFC /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		0A3139E3221AB315009D87F0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0A3139E5221ABCE9009D87F0 /* MKMapViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKMapViewExtension.swift; sourceTree = "<group>"; };
 		0A33CA36221F1F1B00BDD802 /* PromiseKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseKitExtensions.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				0ABA9C7022109EA60099F774 /* DefaultCaseRepresentable.swift */,
 				0A93539822207E700067E197 /* CLLocationCoordinate2DExtensions.swift */,
 				0AA9F1792221CB43008A67D5 /* MKMapRectExtensions.swift */,
+				0A21747A22255487007E4EFC /* UIImageExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				0A9F8C8A221969E600C299C8 /* NatNetworkError.swift in Sources */,
 				0A451A882211B5B000684AC4 /* Animations.swift in Sources */,
 				0ABA9C5F22101D9E0099F774 /* User.swift in Sources */,
+				0A21747B22255487007E4EFC /* UIImageExtensions.swift in Sources */,
 				0A9F8C8C22198F7800C299C8 /* AccessToken.swift in Sources */,
 				0A33CA37221F1F1B00BDD802 /* PromiseKitExtensions.swift in Sources */,
 			);
