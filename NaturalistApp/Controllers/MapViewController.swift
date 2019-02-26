@@ -105,12 +105,18 @@ class MapViewController: UIViewController {
 extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if annotation is MKUserLocation { return nil }
-        let AnnotationIdentifier: String = "ObservationAnnotationMarkerReuseId"
+        guard let annotation = annotation as? ObsAnnotation else {
+            return nil
+        }
         
-        let view = mapView.dequeueReusableAnnotationView(withIdentifier: AnnotationIdentifier) ??
-            MKAnnotationView(annotation: annotation, reuseIdentifier: AnnotationIdentifier)
+        let reuseIdentifier: String = "ObservationAnnotationMarkerReuseId"
         
-        view.image = UIImage(named: "Location")?.maskWith(color: .red)
+        let view = mapView.dequeueReusableAnnotationView(withIdentifier: reuseIdentifier) ??
+            MKAnnotationView(annotation: annotation, reuseIdentifier: reuseIdentifier)
+        
+        let observation = observations[annotation.id]
+        let iconicTaxonName = observation?.taxon?.iconicTaxonName ?? IconicTaxonName.unknown
+        view.image = UIImage(named: "Location")?.maskWith(color: iconicTaxonName.color)
         view.canShowCallout = false
 
         return view
@@ -124,5 +130,11 @@ extension MapViewController: MKMapViewDelegate {
             print("Start map change", self.mapView.visibleMapRect)
             self.fetchObservationsPage(page: 1, mapRect: self.mapView.visibleMapRect)
         }
+    }
+    
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+        guard let annotation = view.annotation as? ObsAnnotation else { return }
+        
+        print("Selected: ", annotation.id)
     }
 }

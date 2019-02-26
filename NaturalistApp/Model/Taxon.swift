@@ -11,25 +11,6 @@ import Foundation
 typealias TaxonId = Int
 struct Taxon: ResultsContent {
 
-    enum IconicTaxonName: String, Codable, DefaultCaseRepresentable {
-        case plantae = "Plantae"
-        case animalia = "Animalia"
-        case mollusca = "Mollusca"
-        case reptilia = "Reptilia"
-        case aves = "Aves"
-        case amphibia = "Amphibia"
-        case actinopterygii = "Actinopterygii"
-        case mammalia = "Mammalia"
-        case insecta = "Insecta"
-        case arachnida = "Arachnida"
-        case fungi = "Fungi"
-        case protozoa = "Protozoa"
-        case chromista = "Chromista"
-        case unknown = "unknown"
-        
-        static let defaultCase = IconicTaxonName.unknown
-    }
-    
     enum Rank: String, Codable {
         case phylum
         case kingdom

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0A0B00A5221FD999008E17D9 /* Geojson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0B00A4221FD999008E17D9 /* Geojson.swift */; };
 		0A21747B22255487007E4EFC /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A21747A22255487007E4EFC /* UIImageExtensions.swift */; };
+		0A21747D222577CF007E4EFC /* IconicTaxonName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A21747C222577CF007E4EFC /* IconicTaxonName.swift */; };
+		0A21747F22257828007E4EFC /* IconicTaxonName+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A21747E22257828007E4EFC /* IconicTaxonName+Color.swift */; };
+		0A2174812225821A007E4EFC /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2174802225821A007E4EFC /* UIColorExtensions.swift */; };
 		0A3139E4221AB315009D87F0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3139E3221AB315009D87F0 /* MapViewController.swift */; };
 		0A3139E6221ABCE9009D87F0 /* MKMapViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3139E5221ABCE9009D87F0 /* MKMapViewExtension.swift */; };
 		0A33CA37221F1F1B00BDD802 /* PromiseKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A33CA36221F1F1B00BDD802 /* PromiseKitExtensions.swift */; };
@@ -65,6 +68,9 @@
 /* Begin PBXFileReference section */
 		0A0B00A4221FD999008E17D9 /* Geojson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geojson.swift; sourceTree = "<group>"; };
 		0A21747A22255487007E4EFC /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		0A21747C222577CF007E4EFC /* IconicTaxonName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconicTaxonName.swift; sourceTree = "<group>"; };
+		0A21747E22257828007E4EFC /* IconicTaxonName+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IconicTaxonName+Color.swift"; sourceTree = "<group>"; };
+		0A2174802225821A007E4EFC /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		0A3139E3221AB315009D87F0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0A3139E5221ABCE9009D87F0 /* MKMapViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKMapViewExtension.swift; sourceTree = "<group>"; };
 		0A33CA36221F1F1B00BDD802 /* PromiseKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseKitExtensions.swift; sourceTree = "<group>"; };
@@ -218,6 +224,8 @@
 				0ABA9C64221029EE0099F774 /* Photo.swift */,
 				0AA5CDAE222044CD000A80BE /* SLocation.swift */,
 				0ABA9C6622102B210099F774 /* Taxon.swift */,
+				0A21747C222577CF007E4EFC /* IconicTaxonName.swift */,
+				0A21747E22257828007E4EFC /* IconicTaxonName+Color.swift */,
 				0ABA9C5E22101D9E0099F774 /* User.swift */,
 				0A5832322224118A0071DEE0 /* ObsAnnotation.swift */,
 			);
@@ -243,6 +251,7 @@
 				0A93539822207E700067E197 /* CLLocationCoordinate2DExtensions.swift */,
 				0AA9F1792221CB43008A67D5 /* MKMapRectExtensions.swift */,
 				0A21747A22255487007E4EFC /* UIImageExtensions.swift */,
+				0A2174802225821A007E4EFC /* UIColorExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -467,11 +476,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A21747F22257828007E4EFC /* IconicTaxonName+Color.swift in Sources */,
 				0ABA9C6722102B210099F774 /* Taxon.swift in Sources */,
 				0A0B00A5221FD999008E17D9 /* Geojson.swift in Sources */,
 				0A5832332224118A0071DEE0 /* ObsAnnotation.swift in Sources */,
 				0ABA9C65221029EE0099F774 /* Photo.swift in Sources */,
 				0A3F664B2219B750002452B0 /* AuthorizeViewController.swift in Sources */,
+				0A2174812225821A007E4EFC /* UIColorExtensions.swift in Sources */,
 				0A9F8C88221961B200C299C8 /* NatProvider.swift in Sources */,
 				0ABA9C762210A4790099F774 /* APIKeys.swift in Sources */,
 				0A9F8C842219516200C299C8 /* Content.swift in Sources */,
@@ -480,6 +491,7 @@
 				0ABA9C63221029BD0099F774 /* LicenseCode.swift in Sources */,
 				0A3139E6221ABCE9009D87F0 /* MKMapViewExtension.swift in Sources */,
 				0A3139E4221AB315009D87F0 /* MapViewController.swift in Sources */,
+				0A21747D222577CF007E4EFC /* IconicTaxonName.swift in Sources */,
 				0A9F8C8E2219905500C299C8 /* JWTToken.swift in Sources */,
 				0A451A812211B35400684AC4 /* FreeMethods.swift in Sources */,
 				0ABA9C742210A3EC0099F774 /* KeychainService.swift in Sources */,
