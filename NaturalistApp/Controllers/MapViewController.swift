@@ -105,14 +105,14 @@ class MapViewController: UIViewController {
 
 extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let AnnotationIdentifier: String = "ObservationAnnotation"
+        let AnnotationIdentifier: String = "ObservationAnnotationMarkerReuseId"
         if annotation is MKUserLocation { return nil }
         
-        let view = (mapView.dequeueReusableAnnotationView(withIdentifier: AnnotationIdentifier) as? MKMarkerAnnotationView) ??
-            MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: AnnotationIdentifier)
+        let view = mapView.dequeueReusableAnnotationView(withIdentifier: AnnotationIdentifier) ??
+            MKAnnotationView(annotation: annotation, reuseIdentifier: AnnotationIdentifier)
         
-        view.canShowCallout = true
-        view.glyphTintColor = UIColor.green
+        view.image = UIImage(named: "Location")?.withRenderingMode(.alwaysTemplate)
+        view.canShowCallout = false
 
         return view
     }
