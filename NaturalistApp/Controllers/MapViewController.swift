@@ -74,7 +74,7 @@ class MapViewController: UIViewController {
             .done { (pagedResult: PagedResults<Observation>) in
                 print(pagedResult.page, pagedResult.perPage, pagedResult.totalResults)
                 let observations = pagedResult.results.content
-                self.addAnnotations(observations)
+                self.addAnnotations(for: observations)
                 guard self.mapView.visibleMapRect == mapRect else { return }
                 let fetchedCount = (pagedResult.page - 1) * pagedResult.perPage + observations.count
                 if fetchedCount >= pagedResult.totalResults || fetchedCount >= 100 { return }
@@ -84,7 +84,7 @@ class MapViewController: UIViewController {
     }
     
     
-    func addAnnotations(_ observations: [Observation])  {
+    func addAnnotations(for observations: [Observation])  {
         guard !observations.isEmpty else { return }
 
         let annotationsToRemove = mapView.annotations.filter{ !mapView.visibleMapRect.contains(coordinate: $0.coordinate) }
@@ -98,8 +98,9 @@ class MapViewController: UIViewController {
             }
         }
         mapView.addAnnotations(annotations)
+        let freeIds = mapView.annotations.compactMap { ($0 as? ObsAnnotation)?.id }.filter { self.observations[$0] != nil }
+        freeIds.forEach { self.observations.removeValue(forKey: $0) }
     }
-    
 }
 
 extension MapViewController: MKMapViewDelegate {
