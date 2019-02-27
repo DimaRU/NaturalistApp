@@ -19,9 +19,12 @@ final class ObsAnnotation: NSObject, MKAnnotation {
     }
     
 
-    convenience init(observation: Observation) {
+    convenience init?(observation: Observation) {
         let coordinate = CLLocationCoordinate2D(latitude: observation.location.lat,
                                                 longitude: observation.location.lng)
+        guard CLLocationCoordinate2DIsValid(coordinate) else {
+            return nil
+        }
         self.init(id: observation.id, coordinate: coordinate)
     }
 }
