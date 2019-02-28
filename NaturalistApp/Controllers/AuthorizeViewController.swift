@@ -36,7 +36,8 @@ class AuthorizeViewController: UIViewController {
                 return NatProvider.shared.request(.currentUser)
             }.done { (paged: PagedResults<User>) -> Void in
                 let user = paged.results.content.first!
-                print(user)
+                Globals.setCurrentUser(user: user)
+                print(user.login, user.name ?? "")
                 self.performSegue(withIdentifier: "TabbarViewControllerSegue", sender: nil)
             }.catch { error in
                 print(error)

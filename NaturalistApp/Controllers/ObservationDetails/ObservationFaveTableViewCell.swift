@@ -19,7 +19,7 @@ class ObservationFaveTableViewCell: UITableViewCell {
     }
     func setup(observation: Observation) {
         favoritedLabel.text = "Favored: " + String(observation.favesCount)
-        let currentUserId = 100
+        let currentUserId = Globals.currentUser.id
         favedByMe = observation.faves.first(where: { $0.userId == currentUserId }) != nil
     }
 }
