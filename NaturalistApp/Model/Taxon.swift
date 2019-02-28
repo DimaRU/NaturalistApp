@@ -46,16 +46,19 @@ struct Taxon: ResultsContent {
     }
 
     let id: TaxonId
+    let name: String
+    let preferredCommonName: String?
+    let defaultPhoto: Photo?
+    let wikipediaUrl: String?
+    let rank: Rank
     let taxonSchemesCount: Int
     let ancestry: String?
     let minSpeciesAncestry: String?
-    let wikipediaUrl: String?
     let currentSynonymousTaxonIds: [Int]?
     let iconicTaxonId: Int?
     let createdAt: Date?
     let taxonChangesCount: Int
     let completeSpeciesCount: Int?
-    let rank: Rank
     let extinct: Bool
     let universalSearchRank: Int?
     let ancestorIds: [Int]
@@ -64,10 +67,7 @@ struct Taxon: ResultsContent {
     let rankLevel: Int
     let atlasId: Int?
     let parentId: Int?
-    let name: String
-    let defaultPhoto: Photo?
     let iconicTaxonName: IconicTaxonName?
-    let preferredCommonName: String?
     let completeRank: Rank?
     let ancestors: [Taxon]?
     let endemic: Bool?

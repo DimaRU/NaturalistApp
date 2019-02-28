@@ -726,8 +726,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="ObservationDateLabel" destination="QHG-63-UYM" id="D48-G5-YCP"/>
                                     <outlet property="avatarImageView" destination="Pni-rh-uyB" id="8Bz-7U-7mA"/>
+                                    <outlet property="observationDateLabel" destination="QHG-63-UYM" id="D48-G5-YCP"/>
                                     <outlet property="userNameLabel" destination="mxK-XY-q4U" id="yXp-jN-bQl"/>
                                 </connections>
                             </tableViewCell>

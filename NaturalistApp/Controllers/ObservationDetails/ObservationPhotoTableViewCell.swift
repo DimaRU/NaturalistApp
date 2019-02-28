@@ -10,4 +10,12 @@ import UIKit
 
 class ObservationPhotoTableViewCell: UITableViewCell {
     @IBOutlet weak var photoImageView: UIImageView!
+
+    func setup(observation: Observation) {
+        guard let photo = observation.photos.first else {
+            self.isHidden = true
+            return
+        }
+        photoImageView.kf.setImage(with: photo.url)
+    }
 }
