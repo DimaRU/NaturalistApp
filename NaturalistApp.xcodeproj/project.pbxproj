@@ -19,6 +19,11 @@
 		0A451A812211B35400684AC4 /* FreeMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A451A802211B35400684AC4 /* FreeMethods.swift */; };
 		0A451A882211B5B000684AC4 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A451A872211B5B000684AC4 /* Animations.swift */; };
 		0A5832332224118A0071DEE0 /* ObsAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5832322224118A0071DEE0 /* ObsAnnotation.swift */; };
+		0A87BB4D2227419100150BE9 /* ObservationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB4C2227419100150BE9 /* ObservationDetailsViewController.swift */; };
+		0A87BB4F2227441300150BE9 /* ObservationProfilleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB4E2227441300150BE9 /* ObservationProfilleTableViewCell.swift */; };
+		0A87BB512227461800150BE9 /* ObservationPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB502227461800150BE9 /* ObservationPhotoTableViewCell.swift */; };
+		0A87BB532227470B00150BE9 /* ObservationTaxaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB522227470B00150BE9 /* ObservationTaxaTableViewCell.swift */; };
+		0A87BB5522274A5F00150BE9 /* ObservationFaveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB5422274A5F00150BE9 /* ObservationFaveTableViewCell.swift */; };
 		0A93539922207E700067E197 /* CLLocationCoordinate2DExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93539822207E700067E197 /* CLLocationCoordinate2DExtensions.swift */; };
 		0A977B67220E0B8B005D1DC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A977B66220E0B8B005D1DC2 /* AppDelegate.swift */; };
 		0A977B6C220E0B8B005D1DC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A977B6A220E0B8B005D1DC2 /* Main.storyboard */; };
@@ -78,6 +83,11 @@
 		0A451A802211B35400684AC4 /* FreeMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeMethods.swift; sourceTree = "<group>"; };
 		0A451A872211B5B000684AC4 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		0A5832322224118A0071DEE0 /* ObsAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObsAnnotation.swift; sourceTree = "<group>"; };
+		0A87BB4C2227419100150BE9 /* ObservationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationDetailsViewController.swift; sourceTree = "<group>"; };
+		0A87BB4E2227441300150BE9 /* ObservationProfilleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationProfilleTableViewCell.swift; sourceTree = "<group>"; };
+		0A87BB502227461800150BE9 /* ObservationPhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationPhotoTableViewCell.swift; sourceTree = "<group>"; };
+		0A87BB522227470B00150BE9 /* ObservationTaxaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationTaxaTableViewCell.swift; sourceTree = "<group>"; };
+		0A87BB5422274A5F00150BE9 /* ObservationFaveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationFaveTableViewCell.swift; sourceTree = "<group>"; };
 		0A93539822207E700067E197 /* CLLocationCoordinate2DExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2DExtensions.swift; sourceTree = "<group>"; };
 		0A977B63220E0B8B005D1DC2 /* NaturalistApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaturalistApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A977B66220E0B8B005D1DC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -144,10 +154,23 @@
 		0A451A842211B4EC00684AC4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0A87BB4B2227415200150BE9 /* ObservationDetails */,
 				0A3F664A2219B750002452B0 /* AuthorizeViewController.swift */,
 				0A3139E3221AB315009D87F0 /* MapViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0A87BB4B2227415200150BE9 /* ObservationDetails */ = {
+			isa = PBXGroup;
+			children = (
+				0A87BB4C2227419100150BE9 /* ObservationDetailsViewController.swift */,
+				0A87BB4E2227441300150BE9 /* ObservationProfilleTableViewCell.swift */,
+				0A87BB502227461800150BE9 /* ObservationPhotoTableViewCell.swift */,
+				0A87BB522227470B00150BE9 /* ObservationTaxaTableViewCell.swift */,
+				0A87BB5422274A5F00150BE9 /* ObservationFaveTableViewCell.swift */,
+			);
+			path = ObservationDetails;
 			sourceTree = "<group>";
 		};
 		0A977B5A220E0B8B005D1DC2 = {
@@ -488,6 +511,7 @@
 				0A9F8C842219516200C299C8 /* Content.swift in Sources */,
 				0ABA9C61221024A10099F774 /* Observation.swift in Sources */,
 				0ABA9C6922103BDD0099F774 /* Comment.swift in Sources */,
+				0A87BB4F2227441300150BE9 /* ObservationProfilleTableViewCell.swift in Sources */,
 				0ABA9C63221029BD0099F774 /* LicenseCode.swift in Sources */,
 				0A3139E6221ABCE9009D87F0 /* MKMapViewExtension.swift in Sources */,
 				0A3139E4221AB315009D87F0 /* MapViewController.swift in Sources */,
@@ -496,15 +520,19 @@
 				0A451A812211B35400684AC4 /* FreeMethods.swift in Sources */,
 				0ABA9C742210A3EC0099F774 /* KeychainService.swift in Sources */,
 				0A9F8C862219615C00C299C8 /* PagedResults.swift in Sources */,
+				0A87BB4D2227419100150BE9 /* ObservationDetailsViewController.swift in Sources */,
 				0ABA9C7122109EA60099F774 /* DefaultCaseRepresentable.swift in Sources */,
 				0AA9F17A2221CB43008A67D5 /* MKMapRectExtensions.swift in Sources */,
 				0ABA9C6E22105FAB0099F774 /* NatAPI.swift in Sources */,
 				0A93539922207E700067E197 /* CLLocationCoordinate2DExtensions.swift in Sources */,
+				0A87BB532227470B00150BE9 /* ObservationTaxaTableViewCell.swift in Sources */,
 				0ABA9C6B2210498A0099F774 /* Fave.swift in Sources */,
 				0A977B67220E0B8B005D1DC2 /* AppDelegate.swift in Sources */,
 				0AA5CDAF222044CD000A80BE /* SLocation.swift in Sources */,
 				0A9F8C8A221969E600C299C8 /* NatNetworkError.swift in Sources */,
 				0A451A882211B5B000684AC4 /* Animations.swift in Sources */,
+				0A87BB5522274A5F00150BE9 /* ObservationFaveTableViewCell.swift in Sources */,
+				0A87BB512227461800150BE9 /* ObservationPhotoTableViewCell.swift in Sources */,
 				0ABA9C5F22101D9E0099F774 /* User.swift in Sources */,
 				0A21747B22255487007E4EFC /* UIImageExtensions.swift in Sources */,
 				0A9F8C8C22198F7800C299C8 /* AccessToken.swift in Sources */,
