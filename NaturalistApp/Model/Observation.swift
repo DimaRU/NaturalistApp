@@ -29,6 +29,7 @@ struct Observation: ResultsContent {
     let placeGuess: String
     let observationPhotos: [ObservationPhoto]
     let photos: [Photo]
+    let communityTaxon: Taxon?
     let favesCount: Int
     let faves: [Fave]
     let mappable: Bool

@@ -54,6 +54,7 @@
 		0ABA9C7122109EA60099F774 /* DefaultCaseRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABA9C7022109EA60099F774 /* DefaultCaseRepresentable.swift */; };
 		0ABA9C742210A3EC0099F774 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABA9C732210A3C80099F774 /* KeychainService.swift */; };
 		0ABA9C762210A4790099F774 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABA9C752210A4790099F774 /* APIKeys.swift */; };
+		0ADC99AA22292FD400034F49 /* TaxonPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADC99A922292FD400034F49 /* TaxonPhoto.swift */; };
 		9F0E766902695A23BFDCB8DF /* Pods_NaturalistApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EFE921A4D01CA1E7FCDC7D1 /* Pods_NaturalistApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -128,6 +129,7 @@
 		0ABA9C7022109EA60099F774 /* DefaultCaseRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCaseRepresentable.swift; sourceTree = "<group>"; };
 		0ABA9C732210A3C80099F774 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		0ABA9C752210A4790099F774 /* APIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		0ADC99A922292FD400034F49 /* TaxonPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxonPhoto.swift; sourceTree = "<group>"; };
 		4EFE921A4D01CA1E7FCDC7D1 /* Pods_NaturalistApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NaturalistApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C0C7C3EA1EB43D5D54BFE4 /* Pods-NaturalistApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaturalistApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NaturalistApp/Pods-NaturalistApp.debug.xcconfig"; sourceTree = "<group>"; };
 		9CCC4157664A04B95EE95B14 /* Pods-NaturalistApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaturalistApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-NaturalistApp/Pods-NaturalistApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				0ABA9C60221024A10099F774 /* Observation.swift */,
 				0A9F8C852219615C00C299C8 /* PagedResults.swift */,
 				0ABA9C64221029EE0099F774 /* Photo.swift */,
+				0ADC99A922292FD400034F49 /* TaxonPhoto.swift */,
 				0AA5CDAE222044CD000A80BE /* SLocation.swift */,
 				0ABA9C6622102B210099F774 /* Taxon.swift */,
 				0A21747C222577CF007E4EFC /* IconicTaxonName.swift */,
@@ -276,16 +279,16 @@
 		0ABA9C6F22109E920099F774 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				0A33CA36221F1F1B00BDD802 /* PromiseKitExtensions.swift */,
-				0A3139E5221ABCE9009D87F0 /* MKMapViewExtension.swift */,
-				0ABA9C7022109EA60099F774 /* DefaultCaseRepresentable.swift */,
 				0A93539822207E700067E197 /* CLLocationCoordinate2DExtensions.swift */,
+				0ABA9C7022109EA60099F774 /* DefaultCaseRepresentable.swift */,
 				0AA9F1792221CB43008A67D5 /* MKMapRectExtensions.swift */,
-				0A21747A22255487007E4EFC /* UIImageExtensions.swift */,
+				0A3139E5221ABCE9009D87F0 /* MKMapViewExtension.swift */,
+				0A33CA36221F1F1B00BDD802 /* PromiseKitExtensions.swift */,
 				0A2174802225821A007E4EFC /* UIColorExtensions.swift */,
+				0A21747A22255487007E4EFC /* UIImageExtensions.swift */,
+				0AA8DB45222900C0003999B7 /* UIStoryboardExtensions.swift */,
 				0A5F60B52227FF4600EABDAF /* UITableViewExtensions.swift */,
 				0A47A1DD22283B00005B4AEB /* UIViewControllerExtensions.swift */,
-				0AA8DB45222900C0003999B7 /* UIStoryboardExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 				0A87BB4F2227441300150BE9 /* ObservationProfilleTableViewCell.swift in Sources */,
 				0ABA9C63221029BD0099F774 /* LicenseCode.swift in Sources */,
 				0A3139E6221ABCE9009D87F0 /* MKMapViewExtension.swift in Sources */,
+				0ADC99AA22292FD400034F49 /* TaxonPhoto.swift in Sources */,
 				0A3139E4221AB315009D87F0 /* MapViewController.swift in Sources */,
 				0A21747D222577CF007E4EFC /* IconicTaxonName.swift in Sources */,
 				0AA8DB46222900C0003999B7 /* UIStoryboardExtensions.swift in Sources */,

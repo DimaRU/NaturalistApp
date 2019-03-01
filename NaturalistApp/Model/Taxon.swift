@@ -49,7 +49,8 @@ struct Taxon: ResultsContent {
     let name: String
     let preferredCommonName: String?
     let defaultPhoto: Photo?
-    let wikipediaUrl: String?
+    let taxonPhotos: [TaxonPhoto]?
+    let wikipediaUrl: URL?
     let rank: Rank
     let taxonSchemesCount: Int
     let ancestry: String?

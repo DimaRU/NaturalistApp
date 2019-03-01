@@ -16,10 +16,16 @@ struct Photo: Codable {
     }
     
     let id: PhotoId
-    let attribution: String
     let url: URL
     let originalDimensions: OriginalDimensions?
     let squareUrl: URL?
     let mediumUrl: URL?
+    let smallUrl: URL?
+    let largeUrl: URL?
+    let originalUrl: URL?
+    let attribution: String
     let licenseCode: String?
+    let nativePageUrl: URL?
+    let nativePhotoId: String?
+    let type: String?
 }
