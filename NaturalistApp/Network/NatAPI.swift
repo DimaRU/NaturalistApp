@@ -20,6 +20,7 @@ enum NatAPI: TargetType {
     case currentUser
     case users(ids: [UserId])
     case taxon(taxonId: TaxonId)
+    case observation(id: ObservationId)
     
     var apiVersion: String {
         return "/v1"
@@ -52,6 +53,8 @@ enum NatAPI: TargetType {
             return "\(apiVersion)/users/\(ids)"
         case .taxon(let taxonId):
             return "\(apiVersion)/taxa/\(taxonId)"
+        case .observation(let id):
+            return "\(apiVersion)/observations/\(id)"
         }
     }
     
@@ -66,7 +69,8 @@ enum NatAPI: TargetType {
              .searchTaxon,
              .currentUser,
              .users,
-             .taxon:
+             .taxon,
+             .observation:
             return .get
         }
     }
@@ -108,7 +112,8 @@ enum NatAPI: TargetType {
             return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
         case .currentUser,
              .users,
-             .taxon:
+             .taxon,
+             .observation:
             return .requestPlain
         }
     }
