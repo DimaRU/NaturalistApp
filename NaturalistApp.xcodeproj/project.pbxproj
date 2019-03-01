@@ -214,12 +214,11 @@
 				0ABA9C5D22101CE40099F774 /* Model */,
 				0ABA9C722210A30C0099F774 /* Services */,
 				0A977B66220E0B8B005D1DC2 /* AppDelegate.swift */,
-				0A977B6A220E0B8B005D1DC2 /* Main.storyboard */,
-				0A977B6D220E0B8C005D1DC2 /* Assets.xcassets */,
-				0A977B6F220E0B8C005D1DC2 /* LaunchScreen.storyboard */,
-				0A977B72220E0B8C005D1DC2 /* Info.plist */,
-				0A451A872211B5B000684AC4 /* Animations.swift */,
 				0A451A802211B35400684AC4 /* FreeMethods.swift */,
+				0A977B6A220E0B8B005D1DC2 /* Main.storyboard */,
+				0A977B6F220E0B8C005D1DC2 /* LaunchScreen.storyboard */,
+				0A977B6D220E0B8C005D1DC2 /* Assets.xcassets */,
+				0A977B72220E0B8C005D1DC2 /* Info.plist */,
 			);
 			path = NaturalistApp;
 			sourceTree = "<group>";
@@ -296,6 +295,7 @@
 		0ABA9C722210A30C0099F774 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0A451A872211B5B000684AC4 /* Animations.swift */,
 				0ABA9C732210A3C80099F774 /* KeychainService.swift */,
 				0ABA9C752210A4790099F774 /* APIKeys.swift */,
 				0A47A1DB222838A3005B4AEB /* Globals.swift */,

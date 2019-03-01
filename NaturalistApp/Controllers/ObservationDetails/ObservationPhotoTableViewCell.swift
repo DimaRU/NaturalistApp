@@ -12,11 +12,10 @@ class ObservationPhotoTableViewCell: UITableViewCell {
     @IBOutlet weak var photoImageView: UIImageView!
 
     func setup(observation: Observation) {
-        guard let photo = observation.observationPhotos.first?.photo else {
+        guard let photo = observation.photos.first else {
             self.isHidden = true
             return
         }
-        let url = photo.mediumUrl ?? photo.url
-        photoImageView.kf.setImage(with: url)
+        photoImageView.kf.setImage(with: photo.mediumUrl)
     }
 }

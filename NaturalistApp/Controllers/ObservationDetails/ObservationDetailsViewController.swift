@@ -10,8 +10,7 @@ import UIKit
 import PromiseKit
 
 class ObservationDetailsViewController: UITableViewController {
-    var observationId: ObservationId!
-    private var observation: Observation?
+    var observation: Observation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +20,7 @@ class ObservationDetailsViewController: UITableViewController {
     func loadObservation() {
         firstly {
             // start
-            NatProvider.shared.request(.observation(id: observationId))
+            NatProvider.shared.request(.observation(id: observation.id))
             }.done { (pagedResult: PagedResults<Observation>) in
                 self.observation = pagedResult.results.content.first
                 self.tableView.reloadData()
@@ -44,19 +43,19 @@ class ObservationDetailsViewController: UITableViewController {
         switch indexPath.row {
         case 0:
             let cell = tableView.dequeueReusableCell(of: ObservationProfilleTableViewCell.self, for: indexPath)
-            cell.setup(observation: observation!)
+            cell.setup(observation: observation)
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(of: ObservationPhotoTableViewCell.self, for: indexPath)
-            cell.setup(observation: observation!)
+            cell.setup(observation: observation)
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(of: ObservationTaxaTableViewCell.self, for: indexPath)
-            cell.setup(observation: observation!)
+            cell.setup(observation: observation)
             return cell
         case 3:
             let cell = tableView.dequeueReusableCell(of: ObservationFaveTableViewCell.self, for: indexPath)
-            cell.setup(observation: observation!)
+            cell.setup(observation: observation)
             return cell
         default:
             fatalError()

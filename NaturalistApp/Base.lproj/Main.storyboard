@@ -672,7 +672,7 @@
         <scene sceneID="HyC-EK-LKu">
             <objects>
                 <tableViewController storyboardIdentifier="ObservationDetailsViewController" id="rhY-j0-KHl" customClass="ObservationDetailsViewController" customModule="NaturalistApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zd4-Fr-I2C">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="zd4-Fr-I2C">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -753,8 +753,8 @@
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="mIj-FR-6VJ" secondAttribute="trailing" id="AGI-BG-ZUK"/>
                                         <constraint firstItem="mIj-FR-6VJ" firstAttribute="leading" secondItem="S5v-N7-4zZ" secondAttribute="leading" id="Crz-OG-Ihu"/>
+                                        <constraint firstAttribute="bottom" secondItem="mIj-FR-6VJ" secondAttribute="bottom" id="YZB-sz-GA6"/>
                                         <constraint firstItem="mIj-FR-6VJ" firstAttribute="top" secondItem="S5v-N7-4zZ" secondAttribute="top" id="ZF9-W3-ldh"/>
-                                        <constraint firstItem="mIj-FR-6VJ" firstAttribute="centerY" secondItem="S5v-N7-4zZ" secondAttribute="centerY" id="oNg-eD-dVl"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
