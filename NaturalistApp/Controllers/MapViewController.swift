@@ -133,7 +133,7 @@ extension MapViewController: MKMapViewDelegate {
         
         delayMapChangeTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { [weak self] _ in
             guard let self = self else { return }
-            print("Start map change", self.mapView.visibleMapRect)
+            print("Start map change")
             self.fetchObservationsPage(page: 1, mapRect: self.mapView.visibleMapRect)
         }
     }
@@ -142,7 +142,7 @@ extension MapViewController: MKMapViewDelegate {
         guard let annotation = view.annotation as? ObsAnnotation else { return }
         
         let vc = storyboard!.instantiateViewController(of: ObservationDetailsViewController.self)
-        vc.observation = self.observations[annotation.id]
+        vc.observationId = annotation.id
         navigationController?.pushViewController(vc, animated: true)
     }
 }

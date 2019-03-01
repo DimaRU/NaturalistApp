@@ -7,24 +7,36 @@
 //
 
 import UIKit
+import PromiseKit
 
 class ObservationDetailsViewController: UITableViewController {
-
-    var observation: Observation!
+    var observationId: ObservationId!
+    private var observation: Observation?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.title = "Observation"
+        loadObservation()
     }
 
+    func loadObservation() {
+        firstly {
+            // start
+            NatProvider.shared.request(.observation(id: observationId))
+            }.done { (pagedResult: PagedResults<Observation>) in
+                self.observation = pagedResult.results.content.first
+                self.tableView.reloadData()
+            }.ensure {
+                // end 
+            }.catch { error in
+                print(error)
+//                self.navigationController?.dismiss(animated: true)
+        }
+    }
+    
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return observation != nil ? 4 : 0
     }
 
     
@@ -32,19 +44,19 @@ class ObservationDetailsViewController: UITableViewController {
         switch indexPath.row {
         case 0:
             let cell = tableView.dequeueReusableCell(of: ObservationProfilleTableViewCell.self, for: indexPath)
-            cell.setup(observation: observation)
+            cell.setup(observation: observation!)
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(of: ObservationPhotoTableViewCell.self, for: indexPath)
-            cell.setup(observation: observation)
+            cell.setup(observation: observation!)
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(of: ObservationTaxaTableViewCell.self, for: indexPath)
-            cell.setup(observation: observation)
+            cell.setup(observation: observation!)
             return cell
         case 3:
             let cell = tableView.dequeueReusableCell(of: ObservationFaveTableViewCell.self, for: indexPath)
-            cell.setup(observation: observation)
+            cell.setup(observation: observation!)
             return cell
         default:
             fatalError()

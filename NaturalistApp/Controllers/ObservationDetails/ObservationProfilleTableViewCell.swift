@@ -25,7 +25,7 @@ class ObservationProfilleTableViewCell: UITableViewCell {
         userNameLabel.text = user.login
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .medium
+        dateFormatter.timeStyle = .short
         observationDateLabel.text = dateFormatter.string(from: observation.createdAt)
     }
 }
