@@ -86,8 +86,8 @@ class MapViewController: UIViewController {
     
     func addAnnotations(for observations: [Observation])  {
         guard !observations.isEmpty else { return }
-
-        let annotationsToRemove = mapView.annotations.filter{ !mapView.visibleMapRect.contains(coordinate: $0.coordinate) }
+        let annotationsToRemove = mapView.annotations.filter{
+            ($0 is ObsAnnotation) && !mapView.visibleMapRect.contains(coordinate: $0.coordinate) }
         mapView.removeAnnotations(annotationsToRemove)
         
         let annotations = observations.compactMap { (observation) -> ObsAnnotation? in
@@ -98,8 +98,13 @@ class MapViewController: UIViewController {
             }
         }
         mapView.addAnnotations(annotations)
-        let freeIds = mapView.annotations.compactMap { ($0 as? ObsAnnotation)?.id }.filter { self.observations[$0] != nil }
-        freeIds.forEach { self.observations.removeValue(forKey: $0) }
+        let usedIds = Set<ObservationId>(mapView.annotations.compactMap { ($0 as? ObsAnnotation)?.id })
+        print(usedIds)
+        self.observations.keys.forEach{
+            if !usedIds.contains($0) {
+                self.observations.removeValue(forKey: $0)
+            }
+        }
     }
 }
 
@@ -136,6 +141,8 @@ extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
         guard let annotation = view.annotation as? ObsAnnotation else { return }
         
-        print("Selected: ", annotation.id)
+        let vc = storyboard!.instantiateViewController(of: ObservationDetailsViewController.self)
+        vc.observation = self.observations[annotation.id]
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
