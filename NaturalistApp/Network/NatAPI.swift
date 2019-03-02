@@ -19,9 +19,11 @@ enum NatAPI: TargetType {
     case searchTaxon(page: Int, name: String?)
     case currentUser
     case users(ids: [UserId])
-    case taxon(taxonId: TaxonId)
+    case taxon(id: TaxonId)
     case observation(id: ObservationId)
-    
+    case fave(id: ObservationId)
+    case unfave(id: ObservationId)
+
     var apiVersion: String {
         return "/v1"
     }
@@ -51,10 +53,14 @@ enum NatAPI: TargetType {
             return "\(apiVersion)/users/me"
         case .users(let ids):
             return "\(apiVersion)/users/\(ids)"
-        case .taxon(let taxonId):
-            return "\(apiVersion)/taxa/\(taxonId)"
+        case .taxon(let id):
+            return "\(apiVersion)/taxa/\(id)"
         case .observation(let id):
             return "\(apiVersion)/observations/\(id)"
+        case .fave(let id):
+            return "\(apiVersion)/observations/\(id)/fave"
+        case .unfave(let id):
+            return "\(apiVersion)/observations/\(id)/unfave"
         }
     }
     
@@ -72,6 +78,10 @@ enum NatAPI: TargetType {
              .taxon,
              .observation:
             return .get
+        case .fave:
+            return .post
+        case .unfave:
+            return .delete
         }
     }
     
@@ -113,7 +123,9 @@ enum NatAPI: TargetType {
         case .currentUser,
              .users,
              .taxon,
-             .observation:
+             .observation,
+             .fave,
+             .unfave:
             return .requestPlain
         }
     }
@@ -130,7 +142,9 @@ enum NatAPI: TargetType {
             break
         case .apiToken(let bearer):
             assigned["Authorization"] = "Bearer \(bearer)"
-        case .currentUser:
+        case .currentUser,
+             .fave,
+             .unfave:
             assigned["Authorization"] = KeychainService.shared[.apiToken]
         default:
             break

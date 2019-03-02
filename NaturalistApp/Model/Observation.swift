@@ -88,6 +88,11 @@ struct Details: Codable {
     let day: Int
 }
 
-
-
-
+extension Observation {
+    var favedByMe: Bool {
+        guard let currentUserId = Globals.currentUser?.id else {
+            return false
+        }
+        return self.faves.first(where: { $0.userId == currentUserId }) != nil
+    }
+}

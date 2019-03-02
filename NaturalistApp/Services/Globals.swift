@@ -12,10 +12,14 @@ var Globals = GlobalFactory()
 
 
 class GlobalFactory {
-    private var user: User?
+    private var user: User? = nil
     
-    var currentUser: User {
-        return self.user!
+    var currentUser: User? {
+        return self.user
+    }
+    
+    var currentUserId: UserId {
+        return self.user?.id ?? 0
     }
     
     func setCurrentUser(user: User) {

@@ -12,14 +12,13 @@ class ObservationFaveTableViewCell: UITableViewCell {
     @IBOutlet weak var favoritedLabel: UILabel!
     @IBOutlet weak var starImageView: UIImageView!
     
-    private var favedByMe: Bool = false {
+    var favedByMe: Bool = false {
         didSet {
             starImageView.image = UIImage(named: favedByMe ? "IC Star 24px" : "IC Star Border 24px")
         }
     }
     func setup(observation: Observation) {
         favoritedLabel.text = "Favored: " + String(observation.favesCount)
-        let currentUserId = Globals.currentUser.id
-        favedByMe = observation.faves.first(where: { $0.userId == currentUserId }) != nil
+        favedByMe = observation.favedByMe
     }
 }

@@ -92,6 +92,16 @@ class ObservationDetailsViewController: UITableViewController {
     
     @IBAction func faveStartTap(_ sender: UITapGestureRecognizer) {
         print("Add/remove fave")
+        let endpoint: NatAPI = observation.favedByMe ? .unfave(id: observation.id) : .fave(id: observation.id)
+        NatProvider.shared.request(endpoint)
+            .done { (observation: Observation) in
+                self.observation = observation
+                let indexPath = IndexPath(row: 3, section: 0)
+                self.tableView.reloadRows(at: [indexPath], with: .none)
+            }.catch { error in
+                print(error)
+        }
+        
     }
     
     /*
