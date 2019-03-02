@@ -19,9 +19,7 @@ class ObservationTaxaTableViewCell: UITableViewCell {
             self.isHidden = true
             return
         }
-        if let url = taxa.defaultPhoto?.squareUrl {
-            taxaPhotoImageView.kf.setImage(with: url)
-        }
+        taxaPhotoImageView.kf.setImage(with: taxa.defaultPhoto?.squareUrl)
         taxaNameLabel.text = taxa.name
         taxaSciNameLabel.text = taxa.preferredCommonName
     }

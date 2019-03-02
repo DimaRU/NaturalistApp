@@ -17,15 +17,12 @@ class ObservationProfilleTableViewCell: UITableViewCell {
     
     func setup(observation: Observation) {
         let user = observation.user
-        if let icon = user.icon {
-            avatarImageView.kf.setImage(with: icon)
-        } else {
-            avatarImageView.image = UIImage(named: "IC Account Circle 24px")
-        }
+            avatarImageView.kf.setImage(with: user.icon,
+                                        placeholder: UIImage(named: "IC Account Circle 24px")?.maskWith(color: .lightGray))
         userNameLabel.text = user.login
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .short
+        dateFormatter.timeStyle = .none
         observationDateLabel.text = dateFormatter.string(from: observation.createdAt)
     }
 }

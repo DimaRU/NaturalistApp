@@ -24,16 +24,12 @@ class ObservationDetailsViewController: UITableViewController {
             }.done { (pagedResult: PagedResults<Observation>) in
                 self.observation = pagedResult.results.content.first
                 self.tableView.reloadData()
-            }.ensure {
-                // end 
             }.catch { error in
                 print(error)
-//                self.navigationController?.dismiss(animated: true)
         }
     }
     
     // MARK: - Table view data source
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return observation != nil ? 4 : 0
     }
@@ -47,7 +43,9 @@ class ObservationDetailsViewController: UITableViewController {
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(of: ObservationPhotoTableViewCell.self, for: indexPath)
-            cell.setup(observation: observation)
+            cell.photoImageView.kf.setImage(with: observation.photos.first?.mediumUrl) { _ in
+                tableView.reloadRows(at: [indexPath], with: .none)
+            }
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(of: ObservationTaxaTableViewCell.self, for: indexPath)
@@ -64,6 +62,7 @@ class ObservationDetailsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Selected: ", indexPath.row)
         switch indexPath.row {
         case 0:
             return
@@ -77,7 +76,24 @@ class ObservationDetailsViewController: UITableViewController {
             fatalError()
         }
     }
-
+    
+    override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        switch indexPath.row {
+        case 0, 2:
+            return true
+        default:
+            return false
+        }
+    }
+    
+    @IBAction func favoriteListTap(_ sender: UITapGestureRecognizer) {
+        print("Show faved users tap")
+    }
+    
+    @IBAction func faveStartTap(_ sender: UITapGestureRecognizer) {
+        print("Add/remove fave")
+    }
+    
     /*
     // MARK: - Navigation
 

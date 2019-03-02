@@ -29,7 +29,6 @@ struct Photo: Codable {
 extension Photo {
     func replaceUrl(_ with: String) -> URL {
         let urlString = url.absoluteString.replacingOccurrences(of: "square", with: with)
-        print(urlString)
         return URL(string: urlString)!
     }
 
