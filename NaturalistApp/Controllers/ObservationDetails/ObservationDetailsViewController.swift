@@ -89,12 +89,12 @@ class ObservationDetailsViewController: UITableViewController, StoryboardInstant
         print("Selected: ", indexPath.row)
         switch CellTypes(indexPath: indexPath) {
         case .profile:
-            return
-        case .photo:
+            #warning ("Todo: show user profile")
             return
         case .taxa:
+            #warning ("Todo: show taxon details")
             return
-        case .fave:
+        case .photo, .fave:
             return
         }
     }
