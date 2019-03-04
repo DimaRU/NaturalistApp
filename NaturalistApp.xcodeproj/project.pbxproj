@@ -22,6 +22,7 @@
 		0A47A1DE22283B00005B4AEB /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A47A1DD22283B00005B4AEB /* UIViewControllerExtensions.swift */; };
 		0A5832332224118A0071DEE0 /* ObsAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5832322224118A0071DEE0 /* ObsAnnotation.swift */; };
 		0A5F60B62227FF4600EABDAF /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F60B52227FF4600EABDAF /* UITableViewExtensions.swift */; };
+		0A62579F222DB78800812C5D /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A62579E222DB78800812C5D /* UIViewExtensions.swift */; };
 		0A87BB4D2227419100150BE9 /* ObservationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB4C2227419100150BE9 /* ObservationDetailsViewController.swift */; };
 		0A87BB4F2227441300150BE9 /* ObservationProfilleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB4E2227441300150BE9 /* ObservationProfilleTableViewCell.swift */; };
 		0A87BB512227461800150BE9 /* ObservationPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB502227461800150BE9 /* ObservationPhotoTableViewCell.swift */; };
@@ -93,6 +94,7 @@
 		0A47A1DD22283B00005B4AEB /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		0A5832322224118A0071DEE0 /* ObsAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObsAnnotation.swift; sourceTree = "<group>"; };
 		0A5F60B52227FF4600EABDAF /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
+		0A62579E222DB78800812C5D /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		0A87BB4C2227419100150BE9 /* ObservationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationDetailsViewController.swift; sourceTree = "<group>"; };
 		0A87BB4E2227441300150BE9 /* ObservationProfilleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationProfilleTableViewCell.swift; sourceTree = "<group>"; };
 		0A87BB502227461800150BE9 /* ObservationPhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationPhotoTableViewCell.swift; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 				0A33CA36221F1F1B00BDD802 /* PromiseKitExtensions.swift */,
 				0A2174802225821A007E4EFC /* UIColorExtensions.swift */,
 				0A21747A22255487007E4EFC /* UIImageExtensions.swift */,
+				0A62579E222DB78800812C5D /* UIViewExtensions.swift */,
 				0AA8DB45222900C0003999B7 /* UIStoryboardExtensions.swift */,
 				0A5F60B52227FF4600EABDAF /* UITableViewExtensions.swift */,
 				0A47A1DD22283B00005B4AEB /* UIViewControllerExtensions.swift */,
@@ -524,6 +527,7 @@
 				0AD2C6E7222D2C86003ECFD6 /* BasicViewController.swift in Sources */,
 				0ABA9C6722102B210099F774 /* Taxon.swift in Sources */,
 				0A0B00A5221FD999008E17D9 /* Geojson.swift in Sources */,
+				0A62579F222DB78800812C5D /* UIViewExtensions.swift in Sources */,
 				0A5F60B62227FF4600EABDAF /* UITableViewExtensions.swift in Sources */,
 				0A5832332224118A0071DEE0 /* ObsAnnotation.swift in Sources */,
 				0ABA9C65221029EE0099F774 /* Photo.swift in Sources */,
