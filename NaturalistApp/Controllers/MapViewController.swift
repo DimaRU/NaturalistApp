@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import PromiseKit
 
-class MapViewController: UIViewController {
+class MapViewController: BasicViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     var observations: [ObservationId:Observation] = [:]

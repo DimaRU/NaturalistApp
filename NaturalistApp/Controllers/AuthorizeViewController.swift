@@ -9,7 +9,7 @@
 import UIKit
 import PromiseKit
 
-class AuthorizeViewController: UIViewController {
+class AuthorizeViewController: BasicViewController {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!

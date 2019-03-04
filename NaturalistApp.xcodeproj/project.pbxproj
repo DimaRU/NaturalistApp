@@ -54,6 +54,8 @@
 		0ABA9C7122109EA60099F774 /* DefaultCaseRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABA9C7022109EA60099F774 /* DefaultCaseRepresentable.swift */; };
 		0ABA9C742210A3EC0099F774 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABA9C732210A3C80099F774 /* KeychainService.swift */; };
 		0ABA9C762210A4790099F774 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABA9C752210A4790099F774 /* APIKeys.swift */; };
+		0AD2C6E5222D2C4A003ECFD6 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2C6E4222D2C4A003ECFD6 /* StoryboardInstantiable.swift */; };
+		0AD2C6E7222D2C86003ECFD6 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2C6E6222D2C86003ECFD6 /* BasicViewController.swift */; };
 		0ADC99AA22292FD400034F49 /* TaxonPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADC99A922292FD400034F49 /* TaxonPhoto.swift */; };
 		9F0E766902695A23BFDCB8DF /* Pods_NaturalistApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EFE921A4D01CA1E7FCDC7D1 /* Pods_NaturalistApp.framework */; };
 /* End PBXBuildFile section */
@@ -129,6 +131,8 @@
 		0ABA9C7022109EA60099F774 /* DefaultCaseRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCaseRepresentable.swift; sourceTree = "<group>"; };
 		0ABA9C732210A3C80099F774 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		0ABA9C752210A4790099F774 /* APIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		0AD2C6E4222D2C4A003ECFD6 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
+		0AD2C6E6222D2C86003ECFD6 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 		0ADC99A922292FD400034F49 /* TaxonPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxonPhoto.swift; sourceTree = "<group>"; };
 		4EFE921A4D01CA1E7FCDC7D1 /* Pods_NaturalistApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NaturalistApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C0C7C3EA1EB43D5D54BFE4 /* Pods-NaturalistApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaturalistApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NaturalistApp/Pods-NaturalistApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 				0A87BB4B2227415200150BE9 /* ObservationDetails */,
 				0A3F664A2219B750002452B0 /* AuthorizeViewController.swift */,
 				0A3139E3221AB315009D87F0 /* MapViewController.swift */,
+				0AD2C6E6222D2C86003ECFD6 /* BasicViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 				0AA8DB45222900C0003999B7 /* UIStoryboardExtensions.swift */,
 				0A5F60B52227FF4600EABDAF /* UITableViewExtensions.swift */,
 				0A47A1DD22283B00005B4AEB /* UIViewControllerExtensions.swift */,
+				0AD2C6E4222D2C4A003ECFD6 /* StoryboardInstantiable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -515,6 +521,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A21747F22257828007E4EFC /* IconicTaxonName+Color.swift in Sources */,
+				0AD2C6E7222D2C86003ECFD6 /* BasicViewController.swift in Sources */,
 				0ABA9C6722102B210099F774 /* Taxon.swift in Sources */,
 				0A0B00A5221FD999008E17D9 /* Geojson.swift in Sources */,
 				0A5F60B62227FF4600EABDAF /* UITableViewExtensions.swift in Sources */,
@@ -544,6 +551,7 @@
 				0ABA9C6E22105FAB0099F774 /* NatAPI.swift in Sources */,
 				0A93539922207E700067E197 /* CLLocationCoordinate2DExtensions.swift in Sources */,
 				0A87BB532227470B00150BE9 /* ObservationTaxaTableViewCell.swift in Sources */,
+				0AD2C6E5222D2C4A003ECFD6 /* StoryboardInstantiable.swift in Sources */,
 				0A47A1DC222838A3005B4AEB /* Globals.swift in Sources */,
 				0A47A1DE22283B00005B4AEB /* UIViewControllerExtensions.swift in Sources */,
 				0ABA9C6B2210498A0099F774 /* Fave.swift in Sources */,
