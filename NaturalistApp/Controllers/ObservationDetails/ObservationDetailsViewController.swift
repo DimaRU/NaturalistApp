@@ -9,7 +9,28 @@
 import UIKit
 import PromiseKit
 
-class ObservationDetailsViewController: UITableViewController {
+class ObservationDetailsViewController: UITableViewController, StoryboardInstantiable {
+    enum CellTypeList: Int, CaseIterable {
+        case profile = 0
+        case photo
+        case taxa
+        case fave
+    
+        init(indexPath: IndexPath) {
+            switch indexPath.row {
+            case 0: self = .profile
+            case 1: self = .photo
+            case 2: self = .taxa
+            case 3: self = .fave
+            default:
+                fatalError()
+            }
+        }
+        var indexPath: IndexPath {
+            return IndexPath(row: self.rawValue, section: 0)
+        }
+    }
+    
     var observation: Observation!
     
     override func viewDidLoad() {
@@ -31,57 +52,53 @@ class ObservationDetailsViewController: UITableViewController {
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return observation != nil ? 4 : 0
+        return observation != nil ? CellTypeList.allCases.count : 0
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.row {
-        case 0:
+        switch CellTypeList(indexPath: indexPath) {
+        case .profile:
             let cell = tableView.dequeueReusableCell(of: ObservationProfilleTableViewCell.self, for: indexPath)
             cell.setup(observation: observation)
             return cell
-        case 1:
+        case .photo:
             let cell = tableView.dequeueReusableCell(of: ObservationPhotoTableViewCell.self, for: indexPath)
             cell.photoImageView.kf.setImage(with: observation.photos.first?.mediumUrl) { _ in
                 tableView.reloadRows(at: [indexPath], with: .none)
             }
             return cell
-        case 2:
+        case .taxa:
             let cell = tableView.dequeueReusableCell(of: ObservationTaxaTableViewCell.self, for: indexPath)
             cell.setup(observation: observation)
             return cell
-        case 3:
+        case .fave:
             let cell = tableView.dequeueReusableCell(of: ObservationFaveTableViewCell.self, for: indexPath)
             cell.setup(observation: observation)
             return cell
-        default:
-            fatalError()
         }
         
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Selected: ", indexPath.row)
-        switch indexPath.row {
-        case 0:
+        switch CellTypeList(indexPath: indexPath) {
+        case .profile:
             return
-        case 1:
+        case .photo:
             return
-        case 2:
+        case .taxa:
             return
-        case 3:
+        case .fave:
             return
-        default:
-            fatalError()
         }
     }
     
     override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
-        switch indexPath.row {
-        case 0, 2:
+        switch CellTypeList(indexPath: indexPath) {
+        case .profile, .taxa:
             return true
-        default:
+        case .photo, .fave:
             return false
         }
     }
@@ -96,8 +113,7 @@ class ObservationDetailsViewController: UITableViewController {
         NatProvider.shared.request(endpoint)
             .done { (observation: Observation) in
                 self.observation = observation
-                let indexPath = IndexPath(row: 3, section: 0)
-                self.tableView.reloadRows(at: [indexPath], with: .none)
+                self.tableView.reloadRows(at: [CellTypeList.fave.indexPath], with: .none)
             }.catch { error in
                 print(error)
         }
