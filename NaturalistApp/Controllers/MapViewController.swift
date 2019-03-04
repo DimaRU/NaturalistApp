@@ -141,7 +141,7 @@ extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
         guard let annotation = view.annotation as? ObsAnnotation else { return }
         
-        let vc = storyboard!.instantiateViewController(of: ObservationDetailsViewController.self)
+        let vc = ObservationDetailsViewController.instantiateFromMainStoryboard()
         vc.observation = self.observations[annotation.id]
         navigationController?.pushViewController(vc, animated: true)
     }
