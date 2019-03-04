@@ -819,9 +819,6 @@
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
-                                            <connections>
-                                                <outletCollection property="gestureRecognizers" destination="oMn-Qc-WTH" appends="YES" id="Snq-np-KxW"/>
-                                            </connections>
                                         </label>
                                         <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IC Star Border 24px" translatesAutoresizingMaskIntoConstraints="NO" id="bNs-X3-mv2">
                                             <rect key="frame" x="280" y="8" width="24" height="24"/>
@@ -830,9 +827,6 @@
                                                 <constraint firstAttribute="height" constant="24" id="JW7-x6-V1N"/>
                                                 <constraint firstAttribute="width" constant="24" id="ob3-Vk-Sr0"/>
                                             </constraints>
-                                            <connections>
-                                                <outletCollection property="gestureRecognizers" destination="dEl-jB-Wlb" appends="YES" id="tCL-8p-TLu"/>
-                                            </connections>
                                         </imageView>
                                     </subviews>
                                     <constraints>
@@ -844,6 +838,7 @@
                                         <constraint firstItem="bNs-X3-mv2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dFq-vj-Rlz" secondAttribute="trailing" constant="16" id="wjb-fs-Qgi"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <gestureRecognizers/>
                                 <connections>
                                     <outlet property="favoritedLabel" destination="dFq-vj-Rlz" id="9QK-Kb-dtf"/>
                                     <outlet property="starImageView" destination="bNs-X3-mv2" id="kkn-em-vC3"/>
@@ -858,16 +853,6 @@
                     <navigationItem key="navigationItem" title="Details" id="qGc-OQ-Cpg"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fob-Ns-oor" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="oMn-Qc-WTH">
-                    <connections>
-                        <action selector="favoriteListTap:" destination="rhY-j0-KHl" id="hdq-Nb-Lsb"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="dEl-jB-Wlb">
-                    <connections>
-                        <action selector="faveStartTap:" destination="rhY-j0-KHl" id="lhZ-Mh-Bpk"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="423.75" y="1616.1971830985915"/>
         </scene>

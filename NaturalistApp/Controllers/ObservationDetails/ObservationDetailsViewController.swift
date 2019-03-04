@@ -9,8 +9,13 @@
 import UIKit
 import PromiseKit
 
+protocol ObservationDetailProtocol: AnyObject {
+    func faveChange()
+    func showFavedUsers()
+}
+
 class ObservationDetailsViewController: UITableViewController, StoryboardInstantiable {
-    enum CellTypeList: Int, CaseIterable {
+    enum CellTypes: Int, CaseIterable {
         case profile = 0
         case photo
         case taxa
@@ -52,12 +57,12 @@ class ObservationDetailsViewController: UITableViewController, StoryboardInstant
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return observation != nil ? CellTypeList.allCases.count : 0
+        return observation != nil ? CellTypes.allCases.count : 0
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch CellTypeList(indexPath: indexPath) {
+        switch CellTypes(indexPath: indexPath) {
         case .profile:
             let cell = tableView.dequeueReusableCell(of: ObservationProfilleTableViewCell.self, for: indexPath)
             cell.setup(observation: observation)
@@ -74,7 +79,7 @@ class ObservationDetailsViewController: UITableViewController, StoryboardInstant
             return cell
         case .fave:
             let cell = tableView.dequeueReusableCell(of: ObservationFaveTableViewCell.self, for: indexPath)
-            cell.setup(observation: observation)
+            cell.setup(observation: observation, delegate: self)
             return cell
         }
         
@@ -82,7 +87,7 @@ class ObservationDetailsViewController: UITableViewController, StoryboardInstant
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Selected: ", indexPath.row)
-        switch CellTypeList(indexPath: indexPath) {
+        switch CellTypes(indexPath: indexPath) {
         case .profile:
             return
         case .photo:
@@ -95,7 +100,7 @@ class ObservationDetailsViewController: UITableViewController, StoryboardInstant
     }
     
     override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
-        switch CellTypeList(indexPath: indexPath) {
+        switch CellTypes(indexPath: indexPath) {
         case .profile, .taxa:
             return true
         case .photo, .fave:
@@ -103,31 +108,21 @@ class ObservationDetailsViewController: UITableViewController, StoryboardInstant
         }
     }
     
-    @IBAction func favoriteListTap(_ sender: UITapGestureRecognizer) {
-        print("Show faved users tap")
-    }
-    
-    @IBAction func faveStartTap(_ sender: UITapGestureRecognizer) {
-        print("Add/remove fave")
+}
+
+
+extension ObservationDetailsViewController: ObservationDetailProtocol {
+    func faveChange() {
         let endpoint: NatAPI = observation.favedByMe ? .unfave(id: observation.id) : .fave(id: observation.id)
         NatProvider.shared.request(endpoint)
             .done { (observation: Observation) in
                 self.observation = observation
-                self.tableView.reloadRows(at: [CellTypeList.fave.indexPath], with: .none)
-            }.catch { error in
-                print(error)
-        }
-        
+                self.tableView.reloadRows(at: [CellTypes.fave.indexPath], with: .none)
+            }.ignoreErrors()
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func showFavedUsers() {
+        #warning ("Todo: Show faved users tap")
+        print("Show faved users tap")
     }
-    */
-
 }
