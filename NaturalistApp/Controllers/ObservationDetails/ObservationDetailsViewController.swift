@@ -22,14 +22,7 @@ class ObservationDetailsViewController: UITableViewController, StoryboardInstant
         case fave
     
         init(indexPath: IndexPath) {
-            switch indexPath.row {
-            case 0: self = .profile
-            case 1: self = .photo
-            case 2: self = .taxa
-            case 3: self = .fave
-            default:
-                fatalError()
-            }
+            self.init(rawValue: indexPath.row)!
         }
         var indexPath: IndexPath {
             return IndexPath(row: self.rawValue, section: 0)
