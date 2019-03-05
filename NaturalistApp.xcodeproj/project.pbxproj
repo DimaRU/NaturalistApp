@@ -58,6 +58,9 @@
 		0AD2C6E5222D2C4A003ECFD6 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2C6E4222D2C4A003ECFD6 /* StoryboardInstantiable.swift */; };
 		0AD2C6E7222D2C86003ECFD6 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2C6E6222D2C86003ECFD6 /* BasicViewController.swift */; };
 		0ADC99AA22292FD400034F49 /* TaxonPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADC99A922292FD400034F49 /* TaxonPhoto.swift */; };
+		0AF16996222E75CE00C1058B /* ProfileCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF16995222E75CE00C1058B /* ProfileCollectionViewController.swift */; };
+		0AF16998222E76BD00C1058B /* ProfileHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF16997222E76BD00C1058B /* ProfileHeaderCollectionReusableView.swift */; };
+		0AF1699A222E783200C1058B /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF16999222E783200C1058B /* ImageCollectionViewCell.swift */; };
 		9F0E766902695A23BFDCB8DF /* Pods_NaturalistApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EFE921A4D01CA1E7FCDC7D1 /* Pods_NaturalistApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +139,9 @@
 		0AD2C6E4222D2C4A003ECFD6 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
 		0AD2C6E6222D2C86003ECFD6 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 		0ADC99A922292FD400034F49 /* TaxonPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxonPhoto.swift; sourceTree = "<group>"; };
+		0AF16995222E75CE00C1058B /* ProfileCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewController.swift; sourceTree = "<group>"; };
+		0AF16997222E76BD00C1058B /* ProfileHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		0AF16999222E783200C1058B /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		4EFE921A4D01CA1E7FCDC7D1 /* Pods_NaturalistApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NaturalistApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C0C7C3EA1EB43D5D54BFE4 /* Pods-NaturalistApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaturalistApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NaturalistApp/Pods-NaturalistApp.debug.xcconfig"; sourceTree = "<group>"; };
 		9CCC4157664A04B95EE95B14 /* Pods-NaturalistApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaturalistApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-NaturalistApp/Pods-NaturalistApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,10 +176,12 @@
 		0A451A842211B4EC00684AC4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0AF16994222E75A500C1058B /* Profile */,
 				0A87BB4B2227415200150BE9 /* ObservationDetails */,
 				0A3F664A2219B750002452B0 /* AuthorizeViewController.swift */,
 				0A3139E3221AB315009D87F0 /* MapViewController.swift */,
 				0AD2C6E6222D2C86003ECFD6 /* BasicViewController.swift */,
+				0AF16999222E783200C1058B /* ImageCollectionViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -310,6 +318,15 @@
 				0A47A1DB222838A3005B4AEB /* Globals.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		0AF16994222E75A500C1058B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				0AF16995222E75CE00C1058B /* ProfileCollectionViewController.swift */,
+				0AF16997222E76BD00C1058B /* ProfileHeaderCollectionReusableView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		3905F3500FDDE72FCFB26D1D /* Pods */ = {
@@ -531,6 +548,7 @@
 				0A5F60B62227FF4600EABDAF /* UITableViewExtensions.swift in Sources */,
 				0A5832332224118A0071DEE0 /* ObsAnnotation.swift in Sources */,
 				0ABA9C65221029EE0099F774 /* Photo.swift in Sources */,
+				0AF16998222E76BD00C1058B /* ProfileHeaderCollectionReusableView.swift in Sources */,
 				0A3F664B2219B750002452B0 /* AuthorizeViewController.swift in Sources */,
 				0A2174812225821A007E4EFC /* UIColorExtensions.swift in Sources */,
 				0A9F8C88221961B200C299C8 /* NatProvider.swift in Sources */,
@@ -551,6 +569,7 @@
 				0A9F8C862219615C00C299C8 /* PagedResults.swift in Sources */,
 				0A87BB4D2227419100150BE9 /* ObservationDetailsViewController.swift in Sources */,
 				0ABA9C7122109EA60099F774 /* DefaultCaseRepresentable.swift in Sources */,
+				0AF16996222E75CE00C1058B /* ProfileCollectionViewController.swift in Sources */,
 				0AA9F17A2221CB43008A67D5 /* MKMapRectExtensions.swift in Sources */,
 				0ABA9C6E22105FAB0099F774 /* NatAPI.swift in Sources */,
 				0A93539922207E700067E197 /* CLLocationCoordinate2DExtensions.swift in Sources */,
@@ -566,6 +585,7 @@
 				0A87BB5522274A5F00150BE9 /* ObservationFaveTableViewCell.swift in Sources */,
 				0A87BB512227461800150BE9 /* ObservationPhotoTableViewCell.swift in Sources */,
 				0ABA9C5F22101D9E0099F774 /* User.swift in Sources */,
+				0AF1699A222E783200C1058B /* ImageCollectionViewCell.swift in Sources */,
 				0A21747B22255487007E4EFC /* UIImageExtensions.swift in Sources */,
 				0A9F8C8C22198F7800C299C8 /* AccessToken.swift in Sources */,
 				0A33CA37221F1F1B00BDD802 /* PromiseKitExtensions.swift in Sources */,

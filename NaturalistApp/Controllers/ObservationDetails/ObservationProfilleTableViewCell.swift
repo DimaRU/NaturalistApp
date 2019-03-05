@@ -17,8 +17,8 @@ class ObservationProfilleTableViewCell: UITableViewCell {
     
     func setup(observation: Observation) {
         let user = observation.user
-            avatarImageView.kf.setImage(with: user.icon,
-                                        placeholder: UIImage(named: "IC Account Circle 24px")?.maskWith(color: .lightGray))
+        avatarImageView.kf.setImage(with: user.icon,
+                                    placeholder: UIImage(named: "IC Account Circle 24px")?.maskWith(color: .lightGray))
         userNameLabel.text = user.login
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
