@@ -20,8 +20,9 @@ final class ObsAnnotation: NSObject, MKAnnotation {
     
 
     convenience init?(observation: Observation) {
-        let coordinate = CLLocationCoordinate2D(latitude: observation.location.lat,
-                                                longitude: observation.location.lng)
+        guard let location = observation.location else { return nil }
+        let coordinate = CLLocationCoordinate2D(latitude: location.lat,
+                                                longitude: location.lng)
         guard CLLocationCoordinate2DIsValid(coordinate) else {
             return nil
         }

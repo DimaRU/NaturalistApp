@@ -13,7 +13,7 @@ typealias ObservationId = Int
 struct Observation: ResultsContent {
     let id: ObservationId
     let user: User
-    let location: SLocation
+    let location: SLocation?
     let timeZoneOffset: String
     let observedOn: String?
     let observedOnString: String?
@@ -26,7 +26,7 @@ struct Observation: ResultsContent {
     let updatedAt: Date
     let identificationsSomeAgree: Bool
     let projectIdsWithoutCuratorId: [Int]
-    let placeGuess: String
+    let placeGuess: String?
     let observationPhotos: [ObservationPhoto]
     let photos: [Photo]
     let communityTaxon: Taxon?
@@ -57,7 +57,7 @@ struct Observation: ResultsContent {
     let comments: [Comment]
     let uri: URL?
     let communityTaxonId: Int?
-    let geojson: Geojson
+    let geojson: Geojson?
     let ownersIdentificationFromVision: Bool?
     let identificationsCount: Int
     let obscured: Bool

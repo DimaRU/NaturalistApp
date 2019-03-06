@@ -12,8 +12,10 @@ typealias TaxonId = Int
 struct Taxon: ResultsContent {
 
     enum Rank: String, Codable {
-        case phylum
+        case stateofmatter
         case kingdom
+        case subkingdom
+        case phylum
         case subphylum
         case superclass
         case `class`
@@ -23,6 +25,10 @@ struct Taxon: ResultsContent {
         case order
         case suborder
         case infraorder
+        case subterclass
+        case parvorder
+        case zoosection
+        case zoosubsection
         case superfamily
         case epifamily
         case family
@@ -31,7 +37,6 @@ struct Taxon: ResultsContent {
         case tribe
         case subtribe
         case genus
-        case genushybrid
         case subgenus
         case section
         case subsection
@@ -39,10 +44,10 @@ struct Taxon: ResultsContent {
         case species
         case hybrid
         case subspecies
-        case varietycase
-        case form
-        case stateofmatter
         case variety
+        case form
+        case infrahybrid
+        case leaves
     }
 
     let id: TaxonId
@@ -50,7 +55,7 @@ struct Taxon: ResultsContent {
     let preferredCommonName: String?
     let defaultPhoto: Photo?
     let taxonPhotos: [TaxonPhoto]?
-    let wikipediaUrl: URL?
+    private let wikipediaUrl: String?
     let rank: Rank
     let taxonSchemesCount: Int
     let ancestry: String?
@@ -75,4 +80,11 @@ struct Taxon: ResultsContent {
     let threatened: Bool?
     let introduced: Bool?
     let native: Bool?
+}
+
+extension Taxon {
+    var wikipediaURL: URL? {
+        guard let s = wikipediaUrl?.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed) else { return nil }
+        return URL(string: s)
+    }
 }
