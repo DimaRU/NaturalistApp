@@ -20,6 +20,7 @@ class ProfileCollectionViewController: UICollectionViewController, StoryboardIns
     var totalResults = 0
     var perPage = 20
     let elementsPerRow = 3
+    var downloadingPages: Set<Int> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +40,7 @@ class ProfileCollectionViewController: UICollectionViewController, StoryboardIns
     }
     
     private func fetchObservationsPage(page: Int) {
+        downloadingPages.insert(page)
         let target = NatAPI.searchObservations(page: page, userId: user?.id, havePhoto: true, poular: nil)
         NatProvider.shared.request(target)
             .done { (pagedResult: PagedResults<Observation>) in
@@ -51,9 +53,13 @@ class ProfileCollectionViewController: UICollectionViewController, StoryboardIns
                     let startRow = pagedResult.page * self.perPage
                     let endRow = startRow + pagedResult.perPage
                     let paths = (startRow..<endRow).map { IndexPath(row: $0, section: 0)}
-                    self.collectionView.reloadItems(at: paths)
+                    let visilePaths = self.collectionView.visibleIndexPaths(intersecting: paths)
+                    self.collectionView.reloadItems(at: visilePaths)
                 }
-            }.ignoreErrors()
+            }.ensure {
+                self.downloadingPages.remove(page)
+            }
+            .ignoreErrors()
     }
 
     
@@ -73,11 +79,14 @@ class ProfileCollectionViewController: UICollectionViewController, StoryboardIns
         let page = (indexPath.row / perPage) + 1
         let index = indexPath.row % perPage
         print("Request:", indexPath.row, page, index)
-        let observation = observations[page]?[index]
-        cell.imageView.kf.setImage(with: observation?.photos.first?.squareUrl)
+        if observations.keys.contains(page) {
+            let observation = observations[page]?[index]
+            cell.imageView.kf.setImage(with: observation?.photos.first?.squareUrl)
+        } else if !downloadingPages.contains(page) {
+            fetchObservationsPage(page: page)
+        }
         return cell
     }
-    
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind,

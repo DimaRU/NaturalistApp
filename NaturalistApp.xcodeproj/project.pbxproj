@@ -58,6 +58,8 @@
 		0AD2C6E5222D2C4A003ECFD6 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2C6E4222D2C4A003ECFD6 /* StoryboardInstantiable.swift */; };
 		0AD2C6E7222D2C86003ECFD6 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2C6E6222D2C86003ECFD6 /* BasicViewController.swift */; };
 		0ADC99AA22292FD400034F49 /* TaxonPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADC99A922292FD400034F49 /* TaxonPhoto.swift */; };
+		0ADF8A48222FCC3A0047AC25 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF8A47222FCC3A0047AC25 /* StringExtensions.swift */; };
+		0ADF8A4A222FD6F80047AC25 /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF8A49222FD6F80047AC25 /* UICollectionViewExtensions.swift */; };
 		0AF16996222E75CE00C1058B /* ProfileCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF16995222E75CE00C1058B /* ProfileCollectionViewController.swift */; };
 		0AF16998222E76BD00C1058B /* ProfileHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF16997222E76BD00C1058B /* ProfileHeaderCollectionReusableView.swift */; };
 		0AF1699A222E783200C1058B /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF16999222E783200C1058B /* ImageCollectionViewCell.swift */; };
@@ -139,6 +141,8 @@
 		0AD2C6E4222D2C4A003ECFD6 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
 		0AD2C6E6222D2C86003ECFD6 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 		0ADC99A922292FD400034F49 /* TaxonPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxonPhoto.swift; sourceTree = "<group>"; };
+		0ADF8A47222FCC3A0047AC25 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		0ADF8A49222FD6F80047AC25 /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
 		0AF16995222E75CE00C1058B /* ProfileCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewController.swift; sourceTree = "<group>"; };
 		0AF16997222E76BD00C1058B /* ProfileHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		0AF16999222E783200C1058B /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -305,6 +309,8 @@
 				0A5F60B52227FF4600EABDAF /* UITableViewExtensions.swift */,
 				0A47A1DD22283B00005B4AEB /* UIViewControllerExtensions.swift */,
 				0AD2C6E4222D2C4A003ECFD6 /* StoryboardInstantiable.swift */,
+				0ADF8A47222FCC3A0047AC25 /* StringExtensions.swift */,
+				0ADF8A49222FD6F80047AC25 /* UICollectionViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -553,6 +559,7 @@
 				0A2174812225821A007E4EFC /* UIColorExtensions.swift in Sources */,
 				0A9F8C88221961B200C299C8 /* NatProvider.swift in Sources */,
 				0ABA9C762210A4790099F774 /* APIKeys.swift in Sources */,
+				0ADF8A4A222FD6F80047AC25 /* UICollectionViewExtensions.swift in Sources */,
 				0A9F8C842219516200C299C8 /* Content.swift in Sources */,
 				0ABA9C61221024A10099F774 /* Observation.swift in Sources */,
 				0ABA9C6922103BDD0099F774 /* Comment.swift in Sources */,
@@ -562,6 +569,7 @@
 				0ADC99AA22292FD400034F49 /* TaxonPhoto.swift in Sources */,
 				0A3139E4221AB315009D87F0 /* MapViewController.swift in Sources */,
 				0A21747D222577CF007E4EFC /* IconicTaxonName.swift in Sources */,
+				0ADF8A48222FCC3A0047AC25 /* StringExtensions.swift in Sources */,
 				0AA8DB46222900C0003999B7 /* UIStoryboardExtensions.swift in Sources */,
 				0A9F8C8E2219905500C299C8 /* JWTToken.swift in Sources */,
 				0A451A812211B35400684AC4 /* FreeMethods.swift in Sources */,
