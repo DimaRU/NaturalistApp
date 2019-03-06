@@ -65,7 +65,8 @@ class MapViewController: BasicViewController {
 
     private func fetchObservationsPage(page: Int, mapRect: MKMapRect) {
         let (swCoord, neCoord) = mapRect.iNatRegion()
-        let target = NatAPI.getObservationsBox(page: page,
+        let target = NatAPI.getObservationsBox(perPage: 20,
+                                               page: page,
                                                nelat: neCoord.latitude,
                                                nelng: neCoord.longitude,
                                                swlat: swCoord.latitude,

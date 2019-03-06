@@ -33,19 +33,17 @@ class ObservationDetailsViewController: UITableViewController, StoryboardInstant
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadObservation()
+//        reLoadObservation()
     }
 
-    func loadObservation() {
+    func reLoadObservation() {
         firstly {
             // start
             NatProvider.shared.request(.observation(id: observation.id))
             }.done { (pagedResult: PagedResults<Observation>) in
                 self.observation = pagedResult.results.content.first
                 self.tableView.reloadData()
-            }.catch { error in
-                print(error)
-        }
+            }.ignoreErrors()
     }
     
     // MARK: - Table view data source

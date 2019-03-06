@@ -70,7 +70,7 @@ struct Taxon: ResultsContent {
     let ancestorIds: [Int]
     let observationsCount: Int
     let isActive: Bool
-    let rankLevel: Int
+//    let rankLevel: Int
     let atlasId: Int?
     let parentId: Int?
     let iconicTaxonName: IconicTaxonName?

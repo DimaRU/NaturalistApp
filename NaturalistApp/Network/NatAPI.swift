@@ -14,9 +14,9 @@ typealias MoyaResult = Result<Moya.Response, Moya.MoyaError>
 enum NatAPI: TargetType {
     case authorize(login: String, password: String)
     case apiToken(bearer: String)
-    case searchObservations(page: Int, userId: UserId?, havePhoto: Bool?, poular: Bool?)
-    case getObservationsBox(page: Int, nelat: Double, nelng: Double, swlat: Double, swlng: Double)
-    case searchTaxon(page: Int, name: String?)
+    case searchObservations(perPage: Int, page: Int, userId: UserId?, havePhoto: Bool?, poular: Bool?)
+    case getObservationsBox(perPage: Int, page: Int, nelat: Double, nelng: Double, swlat: Double, swlng: Double)
+    case searchTaxon(perPage: Int, page: Int, name: String?)
     case currentUser
     case users(ids: [UserId])
     case taxon(id: TaxonId)
@@ -98,15 +98,15 @@ enum NatAPI: TargetType {
             return .requestParameters(parameters: parameters, encoding: JSONEncoding.default)
         case .apiToken:
             return .requestPlain
-        case .searchObservations(let page, let userId, let havePhoto, let poular):
-            parameters["per_page"] = 20
+        case .searchObservations(let perPage, let page, let userId, let havePhoto, let poular):
+            parameters["per_page"] = perPage
             parameters["page"] = page
             parameters["user_id"] = userId
             parameters["photos"] = havePhoto
             parameters["popular"] = poular
             return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
-        case .getObservationsBox(let page, let nelat, let nelng, let swlat, let swlng):
-            parameters["per_page"] = 20
+        case .getObservationsBox(let perPage, let page, let nelat, let nelng, let swlat, let swlng):
+            parameters["per_page"] = perPage
             parameters["page"] = page
             parameters["mappable"] = true
             parameters["verifiable"] = true
@@ -115,8 +115,8 @@ enum NatAPI: TargetType {
             parameters["swlat"] = swlat
             parameters["swlng"] = swlng
             return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
-        case .searchTaxon(let page, let name):
-            parameters["per_page"] = 20
+        case .searchTaxon(let perPage, let page, let name):
+            parameters["per_page"] = perPage
             parameters["page"] = page
             parameters["q"] = name
             return .requestParameters(parameters: parameters, encoding: URLEncoding.default)

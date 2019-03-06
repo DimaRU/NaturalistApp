@@ -18,14 +18,13 @@ class ProfileCollectionViewController: UICollectionViewController, StoryboardIns
     var user: User?
     private var observations: [Int:[Observation]] = [:]
     var totalResults = 0
-    var perPage = 20
-    let elementsPerRow = 3
     var downloadingPages: Set<Int> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if user?.id != Globals.currentUserId {
+        collectionView.prefetchDataSource = self
+        navigationItem.title = user?.login
+            if user?.id != Globals.currentUserId {
             navigationItem.rightBarButtonItem = nil
         }
     }
@@ -38,10 +37,10 @@ class ProfileCollectionViewController: UICollectionViewController, StoryboardIns
     override func viewWillAppear(_ animated: Bool) {
         self.fetchObservationsPage(page: 1)
     }
-    
+
     private func fetchObservationsPage(page: Int) {
         downloadingPages.insert(page)
-        let target = NatAPI.searchObservations(page: page, userId: user?.id, havePhoto: true, poular: nil)
+        let target = NatAPI.searchObservations(perPage: Params.perPage, page: page, userId: user?.id, havePhoto: true, poular: nil)
         NatProvider.shared.request(target)
             .done { (pagedResult: PagedResults<Observation>) in
                 print(pagedResult.page, pagedResult.perPage, pagedResult.totalResults)
@@ -50,7 +49,7 @@ class ProfileCollectionViewController: UICollectionViewController, StoryboardIns
                 if pagedResult.page == 1 {
                     self.collectionView.reloadData()
                 } else {
-                    let startRow = pagedResult.page * self.perPage
+                    let startRow = (pagedResult.page - 1) * Params.perPage
                     let endRow = startRow + pagedResult.perPage
                     let paths = (startRow..<endRow).map { IndexPath(row: $0, section: 0)}
                     let visilePaths = self.collectionView.visibleIndexPaths(intersecting: paths)
@@ -60,6 +59,13 @@ class ProfileCollectionViewController: UICollectionViewController, StoryboardIns
                 self.downloadingPages.remove(page)
             }
             .ignoreErrors()
+    }
+    
+    private func checkFetchPage(for indexPath: IndexPath) {
+        let page = (indexPath.row / Params.perPage) + 1
+        if !observations.keys.contains(page) && !downloadingPages.contains(page) {
+            fetchObservationsPage(page: page)
+        }
     }
 
     
@@ -76,15 +82,10 @@ class ProfileCollectionViewController: UICollectionViewController, StoryboardIns
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: ImageCollectionViewCell.self),
                                                       for: indexPath) as! ImageCollectionViewCell
         
-        let page = (indexPath.row / perPage) + 1
-        let index = indexPath.row % perPage
-        print("Request:", indexPath.row, page, index)
-        if observations.keys.contains(page) {
-            let observation = observations[page]?[index]
-            cell.imageView.kf.setImage(with: observation?.photos.first?.squareUrl)
-        } else if !downloadingPages.contains(page) {
-            fetchObservationsPage(page: page)
-        }
+        let page = (indexPath.row / Params.perPage) + 1
+        let index = indexPath.row % Params.perPage
+        let observation = observations[page]?[index]
+        cell.imageView.kf.setImage(with: observation?.photos.first?.squareUrl)
         return cell
     }
     
@@ -102,10 +103,16 @@ class ProfileCollectionViewController: UICollectionViewController, StoryboardIns
     }
 }
 
+extension ProfileCollectionViewController: UICollectionViewDataSourcePrefetching {
+    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
+        indexPaths.forEach{ checkFetchPage(for: $0) }
+    }
+}
+
 extension ProfileCollectionViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let itemWidth = UIScreen.main.bounds.width / CGFloat(elementsPerRow)
+        let itemWidth = UIScreen.main.bounds.width / CGFloat(Params.elementsPerRow)
         return CGSize(width: itemWidth, height: itemWidth)
     }
     
@@ -113,4 +120,11 @@ extension ProfileCollectionViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: UIScreen.main.bounds.width, height: 86)
     }
     
+}
+
+extension ProfileCollectionViewController {
+    private struct Params {
+        static let perPage = 30
+        static let elementsPerRow = 3
+    }
 }
