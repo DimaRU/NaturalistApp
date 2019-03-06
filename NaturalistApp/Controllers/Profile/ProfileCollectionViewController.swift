@@ -68,6 +68,12 @@ class ProfileCollectionViewController: UICollectionViewController, StoryboardIns
         }
     }
 
+    private func getObservation(for indexPath: IndexPath) -> Observation? {
+        let page = (indexPath.row / Params.perPage) + 1
+        let index = indexPath.row % Params.perPage
+        return observations[page]?[index]
+    }
+    
     
     // MARK: UICollectionViewDataSource
     
@@ -82,9 +88,7 @@ class ProfileCollectionViewController: UICollectionViewController, StoryboardIns
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: ImageCollectionViewCell.self),
                                                       for: indexPath) as! ImageCollectionViewCell
         
-        let page = (indexPath.row / Params.perPage) + 1
-        let index = indexPath.row % Params.perPage
-        let observation = observations[page]?[index]
+        let observation = getObservation(for: indexPath)
         cell.imageView.kf.setImage(with: observation?.photos.first?.squareUrl)
         return cell
     }
@@ -100,6 +104,14 @@ class ProfileCollectionViewController: UICollectionViewController, StoryboardIns
             view.isHidden = true
         }
         return view
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let observation = getObservation(for: indexPath) else { return }
+
+        let vc = ObservationDetailsViewController.instantiateFromMainStoryboard()
+        vc.observation = observation
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
