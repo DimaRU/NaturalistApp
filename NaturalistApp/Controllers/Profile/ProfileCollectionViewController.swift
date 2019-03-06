@@ -15,16 +15,16 @@ protocol ProfileDelegateProtocol: AnyObject {
 
 class ProfileCollectionViewController: UICollectionViewController, StoryboardInstantiable, ProfileDelegateProtocol {
 
-    var userId: UserId!
-    var userProfile: User?
+    var user: User?
     private var observations: [Int:[Observation]] = [:]
     var totalResults = 0
     var perPage = 20
+    let elementsPerRow = 3
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if userId != Globals.currentUserId {
+        if user?.id != Globals.currentUserId {
             navigationItem.rightBarButtonItem = nil
         }
     }
@@ -38,24 +38,22 @@ class ProfileCollectionViewController: UICollectionViewController, StoryboardIns
         self.fetchObservationsPage(page: 1)
     }
     
-    
-    
     private func fetchObservationsPage(page: Int) {
-        let target = NatAPI.searchObservations(page: page, userId: userId, havePhoto: true, poular: nil)
+        let target = NatAPI.searchObservations(page: page, userId: user?.id, havePhoto: true, poular: nil)
         NatProvider.shared.request(target)
             .done { (pagedResult: PagedResults<Observation>) in
                 print(pagedResult.page, pagedResult.perPage, pagedResult.totalResults)
-                
-                let observations = pagedResult.results.content
-                let fetchedCount = (pagedResult.page - 1) * pagedResult.perPage + observations.count
+                self.totalResults = pagedResult.totalResults
+                self.observations[pagedResult.page] = pagedResult.results.content
                 if pagedResult.page == 1 {
                     self.collectionView.reloadData()
                 } else {
+                    let startRow = pagedResult.page * self.perPage
+                    let endRow = startRow + pagedResult.perPage
+                    let paths = (startRow..<endRow).map { IndexPath(row: $0, section: 0)}
+                    self.collectionView.reloadItems(at: paths)
                 }
-                guard fetchedCount < pagedResult.totalResults else { return }
-                self.fetchObservationsPage(page: pagedResult.page + 1)
             }.ignoreErrors()
-        
     }
 
     
@@ -72,7 +70,10 @@ class ProfileCollectionViewController: UICollectionViewController, StoryboardIns
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: ImageCollectionViewCell.self),
                                                       for: indexPath) as! ImageCollectionViewCell
         
-        let observation = observations[1]?[indexPath.row]
+        let page = (indexPath.row / perPage) + 1
+        let index = indexPath.row % perPage
+        print("Request:", indexPath.row, page, index)
+        let observation = observations[page]?[index]
         cell.imageView.kf.setImage(with: observation?.photos.first?.squareUrl)
         return cell
     }
@@ -82,7 +83,7 @@ class ProfileCollectionViewController: UICollectionViewController, StoryboardIns
         let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
                                                                    withReuseIdentifier: String(describing: ProfileHeaderCollectionReusableView.self),
                                                                    for: indexPath) as! ProfileHeaderCollectionReusableView
-        if let user = userProfile {
+        if let user = user {
             view.isHidden = false
             view.configureData(user: user, delegate: self)
         } else {
@@ -95,7 +96,7 @@ class ProfileCollectionViewController: UICollectionViewController, StoryboardIns
 extension ProfileCollectionViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let itemWidth = UIScreen.main.bounds.width / 3
+        let itemWidth = UIScreen.main.bounds.width / CGFloat(elementsPerRow)
         return CGSize(width: itemWidth, height: itemWidth)
     }
     

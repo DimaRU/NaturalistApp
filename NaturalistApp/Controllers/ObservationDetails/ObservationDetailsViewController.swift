@@ -82,7 +82,9 @@ class ObservationDetailsViewController: UITableViewController, StoryboardInstant
         print("Selected: ", indexPath.row)
         switch CellTypes(indexPath: indexPath) {
         case .profile:
-            #warning ("Todo: show user profile")
+            let vc = ProfileCollectionViewController.instantiateFromMainStoryboard()
+            vc.user = observation.user
+            navigationController?.pushViewController(vc, animated: true)
             return
         case .taxa:
             #warning ("Todo: show taxon details")

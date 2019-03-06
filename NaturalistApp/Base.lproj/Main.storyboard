@@ -195,6 +195,11 @@
                                         <constraint firstAttribute="width" constant="70" id="vCk-aa-4Tw"/>
                                         <constraint firstAttribute="height" constant="70" id="vwg-G4-SU6"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="35"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </imageView>
                                 <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Following: 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBk-SQ-FTI">
                                     <rect key="frame" x="222" y="61" width="82" height="17"/>
