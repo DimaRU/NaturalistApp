@@ -20,7 +20,7 @@
 		0A451A882211B5B000684AC4 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A451A872211B5B000684AC4 /* Animations.swift */; };
 		0A47A1DC222838A3005B4AEB /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A47A1DB222838A3005B4AEB /* Globals.swift */; };
 		0A47A1DE22283B00005B4AEB /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A47A1DD22283B00005B4AEB /* UIViewControllerExtensions.swift */; };
-		0A5832332224118A0071DEE0 /* ObsAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5832322224118A0071DEE0 /* ObsAnnotation.swift */; };
+		0A5832332224118A0071DEE0 /* ObservationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5832322224118A0071DEE0 /* ObservationAnnotation.swift */; };
 		0A5F60B62227FF4600EABDAF /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F60B52227FF4600EABDAF /* UITableViewExtensions.swift */; };
 		0A62579F222DB78800812C5D /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A62579E222DB78800812C5D /* UIViewExtensions.swift */; };
 		0A87BB4D2227419100150BE9 /* ObservationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB4C2227419100150BE9 /* ObservationDetailsViewController.swift */; };
@@ -97,7 +97,7 @@
 		0A451A872211B5B000684AC4 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		0A47A1DB222838A3005B4AEB /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		0A47A1DD22283B00005B4AEB /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
-		0A5832322224118A0071DEE0 /* ObsAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObsAnnotation.swift; sourceTree = "<group>"; };
+		0A5832322224118A0071DEE0 /* ObservationAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationAnnotation.swift; sourceTree = "<group>"; };
 		0A5F60B52227FF4600EABDAF /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		0A62579E222DB78800812C5D /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		0A87BB4C2227419100150BE9 /* ObservationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationDetailsViewController.swift; sourceTree = "<group>"; };
@@ -279,7 +279,7 @@
 				0A21747C222577CF007E4EFC /* IconicTaxonName.swift */,
 				0A21747E22257828007E4EFC /* IconicTaxonName+Color.swift */,
 				0ABA9C5E22101D9E0099F774 /* User.swift */,
-				0A5832322224118A0071DEE0 /* ObsAnnotation.swift */,
+				0A5832322224118A0071DEE0 /* ObservationAnnotation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -552,7 +552,7 @@
 				0A0B00A5221FD999008E17D9 /* Geojson.swift in Sources */,
 				0A62579F222DB78800812C5D /* UIViewExtensions.swift in Sources */,
 				0A5F60B62227FF4600EABDAF /* UITableViewExtensions.swift in Sources */,
-				0A5832332224118A0071DEE0 /* ObsAnnotation.swift in Sources */,
+				0A5832332224118A0071DEE0 /* ObservationAnnotation.swift in Sources */,
 				0ABA9C65221029EE0099F774 /* Photo.swift in Sources */,
 				0AF16998222E76BD00C1058B /* ProfileHeaderCollectionReusableView.swift in Sources */,
 				0A3F664B2219B750002452B0 /* AuthorizeViewController.swift in Sources */,

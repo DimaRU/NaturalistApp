@@ -11,26 +11,19 @@ import MapKit
 import PromiseKit
 
 class MapViewController: BasicViewController {
-    
+    let reuseIdentifier: String = "ObservationAnnotationMarkerReuseId"
+
     @IBOutlet weak var mapView: MKMapView!
     var observations: [ObservationId:Observation] = [:]
     var delayMapChangeTimer: Timer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        mapView.setUserTrackingMode(.follow, animated: true)
+        mapView.register(MKAnnotationView.self, forAnnotationViewWithReuseIdentifier: reuseIdentifier)
+        
+        setCurrentLocation()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        CLLocationManager.requestAuthorization(type: .whenInUse)
-            .then { _ in
-                CLLocationManager.requestLocation()
-            }.done { location in
-                print(location)
-            }.ignoreErrors()
-   }
 
     @IBAction func tapButtonPlus(_ sender: UIButton) {
         let zoomLevel = mapView.zoomLevel + 1
@@ -43,13 +36,7 @@ class MapViewController: BasicViewController {
     }
     
     @IBAction func tapButtonCenter(_ sender: UIButton) {
-        CLLocationManager.requestAuthorization(type: .whenInUse)
-            .then { _ in
-                CLLocationManager.requestLocation()
-            }.done { location in
-                self.mapView.setCenter(location.last!.coordinate, animated: true)
-            }.ignoreErrors()
-        
+        setCurrentLocation()
     }
     
     @IBAction func mapTypeChange(_ sender: UISegmentedControl) {
@@ -61,6 +48,15 @@ class MapViewController: BasicViewController {
         default:
             return
         }
+    }
+    
+    private func setCurrentLocation() {
+        CLLocationManager.requestAuthorization(type: .whenInUse)
+            .then { _ in
+                CLLocationManager.requestLocation()
+            }.done { location in
+                self.mapView.setCenterCoordinate(centerCoordinate: location.last!.coordinate, zoomLevel: 14, animated: true)
+            }.ignoreErrors()
     }
 
     private func fetchObservationsPage(page: Int, mapRect: MKMapRect) {
@@ -88,19 +84,18 @@ class MapViewController: BasicViewController {
     func addAnnotations(for observations: [Observation])  {
         guard !observations.isEmpty else { return }
         let annotationsToRemove = mapView.annotations.filter{
-            ($0 is ObsAnnotation) && !mapView.visibleMapRect.contains(coordinate: $0.coordinate) }
+            ($0 is ObservationAnnotation) && !mapView.visibleMapRect.contains(coordinate: $0.coordinate) }
         mapView.removeAnnotations(annotationsToRemove)
         
-        let annotations = observations.compactMap { (observation) -> ObsAnnotation? in
+        let annotations = observations.compactMap { (observation) -> ObservationAnnotation? in
             if self.observations.updateValue(observation, forKey: observation.id) == nil {
-                return ObsAnnotation(observation: observation)
+                return ObservationAnnotation(observation: observation)
             } else {
                 return nil
             }
         }
         mapView.addAnnotations(annotations)
-        let usedIds = Set<ObservationId>(mapView.annotations.compactMap { ($0 as? ObsAnnotation)?.id })
-        print(usedIds)
+        let usedIds = Set<ObservationId>(mapView.annotations.compactMap { ($0 as? ObservationAnnotation)?.id })
         self.observations.keys.forEach{
             if !usedIds.contains($0) {
                 self.observations.removeValue(forKey: $0)
@@ -111,21 +106,16 @@ class MapViewController: BasicViewController {
 
 extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        if annotation is MKUserLocation { return nil }
-        guard let annotation = annotation as? ObsAnnotation else {
-            return nil
-        }
+        guard let annotation = annotation as? ObservationAnnotation else { return nil }
         
-        let reuseIdentifier: String = "ObservationAnnotationMarkerReuseId"
-        
-        let view = mapView.dequeueReusableAnnotationView(withIdentifier: reuseIdentifier) ??
-            MKAnnotationView(annotation: annotation, reuseIdentifier: reuseIdentifier)
+        let view = mapView.dequeueReusableAnnotationView(withIdentifier: reuseIdentifier, for: annotation)
         
         let observation = observations[annotation.id]
         let iconicTaxonName = observation?.taxon?.iconicTaxonName ?? IconicTaxonName.unknown
-        view.image = UIImage(named: "Location")?.maskWith(color: iconicTaxonName.color)
+        let image = UIImage(named: "Location")!.maskWith(color: iconicTaxonName.color)
+        view.image = image
+        view.centerOffset = CGPoint(x: 0, y: image.size.height)
         view.canShowCallout = false
-
         return view
     }
     
@@ -139,9 +129,10 @@ extension MapViewController: MKMapViewDelegate {
         }
     }
     
-    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
-        guard let annotation = view.annotation as? ObsAnnotation else { return }
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        guard let annotation = view.annotation as? ObservationAnnotation else { return }
         
+        mapView.deselectAnnotation(view.annotation, animated: false)
         let vc = ObservationDetailsViewController.instantiateFromMainStoryboard()
         vc.observation = self.observations[annotation.id]
         navigationController?.pushViewController(vc, animated: true)

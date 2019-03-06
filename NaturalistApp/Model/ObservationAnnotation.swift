@@ -8,7 +8,7 @@
 
 import MapKit
 
-final class ObsAnnotation: NSObject, MKAnnotation {
+final class ObservationAnnotation: NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D
     let id: ObservationId
 
@@ -23,9 +23,7 @@ final class ObsAnnotation: NSObject, MKAnnotation {
         guard let location = observation.location else { return nil }
         let coordinate = CLLocationCoordinate2D(latitude: location.lat,
                                                 longitude: location.lng)
-        guard CLLocationCoordinate2DIsValid(coordinate) else {
-            return nil
-        }
+        guard CLLocationCoordinate2DIsValid(coordinate) else { return nil }
         self.init(id: observation.id, coordinate: coordinate)
     }
 }
