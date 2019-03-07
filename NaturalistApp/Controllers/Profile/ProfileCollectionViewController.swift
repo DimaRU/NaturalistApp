@@ -44,9 +44,9 @@ class ProfileCollectionViewController: UICollectionViewController, StoryboardIns
         NatProvider.shared.request(target)
             .done { (pagedResult: PagedResults<Observation>) in
                 print(pagedResult.page, pagedResult.perPage, pagedResult.totalResults)
-                self.totalResults = pagedResult.totalResults
                 self.observations[pagedResult.page] = pagedResult.results.content
-                if pagedResult.page == 1 {
+                if self.totalResults != pagedResult.totalResults {
+                    self.totalResults = pagedResult.totalResults
                     self.collectionView.reloadData()
                 } else {
                     let startRow = (pagedResult.page - 1) * Params.perPage
@@ -54,6 +54,12 @@ class ProfileCollectionViewController: UICollectionViewController, StoryboardIns
                     let paths = (startRow..<endRow).map { IndexPath(row: $0, section: 0)}
                     let visilePaths = self.collectionView.visibleIndexPaths(intersecting: paths)
                     self.collectionView.reloadItems(at: visilePaths)
+                }
+                // Cleanup
+                let min = self.downloadingPages.min()! - 2
+                let max = self.downloadingPages.max()! + 2
+                for key in self.observations.keys where key < min || key > max {
+                    self.observations.removeValue(forKey: key)
                 }
             }.ensure {
                 self.downloadingPages.remove(page)
