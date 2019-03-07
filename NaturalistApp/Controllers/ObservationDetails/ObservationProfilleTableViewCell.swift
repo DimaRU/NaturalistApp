@@ -13,6 +13,7 @@ class ObservationProfilleTableViewCell: UITableViewCell {
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var observationDateLabel: UILabel!
+    @IBOutlet weak var observationsCountLabel: UILabel!
     
     
     func setup(observation: Observation) {
@@ -24,5 +25,7 @@ class ObservationProfilleTableViewCell: UITableViewCell {
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
         observationDateLabel.text = dateFormatter.string(from: observation.createdAt)
+        observationsCountLabel.text = NSLocalizedString("Observations: ", comment: "") +
+            String(user.observationsCount)
     }
 }
