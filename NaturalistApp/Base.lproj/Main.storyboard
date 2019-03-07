@@ -152,7 +152,7 @@
             </objects>
             <point key="canvasLocation" x="651" y="-332"/>
         </scene>
-        <!--UserName-->
+        <!--Login-->
         <scene sceneID="h8T-Pk-giY">
             <objects>
                 <collectionViewController storyboardIdentifier="ProfileCollectionViewController" id="VJT-jc-fa5" customClass="ProfileCollectionViewController" customModule="NaturalistApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -201,13 +201,8 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </imageView>
-                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Following: 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBk-SQ-FTI">
-                                    <rect key="frame" x="222" y="61" width="82" height="17"/>
-                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Followers: 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNg-il-ntZ">
-                                    <rect key="frame" x="86" y="61" width="82" height="17"/>
+                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Observations: 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNg-il-ntZ">
+                                    <rect key="frame" x="86" y="61" width="123" height="17"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -216,43 +211,19 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1E-LL-Slt">
-                                    <rect key="frame" x="232" y="8" width="72" height="30"/>
-                                    <color key="backgroundColor" name="FollowButtonBg"/>
-                                    <inset key="contentEdgeInsets" minX="6" minY="6" maxX="6" maxY="6"/>
-                                    <state key="normal" title="Unfollow">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                            <integer key="value" value="5"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <action selector="followingButtonTap:" destination="ewM-kE-IlG" eventType="touchUpInside" id="6nd-4p-e8f"/>
-                                    </connections>
-                                </button>
                             </subviews>
                             <constraints>
                                 <constraint firstItem="xI7-8B-aJD" firstAttribute="leading" secondItem="Dz0-eg-1RT" secondAttribute="trailing" constant="8" id="1rk-j5-Caz"/>
-                                <constraint firstItem="A1E-LL-Slt" firstAttribute="top" secondItem="ewM-kE-IlG" secondAttribute="top" constant="8" id="5gz-0Q-s1e"/>
-                                <constraint firstItem="EBk-SQ-FTI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zNg-il-ntZ" secondAttribute="trailing" constant="4" id="7Kn-UO-H2b"/>
                                 <constraint firstItem="Dz0-eg-1RT" firstAttribute="top" secondItem="ewM-kE-IlG" secondAttribute="top" constant="8" id="8Bv-8Y-Zo0"/>
                                 <constraint firstAttribute="bottom" secondItem="zNg-il-ntZ" secondAttribute="bottom" constant="8" id="AGy-Hr-LfQ"/>
                                 <constraint firstItem="xI7-8B-aJD" firstAttribute="top" secondItem="ewM-kE-IlG" secondAttribute="topMargin" constant="8" id="K4T-Jm-cVb"/>
                                 <constraint firstAttribute="bottom" secondItem="Dz0-eg-1RT" secondAttribute="bottom" constant="8" id="K7j-NJ-kD8"/>
-                                <constraint firstAttribute="trailing" secondItem="EBk-SQ-FTI" secondAttribute="trailing" constant="16" id="OQF-B9-Eq8"/>
                                 <constraint firstItem="Dz0-eg-1RT" firstAttribute="leading" secondItem="ewM-kE-IlG" secondAttribute="leading" constant="8" id="Peo-Tb-XNj"/>
                                 <constraint firstItem="zNg-il-ntZ" firstAttribute="leading" secondItem="Dz0-eg-1RT" secondAttribute="trailing" constant="8" id="acQ-xy-56p"/>
-                                <constraint firstItem="A1E-LL-Slt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xI7-8B-aJD" secondAttribute="trailing" constant="8" id="cfi-UP-66T"/>
-                                <constraint firstAttribute="trailing" secondItem="A1E-LL-Slt" secondAttribute="trailing" constant="16" id="s1T-dV-He9"/>
-                                <constraint firstAttribute="bottom" secondItem="EBk-SQ-FTI" secondAttribute="bottom" constant="8" id="xg2-gL-ZvZ"/>
                             </constraints>
                             <connections>
                                 <outlet property="avatarImageView" destination="Dz0-eg-1RT" id="PMY-So-cT9"/>
-                                <outlet property="followersLabel" destination="zNg-il-ntZ" id="uvE-qW-Pyr"/>
-                                <outlet property="followingButton" destination="A1E-LL-Slt" id="KAz-0F-JRu"/>
-                                <outlet property="followingLabel" destination="EBk-SQ-FTI" id="nm3-dC-tkO"/>
+                                <outlet property="observationsCountLabel" destination="zNg-il-ntZ" id="Rox-Xv-uyI"/>
                                 <outlet property="userNameLabel" destination="xI7-8B-aJD" id="lMr-IS-2kS"/>
                             </connections>
                         </collectionReusableView>
@@ -261,7 +232,7 @@
                             <outlet property="delegate" destination="VJT-jc-fa5" id="ktX-13-ybY"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="UserName" id="Djx-AH-L0m">
+                    <navigationItem key="navigationItem" title="Login" id="Djx-AH-L0m">
                         <barButtonItem key="rightBarButtonItem" title="Log out" id="yly-uY-eLc">
                             <connections>
                                 <action selector="tapLogOutButton:" destination="VJT-jc-fa5" id="e27-by-fG8"/>
@@ -938,9 +909,6 @@
         <image name="navigation" width="384" height="384"/>
         <image name="plus" width="20" height="20"/>
         <image name="profile" width="40" height="40"/>
-        <namedColor name="FollowButtonBg">
-            <color red="0.0" green="0.58799999952316284" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="LoginButtonUnactiveBg">
             <color red="0.0" green="0.4779999852180481" blue="1" alpha="0.30000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
