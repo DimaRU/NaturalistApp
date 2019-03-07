@@ -348,10 +348,10 @@
             </objects>
             <point key="canvasLocation" x="-1243" y="18"/>
         </scene>
-        <!--Managed Tab Bar Controller-->
+        <!--Nat Tab Bar Controller-->
         <scene sceneID="XSC-l7-MlM">
             <objects>
-                <tabBarController id="dNA-dv-uTw" customClass="ManagedTabBarController" customModule="NaturalistApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="dNA-dv-uTw" customClass="NatTabBarController" customModule="NaturalistApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YaI-rY-yd9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -715,11 +715,18 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Observation Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHG-63-UYM">
-                                            <rect key="frame" x="58" y="26.5" width="113" height="17"/>
+                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18 Feb 2000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHG-63-UYM">
+                                            <rect key="frame" x="58" y="26.5" width="81.5" height="17"/>
                                             <gestureRecognizers/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Observations: 250" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3f-We-euO">
+                                            <rect key="frame" x="185" y="26.5" width="119" height="17"/>
+                                            <gestureRecognizers/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -730,14 +737,17 @@
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mxK-XY-q4U" secondAttribute="trailing" constant="16" id="Z19-lK-nId"/>
                                         <constraint firstItem="Pni-rh-uyB" firstAttribute="top" secondItem="mxK-XY-q4U" secondAttribute="top" id="Zue-hp-gWR"/>
                                         <constraint firstItem="mxK-XY-q4U" firstAttribute="leading" secondItem="Pni-rh-uyB" secondAttribute="trailing" constant="8" id="gjg-Py-qFx"/>
-                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QHG-63-UYM" secondAttribute="trailing" constant="16" id="jZN-PA-Haz"/>
                                         <constraint firstItem="Pni-rh-uyB" firstAttribute="top" secondItem="nKt-Dz-8yN" secondAttribute="top" constant="8" id="jl5-MM-VJH"/>
+                                        <constraint firstItem="QHG-63-UYM" firstAttribute="centerY" secondItem="F3f-We-euO" secondAttribute="centerY" id="kYK-HJ-QXj"/>
+                                        <constraint firstItem="F3f-We-euO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QHG-63-UYM" secondAttribute="trailing" constant="8" id="kny-1t-7Ok"/>
+                                        <constraint firstAttribute="trailing" secondItem="F3f-We-euO" secondAttribute="trailing" constant="16" id="pGp-ry-I7p"/>
                                         <constraint firstAttribute="bottom" secondItem="Pni-rh-uyB" secondAttribute="bottom" constant="8" id="zys-gN-3Sj"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="avatarImageView" destination="Pni-rh-uyB" id="8Bz-7U-7mA"/>
                                     <outlet property="observationDateLabel" destination="QHG-63-UYM" id="D48-G5-YCP"/>
+                                    <outlet property="observationsCountLabel" destination="F3f-We-euO" id="qt8-SZ-ACr"/>
                                     <outlet property="userNameLabel" destination="mxK-XY-q4U" id="yXp-jN-bQl"/>
                                 </connections>
                             </tableViewCell>

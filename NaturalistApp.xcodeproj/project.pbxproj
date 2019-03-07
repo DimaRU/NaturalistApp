@@ -42,6 +42,7 @@
 		0A9F8C8C22198F7800C299C8 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9F8C8B22198F7800C299C8 /* AccessToken.swift */; };
 		0A9F8C8E2219905500C299C8 /* JWTToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9F8C8D2219905500C299C8 /* JWTToken.swift */; };
 		0AA5CDAF222044CD000A80BE /* SLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5CDAE222044CD000A80BE /* SLocation.swift */; };
+		0AA74C4B223137E700B824E8 /* NatTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA74C4A223137E700B824E8 /* NatTabBarController.swift */; };
 		0AA8DB46222900C0003999B7 /* UIStoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8DB45222900C0003999B7 /* UIStoryboardExtensions.swift */; };
 		0AA9F17A2221CB43008A67D5 /* MKMapRectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA9F1792221CB43008A67D5 /* MKMapRectExtensions.swift */; };
 		0ABA9C5F22101D9E0099F774 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABA9C5E22101D9E0099F774 /* User.swift */; };
@@ -125,6 +126,7 @@
 		0A9F8C8B22198F7800C299C8 /* AccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
 		0A9F8C8D2219905500C299C8 /* JWTToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTToken.swift; sourceTree = "<group>"; };
 		0AA5CDAE222044CD000A80BE /* SLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLocation.swift; sourceTree = "<group>"; };
+		0AA74C4A223137E700B824E8 /* NatTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatTabBarController.swift; sourceTree = "<group>"; };
 		0AA8DB45222900C0003999B7 /* UIStoryboardExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtensions.swift; sourceTree = "<group>"; };
 		0AA9F1792221CB43008A67D5 /* MKMapRectExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapRectExtensions.swift; sourceTree = "<group>"; };
 		0ABA9C5E22101D9E0099F774 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				0A3139E3221AB315009D87F0 /* MapViewController.swift */,
 				0AD2C6E6222D2C86003ECFD6 /* BasicViewController.swift */,
 				0AF16999222E783200C1058B /* ImageCollectionViewCell.swift */,
+				0AA74C4A223137E700B824E8 /* NatTabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -587,6 +590,7 @@
 				0A47A1DE22283B00005B4AEB /* UIViewControllerExtensions.swift in Sources */,
 				0ABA9C6B2210498A0099F774 /* Fave.swift in Sources */,
 				0A977B67220E0B8B005D1DC2 /* AppDelegate.swift in Sources */,
+				0AA74C4B223137E700B824E8 /* NatTabBarController.swift in Sources */,
 				0AA5CDAF222044CD000A80BE /* SLocation.swift in Sources */,
 				0A9F8C8A221969E600C299C8 /* NatNetworkError.swift in Sources */,
 				0A451A882211B5B000684AC4 /* Animations.swift in Sources */,
