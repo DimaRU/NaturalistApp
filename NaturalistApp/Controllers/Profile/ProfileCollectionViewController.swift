@@ -44,9 +44,9 @@ class ProfileCollectionViewController: UICollectionViewController, StoryboardIns
         NatProvider.shared.request(target)
             .done { (pagedResult: PagedResults<Observation>) in
                 print(pagedResult.page, pagedResult.perPage, pagedResult.totalResults)
-                self.totalResults = pagedResult.totalResults
                 self.observations[pagedResult.page] = pagedResult.results.content
-                if pagedResult.page == 1 {
+                if self.totalResults != pagedResult.totalResults {
+                    self.totalResults = pagedResult.totalResults
                     self.collectionView.reloadData()
                 } else {
                     let startRow = (pagedResult.page - 1) * Params.perPage
@@ -54,6 +54,12 @@ class ProfileCollectionViewController: UICollectionViewController, StoryboardIns
                     let paths = (startRow..<endRow).map { IndexPath(row: $0, section: 0)}
                     let visilePaths = self.collectionView.visibleIndexPaths(intersecting: paths)
                     self.collectionView.reloadItems(at: visilePaths)
+                }
+                // Cleanup
+                let min = self.downloadingPages.min()! - 2
+                let max = self.downloadingPages.max()! + 2
+                for key in self.observations.keys where key < min || key > max {
+                    self.observations.removeValue(forKey: key)
                 }
             }.ensure {
                 self.downloadingPages.remove(page)
@@ -68,6 +74,12 @@ class ProfileCollectionViewController: UICollectionViewController, StoryboardIns
         }
     }
 
+    private func getObservation(for indexPath: IndexPath) -> Observation? {
+        let page = (indexPath.row / Params.perPage) + 1
+        let index = indexPath.row % Params.perPage
+        return observations[page]?[index]
+    }
+    
     
     // MARK: UICollectionViewDataSource
     
@@ -82,9 +94,7 @@ class ProfileCollectionViewController: UICollectionViewController, StoryboardIns
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: ImageCollectionViewCell.self),
                                                       for: indexPath) as! ImageCollectionViewCell
         
-        let page = (indexPath.row / Params.perPage) + 1
-        let index = indexPath.row % Params.perPage
-        let observation = observations[page]?[index]
+        let observation = getObservation(for: indexPath)
         cell.imageView.kf.setImage(with: observation?.photos.first?.squareUrl)
         return cell
     }
@@ -100,6 +110,14 @@ class ProfileCollectionViewController: UICollectionViewController, StoryboardIns
             view.isHidden = true
         }
         return view
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let observation = getObservation(for: indexPath) else { return }
+
+        let vc = ObservationDetailsViewController.instantiateFromMainStoryboard()
+        vc.observation = observation
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
