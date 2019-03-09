@@ -12,7 +12,7 @@ protocol StoryboardInstantiable: AnyObject {
     static func instantiateFromMainStoryboard() -> Self
 }
 
-extension StoryboardInstantiable {
+extension StoryboardInstantiable where Self: UIViewController {
     static func instantiateFromMainStoryboard() -> Self {
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         let name = String(describing: self)
