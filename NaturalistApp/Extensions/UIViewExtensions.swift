@@ -36,5 +36,13 @@ extension UIView {
             self.layer.borderColor = newValue?.cgColor
         }
     }
-
 }
+
+@nonobjc extension UIView {
+    func contentSetup(_ view: UIView) {
+        view.frame = bounds
+        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        addSubview(view)
+    }
+}
+

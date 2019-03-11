@@ -28,6 +28,9 @@
 		0A87BB512227461800150BE9 /* ObservationPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB502227461800150BE9 /* ObservationPhotoTableViewCell.swift */; };
 		0A87BB532227470B00150BE9 /* ObservationTaxaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB522227470B00150BE9 /* ObservationTaxaTableViewCell.swift */; };
 		0A87BB5522274A5F00150BE9 /* ObservationFaveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB5422274A5F00150BE9 /* ObservationFaveTableViewCell.swift */; };
+		0A89205A22364D2D00900224 /* NibInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A89205922364D2D00900224 /* NibInstantiable.swift */; };
+		0A89205D22364D6E00900224 /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A89205C22364D6E00900224 /* StackViewController.swift */; };
+		0A89205F22364E2100900224 /* NSLayoutConstraintExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A89205E22364E2100900224 /* NSLayoutConstraintExtensions.swift */; };
 		0A93539922207E700067E197 /* CLLocationCoordinate2DExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A93539822207E700067E197 /* CLLocationCoordinate2DExtensions.swift */; };
 		0A977B67220E0B8B005D1DC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A977B66220E0B8B005D1DC2 /* AppDelegate.swift */; };
 		0A977B6C220E0B8B005D1DC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A977B6A220E0B8B005D1DC2 /* Main.storyboard */; };
@@ -106,6 +109,9 @@
 		0A87BB502227461800150BE9 /* ObservationPhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationPhotoTableViewCell.swift; sourceTree = "<group>"; };
 		0A87BB522227470B00150BE9 /* ObservationTaxaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationTaxaTableViewCell.swift; sourceTree = "<group>"; };
 		0A87BB5422274A5F00150BE9 /* ObservationFaveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationFaveTableViewCell.swift; sourceTree = "<group>"; };
+		0A89205922364D2D00900224 /* NibInstantiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibInstantiable.swift; sourceTree = "<group>"; };
+		0A89205C22364D6E00900224 /* StackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
+		0A89205E22364E2100900224 /* NSLayoutConstraintExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintExtensions.swift; sourceTree = "<group>"; };
 		0A93539822207E700067E197 /* CLLocationCoordinate2DExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2DExtensions.swift; sourceTree = "<group>"; };
 		0A977B63220E0B8B005D1DC2 /* NaturalistApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NaturalistApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A977B66220E0B8B005D1DC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -182,11 +188,11 @@
 		0A451A842211B4EC00684AC4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0A89205B22364D4F00900224 /* Common */,
 				0AF16994222E75A500C1058B /* Profile */,
 				0A87BB4B2227415200150BE9 /* ObservationDetails */,
 				0A3F664A2219B750002452B0 /* AuthorizeViewController.swift */,
 				0A3139E3221AB315009D87F0 /* MapViewController.swift */,
-				0AD2C6E6222D2C86003ECFD6 /* BasicViewController.swift */,
 				0AF16999222E783200C1058B /* ImageCollectionViewCell.swift */,
 				0AA74C4A223137E700B824E8 /* NatTabBarController.swift */,
 			);
@@ -203,6 +209,25 @@
 				0A87BB5422274A5F00150BE9 /* ObservationFaveTableViewCell.swift */,
 			);
 			path = ObservationDetails;
+			sourceTree = "<group>";
+		};
+		0A89205822364CED00900224 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0ABA9C7022109EA60099F774 /* DefaultCaseRepresentable.swift */,
+				0AD2C6E4222D2C4A003ECFD6 /* StoryboardInstantiable.swift */,
+				0A89205922364D2D00900224 /* NibInstantiable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		0A89205B22364D4F00900224 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0AD2C6E6222D2C86003ECFD6 /* BasicViewController.swift */,
+				0A89205C22364D6E00900224 /* StackViewController.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		0A977B5A220E0B8B005D1DC2 = {
@@ -230,6 +255,7 @@
 		0A977B65220E0B8B005D1DC2 /* NaturalistApp */ = {
 			isa = PBXGroup;
 			children = (
+				0A89205822364CED00900224 /* Protocols */,
 				0A451A842211B4EC00684AC4 /* Controllers */,
 				0ABA9C6F22109E920099F774 /* Extensions */,
 				0ABA9C6C22105F8F0099F774 /* Network */,
@@ -301,7 +327,6 @@
 			isa = PBXGroup;
 			children = (
 				0A93539822207E700067E197 /* CLLocationCoordinate2DExtensions.swift */,
-				0ABA9C7022109EA60099F774 /* DefaultCaseRepresentable.swift */,
 				0AA9F1792221CB43008A67D5 /* MKMapRectExtensions.swift */,
 				0A3139E5221ABCE9009D87F0 /* MKMapViewExtension.swift */,
 				0A33CA36221F1F1B00BDD802 /* PromiseKitExtensions.swift */,
@@ -311,9 +336,9 @@
 				0AA8DB45222900C0003999B7 /* UIStoryboardExtensions.swift */,
 				0A5F60B52227FF4600EABDAF /* UITableViewExtensions.swift */,
 				0A47A1DD22283B00005B4AEB /* UIViewControllerExtensions.swift */,
-				0AD2C6E4222D2C4A003ECFD6 /* StoryboardInstantiable.swift */,
 				0ADF8A47222FCC3A0047AC25 /* StringExtensions.swift */,
 				0ADF8A49222FD6F80047AC25 /* UICollectionViewExtensions.swift */,
+				0A89205E22364E2100900224 /* NSLayoutConstraintExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -586,6 +611,7 @@
 				0A93539922207E700067E197 /* CLLocationCoordinate2DExtensions.swift in Sources */,
 				0A87BB532227470B00150BE9 /* ObservationTaxaTableViewCell.swift in Sources */,
 				0AD2C6E5222D2C4A003ECFD6 /* StoryboardInstantiable.swift in Sources */,
+				0A89205F22364E2100900224 /* NSLayoutConstraintExtensions.swift in Sources */,
 				0A47A1DC222838A3005B4AEB /* Globals.swift in Sources */,
 				0A47A1DE22283B00005B4AEB /* UIViewControllerExtensions.swift in Sources */,
 				0ABA9C6B2210498A0099F774 /* Fave.swift in Sources */,
@@ -600,6 +626,8 @@
 				0AF1699A222E783200C1058B /* ImageCollectionViewCell.swift in Sources */,
 				0A21747B22255487007E4EFC /* UIImageExtensions.swift in Sources */,
 				0A9F8C8C22198F7800C299C8 /* AccessToken.swift in Sources */,
+				0A89205D22364D6E00900224 /* StackViewController.swift in Sources */,
+				0A89205A22364D2D00900224 /* NibInstantiable.swift in Sources */,
 				0A33CA37221F1F1B00BDD802 /* PromiseKitExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
