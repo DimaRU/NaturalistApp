@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ObservationProfilleView" customModule="NaturalistApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="365" height="51"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cbr-7p-Cgy">
+                    <rect key="frame" x="16" y="8" width="35" height="35"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="c50-Mq-oqd"/>
+                        <constraint firstAttribute="height" constant="35" id="taA-S7-Lvx"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="17.5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18 Feb 2000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdA-gu-lE8">
+                    <rect key="frame" x="59" y="26" width="81.5" height="17"/>
+                    <gestureRecognizers/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ReW-Iq-Vp8">
+                    <rect key="frame" x="59" y="8" width="71" height="17"/>
+                    <gestureRecognizers/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Observations: 250" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHB-Ie-zud">
+                    <rect key="frame" x="230" y="26" width="119" height="17"/>
+                    <gestureRecognizers/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Cbr-7p-Cgy" firstAttribute="top" secondItem="ReW-Iq-Vp8" secondAttribute="top" id="09V-Fe-du3"/>
+                <constraint firstItem="ZHB-Ie-zud" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FdA-gu-lE8" secondAttribute="trailing" constant="8" id="1Cr-5c-ogU"/>
+                <constraint firstItem="Cbr-7p-Cgy" firstAttribute="bottom" secondItem="FdA-gu-lE8" secondAttribute="bottom" id="OJY-Mp-YU5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Cbr-7p-Cgy" secondAttribute="bottom" constant="8" id="QqW-G5-Ori"/>
+                <constraint firstItem="Cbr-7p-Cgy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="WFW-wP-F5j"/>
+                <constraint firstItem="FdA-gu-lE8" firstAttribute="centerY" secondItem="ZHB-Ie-zud" secondAttribute="centerY" id="XTB-c8-wd0"/>
+                <constraint firstItem="Cbr-7p-Cgy" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="ZYt-1f-GMW"/>
+                <constraint firstItem="ReW-Iq-Vp8" firstAttribute="leading" secondItem="Cbr-7p-Cgy" secondAttribute="trailing" constant="8" id="hZU-an-4QC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ZHB-Ie-zud" secondAttribute="trailing" constant="16" id="oSA-0a-r1Q"/>
+                <constraint firstItem="FdA-gu-lE8" firstAttribute="leading" secondItem="Cbr-7p-Cgy" secondAttribute="trailing" constant="8" id="t5Z-qQ-kkM"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="avatarImageView" destination="Cbr-7p-Cgy" id="QyE-Gr-mdh"/>
+                <outlet property="observationDateLabel" destination="FdA-gu-lE8" id="srd-89-DQM"/>
+                <outlet property="observationsCountLabel" destination="ZHB-Ie-zud" id="xmE-vF-ca4"/>
+                <outlet property="userNameLabel" destination="ReW-Iq-Vp8" id="faz-8w-rdq"/>
+            </connections>
+            <point key="canvasLocation" x="302" y="-167"/>
+        </view>
+    </objects>
+</document>

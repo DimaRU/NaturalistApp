@@ -1,5 +1,5 @@
 //
-//  ObservationFaveTableViewCell.swift
+//  ObservationFaveView.swift
 //  NaturalistApp
 //
 //  Created by Dmitriy Borovikov on 28/02/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ObservationFaveTableViewCell: UITableViewCell {
+class ObservationFaveView: UIView, NibInstantiable {
     @IBOutlet weak var favoritedLabel: UILabel!
     @IBOutlet weak var starImageView: UIImageView!
     weak var delegate: ObservationDetailProtocol?
@@ -36,8 +36,8 @@ class ObservationFaveTableViewCell: UITableViewCell {
         }
     }
     func setup(observation: Observation, delegate: ObservationDetailProtocol) {
+        self.delegate = delegate
         favoritedLabel.text = "Favored: " + String(observation.favesCount)
         favedByMe = observation.favedByMe
-        self.delegate = delegate
     }
 }

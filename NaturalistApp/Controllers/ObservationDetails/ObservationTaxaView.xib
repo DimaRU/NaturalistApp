@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ObservationTaxaView" customModule="NaturalistApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="378" height="66"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y5F-JY-yy2">
+                    <rect key="frame" x="8" y="8" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="hRu-5l-8DK"/>
+                        <constraint firstAttribute="width" constant="50" id="ubf-wb-b3T"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRW-BG-RDU">
+                    <rect key="frame" x="66" y="41" width="35" height="17"/>
+                    <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEO-t1-bbS">
+                    <rect key="frame" x="66" y="8" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Y5F-JY-yy2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="9PQ-CQ-Le4"/>
+                <constraint firstItem="iEO-t1-bbS" firstAttribute="leading" secondItem="Y5F-JY-yy2" secondAttribute="trailing" constant="8" id="9pZ-Ub-0Rf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZRW-BG-RDU" secondAttribute="trailing" constant="8" id="CFh-Ee-oZF"/>
+                <constraint firstItem="Y5F-JY-yy2" firstAttribute="top" secondItem="iEO-t1-bbS" secondAttribute="top" id="WRP-u4-b6a"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iEO-t1-bbS" secondAttribute="trailing" constant="8" id="XH8-MG-7ym"/>
+                <constraint firstItem="ZRW-BG-RDU" firstAttribute="leading" secondItem="Y5F-JY-yy2" secondAttribute="trailing" constant="8" id="hKe-sU-FAd"/>
+                <constraint firstItem="Y5F-JY-yy2" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="qSW-hf-4yb"/>
+                <constraint firstItem="Y5F-JY-yy2" firstAttribute="bottom" secondItem="ZRW-BG-RDU" secondAttribute="bottom" id="sp0-8U-wek"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Y5F-JY-yy2" secondAttribute="bottom" constant="8" id="uhZ-bd-1LX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="taxaNameLabel" destination="iEO-t1-bbS" id="yJz-jg-b8L"/>
+                <outlet property="taxaPhotoImageView" destination="Y5F-JY-yy2" id="QLF-09-dIu"/>
+                <outlet property="taxaSciNameLabel" destination="ZRW-BG-RDU" id="SbM-j4-0TO"/>
+            </connections>
+            <point key="canvasLocation" x="-292.80000000000001" y="-44.07796101949026"/>
+        </view>
+    </objects>
+</document>

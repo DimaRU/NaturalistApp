@@ -115,7 +115,7 @@ class ProfileCollectionViewController: UICollectionViewController, StoryboardIns
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let observation = getObservation(for: indexPath) else { return }
 
-        let vc = ObservationDetailsViewController.instantiateFromMainStoryboard()
+        let vc = ObservationDetailsViewController()
         vc.observation = observation
         navigationController?.pushViewController(vc, animated: true)
     }

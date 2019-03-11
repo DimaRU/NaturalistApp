@@ -1,5 +1,5 @@
 //
-//  ObservationProfilleTableViewCell.swift
+//  ObservationProfilleView.swift
 //  NaturalistApp
 //
 //  Created by Dmitriy Borovikov on 28/02/2019.
@@ -9,14 +9,25 @@
 import UIKit
 import Kingfisher
 
-class ObservationProfilleTableViewCell: UITableViewCell {
+class ObservationProfilleView: UIView, NibInstantiable {
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var observationDateLabel: UILabel!
     @IBOutlet weak var observationsCountLabel: UILabel!
+    weak var delegate: ObservationDetailProtocol?
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(viewTap))
+        self.addGestureRecognizer(recognizer)
+    }
     
+    @objc func viewTap() {
+        delegate?.showUserProfile()
+    }
     
-    func setup(observation: Observation) {
+    func setup(observation: Observation, delegate: ObservationDetailProtocol) {
+        self.delegate = delegate
         let user = observation.user
         avatarImageView.kf.setImage(with: user.icon,
                                     placeholder: UIImage(named: "IC Account Circle 24px")?.maskWith(color: .lightGray))
