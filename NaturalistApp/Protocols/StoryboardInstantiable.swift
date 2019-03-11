@@ -10,6 +10,7 @@ import UIKit
 
 protocol StoryboardInstantiable: AnyObject {
     static func instantiateFromMainStoryboard() -> Self
+    static func instantiateFromStoryboard() -> Self
 }
 
 extension StoryboardInstantiable where Self: UIViewController {
@@ -17,5 +18,11 @@ extension StoryboardInstantiable where Self: UIViewController {
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         let name = String(describing: self)
         return storyboard.instantiateViewController(withIdentifier: name) as! Self
+    }
+    
+    static func instantiateFromStoryboard() -> Self {
+        let name = String(describing: self)
+        let storyboard = UIStoryboard.init(name: name, bundle: nil)
+        return storyboard.instantiateInitialViewController() as! Self
     }
 }

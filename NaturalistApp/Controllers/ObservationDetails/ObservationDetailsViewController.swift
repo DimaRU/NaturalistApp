@@ -18,7 +18,6 @@ protocol ObservationDetailProtocol: AnyObject {
 
 class ObservationDetailsViewController: StackViewController {
     private let profilleView = ObservationProfilleView.instantiate()
-    private let photoView = ObservationPhotoView.instantiate()
     private let taxaView = ObservationTaxaView.instantiate()
     private let faveView = ObservationFaveView.instantiate()
     
@@ -34,12 +33,12 @@ class ObservationDetailsViewController: StackViewController {
 
     func setupUI() {
         profilleView.setup(observation: observation, delegate: self)
-        photoView.setup(observation: observation)
         taxaView.setup(observation: observation, delegate: self)
         faveView.setup(observation: observation, delegate: self)
-
+        let photoViewController = PhotoViewController.instantiateFromStoryboard()
+        photoViewController.photos = observation.photos
         add(profilleView)
-        add(photoView)
+        add(photoViewController)
         add(taxaView)
         add(faveView)
     }
