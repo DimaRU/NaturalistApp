@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhotoViewController: UIViewController, StoryboardInstantiable {
+class PhotoViewController: UIViewController {
     var photos: [Photo] = []
     
     @IBOutlet weak var photoStackView: UIStackView!

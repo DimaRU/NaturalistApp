@@ -35,7 +35,7 @@ class ObservationDetailsViewController: StackViewController {
         profilleView.setup(observation: observation, delegate: self)
         taxaView.setup(observation: observation, delegate: self)
         faveView.setup(observation: observation, delegate: self)
-        let photoViewController = PhotoViewController.instantiateFromStoryboard()
+        let photoViewController = PhotoViewController()
         photoViewController.photos = observation.photos
         add(profilleView)
         add(photoViewController)

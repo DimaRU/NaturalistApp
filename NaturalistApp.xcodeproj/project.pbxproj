@@ -17,10 +17,10 @@
 		0A25DFA72236879000DEB46E /* ObservationTaxaView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A25DFA62236879000DEB46E /* ObservationTaxaView.xib */; };
 		0A25DFA92236902F00DEB46E /* ObservationFaveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A25DFA82236902F00DEB46E /* ObservationFaveView.xib */; };
 		0A25DFAF2236BE3D00DEB46E /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A25DFAE2236BE3D00DEB46E /* PhotoViewController.swift */; };
-		0A25DFB42236BFCA00DEB46E /* PhotoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A25DFB32236BFCA00DEB46E /* PhotoViewController.storyboard */; };
 		0A3139E4221AB315009D87F0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3139E3221AB315009D87F0 /* MapViewController.swift */; };
 		0A3139E6221ABCE9009D87F0 /* MKMapViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3139E5221ABCE9009D87F0 /* MKMapViewExtension.swift */; };
 		0A33CA37221F1F1B00BDD802 /* PromiseKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A33CA36221F1F1B00BDD802 /* PromiseKitExtensions.swift */; };
+		0A37F4E722379AFE0089FC09 /* PhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A37F4E622379AFE0089FC09 /* PhotoViewController.xib */; };
 		0A3F664B2219B750002452B0 /* AuthorizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3F664A2219B750002452B0 /* AuthorizeViewController.swift */; };
 		0A451A812211B35400684AC4 /* FreeMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A451A802211B35400684AC4 /* FreeMethods.swift */; };
 		0A451A882211B5B000684AC4 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A451A872211B5B000684AC4 /* Animations.swift */; };
@@ -104,10 +104,10 @@
 		0A25DFA62236879000DEB46E /* ObservationTaxaView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObservationTaxaView.xib; sourceTree = "<group>"; };
 		0A25DFA82236902F00DEB46E /* ObservationFaveView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObservationFaveView.xib; sourceTree = "<group>"; };
 		0A25DFAE2236BE3D00DEB46E /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
-		0A25DFB32236BFCA00DEB46E /* PhotoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PhotoViewController.storyboard; sourceTree = "<group>"; };
 		0A3139E3221AB315009D87F0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0A3139E5221ABCE9009D87F0 /* MKMapViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKMapViewExtension.swift; sourceTree = "<group>"; };
 		0A33CA36221F1F1B00BDD802 /* PromiseKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseKitExtensions.swift; sourceTree = "<group>"; };
+		0A37F4E622379AFE0089FC09 /* PhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoViewController.xib; sourceTree = "<group>"; };
 		0A3F664A2219B750002452B0 /* AuthorizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizeViewController.swift; sourceTree = "<group>"; };
 		0A451A802211B35400684AC4 /* FreeMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeMethods.swift; sourceTree = "<group>"; };
 		0A451A872211B5B000684AC4 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
@@ -201,7 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				0A25DFAE2236BE3D00DEB46E /* PhotoViewController.swift */,
-				0A25DFB32236BFCA00DEB46E /* PhotoViewController.storyboard */,
+				0A37F4E622379AFE0089FC09 /* PhotoViewController.xib */,
 			);
 			path = PhotoViewController;
 			sourceTree = "<group>";
@@ -512,13 +512,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A37F4E722379AFE0089FC09 /* PhotoViewController.xib in Resources */,
 				0A25DFA322367B1300DEB46E /* ObservationProfilleView.xib in Resources */,
 				0A25DFA92236902F00DEB46E /* ObservationFaveView.xib in Resources */,
 				0A25DFA5223685B800DEB46E /* ObservationPhotoView.xib in Resources */,
 				0A977B71220E0B8C005D1DC2 /* LaunchScreen.storyboard in Resources */,
 				0A977B6E220E0B8C005D1DC2 /* Assets.xcassets in Resources */,
 				0A977B6C220E0B8B005D1DC2 /* Main.storyboard in Resources */,
-				0A25DFB42236BFCA00DEB46E /* PhotoViewController.storyboard in Resources */,
 				0A25DFA72236879000DEB46E /* ObservationTaxaView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
