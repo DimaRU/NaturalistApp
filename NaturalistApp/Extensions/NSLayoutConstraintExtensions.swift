@@ -9,7 +9,7 @@
 import UIKit
 
 extension NSLayoutConstraint {
-    static func box(item1: UIView, in item2: UILayoutGuide) {
+    static func box(item item1: UIView, in item2: UILayoutGuide) {
         NSLayoutConstraint.activate([
             item1.leadingAnchor.constraint(equalTo: item2.leadingAnchor),
             item1.trailingAnchor.constraint(equalTo: item2.trailingAnchor),
@@ -18,7 +18,7 @@ extension NSLayoutConstraint {
             ])
     }
     
-    static func box(item1: UIView, in item2: UIView) {
+    static func box(item item1: UIView, in item2: UIView) {
         NSLayoutConstraint.activate([
             item1.leadingAnchor.constraint(equalTo: item2.leadingAnchor),
             item1.trailingAnchor.constraint(equalTo: item2.trailingAnchor),

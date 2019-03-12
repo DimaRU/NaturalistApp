@@ -65,8 +65,8 @@ class StackViewController: UIViewController {
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
-        NSLayoutConstraint.box(item1: scrollView, in: view.safeAreaLayoutGuide)
-        NSLayoutConstraint.box(item1: stackView, in: scrollView)
+        NSLayoutConstraint.box(item: scrollView, in: view.safeAreaLayoutGuide)
+        NSLayoutConstraint.box(item: stackView, in: scrollView)
         stackView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor).isActive = true
     }
 }

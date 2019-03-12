@@ -355,16 +355,16 @@
 				0A93539822207E700067E197 /* CLLocationCoordinate2DExtensions.swift */,
 				0AA9F1792221CB43008A67D5 /* MKMapRectExtensions.swift */,
 				0A3139E5221ABCE9009D87F0 /* MKMapViewExtension.swift */,
+				0A89205E22364E2100900224 /* NSLayoutConstraintExtensions.swift */,
 				0A33CA36221F1F1B00BDD802 /* PromiseKitExtensions.swift */,
+				0ADF8A47222FCC3A0047AC25 /* StringExtensions.swift */,
+				0ADF8A49222FD6F80047AC25 /* UICollectionViewExtensions.swift */,
 				0A2174802225821A007E4EFC /* UIColorExtensions.swift */,
 				0A21747A22255487007E4EFC /* UIImageExtensions.swift */,
-				0A62579E222DB78800812C5D /* UIViewExtensions.swift */,
 				0AA8DB45222900C0003999B7 /* UIStoryboardExtensions.swift */,
 				0A5F60B52227FF4600EABDAF /* UITableViewExtensions.swift */,
 				0A47A1DD22283B00005B4AEB /* UIViewControllerExtensions.swift */,
-				0ADF8A47222FCC3A0047AC25 /* StringExtensions.swift */,
-				0ADF8A49222FD6F80047AC25 /* UICollectionViewExtensions.swift */,
-				0A89205E22364E2100900224 /* NSLayoutConstraintExtensions.swift */,
+				0A62579E222DB78800812C5D /* UIViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
