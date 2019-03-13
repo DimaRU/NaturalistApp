@@ -9,14 +9,11 @@
 import UIKit
 import PromiseKit
 
-protocol ObservationDetailProtocol: AnyObject {
+protocol FaveChangeProtocol: AnyObject {
     func faveChange()
-    func showFavedUsers()
-    func showUserProfile()
-    func showTaxaDetails()
 }
 
-class ObservationDetailsViewController: StackViewController {
+class ObservationDetailsViewController: StackViewController, ObservationDetailProtocol {
     private let profilleView = ObservationProfilleView.instantiate()
     private let taxaView = ObservationTaxaView.instantiate()
     private let faveView = ObservationFaveView.instantiate()
@@ -60,16 +57,7 @@ class ObservationDetailsViewController: StackViewController {
 }
 
 
-extension ObservationDetailsViewController: ObservationDetailProtocol {
-    func showTaxaDetails() {
-        #warning ("Todo: show taxon details")
-    }
-    
-    func showUserProfile() {
-        let vc = ProfileCollectionViewController.instantiateFromMainStoryboard()
-        vc.user = observation.user
-        navigationController?.pushViewController(vc, animated: true)
-    }
+extension ObservationDetailsViewController: FaveChangeProtocol {
     
     func faveChange() {
         let endpoint: NatAPI = observation.favedByMe ? .unfave(id: observation.id) : .fave(id: observation.id)
@@ -80,8 +68,4 @@ extension ObservationDetailsViewController: ObservationDetailProtocol {
             }.ignoreErrors()
     }
     
-    func showFavedUsers() {
-        #warning ("Todo: Show faved users tap")
-        print("Show faved users tap")
-    }
 }

@@ -21,6 +21,7 @@
 		0A3139E6221ABCE9009D87F0 /* MKMapViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3139E5221ABCE9009D87F0 /* MKMapViewExtension.swift */; };
 		0A33CA37221F1F1B00BDD802 /* PromiseKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A33CA36221F1F1B00BDD802 /* PromiseKitExtensions.swift */; };
 		0A37F4E722379AFE0089FC09 /* PhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A37F4E622379AFE0089FC09 /* PhotoViewController.xib */; };
+		0A37F4EB2238316F0089FC09 /* ObservationDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A37F4EA2238316F0089FC09 /* ObservationDetailProtocol.swift */; };
 		0A3F664B2219B750002452B0 /* AuthorizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3F664A2219B750002452B0 /* AuthorizeViewController.swift */; };
 		0A451A812211B35400684AC4 /* FreeMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A451A802211B35400684AC4 /* FreeMethods.swift */; };
 		0A451A882211B5B000684AC4 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A451A872211B5B000684AC4 /* Animations.swift */; };
@@ -108,6 +109,7 @@
 		0A3139E5221ABCE9009D87F0 /* MKMapViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKMapViewExtension.swift; sourceTree = "<group>"; };
 		0A33CA36221F1F1B00BDD802 /* PromiseKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseKitExtensions.swift; sourceTree = "<group>"; };
 		0A37F4E622379AFE0089FC09 /* PhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoViewController.xib; sourceTree = "<group>"; };
+		0A37F4EA2238316F0089FC09 /* ObservationDetailProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservationDetailProtocol.swift; sourceTree = "<group>"; };
 		0A3F664A2219B750002452B0 /* AuthorizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizeViewController.swift; sourceTree = "<group>"; };
 		0A451A802211B35400684AC4 /* FreeMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeMethods.swift; sourceTree = "<group>"; };
 		0A451A872211B5B000684AC4 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 		0A87BB4B2227415200150BE9 /* ObservationDetails */ = {
 			isa = PBXGroup;
 			children = (
+				0A37F4EA2238316F0089FC09 /* ObservationDetailProtocol.swift */,
 				0A87BB4C2227419100150BE9 /* ObservationDetailsViewController.swift */,
 				0A87BB4E2227441300150BE9 /* ObservationProfilleView.swift */,
 				0A87BB502227461800150BE9 /* ObservationPhotoView.swift */,
@@ -618,6 +621,7 @@
 				0A2174812225821A007E4EFC /* UIColorExtensions.swift in Sources */,
 				0A9F8C88221961B200C299C8 /* NatProvider.swift in Sources */,
 				0ABA9C762210A4790099F774 /* APIKeys.swift in Sources */,
+				0A37F4EB2238316F0089FC09 /* ObservationDetailProtocol.swift in Sources */,
 				0ADF8A4A222FD6F80047AC25 /* UICollectionViewExtensions.swift in Sources */,
 				0A9F8C842219516200C299C8 /* Content.swift in Sources */,
 				0ABA9C61221024A10099F774 /* Observation.swift in Sources */,

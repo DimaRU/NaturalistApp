@@ -11,7 +11,7 @@ import UIKit
 class ObservationFaveView: UIView, NibInstantiable {
     @IBOutlet weak var favoritedLabel: UILabel!
     @IBOutlet weak var starImageView: UIImageView!
-    weak var delegate: ObservationDetailProtocol?
+    weak var delegate: (FaveChangeProtocol & ObservationDetailProtocol)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,7 +35,7 @@ class ObservationFaveView: UIView, NibInstantiable {
             starImageView.image = UIImage(named: favedByMe ? "IC Star 24px" : "IC Star Border 24px")
         }
     }
-    func setup(observation: Observation, delegate: ObservationDetailProtocol) {
+    func setup(observation: Observation, delegate: (FaveChangeProtocol & ObservationDetailProtocol)) {
         self.delegate = delegate
         favoritedLabel.text = "Favored: " + String(observation.favesCount)
         favedByMe = observation.favedByMe
