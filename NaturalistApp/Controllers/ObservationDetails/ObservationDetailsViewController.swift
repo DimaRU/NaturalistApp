@@ -14,7 +14,7 @@ protocol FaveChangeProtocol: AnyObject {
 }
 
 class ObservationDetailsViewController: StackViewController, ObservationDetailProtocol {
-    private let profilleView = ObservationProfilleView.instantiate()
+    private let profileView = ObservationProfilleView.instantiate()
     private let taxaView = ObservationTaxaView.instantiate()
     private let faveView = ObservationFaveView.instantiate()
     
@@ -29,18 +29,26 @@ class ObservationDetailsViewController: StackViewController, ObservationDetailPr
     }
 
     func setupUI() {
-        profilleView.setup(observation: observation, delegate: self)
-        taxaView.setup(taxon: observation.taxon, delegate: self)
+        profileView.setup(observation: observation, delegate: self)
+        add(profileView)
+        if !observation.photos.isEmpty {
+            let photoViewController = PhotoViewController()
+            photoViewController.photos = observation.photos
+            add(photoViewController)
+        } else {
+            print("Observation \(observation.id) no photo")
+        }
+        if observation.taxon != nil {
+            taxaView.setup(taxon: observation.taxon, delegate: self)
+            add(taxaView)
+        }
         faveView.setup(observation: observation, delegate: self)
-        let photoViewController = PhotoViewController()
-        photoViewController.photos = observation.photos
-        add(profilleView)
-        add(photoViewController)
-        add(taxaView)
         add(faveView)
-        let activityViewController = ActivityViewController.instantiateFromStoryboard()
-        activityViewController.observation = observation
-        add(activityViewController)
+        if !(observation.identifications.isEmpty && observation.comments.isEmpty) {
+            let activityViewController = ActivityViewController.instantiateFromStoryboard()
+            activityViewController.observation = observation
+            add(activityViewController)
+        }
     }
     
     
