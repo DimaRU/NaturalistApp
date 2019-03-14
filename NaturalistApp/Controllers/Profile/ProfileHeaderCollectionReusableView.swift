@@ -13,7 +13,8 @@ class ProfileHeaderCollectionReusableView: UICollectionReusableView {
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var observationsCountLabel: UILabel!
-    
+    @IBOutlet weak var identificationsCountLabel: UILabel!
+
     private weak var delegate: ProfileDelegateProtocol?
     private var user: User!
     
@@ -34,6 +35,8 @@ class ProfileHeaderCollectionReusableView: UICollectionReusableView {
         userNameLabel.text = user.name ?? user.login
         observationsCountLabel.text = NSLocalizedString("Observations: ", comment: "") +
             String(user.observationsCount)
+        identificationsCountLabel.text = NSLocalizedString("Species: ", comment: "") +
+            String(user.identificationsCount)
 
     }
 }

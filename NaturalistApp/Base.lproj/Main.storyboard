@@ -202,13 +202,18 @@
                                     </userDefinedRuntimeAttributes>
                                 </imageView>
                                 <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Observations: 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNg-il-ntZ">
-                                    <rect key="frame" x="86" y="61" width="123" height="17"/>
+                                    <rect key="frame" x="86" y="34.5" width="123" height="17"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xI7-8B-aJD">
-                                    <rect key="frame" x="86" y="16" width="68.5" height="17"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <rect key="frame" x="86" y="12" width="81" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Species: 50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DaG-a0-hGU">
+                                    <rect key="frame" x="86" y="54.5" width="80" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
@@ -217,14 +222,18 @@
                                 <constraint firstItem="Dz0-eg-1RT" firstAttribute="top" secondItem="ewM-kE-IlG" secondAttribute="top" constant="8" id="8Bv-8Y-Zo0"/>
                                 <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="zNg-il-ntZ" secondAttribute="trailing" constant="8" id="9a9-mz-a7t"/>
                                 <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="xI7-8B-aJD" secondAttribute="trailing" constant="8" id="9hr-Ic-YWe"/>
-                                <constraint firstAttribute="bottom" secondItem="zNg-il-ntZ" secondAttribute="bottom" constant="8" id="AGy-Hr-LfQ"/>
-                                <constraint firstItem="xI7-8B-aJD" firstAttribute="top" secondItem="ewM-kE-IlG" secondAttribute="topMargin" constant="8" id="K4T-Jm-cVb"/>
+                                <constraint firstItem="zNg-il-ntZ" firstAttribute="centerY" secondItem="Dz0-eg-1RT" secondAttribute="centerY" id="9sL-31-5Z9"/>
+                                <constraint firstItem="DaG-a0-hGU" firstAttribute="firstBaseline" secondItem="zNg-il-ntZ" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="Fbl-XI-oI0"/>
                                 <constraint firstAttribute="bottom" secondItem="Dz0-eg-1RT" secondAttribute="bottom" constant="8" id="K7j-NJ-kD8"/>
                                 <constraint firstItem="Dz0-eg-1RT" firstAttribute="leading" secondItem="ewM-kE-IlG" secondAttribute="leading" constant="8" id="Peo-Tb-XNj"/>
                                 <constraint firstItem="zNg-il-ntZ" firstAttribute="leading" secondItem="Dz0-eg-1RT" secondAttribute="trailing" constant="8" id="acQ-xy-56p"/>
+                                <constraint firstItem="DaG-a0-hGU" firstAttribute="leading" secondItem="zNg-il-ntZ" secondAttribute="leading" id="oPr-fi-oBs"/>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DaG-a0-hGU" secondAttribute="trailing" constant="8" id="uk2-ET-nNB"/>
+                                <constraint firstItem="zNg-il-ntZ" firstAttribute="firstBaseline" secondItem="xI7-8B-aJD" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="wP7-fe-n9w"/>
                             </constraints>
                             <connections>
                                 <outlet property="avatarImageView" destination="Dz0-eg-1RT" id="PMY-So-cT9"/>
+                                <outlet property="identificationsCountLabel" destination="DaG-a0-hGU" id="wuD-eK-uca"/>
                                 <outlet property="observationsCountLabel" destination="zNg-il-ntZ" id="Rox-Xv-uyI"/>
                                 <outlet property="userNameLabel" destination="xI7-8B-aJD" id="lMr-IS-2kS"/>
                             </connections>
