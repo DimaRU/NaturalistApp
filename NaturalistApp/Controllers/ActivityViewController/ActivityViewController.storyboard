@@ -13,7 +13,7 @@
         <!--Activity View Controller-->
         <scene sceneID="Pyr-h5-pE9">
             <objects>
-                <viewController storyboardIdentifier="ActivityViewController" id="Aja-3J-Ays" customClass="ActivityViewController" customModule="HorizontalScroll" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ActivityViewController" id="Aja-3J-Ays" customClass="ActivityViewController" customModule="NaturalistApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="arl-1r-gk1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,15 +26,15 @@
                                 </constraints>
                                 <inset key="separatorInset" minX="62" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActivityProfileTableViewCell" rowHeight="60" id="lYI-MP-hii" customClass="ActivityProfileTableViewCell" customModule="HorizontalScroll" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActivityProfileTableViewCell" rowHeight="60" id="lYI-MP-hii" customClass="ActivityProfileTableViewCell" customModule="NaturalistApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lYI-MP-hii" id="qUG-y0-DCi">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lYI-MP-hii" id="qUG-y0-DCi">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jIu-Xx-dnB">
-                                                    <rect key="frame" x="8" y="4" width="48" height="48"/>
+                                                    <rect key="frame" x="8" y="2" width="48" height="48"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="48" id="g4C-bx-zG4"/>
                                                         <constraint firstAttribute="height" constant="48" id="wf7-YG-cWv"/>
@@ -51,26 +51,26 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nwA-O7-FkJ">
-                                                    <rect key="frame" x="30" y="53" width="4" height="7"/>
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nwA-O7-FkJ">
+                                                    <rect key="frame" x="30" y="54" width="4" height="6"/>
                                                     <color key="backgroundColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="4" id="JPG-V6-KSn"/>
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9l-rt-XQP">
-                                                    <rect key="frame" x="72" y="15" width="68.5" height="17"/>
+                                                    <rect key="frame" x="72" y="17.5" width="68.5" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="day ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hed-PQ-vdh">
-                                                    <rect key="frame" x="314" y="16.5" width="45" height="14.5"/>
+                                                    <rect key="frame" x="314" y="19" width="45" height="14.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LAo-PH-h59" userLabel="separator">
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LAo-PH-h59" userLabel="separator">
                                                     <rect key="frame" x="62" y="59" width="313" height="1"/>
                                                     <color key="backgroundColor" name="separatorColor" catalog="System" colorSpace="catalog"/>
                                                     <constraints>
@@ -85,14 +85,14 @@
                                                 <constraint firstAttribute="trailing" secondItem="hed-PQ-vdh" secondAttribute="trailing" constant="16" id="Gxk-SG-gpp"/>
                                                 <constraint firstItem="LAo-PH-h59" firstAttribute="leading" secondItem="qUG-y0-DCi" secondAttribute="leading" constant="62" id="NC5-zK-OW7"/>
                                                 <constraint firstAttribute="bottom" secondItem="LAo-PH-h59" secondAttribute="bottom" id="ULF-zO-kUP"/>
-                                                <constraint firstItem="nwA-O7-FkJ" firstAttribute="top" secondItem="jIu-Xx-dnB" secondAttribute="bottom" constant="1" id="VhV-Rg-8wt"/>
+                                                <constraint firstItem="jIu-Xx-dnB" firstAttribute="centerY" secondItem="s9l-rt-XQP" secondAttribute="centerY" id="Uhv-3u-d8q"/>
+                                                <constraint firstItem="nwA-O7-FkJ" firstAttribute="top" secondItem="jIu-Xx-dnB" secondAttribute="bottom" constant="2" id="VhV-Rg-8wt"/>
                                                 <constraint firstItem="hed-PQ-vdh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="s9l-rt-XQP" secondAttribute="trailing" constant="8" id="dBE-7Z-uBH"/>
                                                 <constraint firstItem="nwA-O7-FkJ" firstAttribute="bottom" secondItem="qUG-y0-DCi" secondAttribute="bottom" id="eUn-H2-1eq"/>
-                                                <constraint firstItem="jIu-Xx-dnB" firstAttribute="top" secondItem="qUG-y0-DCi" secondAttribute="top" constant="4" id="meO-nk-h06"/>
+                                                <constraint firstItem="jIu-Xx-dnB" firstAttribute="top" secondItem="qUG-y0-DCi" secondAttribute="top" constant="2" id="meO-nk-h06"/>
                                                 <constraint firstItem="s9l-rt-XQP" firstAttribute="centerY" secondItem="hed-PQ-vdh" secondAttribute="centerY" id="pHg-oA-VaY"/>
                                                 <constraint firstAttribute="bottom" secondItem="jIu-Xx-dnB" secondAttribute="bottom" constant="8" id="t2K-Ee-iq6"/>
                                                 <constraint firstAttribute="trailing" secondItem="LAo-PH-h59" secondAttribute="trailing" id="wMK-SY-ff2"/>
-                                                <constraint firstItem="jIu-Xx-dnB" firstAttribute="top" secondItem="s9l-rt-XQP" secondAttribute="bottom" constant="-28" id="x3V-eD-10W"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -106,7 +106,7 @@
                                             <outlet property="userNameLabel" destination="s9l-rt-XQP" id="Jrj-qh-i7Y"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActivityTaxaTableViewCell" rowHeight="66" id="CR7-jv-um3" customClass="ActivityTaxaTableViewCell" customModule="HorizontalScroll" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActivityTaxaTableViewCell" rowHeight="66" id="CR7-jv-um3" customClass="ActivityTaxaTableViewCell" customModule="NaturalistApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="88" width="375" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CR7-jv-um3" id="D8Y-Y1-1tV">
@@ -182,7 +182,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="separatorColor" catalog="System" colorSpace="catalog"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActivityCommentTableViewCell" rowHeight="60" id="lNo-SD-nia" customClass="ActivityCommentTableViewCell" customModule="HorizontalScroll" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActivityCommentTableViewCell" rowHeight="60" id="lNo-SD-nia" customClass="ActivityCommentTableViewCell" customModule="NaturalistApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="184" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lNo-SD-nia" id="G6z-SI-1Ol">
