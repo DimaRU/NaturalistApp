@@ -46,7 +46,7 @@ class ActivityViewController: UIViewController, ObservationDetailProtocol, Story
         let comments = observation.comments.map { Activity.comment(comment: $0) }
         activityFeed.append(contentsOf: comments)
         
-        activityFeed.sort{ $0.creationDate > $1.creationDate }
+        activityFeed.sort{ $0.creationDate < $1.creationDate }
     }
     
     override func viewWillAppear(_ animated: Bool) {
