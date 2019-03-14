@@ -27,6 +27,7 @@ class PhotoViewController: UIViewController {
         guard let photo = try? Data(contentsOf: url) else { return nil }
         guard let photoImage = UIImage(data: photo) else { return nil }
         let imageView = UIImageView(image: photoImage)
+        imageView.contentMode = .scaleAspectFill
         imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor, multiplier: 4.0/3.0).isActive = true
         return imageView
     }
