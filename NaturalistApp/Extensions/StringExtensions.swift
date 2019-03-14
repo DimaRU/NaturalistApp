@@ -12,4 +12,7 @@ extension String {
     var localizedString: String {
         return NSLocalizedString(self, comment: "")
     }
+    func uppercasedFirstLetter() -> String {
+        return prefix(1).capitalized + dropFirst()
+    }
 }

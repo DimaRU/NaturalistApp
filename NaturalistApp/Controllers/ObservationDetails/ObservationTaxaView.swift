@@ -25,14 +25,18 @@ class ObservationTaxaView: UIView, NibInstantiable {
         delegate?.showTaxaDetails()
     }
 
-    func setup(observation: Observation, delegate: ObservationDetailProtocol) {
+    func setup(taxon: Taxon?, delegate: ObservationDetailProtocol) {
         self.delegate = delegate
-        guard let taxa = observation.taxon else {
+        guard let taxon = taxon else {
             self.isHidden = true
             return
         }
-        taxaPhotoImageView.kf.setImage(with: taxa.defaultPhoto?.squareUrl)
-        taxaNameLabel.text = taxa.name
-        taxaSciNameLabel.text = taxa.preferredCommonName
+        taxaPhotoImageView.kf.setImage(with: taxon.defaultPhoto?.squareUrl)
+        taxaNameLabel.text = taxon.preferredCommonName
+        var prefix = ""
+        if taxon.rank != .species {
+            prefix = taxon.rank.rawValue.uppercasedFirstLetter() + " "
+        }
+        taxaSciNameLabel.text = prefix + taxon.name
     }
 }

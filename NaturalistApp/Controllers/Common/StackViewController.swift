@@ -9,7 +9,7 @@
 import UIKit
 
 protocol StackViewControllerDelegate {
-    func instantiate(type: NSObject.Type) -> NSObject?
+    func instantiate(type: NSObject.Type) -> NSObject
     func reloadData(_ object: NSObject)
 }
 
@@ -65,7 +65,12 @@ class StackViewController: UIViewController {
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
-        NSLayoutConstraint.box(item: scrollView, in: view.safeAreaLayoutGuide)
+        NSLayoutConstraint.activate([
+            scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            scrollView.topAnchor.constraint(equalTo: view.topAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            ])
         NSLayoutConstraint.box(item: stackView, in: scrollView)
         stackView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor).isActive = true
     }

@@ -14,7 +14,6 @@
 		0A2174812225821A007E4EFC /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2174802225821A007E4EFC /* UIColorExtensions.swift */; };
 		0A25DFA322367B1300DEB46E /* ObservationProfilleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A25DFA222367B1300DEB46E /* ObservationProfilleView.xib */; };
 		0A25DFA5223685B800DEB46E /* ObservationPhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A25DFA4223685B800DEB46E /* ObservationPhotoView.xib */; };
-		0A25DFA72236879000DEB46E /* ObservationTaxaView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A25DFA62236879000DEB46E /* ObservationTaxaView.xib */; };
 		0A25DFA92236902F00DEB46E /* ObservationFaveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A25DFA82236902F00DEB46E /* ObservationFaveView.xib */; };
 		0A25DFAF2236BE3D00DEB46E /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A25DFAE2236BE3D00DEB46E /* PhotoViewController.swift */; };
 		0A3139E4221AB315009D87F0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3139E3221AB315009D87F0 /* MapViewController.swift */; };
@@ -68,6 +67,14 @@
 		0ABA9C762210A4790099F774 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABA9C752210A4790099F774 /* APIKeys.swift */; };
 		0AD2C6E5222D2C4A003ECFD6 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2C6E4222D2C4A003ECFD6 /* StoryboardInstantiable.swift */; };
 		0AD2C6E7222D2C86003ECFD6 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2C6E6222D2C86003ECFD6 /* BasicViewController.swift */; };
+		0AD81CC8223A7D90003082BC /* ActivityProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD81CBD223A7D8E003082BC /* ActivityProfileTableViewCell.swift */; };
+		0AD81CCA223A7D90003082BC /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD81CBF223A7D8F003082BC /* DateExtensions.swift */; };
+		0AD81CCB223A7D90003082BC /* ActivityCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD81CC0223A7D8F003082BC /* ActivityCommentTableViewCell.swift */; };
+		0AD81CCD223A7D90003082BC /* ActivityViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AD81CC2223A7D8F003082BC /* ActivityViewController.storyboard */; };
+		0AD81CCE223A7D90003082BC /* ObservationTaxaView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD81CC3223A7D8F003082BC /* ObservationTaxaView.xib */; };
+		0AD81CCF223A7D90003082BC /* ActivityTaxaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD81CC4223A7D8F003082BC /* ActivityTaxaTableViewCell.swift */; };
+		0AD81CD2223A7D90003082BC /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD81CC7223A7D90003082BC /* ActivityViewController.swift */; };
+		0AD81CD4223A7F9C003082BC /* Identification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD81CD3223A7F9C003082BC /* Identification.swift */; };
 		0ADC99AA22292FD400034F49 /* TaxonPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADC99A922292FD400034F49 /* TaxonPhoto.swift */; };
 		0ADF8A48222FCC3A0047AC25 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF8A47222FCC3A0047AC25 /* StringExtensions.swift */; };
 		0ADF8A4A222FD6F80047AC25 /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF8A49222FD6F80047AC25 /* UICollectionViewExtensions.swift */; };
@@ -102,7 +109,6 @@
 		0A2174802225821A007E4EFC /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		0A25DFA222367B1300DEB46E /* ObservationProfilleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObservationProfilleView.xib; sourceTree = "<group>"; };
 		0A25DFA4223685B800DEB46E /* ObservationPhotoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObservationPhotoView.xib; sourceTree = "<group>"; };
-		0A25DFA62236879000DEB46E /* ObservationTaxaView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObservationTaxaView.xib; sourceTree = "<group>"; };
 		0A25DFA82236902F00DEB46E /* ObservationFaveView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObservationFaveView.xib; sourceTree = "<group>"; };
 		0A25DFAE2236BE3D00DEB46E /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		0A3139E3221AB315009D87F0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +168,14 @@
 		0ABA9C752210A4790099F774 /* APIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		0AD2C6E4222D2C4A003ECFD6 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
 		0AD2C6E6222D2C86003ECFD6 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
+		0AD81CBD223A7D8E003082BC /* ActivityProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityProfileTableViewCell.swift; sourceTree = "<group>"; };
+		0AD81CBF223A7D8F003082BC /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		0AD81CC0223A7D8F003082BC /* ActivityCommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCommentTableViewCell.swift; sourceTree = "<group>"; };
+		0AD81CC2223A7D8F003082BC /* ActivityViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ActivityViewController.storyboard; sourceTree = "<group>"; };
+		0AD81CC3223A7D8F003082BC /* ObservationTaxaView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ObservationTaxaView.xib; sourceTree = "<group>"; };
+		0AD81CC4223A7D8F003082BC /* ActivityTaxaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTaxaTableViewCell.swift; sourceTree = "<group>"; };
+		0AD81CC7223A7D90003082BC /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		0AD81CD3223A7F9C003082BC /* Identification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identification.swift; sourceTree = "<group>"; };
 		0ADC99A922292FD400034F49 /* TaxonPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxonPhoto.swift; sourceTree = "<group>"; };
 		0ADF8A47222FCC3A0047AC25 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		0ADF8A49222FD6F80047AC25 /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
@@ -211,6 +225,7 @@
 		0A451A842211B4EC00684AC4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0AD81CBC223A7D62003082BC /* ActivityViewController */,
 				0A25DFB62236C00900DEB46E /* PhotoViewController */,
 				0A89205B22364D4F00900224 /* Common */,
 				0AF16994222E75A500C1058B /* Profile */,
@@ -234,7 +249,7 @@
 				0A87BB5422274A5F00150BE9 /* ObservationFaveView.swift */,
 				0A25DFA222367B1300DEB46E /* ObservationProfilleView.xib */,
 				0A25DFA4223685B800DEB46E /* ObservationPhotoView.xib */,
-				0A25DFA62236879000DEB46E /* ObservationTaxaView.xib */,
+				0AD81CC3223A7D8F003082BC /* ObservationTaxaView.xib */,
 				0A25DFA82236902F00DEB46E /* ObservationFaveView.xib */,
 			);
 			path = ObservationDetails;
@@ -334,6 +349,7 @@
 				0ADC99A922292FD400034F49 /* TaxonPhoto.swift */,
 				0AA5CDAE222044CD000A80BE /* SLocation.swift */,
 				0ABA9C6622102B210099F774 /* Taxon.swift */,
+				0AD81CD3223A7F9C003082BC /* Identification.swift */,
 				0A21747C222577CF007E4EFC /* IconicTaxonName.swift */,
 				0A21747E22257828007E4EFC /* IconicTaxonName+Color.swift */,
 				0ABA9C5E22101D9E0099F774 /* User.swift */,
@@ -356,6 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				0A93539822207E700067E197 /* CLLocationCoordinate2DExtensions.swift */,
+				0AD81CBF223A7D8F003082BC /* DateExtensions.swift */,
 				0AA9F1792221CB43008A67D5 /* MKMapRectExtensions.swift */,
 				0A3139E5221ABCE9009D87F0 /* MKMapViewExtension.swift */,
 				0A89205E22364E2100900224 /* NSLayoutConstraintExtensions.swift */,
@@ -381,6 +398,18 @@
 				0A47A1DB222838A3005B4AEB /* Globals.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		0AD81CBC223A7D62003082BC /* ActivityViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0AD81CC7223A7D90003082BC /* ActivityViewController.swift */,
+				0AD81CC0223A7D8F003082BC /* ActivityCommentTableViewCell.swift */,
+				0AD81CBD223A7D8E003082BC /* ActivityProfileTableViewCell.swift */,
+				0AD81CC4223A7D8F003082BC /* ActivityTaxaTableViewCell.swift */,
+				0AD81CC2223A7D8F003082BC /* ActivityViewController.storyboard */,
+			);
+			path = ActivityViewController;
 			sourceTree = "<group>";
 		};
 		0AF16994222E75A500C1058B /* Profile */ = {
@@ -519,10 +548,11 @@
 				0A25DFA322367B1300DEB46E /* ObservationProfilleView.xib in Resources */,
 				0A25DFA92236902F00DEB46E /* ObservationFaveView.xib in Resources */,
 				0A25DFA5223685B800DEB46E /* ObservationPhotoView.xib in Resources */,
+				0AD81CCD223A7D90003082BC /* ActivityViewController.storyboard in Resources */,
+				0AD81CCE223A7D90003082BC /* ObservationTaxaView.xib in Resources */,
 				0A977B71220E0B8C005D1DC2 /* LaunchScreen.storyboard in Resources */,
 				0A977B6E220E0B8C005D1DC2 /* Assets.xcassets in Resources */,
 				0A977B6C220E0B8B005D1DC2 /* Main.storyboard in Resources */,
-				0A25DFA72236879000DEB46E /* ObservationTaxaView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,6 +643,7 @@
 				0ABA9C6722102B210099F774 /* Taxon.swift in Sources */,
 				0A0B00A5221FD999008E17D9 /* Geojson.swift in Sources */,
 				0A62579F222DB78800812C5D /* UIViewExtensions.swift in Sources */,
+				0AD81CCF223A7D90003082BC /* ActivityTaxaTableViewCell.swift in Sources */,
 				0A5F60B62227FF4600EABDAF /* UITableViewExtensions.swift in Sources */,
 				0A5832332224118A0071DEE0 /* ObservationAnnotation.swift in Sources */,
 				0ABA9C65221029EE0099F774 /* Photo.swift in Sources */,
@@ -636,17 +667,22 @@
 				0AA8DB46222900C0003999B7 /* UIStoryboardExtensions.swift in Sources */,
 				0A9F8C8E2219905500C299C8 /* JWTToken.swift in Sources */,
 				0A451A812211B35400684AC4 /* FreeMethods.swift in Sources */,
+				0AD81CCB223A7D90003082BC /* ActivityCommentTableViewCell.swift in Sources */,
 				0ABA9C742210A3EC0099F774 /* KeychainService.swift in Sources */,
 				0A9F8C862219615C00C299C8 /* PagedResults.swift in Sources */,
 				0A87BB4D2227419100150BE9 /* ObservationDetailsViewController.swift in Sources */,
 				0ABA9C7122109EA60099F774 /* DefaultCaseRepresentable.swift in Sources */,
+				0AD81CC8223A7D90003082BC /* ActivityProfileTableViewCell.swift in Sources */,
 				0AF16996222E75CE00C1058B /* ProfileCollectionViewController.swift in Sources */,
 				0AA9F17A2221CB43008A67D5 /* MKMapRectExtensions.swift in Sources */,
 				0ABA9C6E22105FAB0099F774 /* NatAPI.swift in Sources */,
 				0A93539922207E700067E197 /* CLLocationCoordinate2DExtensions.swift in Sources */,
+				0AD81CD4223A7F9C003082BC /* Identification.swift in Sources */,
+				0AD81CD2223A7D90003082BC /* ActivityViewController.swift in Sources */,
 				0A87BB532227470B00150BE9 /* ObservationTaxaView.swift in Sources */,
 				0AD2C6E5222D2C4A003ECFD6 /* StoryboardInstantiable.swift in Sources */,
 				0A89205F22364E2100900224 /* NSLayoutConstraintExtensions.swift in Sources */,
+				0AD81CCA223A7D90003082BC /* DateExtensions.swift in Sources */,
 				0A47A1DC222838A3005B4AEB /* Globals.swift in Sources */,
 				0A47A1DE22283B00005B4AEB /* UIViewControllerExtensions.swift in Sources */,
 				0ABA9C6B2210498A0099F774 /* Fave.swift in Sources */,

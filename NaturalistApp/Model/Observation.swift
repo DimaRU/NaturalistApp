@@ -24,6 +24,7 @@ struct Observation: ResultsContent {
     let createdTimeZone: String
     let createdAtDetails: Details
     let updatedAt: Date
+    let identifications: [Identification]
     let identificationsSomeAgree: Bool
     let projectIdsWithoutCuratorId: [Int]
     let placeGuess: String?

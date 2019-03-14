@@ -30,7 +30,7 @@ class ObservationDetailsViewController: StackViewController, ObservationDetailPr
 
     func setupUI() {
         profilleView.setup(observation: observation, delegate: self)
-        taxaView.setup(observation: observation, delegate: self)
+        taxaView.setup(taxon: observation.taxon, delegate: self)
         faveView.setup(observation: observation, delegate: self)
         let photoViewController = PhotoViewController()
         photoViewController.photos = observation.photos
@@ -38,6 +38,9 @@ class ObservationDetailsViewController: StackViewController, ObservationDetailPr
         add(photoViewController)
         add(taxaView)
         add(faveView)
+        let activityViewController = ActivityViewController.instantiateFromStoryboard()
+        activityViewController.observation = observation
+        add(activityViewController)
     }
     
     
