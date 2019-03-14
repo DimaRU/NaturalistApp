@@ -11,18 +11,19 @@ import UIKit
 protocol ObservationDetailProtocol: AnyObject {
     var observation: Observation! { get set }
     func showFavedUsers()
-    func showUserProfile()
+    func showUserProfile(user: User)
     func showTaxaDetails()
 }
 
 extension ObservationDetailProtocol where Self: UIViewController {
     func showTaxaDetails() {
         #warning ("Todo: show taxon details")
+        print("Show taxon details")
     }
     
-    func showUserProfile() {
+    func showUserProfile(user: User) {
         let vc = ProfileCollectionViewController.instantiateFromMainStoryboard()
-        vc.user = observation.user
+        vc.user = user
         navigationController?.pushViewController(vc, animated: true)
     }
     

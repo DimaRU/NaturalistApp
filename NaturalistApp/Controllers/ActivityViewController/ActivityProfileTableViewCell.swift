@@ -13,6 +13,7 @@ class ActivityProfileTableViewCell: UITableViewCell {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var agoLabel: UILabel!
     weak var delegate: ObservationDetailProtocol?
+    var user: User!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,12 +23,12 @@ class ActivityProfileTableViewCell: UITableViewCell {
     }
     
     @objc func tapView(_ sender: Any) {
-        delegate?.showUserProfile()
+        delegate?.showUserProfile(user: user)
     }
     
     func setup(activity: ActivityViewController.Activity, delegate: ObservationDetailProtocol) {
         self.delegate = delegate
-        let user = activity.user
+        user = activity.user
         avatarImageView.kf.setImage(with: user.icon,
                                     placeholder: UIImage(named: "IC Account Circle 24px")?.maskWith(color: .lightGray))
         agoLabel.text = activity.creationDate.smartDatePeriod(to: Date())
