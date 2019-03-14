@@ -16,13 +16,13 @@ struct Identification: Decodable {
     let user: User
     let createdAt: Date
     let createdAtDetails: Details
-    let category: String
     let current: Bool
     let ownObservation: Bool
-    let vision: Bool
-    let spam: Bool
     let taxonId: TaxonId
     let taxon: Taxon
+    let category: String?
+    let vision: Bool?
+    let spam: Bool?
     let disagreement: Bool?
     let previousObservationTaxonID: TaxonId?
     let previousObservationTaxon: Taxon?
