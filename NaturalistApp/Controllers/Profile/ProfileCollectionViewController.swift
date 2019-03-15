@@ -95,7 +95,8 @@ class ProfileCollectionViewController: UICollectionViewController, StoryboardIns
                                                       for: indexPath) as! ImageCollectionViewCell
         
         let observation = getObservation(for: indexPath)
-        cell.imageView.kf.setImage(with: observation?.photos.first?.squareUrl)
+        cell.imageView.kf.setImage(with: observation?.photos.first?.squareUrl,
+                                   placeholder: UIImage(named: "placeholder"))
         return cell
     }
     
