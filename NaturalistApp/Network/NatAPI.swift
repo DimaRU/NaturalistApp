@@ -102,14 +102,14 @@ enum NatAPI: TargetType {
             parameters["per_page"] = perPage
             parameters["page"] = page
             parameters["user_id"] = userId
-            parameters["photos"] = havePhoto
-            parameters["popular"] = poular
+            parameters["photos"] = havePhoto?.description
+            parameters["popular"] = poular?.description
             return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
         case .getObservationsBox(let perPage, let page, let nelat, let nelng, let swlat, let swlng):
             parameters["per_page"] = perPage
             parameters["page"] = page
-            parameters["mappable"] = true
-            parameters["verifiable"] = true
+            parameters["mappable"] = true.description
+            parameters["verifiable"] = true.description
             parameters["nelat"] = nelat
             parameters["nelng"] = nelng
             parameters["swlat"] = swlat

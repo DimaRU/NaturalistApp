@@ -63,6 +63,9 @@ extension NatProvider {
     private func handleRequest(request: RequestFuture, result: MoyaResult) {
         switch result {
         case let .success(moyaResponse):
+            #if DEBUG
+            print(moyaResponse.request?.url?.absoluteString ?? "")
+            #endif
             switch moyaResponse.statusCode {
             case 200...299, 300...399:
                 request.resolve(moyaResponse.data)
