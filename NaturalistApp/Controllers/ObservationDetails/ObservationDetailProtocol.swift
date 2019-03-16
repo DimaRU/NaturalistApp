@@ -22,7 +22,7 @@ extension ObservationDetailProtocol where Self: UIViewController {
     }
     
     func showUserProfile(user: User) {
-        let vc = ProfileCollectionViewController.instantiateFromMainStoryboard()
+        let vc = ProfileCollectionViewController.instantiate()
         vc.user = user
         navigationController?.pushViewController(vc, animated: true)
     }

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0A0B00A5221FD999008E17D9 /* Geojson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0B00A4221FD999008E17D9 /* Geojson.swift */; };
+		0A17F8FA223D562A00B71E66 /* PhotoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A17F8F7223D562900B71E66 /* PhotoViewController.storyboard */; };
+		0A17F8FB223D562A00B71E66 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A17F8F8223D562900B71E66 /* PhotoViewController.swift */; };
+		0A17F8FC223D562A00B71E66 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A17F8F9223D562900B71E66 /* PhotoCollectionViewCell.swift */; };
 		0A21747B22255487007E4EFC /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A21747A22255487007E4EFC /* UIImageExtensions.swift */; };
 		0A21747D222577CF007E4EFC /* IconicTaxonName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A21747C222577CF007E4EFC /* IconicTaxonName.swift */; };
 		0A21747F22257828007E4EFC /* IconicTaxonName+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A21747E22257828007E4EFC /* IconicTaxonName+Color.swift */; };
@@ -15,12 +18,11 @@
 		0A25DFA322367B1300DEB46E /* ObservationProfilleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A25DFA222367B1300DEB46E /* ObservationProfilleView.xib */; };
 		0A25DFA5223685B800DEB46E /* ObservationPhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A25DFA4223685B800DEB46E /* ObservationPhotoView.xib */; };
 		0A25DFA92236902F00DEB46E /* ObservationFaveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A25DFA82236902F00DEB46E /* ObservationFaveView.xib */; };
-		0A25DFAF2236BE3D00DEB46E /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A25DFAE2236BE3D00DEB46E /* PhotoViewController.swift */; };
 		0A3139E4221AB315009D87F0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3139E3221AB315009D87F0 /* MapViewController.swift */; };
 		0A3139E6221ABCE9009D87F0 /* MKMapViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3139E5221ABCE9009D87F0 /* MKMapViewExtension.swift */; };
 		0A33CA37221F1F1B00BDD802 /* PromiseKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A33CA36221F1F1B00BDD802 /* PromiseKitExtensions.swift */; };
-		0A37F4E722379AFE0089FC09 /* PhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A37F4E622379AFE0089FC09 /* PhotoViewController.xib */; };
 		0A37F4EB2238316F0089FC09 /* ObservationDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A37F4EA2238316F0089FC09 /* ObservationDetailProtocol.swift */; };
+		0A3885B7223D8FB4003A63E8 /* PhotoActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3885B6223D8FB4003A63E8 /* PhotoActivityIndicator.swift */; };
 		0A3F664B2219B750002452B0 /* AuthorizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3F664A2219B750002452B0 /* AuthorizeViewController.swift */; };
 		0A451A812211B35400684AC4 /* FreeMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A451A802211B35400684AC4 /* FreeMethods.swift */; };
 		0A451A882211B5B000684AC4 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A451A872211B5B000684AC4 /* Animations.swift */; };
@@ -103,6 +105,9 @@
 
 /* Begin PBXFileReference section */
 		0A0B00A4221FD999008E17D9 /* Geojson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geojson.swift; sourceTree = "<group>"; };
+		0A17F8F7223D562900B71E66 /* PhotoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PhotoViewController.storyboard; sourceTree = "<group>"; };
+		0A17F8F8223D562900B71E66 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		0A17F8F9223D562900B71E66 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		0A21747A22255487007E4EFC /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		0A21747C222577CF007E4EFC /* IconicTaxonName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconicTaxonName.swift; sourceTree = "<group>"; };
 		0A21747E22257828007E4EFC /* IconicTaxonName+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IconicTaxonName+Color.swift"; sourceTree = "<group>"; };
@@ -110,12 +115,11 @@
 		0A25DFA222367B1300DEB46E /* ObservationProfilleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObservationProfilleView.xib; sourceTree = "<group>"; };
 		0A25DFA4223685B800DEB46E /* ObservationPhotoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObservationPhotoView.xib; sourceTree = "<group>"; };
 		0A25DFA82236902F00DEB46E /* ObservationFaveView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObservationFaveView.xib; sourceTree = "<group>"; };
-		0A25DFAE2236BE3D00DEB46E /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		0A3139E3221AB315009D87F0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0A3139E5221ABCE9009D87F0 /* MKMapViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKMapViewExtension.swift; sourceTree = "<group>"; };
 		0A33CA36221F1F1B00BDD802 /* PromiseKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseKitExtensions.swift; sourceTree = "<group>"; };
-		0A37F4E622379AFE0089FC09 /* PhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoViewController.xib; sourceTree = "<group>"; };
 		0A37F4EA2238316F0089FC09 /* ObservationDetailProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservationDetailProtocol.swift; sourceTree = "<group>"; };
+		0A3885B6223D8FB4003A63E8 /* PhotoActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoActivityIndicator.swift; sourceTree = "<group>"; };
 		0A3F664A2219B750002452B0 /* AuthorizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizeViewController.swift; sourceTree = "<group>"; };
 		0A451A802211B35400684AC4 /* FreeMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeMethods.swift; sourceTree = "<group>"; };
 		0A451A872211B5B000684AC4 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
@@ -216,8 +220,10 @@
 		0A25DFB62236C00900DEB46E /* PhotoViewController */ = {
 			isa = PBXGroup;
 			children = (
-				0A25DFAE2236BE3D00DEB46E /* PhotoViewController.swift */,
-				0A37F4E622379AFE0089FC09 /* PhotoViewController.xib */,
+				0A17F8F8223D562900B71E66 /* PhotoViewController.swift */,
+				0A17F8F9223D562900B71E66 /* PhotoCollectionViewCell.swift */,
+				0A17F8F7223D562900B71E66 /* PhotoViewController.storyboard */,
+				0A3885B6223D8FB4003A63E8 /* PhotoActivityIndicator.swift */,
 			);
 			path = PhotoViewController;
 			sourceTree = "<group>";
@@ -544,12 +550,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A37F4E722379AFE0089FC09 /* PhotoViewController.xib in Resources */,
 				0A25DFA322367B1300DEB46E /* ObservationProfilleView.xib in Resources */,
 				0A25DFA92236902F00DEB46E /* ObservationFaveView.xib in Resources */,
 				0A25DFA5223685B800DEB46E /* ObservationPhotoView.xib in Resources */,
 				0AD81CCD223A7D90003082BC /* ActivityViewController.storyboard in Resources */,
 				0AD81CCE223A7D90003082BC /* ObservationTaxaView.xib in Resources */,
+				0A17F8FA223D562A00B71E66 /* PhotoViewController.storyboard in Resources */,
 				0A977B71220E0B8C005D1DC2 /* LaunchScreen.storyboard in Resources */,
 				0A977B6E220E0B8C005D1DC2 /* Assets.xcassets in Resources */,
 				0A977B6C220E0B8B005D1DC2 /* Main.storyboard in Resources */,
@@ -640,6 +646,7 @@
 			files = (
 				0A21747F22257828007E4EFC /* IconicTaxonName+Color.swift in Sources */,
 				0AD2C6E7222D2C86003ECFD6 /* BasicViewController.swift in Sources */,
+				0A3885B7223D8FB4003A63E8 /* PhotoActivityIndicator.swift in Sources */,
 				0ABA9C6722102B210099F774 /* Taxon.swift in Sources */,
 				0A0B00A5221FD999008E17D9 /* Geojson.swift in Sources */,
 				0A62579F222DB78800812C5D /* UIViewExtensions.swift in Sources */,
@@ -670,6 +677,7 @@
 				0AD81CCB223A7D90003082BC /* ActivityCommentTableViewCell.swift in Sources */,
 				0ABA9C742210A3EC0099F774 /* KeychainService.swift in Sources */,
 				0A9F8C862219615C00C299C8 /* PagedResults.swift in Sources */,
+				0A17F8FB223D562A00B71E66 /* PhotoViewController.swift in Sources */,
 				0A87BB4D2227419100150BE9 /* ObservationDetailsViewController.swift in Sources */,
 				0ABA9C7122109EA60099F774 /* DefaultCaseRepresentable.swift in Sources */,
 				0AD81CC8223A7D90003082BC /* ActivityProfileTableViewCell.swift in Sources */,
@@ -678,6 +686,7 @@
 				0ABA9C6E22105FAB0099F774 /* NatAPI.swift in Sources */,
 				0A93539922207E700067E197 /* CLLocationCoordinate2DExtensions.swift in Sources */,
 				0AD81CD4223A7F9C003082BC /* Identification.swift in Sources */,
+				0A17F8FC223D562A00B71E66 /* PhotoCollectionViewCell.swift in Sources */,
 				0AD81CD2223A7D90003082BC /* ActivityViewController.swift in Sources */,
 				0A87BB532227470B00150BE9 /* ObservationTaxaView.swift in Sources */,
 				0AD2C6E5222D2C4A003ECFD6 /* StoryboardInstantiable.swift in Sources */,
@@ -698,7 +707,6 @@
 				0A21747B22255487007E4EFC /* UIImageExtensions.swift in Sources */,
 				0A9F8C8C22198F7800C299C8 /* AccessToken.swift in Sources */,
 				0A89205D22364D6E00900224 /* StackViewController.swift in Sources */,
-				0A25DFAF2236BE3D00DEB46E /* PhotoViewController.swift in Sources */,
 				0A89205A22364D2D00900224 /* NibInstantiable.swift in Sources */,
 				0A33CA37221F1F1B00BDD802 /* PromiseKitExtensions.swift in Sources */,
 			);

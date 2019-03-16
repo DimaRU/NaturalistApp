@@ -32,7 +32,7 @@ class ObservationDetailsViewController: StackViewController, ObservationDetailPr
         profileView.setup(observation: observation, delegate: self)
         add(profileView)
         if !observation.photos.isEmpty {
-            let photoViewController = PhotoViewController()
+            let photoViewController = PhotoViewController.instantiate()
             photoViewController.photos = observation.photos
             add(photoViewController)
         } else {
@@ -45,7 +45,7 @@ class ObservationDetailsViewController: StackViewController, ObservationDetailPr
         faveView.setup(observation: observation, delegate: self)
         add(faveView)
         if !(observation.identifications.isEmpty && observation.comments.isEmpty) {
-            let activityViewController = ActivityViewController.instantiateFromStoryboard()
+            let activityViewController = ActivityViewController.instantiate()
             activityViewController.observation = observation
             add(activityViewController)
         }

@@ -13,7 +13,7 @@ protocol ProfileDelegateProtocol: AnyObject {
     
 }
 
-class ProfileCollectionViewController: UICollectionViewController, StoryboardInstantiable, ProfileDelegateProtocol {
+class ProfileCollectionViewController: UICollectionViewController, MainStoryboardInstantiable, ProfileDelegateProtocol {
 
     var user: User?
     private var observations: [Int:[Observation]] = [:]

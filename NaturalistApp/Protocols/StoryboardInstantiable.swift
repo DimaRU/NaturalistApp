@@ -9,18 +9,21 @@
 import UIKit
 
 protocol StoryboardInstantiable: AnyObject {
-    static func instantiateFromMainStoryboard() -> Self
-    static func instantiateFromStoryboard() -> Self
+    static func instantiate() -> Self
+}
+protocol MainStoryboardInstantiable: AnyObject {
+    static func instantiate() -> Self
 }
 
-extension StoryboardInstantiable where Self: UIViewController {
-    static func instantiateFromMainStoryboard() -> Self {
+extension MainStoryboardInstantiable where Self: UIViewController {
+    static func instantiate() -> Self {
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         let name = String(describing: self)
         return storyboard.instantiateViewController(withIdentifier: name) as! Self
     }
-    
-    static func instantiateFromStoryboard() -> Self {
+}
+extension StoryboardInstantiable where Self: UIViewController {
+    static func instantiate() -> Self {
         let name = String(describing: self)
         let storyboard = UIStoryboard.init(name: name, bundle: nil)
         return storyboard.instantiateInitialViewController() as! Self
