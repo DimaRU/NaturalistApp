@@ -15,7 +15,7 @@ enum NatAPI: TargetType {
     case authorize(login: String, password: String)
     case apiToken(bearer: String)
     case searchObservations(perPage: Int, page: Int, userId: UserId?, havePhoto: Bool?, poular: Bool?)
-    case searchTaxonBounds(id: TaxonId?)
+    case searchTaxonBounds(id: TaxonId)
     case getObservationsBox(perPage: Int, page: Int, nelat: Double, nelng: Double, swlat: Double, swlng: Double)
     case searchTaxon(perPage: Int, page: Int, name: String?)
     case currentUser

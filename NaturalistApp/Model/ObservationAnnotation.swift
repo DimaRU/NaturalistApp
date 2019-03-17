@@ -17,13 +17,9 @@ final class ObservationAnnotation: NSObject, MKAnnotation {
         self.id = id
         super.init()
     }
-    
 
     convenience init?(observation: Observation) {
-        guard let location = observation.location else { return nil }
-        let coordinate = CLLocationCoordinate2D(latitude: location.lat,
-                                                longitude: location.lng)
-        guard CLLocationCoordinate2DIsValid(coordinate) else { return nil }
+        guard let coordinate = observation.coordinate else { return nil }
         self.init(id: observation.id, coordinate: coordinate)
     }
 }

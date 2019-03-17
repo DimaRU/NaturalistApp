@@ -27,6 +27,9 @@
 		0A37F4EB2238316F0089FC09 /* ObservationDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A37F4EA2238316F0089FC09 /* ObservationDetailProtocol.swift */; };
 		0A3885B7223D8FB4003A63E8 /* PhotoActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3885B6223D8FB4003A63E8 /* PhotoActivityIndicator.swift */; };
 		0A3DA670223EACFB002C8E89 /* MapBounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3DA66F223EACFB002C8E89 /* MapBounds.swift */; };
+		0A3DA674223EB7D4002C8E89 /* TaxonMapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A3DA672223EB7D4002C8E89 /* TaxonMapViewController.storyboard */; };
+		0A3DA675223EB7D4002C8E89 /* TaxonMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3DA673223EB7D4002C8E89 /* TaxonMapViewController.swift */; };
+		0A3DA677223EBE0A002C8E89 /* ObservationCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3DA676223EBE0A002C8E89 /* ObservationCoordinate.swift */; };
 		0A3F664B2219B750002452B0 /* AuthorizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3F664A2219B750002452B0 /* AuthorizeViewController.swift */; };
 		0A451A812211B35400684AC4 /* FreeMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A451A802211B35400684AC4 /* FreeMethods.swift */; };
 		0A451A882211B5B000684AC4 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A451A872211B5B000684AC4 /* Animations.swift */; };
@@ -128,6 +131,9 @@
 		0A37F4EA2238316F0089FC09 /* ObservationDetailProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservationDetailProtocol.swift; sourceTree = "<group>"; };
 		0A3885B6223D8FB4003A63E8 /* PhotoActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoActivityIndicator.swift; sourceTree = "<group>"; };
 		0A3DA66F223EACFB002C8E89 /* MapBounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBounds.swift; sourceTree = "<group>"; };
+		0A3DA672223EB7D4002C8E89 /* TaxonMapViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TaxonMapViewController.storyboard; sourceTree = "<group>"; };
+		0A3DA673223EB7D4002C8E89 /* TaxonMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxonMapViewController.swift; sourceTree = "<group>"; };
+		0A3DA676223EBE0A002C8E89 /* ObservationCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationCoordinate.swift; sourceTree = "<group>"; };
 		0A3F664A2219B750002452B0 /* AuthorizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizeViewController.swift; sourceTree = "<group>"; };
 		0A451A802211B35400684AC4 /* FreeMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeMethods.swift; sourceTree = "<group>"; };
 		0A451A872211B5B000684AC4 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
@@ -236,6 +242,15 @@
 			path = PhotoViewController;
 			sourceTree = "<group>";
 		};
+		0A3DA671223EB7D4002C8E89 /* TaxonMapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0A3DA672223EB7D4002C8E89 /* TaxonMapViewController.storyboard */,
+				0A3DA673223EB7D4002C8E89 /* TaxonMapViewController.swift */,
+			);
+			path = TaxonMapViewController;
+			sourceTree = "<group>";
+		};
 		0A451A842211B4EC00684AC4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +259,7 @@
 				0A89205B22364D4F00900224 /* Common */,
 				0AF16994222E75A500C1058B /* Profile */,
 				0A87BB4B2227415200150BE9 /* ObservationDetails */,
+				0A3DA671223EB7D4002C8E89 /* TaxonMapViewController */,
 				0A3F664A2219B750002452B0 /* AuthorizeViewController.swift */,
 				0A3139E3221AB315009D87F0 /* MapViewController.swift */,
 				0AF16999222E783200C1058B /* ImageCollectionViewCell.swift */,
@@ -360,6 +376,7 @@
 				0A9F8C8D2219905500C299C8 /* JWTToken.swift */,
 				0ABA9C62221029BD0099F774 /* LicenseCode.swift */,
 				0ABA9C60221024A10099F774 /* Observation.swift */,
+				0A3DA676223EBE0A002C8E89 /* ObservationCoordinate.swift */,
 				0A9F8C852219615C00C299C8 /* PagedResults.swift */,
 				0ABA9C64221029EE0099F774 /* Photo.swift */,
 				0ADC99A922292FD400034F49 /* TaxonPhoto.swift */,
@@ -572,6 +589,7 @@
 				0A977B6E220E0B8C005D1DC2 /* Assets.xcassets in Resources */,
 				0A977B6C220E0B8B005D1DC2 /* Main.storyboard in Resources */,
 				0A10102C223E408000EB42C3 /* ObservationDescription.xib in Resources */,
+				0A3DA674223EB7D4002C8E89 /* TaxonMapViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,6 +724,7 @@
 				0AD2C6E5222D2C4A003ECFD6 /* StoryboardInstantiable.swift in Sources */,
 				0A3DA670223EACFB002C8E89 /* MapBounds.swift in Sources */,
 				0A89205F22364E2100900224 /* NSLayoutConstraintExtensions.swift in Sources */,
+				0A3DA675223EB7D4002C8E89 /* TaxonMapViewController.swift in Sources */,
 				0AD81CCA223A7D90003082BC /* DateExtensions.swift in Sources */,
 				0A47A1DC222838A3005B4AEB /* Globals.swift in Sources */,
 				0A47A1DE22283B00005B4AEB /* UIViewControllerExtensions.swift in Sources */,
@@ -716,6 +735,7 @@
 				0AA5CDAF222044CD000A80BE /* SLocation.swift in Sources */,
 				0A9F8C8A221969E600C299C8 /* NatNetworkError.swift in Sources */,
 				0A451A882211B5B000684AC4 /* Animations.swift in Sources */,
+				0A3DA677223EBE0A002C8E89 /* ObservationCoordinate.swift in Sources */,
 				0A87BB5522274A5F00150BE9 /* ObservationFaveView.swift in Sources */,
 				0A87BB512227461800150BE9 /* ObservationPhotoView.swift in Sources */,
 				0ABA9C5F22101D9E0099F774 /* User.swift in Sources */,

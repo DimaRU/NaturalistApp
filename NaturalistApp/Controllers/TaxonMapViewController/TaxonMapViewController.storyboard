@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Taxon Map View Controller-->
+        <scene sceneID="kk9-82-QsZ">
+            <objects>
+                <viewController storyboardIdentifier="TaxonMapViewController" id="XTz-nv-FF1" customClass="TaxonMapViewController" customModule="HorizontalScroll" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1b0-Vt-j43">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" rotateEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnP-Yi-6NG">
+                                <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nnP-Yi-6NG" secondAttribute="height" multiplier="4:3" id="eMI-QU-BTB"/>
+                                </constraints>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="nnP-Yi-6NG" secondAttribute="trailing" id="A3I-AW-BB7"/>
+                            <constraint firstItem="nnP-Yi-6NG" firstAttribute="top" secondItem="1b0-Vt-j43" secondAttribute="top" id="BZd-Wa-cvb"/>
+                            <constraint firstItem="nnP-Yi-6NG" firstAttribute="leading" secondItem="1b0-Vt-j43" secondAttribute="leading" id="GYF-oa-UQg"/>
+                            <constraint firstItem="nnP-Yi-6NG" firstAttribute="bottom" secondItem="1b0-Vt-j43" secondAttribute="bottom" priority="999" id="Yuu-RI-j4T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MwE-kH-49V"/>
+                    </view>
+                    <size key="freeformSize" width="400" height="300"/>
+                    <connections>
+                        <outlet property="mapView" destination="nnP-Yi-6NG" id="0i8-ka-pAR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oz9-dx-Ck3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-60.799999999999997" y="211.39430284857573"/>
+        </scene>
+    </scenes>
+</document>
