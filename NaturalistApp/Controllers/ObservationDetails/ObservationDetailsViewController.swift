@@ -17,6 +17,7 @@ class ObservationDetailsViewController: StackViewController, ObservationDetailPr
     private let profileView = ObservationProfilleView.instantiate()
     private let taxaView = ObservationTaxaView.instantiate()
     private let faveView = ObservationFaveView.instantiate()
+    private let descriptionView  = ObservationDescription.instantiate()
     
     var observation: Observation!
     
@@ -25,25 +26,29 @@ class ObservationDetailsViewController: StackViewController, ObservationDetailPr
         view.backgroundColor = UIColor(red:0.88, green:0.89, blue:0.90, alpha:1.00)
         spacing = 2
         setupUI()
-        //        reLoadObservation()
+        loadFullObservation()
     }
 
     func setupUI() {
         profileView.setup(observation: observation, delegate: self)
         add(profileView)
+        
         if !observation.photos.isEmpty {
             let photoViewController = PhotoViewController.instantiate()
             photoViewController.photos = observation.photos
             add(photoViewController)
-        } else {
-            print("Observation \(observation.id) no photo")
         }
+        
         if observation.taxon != nil {
             taxaView.setup(taxon: observation.taxon, delegate: self)
             add(taxaView)
         }
+        descriptionView.setup(description: observation.description)
+        add(descriptionView)
+        
         faveView.setup(observation: observation, delegate: self)
         add(faveView)
+        
         if !(observation.identifications.isEmpty && observation.comments.isEmpty) {
             let activityViewController = ActivityViewController.instantiate()
             activityViewController.observation = observation
@@ -51,18 +56,16 @@ class ObservationDetailsViewController: StackViewController, ObservationDetailPr
         }
     }
     
-    
-    func reloadData(_ object: NSObject) {
-        
-    }
-    
-    func reLoadObservation() {
+    func loadFullObservation() {
         firstly {
             // start
             NatProvider.shared.request(.observation(id: observation.id))
             }.done { (pagedResult: PagedResults<Observation>) in
                 self.observation = pagedResult.results.content.first
-//                self.reloadData()
+                self.descriptionView.setup(description: self.observation.description)
+                if let description = self.observation.description {
+                    print("Description:", description)
+                }
             }.ignoreErrors()
     }
 }
