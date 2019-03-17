@@ -1,5 +1,5 @@
 //
-//  ObservationProfilleView.swift
+//  ObservationProfileView.swift
 //  NaturalistApp
 //
 //  Created by Dmitriy Borovikov on 28/02/2019.
@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-class ObservationProfilleView: UIView, NibInstantiable {
+class ObservationProfileView: UIView, NibInstantiable {
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var observationDateLabel: UILabel!

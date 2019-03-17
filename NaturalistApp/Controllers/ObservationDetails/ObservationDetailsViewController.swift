@@ -14,7 +14,7 @@ protocol FaveChangeProtocol: AnyObject {
 }
 
 class ObservationDetailsViewController: StackViewController, ObservationDetailProtocol {
-    private let profileView = ObservationProfilleView.instantiate()
+    private let profileView = ObservationProfileView.instantiate()
     private let taxaView = ObservationTaxaView.instantiate()
     private let faveView = ObservationFaveView.instantiate()
     private let descriptionView  = ObservationDescription.instantiate()

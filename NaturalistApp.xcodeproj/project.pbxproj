@@ -35,7 +35,7 @@
 		0A5F60B62227FF4600EABDAF /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F60B52227FF4600EABDAF /* UITableViewExtensions.swift */; };
 		0A62579F222DB78800812C5D /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A62579E222DB78800812C5D /* UIViewExtensions.swift */; };
 		0A87BB4D2227419100150BE9 /* ObservationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB4C2227419100150BE9 /* ObservationDetailsViewController.swift */; };
-		0A87BB4F2227441300150BE9 /* ObservationProfilleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB4E2227441300150BE9 /* ObservationProfilleView.swift */; };
+		0A87BB4F2227441300150BE9 /* ObservationProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB4E2227441300150BE9 /* ObservationProfileView.swift */; };
 		0A87BB512227461800150BE9 /* ObservationPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB502227461800150BE9 /* ObservationPhotoView.swift */; };
 		0A87BB532227470B00150BE9 /* ObservationTaxaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB522227470B00150BE9 /* ObservationTaxaView.swift */; };
 		0A87BB5522274A5F00150BE9 /* ObservationFaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB5422274A5F00150BE9 /* ObservationFaveView.swift */; };
@@ -135,7 +135,7 @@
 		0A5F60B52227FF4600EABDAF /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		0A62579E222DB78800812C5D /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		0A87BB4C2227419100150BE9 /* ObservationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationDetailsViewController.swift; sourceTree = "<group>"; };
-		0A87BB4E2227441300150BE9 /* ObservationProfilleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationProfilleView.swift; sourceTree = "<group>"; };
+		0A87BB4E2227441300150BE9 /* ObservationProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationProfileView.swift; sourceTree = "<group>"; };
 		0A87BB502227461800150BE9 /* ObservationPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationPhotoView.swift; sourceTree = "<group>"; };
 		0A87BB522227470B00150BE9 /* ObservationTaxaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationTaxaView.swift; sourceTree = "<group>"; };
 		0A87BB5422274A5F00150BE9 /* ObservationFaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationFaveView.swift; sourceTree = "<group>"; };
@@ -255,7 +255,7 @@
 			children = (
 				0A37F4EA2238316F0089FC09 /* ObservationDetailProtocol.swift */,
 				0A87BB4C2227419100150BE9 /* ObservationDetailsViewController.swift */,
-				0A87BB4E2227441300150BE9 /* ObservationProfilleView.swift */,
+				0A87BB4E2227441300150BE9 /* ObservationProfileView.swift */,
 				0A87BB502227461800150BE9 /* ObservationPhotoView.swift */,
 				0A87BB522227470B00150BE9 /* ObservationTaxaView.swift */,
 				0A10102D223E40A500EB42C3 /* ObservationDescription.swift */,
@@ -674,7 +674,7 @@
 				0A9F8C842219516200C299C8 /* Content.swift in Sources */,
 				0ABA9C61221024A10099F774 /* Observation.swift in Sources */,
 				0ABA9C6922103BDD0099F774 /* Comment.swift in Sources */,
-				0A87BB4F2227441300150BE9 /* ObservationProfilleView.swift in Sources */,
+				0A87BB4F2227441300150BE9 /* ObservationProfileView.swift in Sources */,
 				0ABA9C63221029BD0099F774 /* LicenseCode.swift in Sources */,
 				0A3139E6221ABCE9009D87F0 /* MKMapViewExtension.swift in Sources */,
 				0ADC99AA22292FD400034F49 /* TaxonPhoto.swift in Sources */,
