@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0A0B00A5221FD999008E17D9 /* Geojson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0B00A4221FD999008E17D9 /* Geojson.swift */; };
+		0A10102C223E408000EB42C3 /* ObservationDescription.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A10102B223E408000EB42C3 /* ObservationDescription.xib */; };
+		0A10102E223E40A500EB42C3 /* ObservationDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A10102D223E40A500EB42C3 /* ObservationDescription.swift */; };
+		0A101032223E6C2400EB42C3 /* KeyedDecodingContainerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A101031223E6C2400EB42C3 /* KeyedDecodingContainerExtensions.swift */; };
 		0A17F8FA223D562A00B71E66 /* PhotoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A17F8F7223D562900B71E66 /* PhotoViewController.storyboard */; };
 		0A17F8FB223D562A00B71E66 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A17F8F8223D562900B71E66 /* PhotoViewController.swift */; };
 		0A17F8FC223D562A00B71E66 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A17F8F9223D562900B71E66 /* PhotoCollectionViewCell.swift */; };
@@ -105,6 +108,9 @@
 
 /* Begin PBXFileReference section */
 		0A0B00A4221FD999008E17D9 /* Geojson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geojson.swift; sourceTree = "<group>"; };
+		0A10102B223E408000EB42C3 /* ObservationDescription.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObservationDescription.xib; sourceTree = "<group>"; };
+		0A10102D223E40A500EB42C3 /* ObservationDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationDescription.swift; sourceTree = "<group>"; };
+		0A101031223E6C2400EB42C3 /* KeyedDecodingContainerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyedDecodingContainerExtensions.swift; sourceTree = "<group>"; };
 		0A17F8F7223D562900B71E66 /* PhotoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PhotoViewController.storyboard; sourceTree = "<group>"; };
 		0A17F8F8223D562900B71E66 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		0A17F8F9223D562900B71E66 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -252,6 +258,8 @@
 				0A87BB4E2227441300150BE9 /* ObservationProfilleView.swift */,
 				0A87BB502227461800150BE9 /* ObservationPhotoView.swift */,
 				0A87BB522227470B00150BE9 /* ObservationTaxaView.swift */,
+				0A10102D223E40A500EB42C3 /* ObservationDescription.swift */,
+				0A10102B223E408000EB42C3 /* ObservationDescription.xib */,
 				0A87BB5422274A5F00150BE9 /* ObservationFaveView.swift */,
 				0A25DFA222367B1300DEB46E /* ObservationProfilleView.xib */,
 				0A25DFA4223685B800DEB46E /* ObservationPhotoView.xib */,
@@ -391,6 +399,7 @@
 				0A5F60B52227FF4600EABDAF /* UITableViewExtensions.swift */,
 				0A47A1DD22283B00005B4AEB /* UIViewControllerExtensions.swift */,
 				0A62579E222DB78800812C5D /* UIViewExtensions.swift */,
+				0A101031223E6C2400EB42C3 /* KeyedDecodingContainerExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -559,6 +568,7 @@
 				0A977B71220E0B8C005D1DC2 /* LaunchScreen.storyboard in Resources */,
 				0A977B6E220E0B8C005D1DC2 /* Assets.xcassets in Resources */,
 				0A977B6C220E0B8B005D1DC2 /* Main.storyboard in Resources */,
+				0A10102C223E408000EB42C3 /* ObservationDescription.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,6 +684,7 @@
 				0AA8DB46222900C0003999B7 /* UIStoryboardExtensions.swift in Sources */,
 				0A9F8C8E2219905500C299C8 /* JWTToken.swift in Sources */,
 				0A451A812211B35400684AC4 /* FreeMethods.swift in Sources */,
+				0A101032223E6C2400EB42C3 /* KeyedDecodingContainerExtensions.swift in Sources */,
 				0AD81CCB223A7D90003082BC /* ActivityCommentTableViewCell.swift in Sources */,
 				0ABA9C742210A3EC0099F774 /* KeychainService.swift in Sources */,
 				0A9F8C862219615C00C299C8 /* PagedResults.swift in Sources */,
@@ -697,6 +708,7 @@
 				0ABA9C6B2210498A0099F774 /* Fave.swift in Sources */,
 				0A977B67220E0B8B005D1DC2 /* AppDelegate.swift in Sources */,
 				0AA74C4B223137E700B824E8 /* NatTabBarController.swift in Sources */,
+				0A10102E223E40A500EB42C3 /* ObservationDescription.swift in Sources */,
 				0AA5CDAF222044CD000A80BE /* SLocation.swift in Sources */,
 				0A9F8C8A221969E600C299C8 /* NatNetworkError.swift in Sources */,
 				0A451A882211B5B000684AC4 /* Animations.swift in Sources */,

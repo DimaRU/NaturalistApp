@@ -55,7 +55,7 @@ struct Taxon: ResultsContent {
     let preferredCommonName: String?
     let defaultPhoto: Photo?
     let taxonPhotos: [TaxonPhoto]?
-    private let wikipediaUrl: String?
+    let wikipediaUrl: URL?
     let rank: Rank
     let taxonSchemesCount: Int
     let ancestry: String?
@@ -70,7 +70,6 @@ struct Taxon: ResultsContent {
     let ancestorIds: [Int]
     let observationsCount: Int
     let isActive: Bool
-//    let rankLevel: Int
     let atlasId: Int?
     let parentId: Int?
     let iconicTaxonName: IconicTaxonName?
@@ -80,11 +79,4 @@ struct Taxon: ResultsContent {
     let threatened: Bool?
     let introduced: Bool?
     let native: Bool?
-}
-
-extension Taxon {
-    var wikipediaURL: URL? {
-        guard let s = wikipediaUrl?.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed) else { return nil }
-        return URL(string: s)
-    }
 }
