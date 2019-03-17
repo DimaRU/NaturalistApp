@@ -22,6 +22,7 @@ class NaturalistAppTests: XCTestCase {
         vc = ActivityViewController.instantiate()
         vc = PhotoViewController.instantiate()
         vc = ProfileCollectionViewController.instantiate()
+        vc = TaxonMapViewController.instantiate()
         vc = NatTabBarController.instantiate()
         print(vc.description)
     }
