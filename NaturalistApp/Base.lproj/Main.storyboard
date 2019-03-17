@@ -333,7 +333,7 @@
         <!--Nat Tab Bar Controller-->
         <scene sceneID="XSC-l7-MlM">
             <objects>
-                <tabBarController id="dNA-dv-uTw" customClass="NatTabBarController" customModule="NaturalistApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="NatTabBarController" id="dNA-dv-uTw" customClass="NatTabBarController" customModule="NaturalistApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YaI-rY-yd9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

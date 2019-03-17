@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NatTabBarController: UITabBarController, StoryboardInstantiable {
+class NatTabBarController: UITabBarController, MainStoryboardInstantiable {
     override func viewDidLoad() {
         super.viewDidLoad()
 
