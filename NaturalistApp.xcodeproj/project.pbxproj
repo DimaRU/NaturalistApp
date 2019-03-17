@@ -18,7 +18,7 @@
 		0A21747D222577CF007E4EFC /* IconicTaxonName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A21747C222577CF007E4EFC /* IconicTaxonName.swift */; };
 		0A21747F22257828007E4EFC /* IconicTaxonName+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A21747E22257828007E4EFC /* IconicTaxonName+Color.swift */; };
 		0A2174812225821A007E4EFC /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2174802225821A007E4EFC /* UIColorExtensions.swift */; };
-		0A25DFA322367B1300DEB46E /* ObservationProfilleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A25DFA222367B1300DEB46E /* ObservationProfilleView.xib */; };
+		0A25DFA322367B1300DEB46E /* ObservationProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A25DFA222367B1300DEB46E /* ObservationProfileView.xib */; };
 		0A25DFA5223685B800DEB46E /* ObservationPhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A25DFA4223685B800DEB46E /* ObservationPhotoView.xib */; };
 		0A25DFA92236902F00DEB46E /* ObservationFaveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A25DFA82236902F00DEB46E /* ObservationFaveView.xib */; };
 		0A3139E4221AB315009D87F0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3139E3221AB315009D87F0 /* MapViewController.swift */; };
@@ -63,6 +63,7 @@
 		0AA74C4B223137E700B824E8 /* NatTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA74C4A223137E700B824E8 /* NatTabBarController.swift */; };
 		0AA8DB46222900C0003999B7 /* UIStoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8DB45222900C0003999B7 /* UIStoryboardExtensions.swift */; };
 		0AA9F17A2221CB43008A67D5 /* MKMapRectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA9F1792221CB43008A67D5 /* MKMapRectExtensions.swift */; };
+		0AB65035223ED97500B65768 /* TaxonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB65034223ED97500B65768 /* TaxonDetailViewController.swift */; };
 		0ABA9C5F22101D9E0099F774 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABA9C5E22101D9E0099F774 /* User.swift */; };
 		0ABA9C61221024A10099F774 /* Observation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABA9C60221024A10099F774 /* Observation.swift */; };
 		0ABA9C63221029BD0099F774 /* LicenseCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABA9C62221029BD0099F774 /* LicenseCode.swift */; };
@@ -122,7 +123,7 @@
 		0A21747C222577CF007E4EFC /* IconicTaxonName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconicTaxonName.swift; sourceTree = "<group>"; };
 		0A21747E22257828007E4EFC /* IconicTaxonName+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IconicTaxonName+Color.swift"; sourceTree = "<group>"; };
 		0A2174802225821A007E4EFC /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
-		0A25DFA222367B1300DEB46E /* ObservationProfilleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObservationProfilleView.xib; sourceTree = "<group>"; };
+		0A25DFA222367B1300DEB46E /* ObservationProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObservationProfileView.xib; sourceTree = "<group>"; };
 		0A25DFA4223685B800DEB46E /* ObservationPhotoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObservationPhotoView.xib; sourceTree = "<group>"; };
 		0A25DFA82236902F00DEB46E /* ObservationFaveView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObservationFaveView.xib; sourceTree = "<group>"; };
 		0A3139E3221AB315009D87F0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +174,7 @@
 		0AA74C4A223137E700B824E8 /* NatTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatTabBarController.swift; sourceTree = "<group>"; };
 		0AA8DB45222900C0003999B7 /* UIStoryboardExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtensions.swift; sourceTree = "<group>"; };
 		0AA9F1792221CB43008A67D5 /* MKMapRectExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapRectExtensions.swift; sourceTree = "<group>"; };
+		0AB65034223ED97500B65768 /* TaxonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxonDetailViewController.swift; sourceTree = "<group>"; };
 		0ABA9C5E22101D9E0099F774 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0ABA9C60221024A10099F774 /* Observation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observation.swift; sourceTree = "<group>"; };
 		0ABA9C62221029BD0099F774 /* LicenseCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseCode.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 		0A451A842211B4EC00684AC4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0AB65033223ED92B00B65768 /* TaxonDetails */,
 				0AD81CBC223A7D62003082BC /* ActivityViewController */,
 				0A25DFB62236C00900DEB46E /* PhotoViewController */,
 				0A89205B22364D4F00900224 /* Common */,
@@ -279,7 +282,7 @@
 				0A10102D223E40A500EB42C3 /* ObservationDescription.swift */,
 				0A10102B223E408000EB42C3 /* ObservationDescription.xib */,
 				0A87BB5422274A5F00150BE9 /* ObservationFaveView.swift */,
-				0A25DFA222367B1300DEB46E /* ObservationProfilleView.xib */,
+				0A25DFA222367B1300DEB46E /* ObservationProfileView.xib */,
 				0A25DFA4223685B800DEB46E /* ObservationPhotoView.xib */,
 				0AD81CC3223A7D8F003082BC /* ObservationTaxaView.xib */,
 				0A25DFA82236902F00DEB46E /* ObservationFaveView.xib */,
@@ -363,6 +366,14 @@
 				0A977B88220E0B8C005D1DC2 /* Info.plist */,
 			);
 			path = NaturalistAppUITests;
+			sourceTree = "<group>";
+		};
+		0AB65033223ED92B00B65768 /* TaxonDetails */ = {
+			isa = PBXGroup;
+			children = (
+				0AB65034223ED97500B65768 /* TaxonDetailViewController.swift */,
+			);
+			path = TaxonDetails;
 			sourceTree = "<group>";
 		};
 		0ABA9C5D22101CE40099F774 /* Model */ = {
@@ -579,7 +590,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A25DFA322367B1300DEB46E /* ObservationProfilleView.xib in Resources */,
+				0A25DFA322367B1300DEB46E /* ObservationProfileView.xib in Resources */,
 				0A25DFA92236902F00DEB46E /* ObservationFaveView.xib in Resources */,
 				0A25DFA5223685B800DEB46E /* ObservationPhotoView.xib in Resources */,
 				0AD81CCD223A7D90003082BC /* ActivityViewController.storyboard in Resources */,
@@ -719,6 +730,7 @@
 				0A93539922207E700067E197 /* CLLocationCoordinate2DExtensions.swift in Sources */,
 				0AD81CD4223A7F9C003082BC /* Identification.swift in Sources */,
 				0A17F8FC223D562A00B71E66 /* PhotoCollectionViewCell.swift in Sources */,
+				0AB65035223ED97500B65768 /* TaxonDetailViewController.swift in Sources */,
 				0AD81CD2223A7D90003082BC /* ActivityViewController.swift in Sources */,
 				0A87BB532227470B00150BE9 /* ObservationTaxaView.swift in Sources */,
 				0AD2C6E5222D2C4A003ECFD6 /* StoryboardInstantiable.swift in Sources */,

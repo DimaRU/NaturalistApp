@@ -17,8 +17,12 @@ protocol ObservationDetailProtocol: AnyObject {
 
 extension ObservationDetailProtocol where Self: UIViewController {
     func showTaxaDetails() {
-        #warning ("Todo: show taxon details")
-        print("Show taxon details")
+        guard let taxon = observation.taxon else { return }
+        let vc = TaxonDetailViewController()
+        vc.observationId = observation.id
+        vc.observationCoordinate = observation.coordinate
+        vc.taxon = taxon
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func showUserProfile(user: User) {
