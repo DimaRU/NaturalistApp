@@ -15,6 +15,7 @@ enum NatAPI: TargetType {
     case authorize(login: String, password: String)
     case apiToken(bearer: String)
     case searchObservations(perPage: Int, page: Int, userId: UserId?, havePhoto: Bool?, poular: Bool?)
+    case searchTaxonBounds(id: TaxonId?)
     case getObservationsBox(perPage: Int, page: Int, nelat: Double, nelng: Double, swlat: Double, swlng: Double)
     case searchTaxon(perPage: Int, page: Int, name: String?)
     case currentUser
@@ -45,7 +46,8 @@ enum NatAPI: TargetType {
         case .apiToken:
             return "/users/api_token"
         case .searchObservations,
-             .getObservationsBox:
+             .getObservationsBox,
+             .searchTaxonBounds:
             return "\(apiVersion)/observations"
         case .searchTaxon:
             return "\(apiVersion)/taxa"
@@ -76,7 +78,8 @@ enum NatAPI: TargetType {
              .currentUser,
              .users,
              .taxon,
-             .observation:
+             .observation,
+             .searchTaxonBounds:
             return .get
         case .fave:
             return .post
@@ -104,6 +107,11 @@ enum NatAPI: TargetType {
             parameters["user_id"] = userId
             parameters["photos"] = havePhoto?.description
             parameters["popular"] = poular?.description
+            return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
+        case .searchTaxonBounds(let id):
+            parameters["per_page"] = 1
+            parameters["taxon_id"] = id
+            parameters["return_bounds"] = true.description
             return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
         case .getObservationsBox(let perPage, let page, let nelat, let nelng, let swlat, let swlng):
             parameters["per_page"] = perPage

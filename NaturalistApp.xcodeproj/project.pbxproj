@@ -26,6 +26,7 @@
 		0A33CA37221F1F1B00BDD802 /* PromiseKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A33CA36221F1F1B00BDD802 /* PromiseKitExtensions.swift */; };
 		0A37F4EB2238316F0089FC09 /* ObservationDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A37F4EA2238316F0089FC09 /* ObservationDetailProtocol.swift */; };
 		0A3885B7223D8FB4003A63E8 /* PhotoActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3885B6223D8FB4003A63E8 /* PhotoActivityIndicator.swift */; };
+		0A3DA670223EACFB002C8E89 /* MapBounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3DA66F223EACFB002C8E89 /* MapBounds.swift */; };
 		0A3F664B2219B750002452B0 /* AuthorizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3F664A2219B750002452B0 /* AuthorizeViewController.swift */; };
 		0A451A812211B35400684AC4 /* FreeMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A451A802211B35400684AC4 /* FreeMethods.swift */; };
 		0A451A882211B5B000684AC4 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A451A872211B5B000684AC4 /* Animations.swift */; };
@@ -126,6 +127,7 @@
 		0A33CA36221F1F1B00BDD802 /* PromiseKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseKitExtensions.swift; sourceTree = "<group>"; };
 		0A37F4EA2238316F0089FC09 /* ObservationDetailProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservationDetailProtocol.swift; sourceTree = "<group>"; };
 		0A3885B6223D8FB4003A63E8 /* PhotoActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoActivityIndicator.swift; sourceTree = "<group>"; };
+		0A3DA66F223EACFB002C8E89 /* MapBounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBounds.swift; sourceTree = "<group>"; };
 		0A3F664A2219B750002452B0 /* AuthorizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizeViewController.swift; sourceTree = "<group>"; };
 		0A451A802211B35400684AC4 /* FreeMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeMethods.swift; sourceTree = "<group>"; };
 		0A451A872211B5B000684AC4 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
@@ -368,6 +370,7 @@
 				0A21747E22257828007E4EFC /* IconicTaxonName+Color.swift */,
 				0ABA9C5E22101D9E0099F774 /* User.swift */,
 				0A5832322224118A0071DEE0 /* ObservationAnnotation.swift */,
+				0A3DA66F223EACFB002C8E89 /* MapBounds.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -701,6 +704,7 @@
 				0AD81CD2223A7D90003082BC /* ActivityViewController.swift in Sources */,
 				0A87BB532227470B00150BE9 /* ObservationTaxaView.swift in Sources */,
 				0AD2C6E5222D2C4A003ECFD6 /* StoryboardInstantiable.swift in Sources */,
+				0A3DA670223EACFB002C8E89 /* MapBounds.swift in Sources */,
 				0A89205F22364E2100900224 /* NSLayoutConstraintExtensions.swift in Sources */,
 				0AD81CCA223A7D90003082BC /* DateExtensions.swift in Sources */,
 				0A47A1DC222838A3005B4AEB /* Globals.swift in Sources */,

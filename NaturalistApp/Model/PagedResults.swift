@@ -12,5 +12,6 @@ struct PagedResults<T: ResultsContent>: Decodable {
     let totalResults: Int
     let page: Int
     let perPage: Int
+    let totalBounds: MapBounds?
     let results: Content<T>
 }
