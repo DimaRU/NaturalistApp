@@ -63,9 +63,6 @@ class ObservationDetailsViewController: StackViewController, ObservationDetailPr
             }.done { (pagedResult: PagedResults<Observation>) in
                 self.observation = pagedResult.results.content.first
                 self.descriptionView.setup(description: self.observation.description)
-                if let description = self.observation.description {
-                    print("Description:", description)
-                }
             }.ignoreErrors()
     }
 }
