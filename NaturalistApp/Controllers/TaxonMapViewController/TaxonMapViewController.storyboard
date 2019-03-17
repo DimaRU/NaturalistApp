@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XTz-nv-FF1">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,7 @@
         <!--Taxon Map View Controller-->
         <scene sceneID="kk9-82-QsZ">
             <objects>
-                <viewController storyboardIdentifier="TaxonMapViewController" id="XTz-nv-FF1" customClass="TaxonMapViewController" customModule="HorizontalScroll" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TaxonMapViewController" id="XTz-nv-FF1" customClass="TaxonMapViewController" customModule="NaturalistApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1b0-Vt-j43">
                         <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,6 +23,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="nnP-Yi-6NG" secondAttribute="height" multiplier="4:3" id="eMI-QU-BTB"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="XTz-nv-FF1" id="CXd-4r-au0"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
