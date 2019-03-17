@@ -26,4 +26,13 @@ class NaturalistAppTests: XCTestCase {
         print(vc.description)
     }
 
+    func testViewNibInstantiable() {
+        var view: UIView
+        view = ObservationProfileView.instantiate()
+        view = ObservationPhotoView.instantiate()
+        view = ObservationTaxaView.instantiate()
+        view = ObservationDescription.instantiate()
+        view = ObservationFaveView.instantiate()
+        print(view.description)
+    }
 }
