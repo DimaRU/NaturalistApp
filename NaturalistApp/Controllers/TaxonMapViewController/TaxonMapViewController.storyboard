@@ -15,13 +15,13 @@
             <objects>
                 <viewController storyboardIdentifier="TaxonMapViewController" id="XTz-nv-FF1" customClass="TaxonMapViewController" customModule="NaturalistApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1b0-Vt-j43">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" rotateEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnP-Yi-6NG">
-                                <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+                                <rect key="frame" x="0.0" y="0.0" width="400" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="nnP-Yi-6NG" secondAttribute="height" multiplier="4:3" id="eMI-QU-BTB"/>
+                                    <constraint firstAttribute="height" constant="200" id="e74-Rv-o7P"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="XTz-nv-FF1" id="CXd-4r-au0"/>
@@ -37,7 +37,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MwE-kH-49V"/>
                     </view>
-                    <size key="freeformSize" width="400" height="300"/>
+                    <size key="freeformSize" width="400" height="200"/>
                     <connections>
                         <outlet property="mapView" destination="nnP-Yi-6NG" id="0i8-ka-pAR"/>
                     </connections>
