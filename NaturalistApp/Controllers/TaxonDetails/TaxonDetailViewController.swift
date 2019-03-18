@@ -75,6 +75,9 @@ extension TaxonDetailViewController: TaxonDetailProtocol {
     }
     
     func showWikipediaPage() {
-        print("Show wikipedia page")
+        guard let url = fullTaxon?.wikipediaUrl else { return }
+        let vc = WebViewController()
+        vc.url = url
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

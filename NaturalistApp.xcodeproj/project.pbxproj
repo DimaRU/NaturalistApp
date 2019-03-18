@@ -61,6 +61,7 @@
 		0A9F8C8A221969E600C299C8 /* NatNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9F8C89221969E600C299C8 /* NatNetworkError.swift */; };
 		0A9F8C8C22198F7800C299C8 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9F8C8B22198F7800C299C8 /* AccessToken.swift */; };
 		0A9F8C8E2219905500C299C8 /* JWTToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9F8C8D2219905500C299C8 /* JWTToken.swift */; };
+		0AA22B15223FA8DD00F1A52B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA22B14223FA8DD00F1A52B /* WebViewController.swift */; };
 		0AA3982E223F7F2900AF2A62 /* TaxonMapheaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA3982D223F7F2900AF2A62 /* TaxonMapheaderView.swift */; };
 		0AA39830223F7F6400AF2A62 /* TaxonMapheaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA3982F223F7F6400AF2A62 /* TaxonMapheaderView.xib */; };
 		0AA5CDAF222044CD000A80BE /* SLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5CDAE222044CD000A80BE /* SLocation.swift */; };
@@ -176,6 +177,7 @@
 		0A9F8C89221969E600C299C8 /* NatNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatNetworkError.swift; sourceTree = "<group>"; };
 		0A9F8C8B22198F7800C299C8 /* AccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
 		0A9F8C8D2219905500C299C8 /* JWTToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTToken.swift; sourceTree = "<group>"; };
+		0AA22B14223FA8DD00F1A52B /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		0AA3982D223F7F2900AF2A62 /* TaxonMapheaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxonMapheaderView.swift; sourceTree = "<group>"; };
 		0AA3982F223F7F6400AF2A62 /* TaxonMapheaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaxonMapheaderView.xib; sourceTree = "<group>"; };
 		0AA5CDAE222044CD000A80BE /* SLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLocation.swift; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 				0A3139E3221AB315009D87F0 /* MapViewController.swift */,
 				0AF16999222E783200C1058B /* ImageCollectionViewCell.swift */,
 				0AA74C4A223137E700B824E8 /* NatTabBarController.swift */,
+				0AA22B14223FA8DD00F1A52B /* WebViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -737,6 +740,7 @@
 				0A0BE666223F72E9004E9AC4 /* TaxonWebContentView.swift in Sources */,
 				0A17F8FB223D562A00B71E66 /* PhotoViewController.swift in Sources */,
 				0A87BB4D2227419100150BE9 /* ObservationDetailsViewController.swift in Sources */,
+				0AA22B15223FA8DD00F1A52B /* WebViewController.swift in Sources */,
 				0ABA9C7122109EA60099F774 /* DefaultCaseRepresentable.swift in Sources */,
 				0AD81CC8223A7D90003082BC /* ActivityProfileTableViewCell.swift in Sources */,
 				0AF16996222E75CE00C1058B /* ProfileCollectionViewController.swift in Sources */,
