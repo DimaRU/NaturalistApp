@@ -24,6 +24,7 @@ enum NatAPI: TargetType {
     case observation(id: ObservationId)
     case fave(id: ObservationId)
     case unfave(id: ObservationId)
+    case observers(perPage: Int, page: Int, taxonId: TaxonId?, observationId: ObservationId?, userId: UserId?)
 
     var apiVersion: String {
         return "/v1"
@@ -63,6 +64,8 @@ enum NatAPI: TargetType {
             return "\(apiVersion)/observations/\(id)/fave"
         case .unfave(let id):
             return "\(apiVersion)/observations/\(id)/unfave"
+        case .observers:
+            return "\(apiVersion)/observation/observers"
         }
     }
     
@@ -79,7 +82,8 @@ enum NatAPI: TargetType {
              .users,
              .taxon,
              .observation,
-             .searchTaxonBounds:
+             .searchTaxonBounds,
+             .observers:
             return .get
         case .fave:
             return .post
@@ -135,6 +139,13 @@ enum NatAPI: TargetType {
              .fave,
              .unfave:
             return .requestPlain
+        case .observers(let perPage, let page, let taxonId, let observationId, let userId):
+            parameters["per_page"] = perPage
+            parameters["page"] = page
+            parameters["taxon_id"] = taxonId
+            parameters["id"] = observationId
+            parameters["user_id"] = userId
+            return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
         }
     }
     
