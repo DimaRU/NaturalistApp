@@ -17,8 +17,8 @@ class ProfileCollectionViewController: UICollectionViewController, MainStoryboar
 
     var user: User?
     private var observations: [Int:[Observation]] = [:]
-    var totalResults = 0
-    var downloadingPages: Set<Int> = []
+    private var totalResults = 0
+    private var downloadingPages: Set<Int> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,12 +52,12 @@ class ProfileCollectionViewController: UICollectionViewController, MainStoryboar
                     let startRow = (pagedResult.page - 1) * Params.perPage
                     let endRow = startRow + pagedResult.perPage
                     let paths = (startRow..<endRow).map { IndexPath(row: $0, section: 0)}
-                    let visilePaths = self.collectionView.visibleIndexPaths(intersecting: paths)
-                    self.collectionView.reloadItems(at: visilePaths)
+                    let visiblePaths = self.collectionView.visibleIndexPaths(intersecting: paths)
+                    self.collectionView.reloadItems(at: visiblePaths)
                 }
                 // Cleanup
-                let min = self.downloadingPages.min()! - 2
-                let max = self.downloadingPages.max()! + 2
+                let min = self.downloadingPages.min()! - 5
+                let max = self.downloadingPages.max()! + 5
                 for key in self.observations.keys where key < min || key > max {
                     self.observations.removeValue(forKey: key)
                 }
