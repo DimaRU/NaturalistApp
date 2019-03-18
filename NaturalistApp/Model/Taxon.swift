@@ -75,8 +75,13 @@ struct Taxon: ResultsContent {
     let iconicTaxonName: IconicTaxonName?
     let completeRank: Rank?
     let ancestors: [Taxon]?
+    let children: [Taxon]
     let endemic: Bool?
     let threatened: Bool?
     let introduced: Bool?
     let native: Bool?
+    let listedTaxaCount: Int?
+    let listedTaxa: [Taxon]?
+    let rankLevel: Int?
+    let wikipediaSummary: String?
 }

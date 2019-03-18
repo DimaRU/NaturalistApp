@@ -36,6 +36,7 @@ class ObservationDetailsViewController: StackViewController, ObservationDetailPr
         if !observation.photos.isEmpty {
             let photoViewController = PhotoViewController.instantiate()
             photoViewController.photos = observation.photos
+            photoViewController.imageContentMode = .scaleAspectFill
             add(photoViewController)
         }
         
