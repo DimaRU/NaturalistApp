@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0A0B00A5221FD999008E17D9 /* Geojson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0B00A4221FD999008E17D9 /* Geojson.swift */; };
+		0A0BE666223F72E9004E9AC4 /* TaxonWebContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0BE665223F72E9004E9AC4 /* TaxonWebContentView.swift */; };
+		0A0BE668223F7304004E9AC4 /* TaxonWebContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A0BE667223F7304004E9AC4 /* TaxonWebContentView.xib */; };
 		0A10102C223E408000EB42C3 /* ObservationDescription.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A10102B223E408000EB42C3 /* ObservationDescription.xib */; };
 		0A10102E223E40A500EB42C3 /* ObservationDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A10102D223E40A500EB42C3 /* ObservationDescription.swift */; };
 		0A101032223E6C2400EB42C3 /* KeyedDecodingContainerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A101031223E6C2400EB42C3 /* KeyedDecodingContainerExtensions.swift */; };
@@ -59,6 +61,8 @@
 		0A9F8C8A221969E600C299C8 /* NatNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9F8C89221969E600C299C8 /* NatNetworkError.swift */; };
 		0A9F8C8C22198F7800C299C8 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9F8C8B22198F7800C299C8 /* AccessToken.swift */; };
 		0A9F8C8E2219905500C299C8 /* JWTToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9F8C8D2219905500C299C8 /* JWTToken.swift */; };
+		0AA3982E223F7F2900AF2A62 /* TaxonMapheaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA3982D223F7F2900AF2A62 /* TaxonMapheaderView.swift */; };
+		0AA39830223F7F6400AF2A62 /* TaxonMapheaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA3982F223F7F6400AF2A62 /* TaxonMapheaderView.xib */; };
 		0AA5CDAF222044CD000A80BE /* SLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5CDAE222044CD000A80BE /* SLocation.swift */; };
 		0AA74C4B223137E700B824E8 /* NatTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA74C4A223137E700B824E8 /* NatTabBarController.swift */; };
 		0AA8DB46222900C0003999B7 /* UIStoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA8DB45222900C0003999B7 /* UIStoryboardExtensions.swift */; };
@@ -113,6 +117,8 @@
 
 /* Begin PBXFileReference section */
 		0A0B00A4221FD999008E17D9 /* Geojson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geojson.swift; sourceTree = "<group>"; };
+		0A0BE665223F72E9004E9AC4 /* TaxonWebContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxonWebContentView.swift; sourceTree = "<group>"; };
+		0A0BE667223F7304004E9AC4 /* TaxonWebContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaxonWebContentView.xib; sourceTree = "<group>"; };
 		0A10102B223E408000EB42C3 /* ObservationDescription.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObservationDescription.xib; sourceTree = "<group>"; };
 		0A10102D223E40A500EB42C3 /* ObservationDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationDescription.swift; sourceTree = "<group>"; };
 		0A101031223E6C2400EB42C3 /* KeyedDecodingContainerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyedDecodingContainerExtensions.swift; sourceTree = "<group>"; };
@@ -170,6 +176,8 @@
 		0A9F8C89221969E600C299C8 /* NatNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatNetworkError.swift; sourceTree = "<group>"; };
 		0A9F8C8B22198F7800C299C8 /* AccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
 		0A9F8C8D2219905500C299C8 /* JWTToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTToken.swift; sourceTree = "<group>"; };
+		0AA3982D223F7F2900AF2A62 /* TaxonMapheaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxonMapheaderView.swift; sourceTree = "<group>"; };
+		0AA3982F223F7F6400AF2A62 /* TaxonMapheaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaxonMapheaderView.xib; sourceTree = "<group>"; };
 		0AA5CDAE222044CD000A80BE /* SLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLocation.swift; sourceTree = "<group>"; };
 		0AA74C4A223137E700B824E8 /* NatTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatTabBarController.swift; sourceTree = "<group>"; };
 		0AA8DB45222900C0003999B7 /* UIStoryboardExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtensions.swift; sourceTree = "<group>"; };
@@ -372,6 +380,10 @@
 			isa = PBXGroup;
 			children = (
 				0AB65034223ED97500B65768 /* TaxonDetailViewController.swift */,
+				0AA3982D223F7F2900AF2A62 /* TaxonMapheaderView.swift */,
+				0AA3982F223F7F6400AF2A62 /* TaxonMapheaderView.xib */,
+				0A0BE665223F72E9004E9AC4 /* TaxonWebContentView.swift */,
+				0A0BE667223F7304004E9AC4 /* TaxonWebContentView.xib */,
 			);
 			path = TaxonDetails;
 			sourceTree = "<group>";
@@ -599,7 +611,9 @@
 				0A977B71220E0B8C005D1DC2 /* LaunchScreen.storyboard in Resources */,
 				0A977B6E220E0B8C005D1DC2 /* Assets.xcassets in Resources */,
 				0A977B6C220E0B8B005D1DC2 /* Main.storyboard in Resources */,
+				0AA39830223F7F6400AF2A62 /* TaxonMapheaderView.xib in Resources */,
 				0A10102C223E408000EB42C3 /* ObservationDescription.xib in Resources */,
+				0A0BE668223F7304004E9AC4 /* TaxonWebContentView.xib in Resources */,
 				0A3DA674223EB7D4002C8E89 /* TaxonMapViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -720,6 +734,7 @@
 				0AD81CCB223A7D90003082BC /* ActivityCommentTableViewCell.swift in Sources */,
 				0ABA9C742210A3EC0099F774 /* KeychainService.swift in Sources */,
 				0A9F8C862219615C00C299C8 /* PagedResults.swift in Sources */,
+				0A0BE666223F72E9004E9AC4 /* TaxonWebContentView.swift in Sources */,
 				0A17F8FB223D562A00B71E66 /* PhotoViewController.swift in Sources */,
 				0A87BB4D2227419100150BE9 /* ObservationDetailsViewController.swift in Sources */,
 				0ABA9C7122109EA60099F774 /* DefaultCaseRepresentable.swift in Sources */,
@@ -747,6 +762,7 @@
 				0AA5CDAF222044CD000A80BE /* SLocation.swift in Sources */,
 				0A9F8C8A221969E600C299C8 /* NatNetworkError.swift in Sources */,
 				0A451A882211B5B000684AC4 /* Animations.swift in Sources */,
+				0AA3982E223F7F2900AF2A62 /* TaxonMapheaderView.swift in Sources */,
 				0A3DA677223EBE0A002C8E89 /* ObservationCoordinate.swift in Sources */,
 				0A87BB5522274A5F00150BE9 /* ObservationFaveView.swift in Sources */,
 				0A87BB512227461800150BE9 /* ObservationPhotoView.swift in Sources */,

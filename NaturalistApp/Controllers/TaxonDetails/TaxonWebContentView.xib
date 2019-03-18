@@ -16,35 +16,87 @@
             <rect key="frame" x="0.0" y="0.0" width="400" height="224"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HKV-dp-FWV">
-                    <rect key="frame" x="16" y="3" width="368" height="213"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="HKV-dp-FWV">
+                    <rect key="frame" x="16" y="8" width="368" height="208"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Common Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05E-j2-4FI">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Common Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05E-j2-4FI">
                             <rect key="frame" x="0.0" y="0.0" width="162" height="29"/>
                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scientific Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehs-YM-07p">
-                            <rect key="frame" x="0.0" y="37" width="101.5" height="17"/>
+                            <rect key="frame" x="0.0" y="29" width="101.5" height="17"/>
                             <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FSq-ab-hDm">
-                            <rect key="frame" x="0.0" y="62" width="84" height="151"/>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" scrollEnabled="NO" editable="NO" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FSq-ab-hDm">
+                            <rect key="frame" x="0.0" y="46" width="84" height="142"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             <dataDetectorType key="dataDetectorTypes" link="YES"/>
                         </textView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="4Hw-ox-l2f">
+                            <rect key="frame" x="0.0" y="188" width="368" height="20"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rie-PS-3NA">
+                                    <rect key="frame" x="0.0" y="0.0" width="182" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="z2N-YV-QsD"/>
+                                    </constraints>
+                                    <state key="normal">
+                                        <attributedString key="attributedTitle">
+                                            <fragment content="View on Wikipedia">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="13" name=".SFNSText"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    <integer key="NSUnderline" value="1"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                    </state>
+                                    <connections>
+                                        <action selector="wikiLinkTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="hHd-aM-YAr"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rzn-tp-oOR">
+                                    <rect key="frame" x="186" y="0.0" width="182" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="BEV-OS-s62"/>
+                                    </constraints>
+                                    <state key="normal">
+                                        <attributedString key="attributedTitle">
+                                            <fragment content="More on iNaturalist.org">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="13" name=".SFNSText"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    <integer key="NSUnderline" value="1"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                    </state>
+                                    <connections>
+                                        <action selector="inaturalistLinkTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="8CC-Hi-1gU"/>
+                                        <action selector="wikiLinkTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="cx0-xp-QCG"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
                     </subviews>
+                    <constraints>
+                        <constraint firstItem="4Hw-ox-l2f" firstAttribute="leading" secondItem="HKV-dp-FWV" secondAttribute="leading" id="DLg-WN-oLY"/>
+                        <constraint firstAttribute="trailing" secondItem="4Hw-ox-l2f" secondAttribute="trailing" id="WI6-R5-SH1"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="HKV-dp-FWV" secondAttribute="trailing" constant="16" id="Ifg-sJ-SeL"/>
-                <constraint firstItem="HKV-dp-FWV" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="3" id="cj9-bE-ySj"/>
+                <constraint firstItem="HKV-dp-FWV" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="cj9-bE-ySj"/>
                 <constraint firstItem="HKV-dp-FWV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="mo7-td-5uD"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="HKV-dp-FWV" secondAttribute="bottom" constant="8" id="ntr-xy-CTZ"/>
             </constraints>
@@ -54,6 +106,7 @@
                 <outlet property="commonNameLabel" destination="05E-j2-4FI" id="hQo-oK-rmA"/>
                 <outlet property="descriptionTextView" destination="FSq-ab-hDm" id="XJL-vP-hcw"/>
                 <outlet property="scientificNameLabel" destination="Ehs-YM-07p" id="0uo-Gg-B6S"/>
+                <outlet property="wikiLinkButton" destination="rie-PS-3NA" id="KiC-EY-OEe"/>
             </connections>
             <point key="canvasLocation" x="52.799999999999997" y="14.392803598200901"/>
         </view>

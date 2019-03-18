@@ -34,6 +34,8 @@ class NaturalistAppTests: XCTestCase {
         view = ObservationTaxaView.instantiate()
         view = ObservationDescription.instantiate()
         view = ObservationFaveView.instantiate()
+        view = TaxonWebContentView.instantiate()
+        view = TaxonMapheaderView.instantiate()
         print(view.description)
     }
 }

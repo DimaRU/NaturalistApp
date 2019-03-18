@@ -9,19 +9,27 @@
 import UIKit
 import MapKit
 
-class TaxonDetailViewController: StackViewController {
+protocol TaxonDetailProtocol: AnyObject {
+    func showWikipediaPage()
+    func openInaturalist()
+}
 
+class TaxonDetailViewController: StackViewController {
+    private let webContentView = TaxonWebContentView.instantiate()
+    private let mapHeaderView = TaxonMapheaderView.instantiate()
+    private var photoViewController: PhotoViewController!
+    private var fullTaxon: Taxon?
+    
     var observationId: ObservationId?
     var observationCoordinate: CLLocationCoordinate2D?
     var taxon: Taxon!
-    var fullTaxon: Taxon?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.title = taxon.preferredCommonName
         view.backgroundColor = UIColor(red:0.88, green:0.89, blue:0.90, alpha:1.00)
-        spacing = 2
+        spacing = 0
         setupUI()
         loadFullTaxon()
     }
@@ -30,23 +38,43 @@ class TaxonDetailViewController: StackViewController {
         NatProvider.shared.request(.taxon(id: taxon.id))
             .done { (results: PagedResults<Taxon>) in
                 self.fullTaxon = results.results.content.first
-                print(self.fullTaxon?.taxonPhotos?.count)
-                print(self.fullTaxon?.wikipediaSummary)
+                self.webContentView.setup(taxon: self.fullTaxon!, delegate: self)
+                if let taxonPhotos = self.fullTaxon?.taxonPhotos {
+                    self.photoViewController.photos = taxonPhotos.map{ $0.photo }
+                    self.photoViewController.captions = taxonPhotos.map{ $0.photo.attribution }
+                    self.photoViewController.refreshData()
+                }
             }.ignoreErrors()
     }
 
     private func setupUI() {
-        if let photos = taxon.taxonPhotos, !photos.isEmpty {
-            let photoViewController = PhotoViewController.instantiate()
-            photoViewController.photos = photos.map { $0.photo }
-            photoViewController.captions = photos.map { $0.photo.attribution }
-            photoViewController.imageContentMode = .scaleAspectFit
-            add(photoViewController)
+        photoViewController = PhotoViewController.instantiate()
+        if let photo = taxon.defaultPhoto {
+            photoViewController.photos = [photo]
+            photoViewController.captions = [photo.attribution]
         }
+        photoViewController.imageContentMode = .scaleAspectFit
+        add(photoViewController)
+        
+        webContentView.setup(taxon: taxon, delegate: self)
+        add(webContentView)
+        add(mapHeaderView)
         let mapViewController = TaxonMapViewController.instantiate()
         mapViewController.observationId = observationId
         mapViewController.observationCoordinate = observationCoordinate
         mapViewController.taxon = taxon
         add(mapViewController)
+    }
+}
+
+extension TaxonDetailViewController: TaxonDetailProtocol {
+    func openInaturalist() {
+        let urlString = "https://www.inaturalist.org/taxa/" + String(taxon.id)
+        let url = URL(string: urlString)!
+        UIApplication.shared.open(url)
+    }
+    
+    func showWikipediaPage() {
+        print("Show wikipedia page")
     }
 }
