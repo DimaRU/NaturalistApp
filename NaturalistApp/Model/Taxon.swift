@@ -80,6 +80,6 @@ struct Taxon: ResultsContent {
     let threatened: Bool?
     let introduced: Bool?
     let native: Bool?
-    let rankLevel: Int?
+//    let rankLevel: String?
     let wikipediaSummary: String?
 }

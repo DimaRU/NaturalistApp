@@ -65,7 +65,7 @@ enum NatAPI: TargetType {
         case .unfave(let id):
             return "\(apiVersion)/observations/\(id)/unfave"
         case .observers:
-            return "\(apiVersion)/observation/observers"
+            return "\(apiVersion)/observations/observers"
         }
     }
     

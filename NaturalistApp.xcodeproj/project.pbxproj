@@ -83,6 +83,10 @@
 		0ABA9C762210A4790099F774 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABA9C752210A4790099F774 /* APIKeys.swift */; };
 		0AD2C6E5222D2C4A003ECFD6 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2C6E4222D2C4A003ECFD6 /* StoryboardInstantiable.swift */; };
 		0AD2C6E7222D2C86003ECFD6 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2C6E6222D2C86003ECFD6 /* BasicViewController.swift */; };
+		0AD653E922401315007F315B /* LeadersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD653E822401315007F315B /* LeadersTableViewController.swift */; };
+		0AD653EB2240134D007F315B /* LeadersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD653EA2240134D007F315B /* LeadersTableViewCell.swift */; };
+		0AD653EE2240290C007F315B /* IndicateStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD653ED2240290C007F315B /* IndicateStateProtocol.swift */; };
+		0AD653F02240291B007F315B /* IndicateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD653EF2240291B007F315B /* IndicateState.swift */; };
 		0AD81CC8223A7D90003082BC /* ActivityProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD81CBD223A7D8E003082BC /* ActivityProfileTableViewCell.swift */; };
 		0AD81CCA223A7D90003082BC /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD81CBF223A7D8F003082BC /* DateExtensions.swift */; };
 		0AD81CCB223A7D90003082BC /* ActivityCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD81CC0223A7D8F003082BC /* ActivityCommentTableViewCell.swift */; };
@@ -200,6 +204,10 @@
 		0ABA9C752210A4790099F774 /* APIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		0AD2C6E4222D2C4A003ECFD6 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
 		0AD2C6E6222D2C86003ECFD6 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
+		0AD653E822401315007F315B /* LeadersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeadersTableViewController.swift; sourceTree = "<group>"; };
+		0AD653EA2240134D007F315B /* LeadersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadersTableViewCell.swift; sourceTree = "<group>"; };
+		0AD653ED2240290C007F315B /* IndicateStateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicateStateProtocol.swift; sourceTree = "<group>"; };
+		0AD653EF2240291B007F315B /* IndicateState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicateState.swift; sourceTree = "<group>"; };
 		0AD81CBD223A7D8E003082BC /* ActivityProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityProfileTableViewCell.swift; sourceTree = "<group>"; };
 		0AD81CBF223A7D8F003082BC /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		0AD81CC0223A7D8F003082BC /* ActivityCommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCommentTableViewCell.swift; sourceTree = "<group>"; };
@@ -275,6 +283,7 @@
 				0AF16994222E75A500C1058B /* Profile */,
 				0A87BB4B2227415200150BE9 /* ObservationDetails */,
 				0A3DA671223EB7D4002C8E89 /* TaxonMapViewController */,
+				0AD653EC22401366007F315B /* LeadersTableViewController */,
 				0A3F664A2219B750002452B0 /* AuthorizeViewController.swift */,
 				0A3139E3221AB315009D87F0 /* MapViewController.swift */,
 				0AF16999222E783200C1058B /* ImageCollectionViewCell.swift */,
@@ -309,6 +318,8 @@
 				0ABA9C7022109EA60099F774 /* DefaultCaseRepresentable.swift */,
 				0AD2C6E4222D2C4A003ECFD6 /* StoryboardInstantiable.swift */,
 				0A89205922364D2D00900224 /* NibInstantiable.swift */,
+				0AD653ED2240290C007F315B /* IndicateStateProtocol.swift */,
+				0AD653EF2240291B007F315B /* IndicateState.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -462,6 +473,15 @@
 				0A47A1DB222838A3005B4AEB /* Globals.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		0AD653EC22401366007F315B /* LeadersTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0AD653E822401315007F315B /* LeadersTableViewController.swift */,
+				0AD653EA2240134D007F315B /* LeadersTableViewCell.swift */,
+			);
+			path = LeadersTableViewController;
 			sourceTree = "<group>";
 		};
 		0AD81CBC223A7D62003082BC /* ActivityViewController */ = {
@@ -708,6 +728,7 @@
 			files = (
 				0A21747F22257828007E4EFC /* IconicTaxonName+Color.swift in Sources */,
 				0AD2C6E7222D2C86003ECFD6 /* BasicViewController.swift in Sources */,
+				0AD653EE2240290C007F315B /* IndicateStateProtocol.swift in Sources */,
 				0A3885B7223D8FB4003A63E8 /* PhotoActivityIndicator.swift in Sources */,
 				0ABA9C6722102B210099F774 /* Taxon.swift in Sources */,
 				0A0B00A5221FD999008E17D9 /* Geojson.swift in Sources */,
@@ -721,6 +742,8 @@
 				0A3F664B2219B750002452B0 /* AuthorizeViewController.swift in Sources */,
 				0A2174812225821A007E4EFC /* UIColorExtensions.swift in Sources */,
 				0A9F8C88221961B200C299C8 /* NatProvider.swift in Sources */,
+				0AD653EB2240134D007F315B /* LeadersTableViewCell.swift in Sources */,
+				0AD653F02240291B007F315B /* IndicateState.swift in Sources */,
 				0ABA9C762210A4790099F774 /* APIKeys.swift in Sources */,
 				0A37F4EB2238316F0089FC09 /* ObservationDetailProtocol.swift in Sources */,
 				0ADF8A4A222FD6F80047AC25 /* UICollectionViewExtensions.swift in Sources */,
@@ -778,6 +801,7 @@
 				0AF1699A222E783200C1058B /* ImageCollectionViewCell.swift in Sources */,
 				0A21747B22255487007E4EFC /* UIImageExtensions.swift in Sources */,
 				0A9F8C8C22198F7800C299C8 /* AccessToken.swift in Sources */,
+				0AD653E922401315007F315B /* LeadersTableViewController.swift in Sources */,
 				0A89205D22364D6E00900224 /* StackViewController.swift in Sources */,
 				0A89205A22364D2D00900224 /* NibInstantiable.swift in Sources */,
 				0A33CA37221F1F1B00BDD802 /* PromiseKitExtensions.swift in Sources */,

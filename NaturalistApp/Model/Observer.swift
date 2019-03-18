@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct Observer {
-    let userID: UserId
+struct Observer: ResultsContent {
+    let userId: UserId
     let observationCount: Int
     let speciesCount: Int
     let user: User
