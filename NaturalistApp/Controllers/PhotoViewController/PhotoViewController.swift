@@ -17,13 +17,19 @@ class PhotoViewController: UIViewController, StoryboardInstantiable {
     public var photos: [Photo] = []
     public var captions: [String] = []
     public var imageContentMode = UIView.ContentMode.scaleAspectFit
+    private var pageControlConstraintConstant: CGFloat = 0
+    
+    public func refreshData() {
+        pageControl.numberOfPages = photos.count
+        pageControlConstraint.constant = captions.isEmpty ? 0 : pageControlConstraintConstant
+        collectionView.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        pageControlConstraintConstant = pageControlConstraint.constant
         pageControl.numberOfPages = photos.count
-        if captions.isEmpty {
-            pageControlConstraint.constant = 0
-        }
+        pageControlConstraint.constant = captions.isEmpty ? 0 : pageControlConstraintConstant
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
