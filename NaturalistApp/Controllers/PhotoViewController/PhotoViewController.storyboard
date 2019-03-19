@@ -13,7 +13,7 @@
         <!--Photo View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="PhotoViewController" customModule="PhotoViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PhotoViewController" customModule="NaturalistApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,7 +31,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCollectionViewCell" id="fwZ-fc-LNN" customClass="PhotoCollectionViewCell" customModule="PhotoViewController" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCollectionViewCell" id="fwZ-fc-LNN" customClass="PhotoCollectionViewCell" customModule="NaturalistApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -103,7 +103,7 @@
                                 </connections>
                             </collectionView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="aCs-hb-tt9">
-                                <rect key="frame" x="0.0" y="236" width="400" height="37"/>
+                                <rect key="frame" x="16" y="16" width="368" height="37"/>
                                 <connections>
                                     <action selector="setPage:" destination="BYZ-38-t0r" eventType="valueChanged" id="xuL-T0-LwP"/>
                                 </connections>
@@ -112,11 +112,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Thv-1w-H3z" secondAttribute="bottom" priority="999" id="ABf-jT-hpn"/>
-                            <constraint firstItem="aCs-hb-tt9" firstAttribute="leading" secondItem="Thv-1w-H3z" secondAttribute="leading" id="EPj-T4-0qm"/>
-                            <constraint firstItem="Thv-1w-H3z" firstAttribute="bottom" secondItem="aCs-hb-tt9" secondAttribute="bottom" constant="27" id="JfC-Vq-hzj"/>
+                            <constraint firstItem="aCs-hb-tt9" firstAttribute="leading" secondItem="Thv-1w-H3z" secondAttribute="leading" constant="16" id="EPj-T4-0qm"/>
+                            <constraint firstItem="aCs-hb-tt9" firstAttribute="top" secondItem="Thv-1w-H3z" secondAttribute="top" constant="16" id="JfC-Vq-hzj"/>
                             <constraint firstItem="Thv-1w-H3z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aaI-2f-bkU"/>
                             <constraint firstItem="Thv-1w-H3z" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nYQ-ej-8We"/>
-                            <constraint firstItem="aCs-hb-tt9" firstAttribute="trailing" secondItem="Thv-1w-H3z" secondAttribute="trailing" id="uum-jX-7dU"/>
+                            <constraint firstItem="Thv-1w-H3z" firstAttribute="trailing" secondItem="aCs-hb-tt9" secondAttribute="trailing" constant="16" id="uum-jX-7dU"/>
                             <constraint firstItem="Thv-1w-H3z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yVk-5Y-hgw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -125,7 +125,6 @@
                     <connections>
                         <outlet property="collectionView" destination="Thv-1w-H3z" id="vZY-Fh-M2i"/>
                         <outlet property="pageControl" destination="aCs-hb-tt9" id="gKB-z5-zEE"/>
-                        <outlet property="pageControlConstraint" destination="JfC-Vq-hzj" id="FPN-fO-B4A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
