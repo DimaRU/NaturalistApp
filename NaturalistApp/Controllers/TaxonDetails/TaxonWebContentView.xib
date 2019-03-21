@@ -96,7 +96,6 @@
                                     </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="inaturalistLinkTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="8CC-Hi-1gU"/>
-                                        <action selector="wikiLinkTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="cx0-xp-QCG"/>
                                     </connections>
                                 </button>
                             </subviews>
