@@ -43,7 +43,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     func setup(url: URL, caption: String?, contentMode: UIView.ContentMode) {
         imageView.contentMode = contentMode
         self.caption = caption
-        imageView.kf.indicatorType = .custom(indicator: PhotoActivityIndicator())
+        imageView.kf.indicatorType = .custom(indicator: PhotoActivityIndicator(style: .whiteLarge))
         imageView.kf.setImage(with: url, placeholder: nil)
         { result in
             if case .success(let value) = result {

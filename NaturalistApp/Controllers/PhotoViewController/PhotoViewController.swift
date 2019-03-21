@@ -82,13 +82,11 @@ class PhotoViewController: UIViewController, StoryboardInstantiable {
     
     @objc private func nextPage() {
         scollViewIsDragging = true
-        let nextPage = pageControl.currentPage + 1
-        if nextPage < pageControl.numberOfPages {
-            moveToPage(nextPage)
+        var nextPage = pageControl.currentPage + 1
+        if nextPage >= pageControl.numberOfPages {
+            nextPage = 0
         }
-        else {
-            moveToPage(0)
-        }
+        moveToPage(nextPage)
     }
 }
 
@@ -108,5 +106,15 @@ extension PhotoViewController: UICollectionViewDataSource {
 extension PhotoViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return collectionView.frame.size
+    }
+}
+
+extension PhotoViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        stopAutoscroll()
+        let vc = FullScreenViewController()
+        vc.photo = photos[indexPath.row]
+        let nc = FullScreenNavigationViewController(rootViewController: vc)
+        present(nc, animated: true)
     }
 }

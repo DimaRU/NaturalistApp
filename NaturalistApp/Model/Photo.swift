@@ -18,7 +18,6 @@ struct Photo: Codable {
     let id: PhotoId
     let url: URL
     let originalDimensions: OriginalDimensions?
-    let originalUrl: URL?
     let attribution: String
     let licenseCode: String?
     let nativePageUrl: URL?
@@ -37,5 +36,6 @@ extension Photo {
     var smallUrl: URL { return replaceUrl("small") }
     var thumbUrl: URL { return replaceUrl("thumb") }
     var largeUrl: URL { return replaceUrl("large") }
+    var originalUrl: URL { return replaceUrl("original") }
 
 }

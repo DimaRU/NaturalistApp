@@ -16,6 +16,8 @@
 		0A17F8FA223D562A00B71E66 /* PhotoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A17F8F7223D562900B71E66 /* PhotoViewController.storyboard */; };
 		0A17F8FB223D562A00B71E66 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A17F8F8223D562900B71E66 /* PhotoViewController.swift */; };
 		0A17F8FC223D562A00B71E66 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A17F8F9223D562900B71E66 /* PhotoCollectionViewCell.swift */; };
+		0A1D41632243A0A500718651 /* FullScreenNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1D41622243A0A500718651 /* FullScreenNavigationViewController.swift */; };
+		0A1D41652243A0B500718651 /* FullScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1D41642243A0B500718651 /* FullScreenViewController.swift */; };
 		0A21747B22255487007E4EFC /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A21747A22255487007E4EFC /* UIImageExtensions.swift */; };
 		0A21747D222577CF007E4EFC /* IconicTaxonName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A21747C222577CF007E4EFC /* IconicTaxonName.swift */; };
 		0A21747F22257828007E4EFC /* IconicTaxonName+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A21747E22257828007E4EFC /* IconicTaxonName+Color.swift */; };
@@ -131,6 +133,8 @@
 		0A17F8F7223D562900B71E66 /* PhotoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PhotoViewController.storyboard; sourceTree = "<group>"; };
 		0A17F8F8223D562900B71E66 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		0A17F8F9223D562900B71E66 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		0A1D41622243A0A500718651 /* FullScreenNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenNavigationViewController.swift; sourceTree = "<group>"; };
+		0A1D41642243A0B500718651 /* FullScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenViewController.swift; sourceTree = "<group>"; };
 		0A21747A22255487007E4EFC /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		0A21747C222577CF007E4EFC /* IconicTaxonName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconicTaxonName.swift; sourceTree = "<group>"; };
 		0A21747E22257828007E4EFC /* IconicTaxonName+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IconicTaxonName+Color.swift"; sourceTree = "<group>"; };
@@ -258,8 +262,10 @@
 			children = (
 				0A17F8F8223D562900B71E66 /* PhotoViewController.swift */,
 				0A17F8F9223D562900B71E66 /* PhotoCollectionViewCell.swift */,
-				0A17F8F7223D562900B71E66 /* PhotoViewController.storyboard */,
 				0A3885B6223D8FB4003A63E8 /* PhotoActivityIndicator.swift */,
+				0A1D41622243A0A500718651 /* FullScreenNavigationViewController.swift */,
+				0A1D41642243A0B500718651 /* FullScreenViewController.swift */,
+				0A17F8F7223D562900B71E66 /* PhotoViewController.storyboard */,
 			);
 			path = PhotoViewController;
 			sourceTree = "<group>";
@@ -731,6 +737,7 @@
 				0AD653EE2240290C007F315B /* IndicateStateProtocol.swift in Sources */,
 				0A3885B7223D8FB4003A63E8 /* PhotoActivityIndicator.swift in Sources */,
 				0ABA9C6722102B210099F774 /* Taxon.swift in Sources */,
+				0A1D41632243A0A500718651 /* FullScreenNavigationViewController.swift in Sources */,
 				0A0B00A5221FD999008E17D9 /* Geojson.swift in Sources */,
 				0A62579F222DB78800812C5D /* UIViewExtensions.swift in Sources */,
 				0AD81CCF223A7D90003082BC /* ActivityTaxaTableViewCell.swift in Sources */,
@@ -802,6 +809,7 @@
 				0A21747B22255487007E4EFC /* UIImageExtensions.swift in Sources */,
 				0A9F8C8C22198F7800C299C8 /* AccessToken.swift in Sources */,
 				0AD653E922401315007F315B /* LeadersTableViewController.swift in Sources */,
+				0A1D41652243A0B500718651 /* FullScreenViewController.swift in Sources */,
 				0A89205D22364D6E00900224 /* StackViewController.swift in Sources */,
 				0A89205A22364D2D00900224 /* NibInstantiable.swift in Sources */,
 				0A33CA37221F1F1B00BDD802 /* PromiseKitExtensions.swift in Sources */,

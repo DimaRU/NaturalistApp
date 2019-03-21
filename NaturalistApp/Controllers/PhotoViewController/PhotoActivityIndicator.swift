@@ -10,7 +10,7 @@ import UIKit
 import Kingfisher
 
 struct PhotoActivityIndicator: Indicator {
-    let view: UIView = UIActivityIndicatorView(style: .whiteLarge)
+    let view: UIView
     
     func startAnimatingView() {
         let indicator = view as! UIActivityIndicatorView
@@ -21,7 +21,8 @@ struct PhotoActivityIndicator: Indicator {
         indicator.stopAnimating()
     }
     
-    init() {
+    init(style: UIActivityIndicatorView.Style) {
+        view = UIActivityIndicatorView(style: style)
         view.backgroundColor = .black
     }
 }
