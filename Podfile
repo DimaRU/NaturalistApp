@@ -6,13 +6,13 @@ target 'NaturalistApp' do
   use_frameworks!
 
   # Pods for MoyaTest
-  pod 'Moya'
-  pod 'PromiseKit'
-  pod 'PromiseKit/Alamofire'
-  pod 'PromiseKit/CoreLocation'
-  pod 'KeychainAccess'
-  pod 'SwiftyUserDefaults'
-  pod 'Kingfisher'
+  pod 'Moya', '13.0.0-beta.1'
+  pod 'PromiseKit', '6.8.3'
+  pod 'PromiseKit/Alamofire', '6.8.3'
+  pod 'PromiseKit/CoreLocation', '6.8.3'
+  pod 'KeychainAccess', '3.2.0'
+  pod 'SwiftyUserDefaults', '4.0.0-beta.2'
+  pod 'Kingfisher', '5.3.1'
 
 
 plugin 'cocoapods-keys', {
