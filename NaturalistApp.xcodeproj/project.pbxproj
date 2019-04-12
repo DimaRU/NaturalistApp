@@ -41,6 +41,17 @@
 		0A47A1DE22283B00005B4AEB /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A47A1DD22283B00005B4AEB /* UIViewControllerExtensions.swift */; };
 		0A4D5D6A223FDF8D00B2EB0E /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4D5D69223FDF8D00B2EB0E /* Observer.swift */; };
 		0A5832332224118A0071DEE0 /* ObservationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5832322224118A0071DEE0 /* ObservationAnnotation.swift */; };
+		0A5898222260E7980036AD6E /* SheetViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A5898212260E7980036AD6E /* SheetViewController.storyboard */; };
+		0A5898242260E7A60036AD6E /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5898232260E7A60036AD6E /* SheetViewController.swift */; };
+		0A5898262260E7CB0036AD6E /* SheetPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5898252260E7CB0036AD6E /* SheetPromise.swift */; };
+		0A5898332260E91F0036AD6E /* PickPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5898292260E91E0036AD6E /* PickPhotoCollectionViewCell.swift */; };
+		0A5898352260E91F0036AD6E /* PickPhotoController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A58982B2260E91F0036AD6E /* PickPhotoController.storyboard */; };
+		0A5898362260E91F0036AD6E /* PickPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A58982C2260E91F0036AD6E /* PickPhotoController.swift */; };
+		0A5898372260E91F0036AD6E /* ImagePickerPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A58982D2260E91F0036AD6E /* ImagePickerPromise.swift */; };
+		0A5898382260E91F0036AD6E /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A58982E2260E91F0036AD6E /* DataExtensions.swift */; };
+		0A5898392260E91F0036AD6E /* PHImageManagerPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A58982F2260E91F0036AD6E /* PHImageManagerPromise.swift */; };
+		0A58983A2260E91F0036AD6E /* CLLocationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5898302260E91F0036AD6E /* CLLocationExtensions.swift */; };
+		0A58983B2260E91F0036AD6E /* PhotoLibraryPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5898312260E91F0036AD6E /* PhotoLibraryPromise.swift */; };
 		0A5F60B62227FF4600EABDAF /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F60B52227FF4600EABDAF /* UITableViewExtensions.swift */; };
 		0A62579F222DB78800812C5D /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A62579E222DB78800812C5D /* UIViewExtensions.swift */; };
 		0A87BB4D2227419100150BE9 /* ObservationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB4C2227419100150BE9 /* ObservationDetailsViewController.swift */; };
@@ -158,6 +169,17 @@
 		0A47A1DD22283B00005B4AEB /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		0A4D5D69223FDF8D00B2EB0E /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		0A5832322224118A0071DEE0 /* ObservationAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationAnnotation.swift; sourceTree = "<group>"; };
+		0A5898212260E7980036AD6E /* SheetViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SheetViewController.storyboard; sourceTree = "<group>"; };
+		0A5898232260E7A60036AD6E /* SheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
+		0A5898252260E7CB0036AD6E /* SheetPromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheetPromise.swift; sourceTree = "<group>"; };
+		0A5898292260E91E0036AD6E /* PickPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		0A58982B2260E91F0036AD6E /* PickPhotoController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PickPhotoController.storyboard; sourceTree = "<group>"; };
+		0A58982C2260E91F0036AD6E /* PickPhotoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickPhotoController.swift; sourceTree = "<group>"; };
+		0A58982D2260E91F0036AD6E /* ImagePickerPromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerPromise.swift; sourceTree = "<group>"; };
+		0A58982E2260E91F0036AD6E /* DataExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataExtensions.swift; sourceTree = "<group>"; };
+		0A58982F2260E91F0036AD6E /* PHImageManagerPromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHImageManagerPromise.swift; sourceTree = "<group>"; };
+		0A5898302260E91F0036AD6E /* CLLocationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLLocationExtensions.swift; sourceTree = "<group>"; };
+		0A5898312260E91F0036AD6E /* PhotoLibraryPromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibraryPromise.swift; sourceTree = "<group>"; };
 		0A5F60B52227FF4600EABDAF /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		0A62579E222DB78800812C5D /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		0A87BB4C2227419100150BE9 /* ObservationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationDetailsViewController.swift; sourceTree = "<group>"; };
@@ -282,6 +304,8 @@
 		0A451A842211B4EC00684AC4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0A5898272260E8FD0036AD6E /* PickPhotoController */,
+				0A5898202260E7840036AD6E /* SheetViewController */,
 				0AB65033223ED92B00B65768 /* TaxonDetails */,
 				0AD81CBC223A7D62003082BC /* ActivityViewController */,
 				0A25DFB62236C00900DEB46E /* PhotoViewController */,
@@ -297,6 +321,29 @@
 				0AA22B14223FA8DD00F1A52B /* WebViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0A5898202260E7840036AD6E /* SheetViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0A5898252260E7CB0036AD6E /* SheetPromise.swift */,
+				0A5898232260E7A60036AD6E /* SheetViewController.swift */,
+				0A5898212260E7980036AD6E /* SheetViewController.storyboard */,
+			);
+			path = SheetViewController;
+			sourceTree = "<group>";
+		};
+		0A5898272260E8FD0036AD6E /* PickPhotoController */ = {
+			isa = PBXGroup;
+			children = (
+				0A58982D2260E91F0036AD6E /* ImagePickerPromise.swift */,
+				0A58982F2260E91F0036AD6E /* PHImageManagerPromise.swift */,
+				0A5898312260E91F0036AD6E /* PhotoLibraryPromise.swift */,
+				0A5898292260E91E0036AD6E /* PickPhotoCollectionViewCell.swift */,
+				0A58982B2260E91F0036AD6E /* PickPhotoController.storyboard */,
+				0A58982C2260E91F0036AD6E /* PickPhotoController.swift */,
+			);
+			path = PickPhotoController;
 			sourceTree = "<group>";
 		};
 		0A87BB4B2227415200150BE9 /* ObservationDetails */ = {
@@ -451,7 +498,9 @@
 		0ABA9C6F22109E920099F774 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0A5898302260E91F0036AD6E /* CLLocationExtensions.swift */,
 				0A93539822207E700067E197 /* CLLocationCoordinate2DExtensions.swift */,
+				0A58982E2260E91F0036AD6E /* DataExtensions.swift */,
 				0AD81CBF223A7D8F003082BC /* DateExtensions.swift */,
 				0AA9F1792221CB43008A67D5 /* MKMapRectExtensions.swift */,
 				0A3139E5221ABCE9009D87F0 /* MKMapViewExtension.swift */,
@@ -644,12 +693,14 @@
 				0AD81CCE223A7D90003082BC /* ObservationTaxaView.xib in Resources */,
 				0A17F8FA223D562A00B71E66 /* PhotoViewController.storyboard in Resources */,
 				0A977B71220E0B8C005D1DC2 /* LaunchScreen.storyboard in Resources */,
+				0A5898352260E91F0036AD6E /* PickPhotoController.storyboard in Resources */,
 				0A977B6E220E0B8C005D1DC2 /* Assets.xcassets in Resources */,
 				0A977B6C220E0B8B005D1DC2 /* Main.storyboard in Resources */,
 				0AA39830223F7F6400AF2A62 /* TaxonMapheaderView.xib in Resources */,
 				0A10102C223E408000EB42C3 /* ObservationDescription.xib in Resources */,
 				0A0BE668223F7304004E9AC4 /* TaxonWebContentView.xib in Resources */,
 				0A3DA674223EB7D4002C8E89 /* TaxonMapViewController.storyboard in Resources */,
+				0A5898222260E7980036AD6E /* SheetViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -745,6 +796,7 @@
 				0A62579F222DB78800812C5D /* UIViewExtensions.swift in Sources */,
 				0AD81CCF223A7D90003082BC /* ActivityTaxaTableViewCell.swift in Sources */,
 				0A5F60B62227FF4600EABDAF /* UITableViewExtensions.swift in Sources */,
+				0A5898332260E91F0036AD6E /* PickPhotoCollectionViewCell.swift in Sources */,
 				0A5832332224118A0071DEE0 /* ObservationAnnotation.swift in Sources */,
 				0A4D5D6A223FDF8D00B2EB0E /* Observer.swift in Sources */,
 				0ABA9C65221029EE0099F774 /* Photo.swift in Sources */,
@@ -759,13 +811,16 @@
 				0ADF8A4A222FD6F80047AC25 /* UICollectionViewExtensions.swift in Sources */,
 				0A9F8C842219516200C299C8 /* Content.swift in Sources */,
 				0ABA9C61221024A10099F774 /* Observation.swift in Sources */,
+				0A5898242260E7A60036AD6E /* SheetViewController.swift in Sources */,
 				0ABA9C6922103BDD0099F774 /* Comment.swift in Sources */,
+				0A5898372260E91F0036AD6E /* ImagePickerPromise.swift in Sources */,
 				0A87BB4F2227441300150BE9 /* ObservationProfileView.swift in Sources */,
 				0ABA9C63221029BD0099F774 /* LicenseCode.swift in Sources */,
 				0A3139E6221ABCE9009D87F0 /* MKMapViewExtension.swift in Sources */,
 				0ADC99AA22292FD400034F49 /* TaxonPhoto.swift in Sources */,
 				0A3139E4221AB315009D87F0 /* MapViewController.swift in Sources */,
 				0A21747D222577CF007E4EFC /* IconicTaxonName.swift in Sources */,
+				0A5898262260E7CB0036AD6E /* SheetPromise.swift in Sources */,
 				0ADF8A48222FCC3A0047AC25 /* StringExtensions.swift in Sources */,
 				0AA8DB46222900C0003999B7 /* UIStoryboardExtensions.swift in Sources */,
 				0A9F8C8E2219905500C299C8 /* JWTToken.swift in Sources */,
@@ -799,21 +854,26 @@
 				0ABA9C6B2210498A0099F774 /* Fave.swift in Sources */,
 				0A977B67220E0B8B005D1DC2 /* AppDelegate.swift in Sources */,
 				0AA74C4B223137E700B824E8 /* NatTabBarController.swift in Sources */,
+				0A58983B2260E91F0036AD6E /* PhotoLibraryPromise.swift in Sources */,
 				0A10102E223E40A500EB42C3 /* ObservationDescription.swift in Sources */,
 				0AA5CDAF222044CD000A80BE /* SLocation.swift in Sources */,
 				0A9F8C8A221969E600C299C8 /* NatNetworkError.swift in Sources */,
+				0A5898362260E91F0036AD6E /* PickPhotoController.swift in Sources */,
 				0A451A882211B5B000684AC4 /* Animations.swift in Sources */,
 				0AA3982E223F7F2900AF2A62 /* TaxonMapheaderView.swift in Sources */,
 				0A3DA677223EBE0A002C8E89 /* ObservationCoordinate.swift in Sources */,
+				0A5898392260E91F0036AD6E /* PHImageManagerPromise.swift in Sources */,
 				0A87BB5522274A5F00150BE9 /* ObservationFaveView.swift in Sources */,
 				0A87BB512227461800150BE9 /* ObservationPhotoView.swift in Sources */,
 				0ABA9C5F22101D9E0099F774 /* User.swift in Sources */,
 				0AF1699A222E783200C1058B /* ImageCollectionViewCell.swift in Sources */,
 				0A21747B22255487007E4EFC /* UIImageExtensions.swift in Sources */,
 				0A9F8C8C22198F7800C299C8 /* AccessToken.swift in Sources */,
+				0A5898382260E91F0036AD6E /* DataExtensions.swift in Sources */,
 				0AD653E922401315007F315B /* LeadersTableViewController.swift in Sources */,
 				0A1D41652243A0B500718651 /* FullScreenViewController.swift in Sources */,
 				0A89205D22364D6E00900224 /* StackViewController.swift in Sources */,
+				0A58983A2260E91F0036AD6E /* CLLocationExtensions.swift in Sources */,
 				0A89205A22364D2D00900224 /* NibInstantiable.swift in Sources */,
 				0A33CA37221F1F1B00BDD802 /* PromiseKitExtensions.swift in Sources */,
 			);

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OHY-5b-Cxr">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pick Photo Controller-->
+        <scene sceneID="JZB-U6-swJ">
+            <objects>
+                <collectionViewController storyboardIdentifier="PickPhotoController" id="OHY-5b-Cxr" customClass="PickPhotoController" customModule="TestPickerView" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Hks-Pl-QJS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="Ikc-xU-3SV">
+                            <size key="itemSize" width="100" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PickPhotoCollectionViewCell" id="79e-aU-ls0" customClass="PickPhotoCollectionViewCell" customModule="TestPickerView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3wq-Vy-Sl7">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        </imageView>
+                                        <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CheckCircle 1031542" translatesAutoresizingMaskIntoConstraints="NO" id="j8Y-ZT-ih3">
+                                            <rect key="frame" x="50" y="50" width="30" height="30"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="3wq-Vy-Sl7" firstAttribute="top" secondItem="79e-aU-ls0" secondAttribute="top" id="GgE-X7-OH6"/>
+                                    <constraint firstAttribute="bottom" secondItem="3wq-Vy-Sl7" secondAttribute="bottom" id="RCP-Bz-ghy"/>
+                                    <constraint firstItem="3wq-Vy-Sl7" firstAttribute="leading" secondItem="79e-aU-ls0" secondAttribute="leading" id="RNd-eF-HrJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="j8Y-ZT-ih3" secondAttribute="bottom" constant="20" id="SVG-Vu-tf3"/>
+                                    <constraint firstAttribute="trailing" secondItem="j8Y-ZT-ih3" secondAttribute="trailing" constant="20" id="TUQ-eC-7fd"/>
+                                    <constraint firstAttribute="trailing" secondItem="3wq-Vy-Sl7" secondAttribute="trailing" id="k7h-Gv-U9e"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="checkMarkIcon" destination="j8Y-ZT-ih3" id="DiV-Bz-gQY"/>
+                                    <outlet property="photoImageView" destination="3wq-Vy-Sl7" id="UaM-ID-xH7"/>
+                                </connections>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CameraCell" id="fNQ-2E-mb8">
+                                <rect key="frame" x="104.5" y="0.0" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Camera 1983537" translatesAutoresizingMaskIntoConstraints="NO" id="ET2-qk-gKh">
+                                            <rect key="frame" x="25" y="25" width="50" height="50"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbI-4d-mfb">
+                                            <rect key="frame" x="26.5" y="75" width="47" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kbI-4d-mfb" secondAttribute="trailing" constant="8" id="8Rh-lO-b5i"/>
+                                    <constraint firstItem="ET2-qk-gKh" firstAttribute="centerX" secondItem="fNQ-2E-mb8" secondAttribute="centerX" id="Apv-1e-wDg"/>
+                                    <constraint firstItem="kbI-4d-mfb" firstAttribute="top" secondItem="ET2-qk-gKh" secondAttribute="bottom" id="EsU-tz-8XV"/>
+                                    <constraint firstItem="kbI-4d-mfb" firstAttribute="centerX" secondItem="fNQ-2E-mb8" secondAttribute="centerX" id="MXg-G5-CUp"/>
+                                    <constraint firstItem="ET2-qk-gKh" firstAttribute="centerY" secondItem="fNQ-2E-mb8" secondAttribute="centerY" id="NFr-7u-NTr"/>
+                                    <constraint firstItem="kbI-4d-mfb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fNQ-2E-mb8" secondAttribute="leading" constant="8" id="uiq-CS-H6c"/>
+                                </constraints>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GalleryCell" id="08B-6N-NsM">
+                                <rect key="frame" x="209.5" y="0.0" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gallery 2028580" translatesAutoresizingMaskIntoConstraints="NO" id="qas-1W-7wc">
+                                            <rect key="frame" x="25" y="25" width="50" height="50"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo library" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAp-if-mip">
+                                            <rect key="frame" x="11.5" y="75" width="77.5" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                                <constraints>
+                                    <constraint firstItem="CAp-if-mip" firstAttribute="centerX" secondItem="08B-6N-NsM" secondAttribute="centerX" id="430-a6-NlO"/>
+                                    <constraint firstItem="qas-1W-7wc" firstAttribute="centerY" secondItem="08B-6N-NsM" secondAttribute="centerY" id="MY5-aQ-5sR"/>
+                                    <constraint firstItem="qas-1W-7wc" firstAttribute="centerX" secondItem="08B-6N-NsM" secondAttribute="centerX" id="RMf-i1-Aay"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CAp-if-mip" secondAttribute="trailing" constant="8" id="Ul2-Za-c3o"/>
+                                    <constraint firstItem="CAp-if-mip" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="08B-6N-NsM" secondAttribute="leading" constant="8" id="nw8-Rz-RJh"/>
+                                    <constraint firstItem="CAp-if-mip" firstAttribute="top" secondItem="qas-1W-7wc" secondAttribute="bottom" id="rHv-9q-OTH"/>
+                                </constraints>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="OHY-5b-Cxr" id="87h-Cn-UXD"/>
+                            <outlet property="delegate" destination="OHY-5b-Cxr" id="sBM-7f-Ew2"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="thc-Uq-MpI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="890" y="96"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Camera 1983537" width="50" height="50"/>
+        <image name="CheckCircle 1031542" width="30" height="30"/>
+        <image name="Gallery 2028580" width="50" height="50"/>
+    </resources>
+</document>
