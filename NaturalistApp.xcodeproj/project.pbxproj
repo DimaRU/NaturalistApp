@@ -54,6 +54,8 @@
 		0A58983B2260E91F0036AD6E /* PhotoLibraryPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5898312260E91F0036AD6E /* PhotoLibraryPromise.swift */; };
 		0A5F60B62227FF4600EABDAF /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F60B52227FF4600EABDAF /* UITableViewExtensions.swift */; };
 		0A62579F222DB78800812C5D /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A62579E222DB78800812C5D /* UIViewExtensions.swift */; };
+		0A6624E022660E5C00EB2747 /* UITextViewPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6624DF22660E5C00EB2747 /* UITextViewPlaceholder.swift */; };
+		0A7788A22264F3CD00A471F1 /* AddObservationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7788A12264F3CD00A471F1 /* AddObservationTableViewController.swift */; };
 		0A87BB4D2227419100150BE9 /* ObservationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB4C2227419100150BE9 /* ObservationDetailsViewController.swift */; };
 		0A87BB4F2227441300150BE9 /* ObservationProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB4E2227441300150BE9 /* ObservationProfileView.swift */; };
 		0A87BB512227461800150BE9 /* ObservationPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB502227461800150BE9 /* ObservationPhotoView.swift */; };
@@ -183,6 +185,8 @@
 		0A5898312260E91F0036AD6E /* PhotoLibraryPromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibraryPromise.swift; sourceTree = "<group>"; };
 		0A5F60B52227FF4600EABDAF /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		0A62579E222DB78800812C5D /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		0A6624DF22660E5C00EB2747 /* UITextViewPlaceholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewPlaceholder.swift; sourceTree = "<group>"; };
+		0A7788A12264F3CD00A471F1 /* AddObservationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddObservationTableViewController.swift; sourceTree = "<group>"; };
 		0A87BB4C2227419100150BE9 /* ObservationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationDetailsViewController.swift; sourceTree = "<group>"; };
 		0A87BB4E2227441300150BE9 /* ObservationProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationProfileView.swift; sourceTree = "<group>"; };
 		0A87BB502227461800150BE9 /* ObservationPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationPhotoView.swift; sourceTree = "<group>"; };
@@ -322,7 +326,6 @@
 				0AF16999222E783200C1058B /* ImageCollectionViewCell.swift */,
 				0AA74C4A223137E700B824E8 /* NatTabBarController.swift */,
 				0AA22B14223FA8DD00F1A52B /* WebViewController.swift */,
-				0AD6037922624B340099B90F /* AddObservationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -353,8 +356,18 @@
 		0A58983C2260EE4F0036AD6E /* AddObservationController */ = {
 			isa = PBXGroup;
 			children = (
+				0AD6037922624B340099B90F /* AddObservationViewController.swift */,
+				0A7788A12264F3CD00A471F1 /* AddObservationTableViewController.swift */,
 			);
 			path = AddObservationController;
+			sourceTree = "<group>";
+		};
+		0A6624DE22660E2D00EB2747 /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				0A6624DF22660E5C00EB2747 /* UITextViewPlaceholder.swift */,
+			);
+			path = "Third Party";
 			sourceTree = "<group>";
 		};
 		0A87BB4B2227415200150BE9 /* ObservationDetails */ = {
@@ -428,6 +441,7 @@
 				0ABA9C6C22105F8F0099F774 /* Network */,
 				0ABA9C5D22101CE40099F774 /* Model */,
 				0ABA9C722210A30C0099F774 /* Services */,
+				0A6624DE22660E2D00EB2747 /* Third Party */,
 				0A977B66220E0B8B005D1DC2 /* AppDelegate.swift */,
 				0A451A802211B35400684AC4 /* FreeMethods.swift */,
 				0A977B6A220E0B8B005D1DC2 /* Main.storyboard */,
@@ -819,6 +833,7 @@
 				0AD653F02240291B007F315B /* IndicateState.swift in Sources */,
 				0ABA9C762210A4790099F774 /* APIKeys.swift in Sources */,
 				0A37F4EB2238316F0089FC09 /* ObservationDetailProtocol.swift in Sources */,
+				0A7788A22264F3CD00A471F1 /* AddObservationTableViewController.swift in Sources */,
 				0ADF8A4A222FD6F80047AC25 /* UICollectionViewExtensions.swift in Sources */,
 				0A9F8C842219516200C299C8 /* Content.swift in Sources */,
 				0ABA9C61221024A10099F774 /* Observation.swift in Sources */,
@@ -832,6 +847,7 @@
 				0A3139E4221AB315009D87F0 /* MapViewController.swift in Sources */,
 				0A21747D222577CF007E4EFC /* IconicTaxonName.swift in Sources */,
 				0A5898262260E7CB0036AD6E /* SheetPromise.swift in Sources */,
+				0A6624E022660E5C00EB2747 /* UITextViewPlaceholder.swift in Sources */,
 				0ADF8A48222FCC3A0047AC25 /* StringExtensions.swift in Sources */,
 				0AA8DB46222900C0003999B7 /* UIStoryboardExtensions.swift in Sources */,
 				0A9F8C8E2219905500C299C8 /* JWTToken.swift in Sources */,
