@@ -11,7 +11,7 @@ import Photos
 import PromiseKit
 
 class AddObservationViewController: UIViewController {
-
+    @IBOutlet weak var taxaView: ObservationTaxaView!
     private var assets: [PHAsset] = []
     
     override func viewDidLoad() {

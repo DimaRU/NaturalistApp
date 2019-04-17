@@ -114,6 +114,7 @@
 		0ADC99AA22292FD400034F49 /* TaxonPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADC99A922292FD400034F49 /* TaxonPhoto.swift */; };
 		0ADF8A48222FCC3A0047AC25 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF8A47222FCC3A0047AC25 /* StringExtensions.swift */; };
 		0ADF8A4A222FD6F80047AC25 /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADF8A49222FD6F80047AC25 /* UICollectionViewExtensions.swift */; };
+		0AEB410E22678213008BD357 /* TitleValueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEB410D22678213008BD357 /* TitleValueTableViewCell.swift */; };
 		0AF16996222E75CE00C1058B /* ProfileCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF16995222E75CE00C1058B /* ProfileCollectionViewController.swift */; };
 		0AF16998222E76BD00C1058B /* ProfileHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF16997222E76BD00C1058B /* ProfileHeaderCollectionReusableView.swift */; };
 		0AF1699A222E783200C1058B /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF16999222E783200C1058B /* ImageCollectionViewCell.swift */; };
@@ -251,6 +252,7 @@
 		0ADC99A922292FD400034F49 /* TaxonPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxonPhoto.swift; sourceTree = "<group>"; };
 		0ADF8A47222FCC3A0047AC25 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		0ADF8A49222FD6F80047AC25 /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
+		0AEB410D22678213008BD357 /* TitleValueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleValueTableViewCell.swift; sourceTree = "<group>"; };
 		0AF16995222E75CE00C1058B /* ProfileCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewController.swift; sourceTree = "<group>"; };
 		0AF16997222E76BD00C1058B /* ProfileHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		0AF16999222E783200C1058B /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 			children = (
 				0AD6037922624B340099B90F /* AddObservationViewController.swift */,
 				0A7788A12264F3CD00A471F1 /* AddObservationTableViewController.swift */,
+				0AEB410D22678213008BD357 /* TitleValueTableViewCell.swift */,
 			);
 			path = AddObservationController;
 			sourceTree = "<group>";
@@ -847,6 +850,7 @@
 				0A3139E4221AB315009D87F0 /* MapViewController.swift in Sources */,
 				0A21747D222577CF007E4EFC /* IconicTaxonName.swift in Sources */,
 				0A5898262260E7CB0036AD6E /* SheetPromise.swift in Sources */,
+				0AEB410E22678213008BD357 /* TitleValueTableViewCell.swift in Sources */,
 				0A6624E022660E5C00EB2747 /* UITextViewPlaceholder.swift in Sources */,
 				0ADF8A48222FCC3A0047AC25 /* StringExtensions.swift in Sources */,
 				0AA8DB46222900C0003999B7 /* UIStoryboardExtensions.swift in Sources */,
