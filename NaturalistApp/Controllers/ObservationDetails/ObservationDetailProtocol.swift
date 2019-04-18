@@ -12,12 +12,11 @@ protocol ObservationDetailProtocol: AnyObject {
     var observation: Observation! { get set }
     func showFavedUsers()
     func showUserProfile(user: User)
-    func showTaxaDetails()
+    func showTaxaDetails(taxon: Taxon)
 }
 
 extension ObservationDetailProtocol where Self: UIViewController {
-    func showTaxaDetails() {
-        guard let taxon = observation.taxon else { return }
+    func showTaxaDetails(taxon: Taxon) {
         let vc = TaxonDetailViewController()
         vc.observationId = observation.id
         vc.observationCoordinate = observation.coordinate

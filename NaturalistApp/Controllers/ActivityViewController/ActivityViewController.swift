@@ -67,13 +67,13 @@ extension ActivityViewController: UITableViewDataSource {
         switch indexPath.row % 3 {
         case 0:
             let cell = tableView.dequeueReusableCell(of: ActivityProfileTableViewCell.self, for: indexPath)
-            cell.setup(activity: activityFeed[row], delegate: self)
+            cell.setup(activity: activityFeed[row])
             return cell
         case 1:
             switch activityFeed[row] {
             case .ident(let ident):
                 let cell = tableView.dequeueReusableCell(of: ActivityTaxaTableViewCell.self, for: indexPath)
-                cell.setup(taxon: ident.taxon, delegate: self)
+                cell.setup(taxon: ident.taxon)
                 return cell
             case .comment(let comment):
                 let cell = tableView.dequeueReusableCell(of: ActivityCommentTableViewCell.self, for: indexPath)
@@ -86,4 +86,23 @@ extension ActivityViewController: UITableViewDataSource {
             fatalError()
         }
     }
+}
+
+extension ActivityViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Selected row:", indexPath.row)
+        let row = indexPath.row / 3
+        switch indexPath.row % 3 {
+        case 0:
+            let user = activityFeed[row].user
+            showUserProfile(user: user)
+        case 1:
+            if case .ident(let ident) = activityFeed[row] {
+                showTaxaDetails(taxon: ident.taxon)
+            }
+        default:
+            break
+        }
+    }
+
 }

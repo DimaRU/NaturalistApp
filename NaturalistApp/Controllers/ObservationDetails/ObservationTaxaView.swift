@@ -13,20 +13,8 @@ class ObservationTaxaView: UIView, NibInstantiable {
     @IBOutlet weak var taxaPhotoImageView: UIImageView!
     @IBOutlet weak var taxaNameLabel: UILabel!
     @IBOutlet weak var taxaSciNameLabel: UILabel!
-    weak var delegate: ObservationDetailProtocol?
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        let recognizer = UITapGestureRecognizer(target: self, action: #selector(viewTap))
-        self.addGestureRecognizer(recognizer)
-    }
-    
-    @objc func viewTap() {
-        delegate?.showTaxaDetails()
-    }
-
-    func setup(taxon: Taxon?, delegate: ObservationDetailProtocol) {
-        self.delegate = delegate
+    func setup(taxon: Taxon?) {
         guard let taxon = taxon else {
             self.isHidden = true
             return

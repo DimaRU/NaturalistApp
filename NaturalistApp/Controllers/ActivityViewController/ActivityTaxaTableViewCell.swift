@@ -18,7 +18,7 @@ class ActivityTaxaTableViewCell: UITableViewCell {
         taxaContainerView.addSubview(taxaView)
     }
     
-    func setup(taxon: Taxon?, delegate: ObservationDetailProtocol) {
-        taxaView.setup(taxon: taxon, delegate: delegate)
+    func setup(taxon: Taxon?) {
+        taxaView.setup(taxon: taxon)
     }
 }

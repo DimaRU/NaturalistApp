@@ -12,23 +12,9 @@ class ActivityProfileTableViewCell: UITableViewCell {
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var agoLabel: UILabel!
-    weak var delegate: ObservationDetailProtocol?
-    var user: User!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        let recognizer = UITapGestureRecognizer(target: self, action: #selector(tapView(_:)))
-        self.addGestureRecognizer(recognizer)
-    }
-    
-    @objc func tapView(_ sender: Any) {
-        delegate?.showUserProfile(user: user)
-    }
-    
-    func setup(activity: ActivityViewController.Activity, delegate: ObservationDetailProtocol) {
-        self.delegate = delegate
-        user = activity.user
+    func setup(activity: ActivityViewController.Activity) {
+        let user = activity.user
         avatarImageView.kf.setImage(with: user.icon,
                                     placeholder: UIImage(named: "IC Account Circle 24px")?.maskWith(color: .lightGray))
         agoLabel.text = activity.creationDate.smartDatePeriod(to: Date())

@@ -24,7 +24,7 @@ class ObservationDetailsViewController: StackViewController, ObservationDetailPr
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(red:0.88, green:0.89, blue:0.90, alpha:1.00)
-        spacing = 2
+        spacing = 1
         setupUI()
         loadFullObservation()
     }
@@ -41,7 +41,9 @@ class ObservationDetailsViewController: StackViewController, ObservationDetailPr
         }
         
         if observation.taxon != nil {
-            taxaView.setup(taxon: observation.taxon, delegate: self)
+            taxaView.setup(taxon: observation.taxon)
+            let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(taxaViewTapped(_:)))
+            taxaView.addGestureRecognizer(gestureRecognizer)
             add(taxaView)
         }
         descriptionView.setup(description: observation.description)
@@ -65,6 +67,11 @@ class ObservationDetailsViewController: StackViewController, ObservationDetailPr
                 self.observation = pagedResult.results.content.first
                 self.descriptionView.setup(description: self.observation.description)
             }.ignoreErrors()
+    }
+
+    @objc func taxaViewTapped(_ sender: Any) {
+        guard let taxon = observation.taxon else { return }
+        showTaxaDetails(taxon: taxon)
     }
 }
 
