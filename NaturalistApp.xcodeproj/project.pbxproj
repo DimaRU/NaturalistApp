@@ -118,6 +118,9 @@
 		0AF16996222E75CE00C1058B /* ProfileCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF16995222E75CE00C1058B /* ProfileCollectionViewController.swift */; };
 		0AF16998222E76BD00C1058B /* ProfileHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF16997222E76BD00C1058B /* ProfileHeaderCollectionReusableView.swift */; };
 		0AF1699A222E783200C1058B /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF16999222E783200C1058B /* ImageCollectionViewCell.swift */; };
+		0AF3C6592268CBAB00BF257A /* AddObservationTaxaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF3C6582268CBAB00BF257A /* AddObservationTaxaTableViewCell.swift */; };
+		0AF3C65D2269B39400BF257A /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF3C65C2269B39400BF257A /* Localizable.swift */; };
+		0AF3C65F2269B4A900BF257A /* GeoprivacyOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF3C65E2269B4A900BF257A /* GeoprivacyOptions.swift */; };
 		9F0E766902695A23BFDCB8DF /* Pods_NaturalistApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EFE921A4D01CA1E7FCDC7D1 /* Pods_NaturalistApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -256,6 +259,9 @@
 		0AF16995222E75CE00C1058B /* ProfileCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewController.swift; sourceTree = "<group>"; };
 		0AF16997222E76BD00C1058B /* ProfileHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		0AF16999222E783200C1058B /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		0AF3C6582268CBAB00BF257A /* AddObservationTaxaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddObservationTaxaTableViewCell.swift; sourceTree = "<group>"; };
+		0AF3C65C2269B39400BF257A /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		0AF3C65E2269B4A900BF257A /* GeoprivacyOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoprivacyOptions.swift; sourceTree = "<group>"; };
 		4EFE921A4D01CA1E7FCDC7D1 /* Pods_NaturalistApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NaturalistApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C0C7C3EA1EB43D5D54BFE4 /* Pods-NaturalistApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaturalistApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NaturalistApp/Pods-NaturalistApp.debug.xcconfig"; sourceTree = "<group>"; };
 		9CCC4157664A04B95EE95B14 /* Pods-NaturalistApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NaturalistApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-NaturalistApp/Pods-NaturalistApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -360,6 +366,7 @@
 			children = (
 				0AD6037922624B340099B90F /* AddObservationViewController.swift */,
 				0A7788A12264F3CD00A471F1 /* AddObservationTableViewController.swift */,
+				0AF3C6582268CBAB00BF257A /* AddObservationTaxaTableViewCell.swift */,
 				0AEB410D22678213008BD357 /* TitleValueTableViewCell.swift */,
 			);
 			path = AddObservationController;
@@ -395,6 +402,7 @@
 		0A89205822364CED00900224 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				0AF3C65C2269B39400BF257A /* Localizable.swift */,
 				0ABA9C7022109EA60099F774 /* DefaultCaseRepresentable.swift */,
 				0AD2C6E4222D2C4A003ECFD6 /* StoryboardInstantiable.swift */,
 				0A89205922364D2D00900224 /* NibInstantiable.swift */,
@@ -509,6 +517,7 @@
 				0ADC99A922292FD400034F49 /* TaxonPhoto.swift */,
 				0ABA9C5E22101D9E0099F774 /* User.swift */,
 				0A4D5D69223FDF8D00B2EB0E /* Observer.swift */,
+				0AF3C65E2269B4A900BF257A /* GeoprivacyOptions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -816,6 +825,7 @@
 			files = (
 				0A21747F22257828007E4EFC /* IconicTaxonName+Color.swift in Sources */,
 				0AD2C6E7222D2C86003ECFD6 /* BasicViewController.swift in Sources */,
+				0AF3C6592268CBAB00BF257A /* AddObservationTaxaTableViewCell.swift in Sources */,
 				0AD653EE2240290C007F315B /* IndicateStateProtocol.swift in Sources */,
 				0A3885B7223D8FB4003A63E8 /* PhotoActivityIndicator.swift in Sources */,
 				0ABA9C6722102B210099F774 /* Taxon.swift in Sources */,
@@ -828,6 +838,7 @@
 				0A5832332224118A0071DEE0 /* ObservationAnnotation.swift in Sources */,
 				0A4D5D6A223FDF8D00B2EB0E /* Observer.swift in Sources */,
 				0ABA9C65221029EE0099F774 /* Photo.swift in Sources */,
+				0AF3C65F2269B4A900BF257A /* GeoprivacyOptions.swift in Sources */,
 				0AF16998222E76BD00C1058B /* ProfileHeaderCollectionReusableView.swift in Sources */,
 				0A3F664B2219B750002452B0 /* AuthorizeViewController.swift in Sources */,
 				0A2174812225821A007E4EFC /* UIColorExtensions.swift in Sources */,
@@ -859,6 +870,7 @@
 				0A101032223E6C2400EB42C3 /* KeyedDecodingContainerExtensions.swift in Sources */,
 				0AD81CCB223A7D90003082BC /* ActivityCommentTableViewCell.swift in Sources */,
 				0ABA9C742210A3EC0099F774 /* KeychainService.swift in Sources */,
+				0AF3C65D2269B39400BF257A /* Localizable.swift in Sources */,
 				0A9F8C862219615C00C299C8 /* PagedResults.swift in Sources */,
 				0A0BE666223F72E9004E9AC4 /* TaxonWebContentView.swift in Sources */,
 				0A17F8FB223D562A00B71E66 /* PhotoViewController.swift in Sources */,

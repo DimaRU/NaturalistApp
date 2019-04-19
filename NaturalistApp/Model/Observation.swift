@@ -36,7 +36,7 @@ struct Observation: ResultsContent {
     let mappable: Bool
     let outOfRange: Bool?
     let qualityGrade: QualityGrade
-    let taxonGeoprivacy: String?
+    let taxonGeoprivacy: GeoprivacyOptions?
     let uuid: String
     let cachedVotesTotal: Int
     let identificationsMostAgree: Bool
@@ -63,7 +63,7 @@ struct Observation: ResultsContent {
     let identificationsCount: Int
     let obscured: Bool
     let numIdentificationDisagreements: Int
-    let geoprivacy: String?
+    let geoprivacy: GeoprivacyOptions?
     let spam: Bool
 
     struct ObservationPhoto: Codable {

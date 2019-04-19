@@ -11,7 +11,6 @@ import Photos
 import PromiseKit
 
 class AddObservationViewController: UIViewController {
-    @IBOutlet weak var taxaView: ObservationTaxaView!
     private var assets: [PHAsset] = []
     
     override func viewDidLoad() {
@@ -21,6 +20,9 @@ class AddObservationViewController: UIViewController {
         pickPhotoController.delegate = self
     }
 
+    @IBAction func shareButtonTap(_ sender: Any) {
+        print("Share")
+    }
 }
 
 extension AddObservationViewController: PickPhotoControllerProtocol {
