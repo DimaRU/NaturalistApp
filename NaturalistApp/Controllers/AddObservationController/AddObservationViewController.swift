@@ -12,11 +12,15 @@ import PromiseKit
 
 class AddObservationViewController: UIViewController {
     private var assets: [PHAsset] = []
+    private var mainAsset: PHAsset?
+    private var pickPhotoController: PickPhotoController!
+    private var observationTableController: AddObservationTableViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let pickPhotoController = children.first as! PickPhotoController
+        pickPhotoController = (children.first as! PickPhotoController)
+        observationTableController = (children.last as! AddObservationTableViewController)
         pickPhotoController.delegate = self
     }
 
@@ -28,9 +32,9 @@ class AddObservationViewController: UIViewController {
 extension AddObservationViewController: PickPhotoControllerProtocol {
     func selected(assets: [PHAsset]) {
         self.assets = assets
-        print(assets.count)
-        if let location = assets.first?.location {
-            print(location)
+        if mainAsset != assets.first {
+            mainAsset = assets.first
+            observationTableController.mainAsset = mainAsset
         }
     }
 }

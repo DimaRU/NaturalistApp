@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import Photos
 import PromiseKit
 
 class AddObservationTableViewController: UITableViewController {
@@ -19,6 +20,13 @@ class AddObservationTableViewController: UITableViewController {
     @IBOutlet weak var locationCell: UITableViewCell!
     @IBOutlet weak var geoPrivacyCell: TitleValueTableViewCell!
     @IBOutlet weak var captiveCell: TitleValueTableViewCell!
+    
+    public var mainAsset: PHAsset? {
+        didSet {
+            setLocation(mainAsset?.location)
+            observationDate = mainAsset?.creationDate ?? Date()
+        }
+    }
 
     enum ChooseBool: String, CaseIterable, Localizable {
         case no, yes
@@ -63,7 +71,7 @@ class AddObservationTableViewController: UITableViewController {
         geoprivacy = .open
         captive = .no
 
-        setupLocation(observationLocation)
+        setLocation(observationLocation)
     }
     
     private func setupCells() {
@@ -76,7 +84,7 @@ class AddObservationTableViewController: UITableViewController {
         locationCell.detailTextLabel?.text = nil
     }
 
-    private func setupLocation(_ location: CLLocation?) {
+    private func setLocation(_ location: CLLocation?) {
         firstly { () -> Promise<[CLLocation]> in
                 if let location = location {
                     return Promise.value([location])
