@@ -39,6 +39,7 @@
 		0A451A882211B5B000684AC4 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A451A872211B5B000684AC4 /* Animations.swift */; };
 		0A47A1DC222838A3005B4AEB /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A47A1DB222838A3005B4AEB /* Globals.swift */; };
 		0A47A1DE22283B00005B4AEB /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A47A1DD22283B00005B4AEB /* UIViewControllerExtensions.swift */; };
+		0A4B5C9B226A6E84001E8C7E /* EditLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4B5C9A226A6E84001E8C7E /* EditLocationViewController.swift */; };
 		0A4D5D6A223FDF8D00B2EB0E /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4D5D69223FDF8D00B2EB0E /* Observer.swift */; };
 		0A5832332224118A0071DEE0 /* ObservationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5832322224118A0071DEE0 /* ObservationAnnotation.swift */; };
 		0A5898222260E7980036AD6E /* SheetViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A5898212260E7980036AD6E /* SheetViewController.storyboard */; };
@@ -56,6 +57,7 @@
 		0A62579F222DB78800812C5D /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A62579E222DB78800812C5D /* UIViewExtensions.swift */; };
 		0A6624E022660E5C00EB2747 /* UITextViewPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6624DF22660E5C00EB2747 /* UITextViewPlaceholder.swift */; };
 		0A7788A22264F3CD00A471F1 /* AddObservationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7788A12264F3CD00A471F1 /* AddObservationTableViewController.swift */; };
+		0A85C3E5226A52930035A290 /* TaxaSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A85C3E4226A52930035A290 /* TaxaSearchViewController.swift */; };
 		0A87BB4D2227419100150BE9 /* ObservationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB4C2227419100150BE9 /* ObservationDetailsViewController.swift */; };
 		0A87BB4F2227441300150BE9 /* ObservationProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB4E2227441300150BE9 /* ObservationProfileView.swift */; };
 		0A87BB512227461800150BE9 /* ObservationPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB502227461800150BE9 /* ObservationPhotoView.swift */; };
@@ -174,6 +176,7 @@
 		0A451A872211B5B000684AC4 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		0A47A1DB222838A3005B4AEB /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		0A47A1DD22283B00005B4AEB /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		0A4B5C9A226A6E84001E8C7E /* EditLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditLocationViewController.swift; path = NaturalistApp/Controllers/EditLocationViewController.swift; sourceTree = SOURCE_ROOT; };
 		0A4D5D69223FDF8D00B2EB0E /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		0A5832322224118A0071DEE0 /* ObservationAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationAnnotation.swift; sourceTree = "<group>"; };
 		0A5898212260E7980036AD6E /* SheetViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SheetViewController.storyboard; sourceTree = "<group>"; };
@@ -191,6 +194,7 @@
 		0A62579E222DB78800812C5D /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		0A6624DF22660E5C00EB2747 /* UITextViewPlaceholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewPlaceholder.swift; sourceTree = "<group>"; };
 		0A7788A12264F3CD00A471F1 /* AddObservationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddObservationTableViewController.swift; sourceTree = "<group>"; };
+		0A85C3E4226A52930035A290 /* TaxaSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxaSearchViewController.swift; sourceTree = "<group>"; };
 		0A87BB4C2227419100150BE9 /* ObservationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationDetailsViewController.swift; sourceTree = "<group>"; };
 		0A87BB4E2227441300150BE9 /* ObservationProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationProfileView.swift; sourceTree = "<group>"; };
 		0A87BB502227461800150BE9 /* ObservationPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationPhotoView.swift; sourceTree = "<group>"; };
@@ -330,6 +334,8 @@
 				0A3DA671223EB7D4002C8E89 /* TaxonMapViewController */,
 				0AD653EC22401366007F315B /* LeadersTableViewController */,
 				0A3F664A2219B750002452B0 /* AuthorizeViewController.swift */,
+				0A85C3E4226A52930035A290 /* TaxaSearchViewController.swift */,
+				0A4B5C9A226A6E84001E8C7E /* EditLocationViewController.swift */,
 				0A3139E3221AB315009D87F0 /* MapViewController.swift */,
 				0AF16999222E783200C1058B /* ImageCollectionViewCell.swift */,
 				0AA74C4A223137E700B824E8 /* NatTabBarController.swift */,
@@ -857,6 +863,7 @@
 				0A87BB4F2227441300150BE9 /* ObservationProfileView.swift in Sources */,
 				0ABA9C63221029BD0099F774 /* LicenseCode.swift in Sources */,
 				0A3139E6221ABCE9009D87F0 /* MKMapViewExtension.swift in Sources */,
+				0A85C3E5226A52930035A290 /* TaxaSearchViewController.swift in Sources */,
 				0ADC99AA22292FD400034F49 /* TaxonPhoto.swift in Sources */,
 				0A3139E4221AB315009D87F0 /* MapViewController.swift in Sources */,
 				0A21747D222577CF007E4EFC /* IconicTaxonName.swift in Sources */,
@@ -888,6 +895,7 @@
 				0AD81CD2223A7D90003082BC /* ActivityViewController.swift in Sources */,
 				0A87BB532227470B00150BE9 /* ObservationTaxaView.swift in Sources */,
 				0AD2C6E5222D2C4A003ECFD6 /* StoryboardInstantiable.swift in Sources */,
+				0A4B5C9B226A6E84001E8C7E /* EditLocationViewController.swift in Sources */,
 				0A3DA670223EACFB002C8E89 /* MapBounds.swift in Sources */,
 				0A89205F22364E2100900224 /* NSLayoutConstraintExtensions.swift in Sources */,
 				0A3DA675223EB7D4002C8E89 /* TaxonMapViewController.swift in Sources */,
