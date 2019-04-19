@@ -12,6 +12,7 @@ class NatTabBarController: UITabBarController, MainStoryboardInstantiable {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        delegate = self
         for controller in viewControllers ?? [] {
             if let navcontroller = controller as? UINavigationController {
                 if let controller = navcontroller.viewControllers.first as? ProfileCollectionViewController {
@@ -19,5 +20,18 @@ class NatTabBarController: UITabBarController, MainStoryboardInstantiable {
                 }
             }
         }
+    }
+}
+
+extension NatTabBarController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        if let navController = viewController as? UINavigationController,
+            navController.viewControllers.first is AddObservationViewController {
+            let addObservationController = AddObservationViewController.instantiate()
+            let navigationController = UINavigationController(rootViewController: addObservationController)
+            tabBarController.present(navigationController, animated: true)
+            return false
+        }
+        return true
     }
 }

@@ -10,11 +10,16 @@ import UIKit
 import Photos
 import PromiseKit
 
-class AddObservationViewController: UIViewController {
+class AddObservationViewController: UIViewController, MainStoryboardInstantiable {
     private var assets: [PHAsset] = []
     private var mainAsset: PHAsset?
     private var pickPhotoController: PickPhotoController!
     private var observationTableController: AddObservationTableViewController!
+    
+
+    @IBAction func cancelAction(_ sender: Any) {
+        dismiss(animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
