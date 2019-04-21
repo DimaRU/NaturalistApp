@@ -125,11 +125,17 @@ class AddObservationTableViewController: UITableViewController {
 
     }
 
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        let cell = tableView.cellForRow(at: indexPath)
+        if cell == taxaCell, mainAsset == nil {
+            return nil
+        }
+        return indexPath
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
         switch cell {
-        case taxaCell:
-            print("TaxaSearchViewController")
         case dateCell:
             let datePickerView = UIDatePicker()
             datePickerView.date = observationDate
@@ -156,6 +162,13 @@ class AddObservationTableViewController: UITableViewController {
                 }.ignoreErrors()
         default:
             break
+        }
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination
+        if let taxaSearchViewController = destination as? TaxaSearchViewController {
+            taxaSearchViewController.asset = mainAsset
         }
     }
 }

@@ -54,6 +54,8 @@
 		0A58983A2260E91F0036AD6E /* CLLocationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5898302260E91F0036AD6E /* CLLocationExtensions.swift */; };
 		0A58983B2260E91F0036AD6E /* PhotoLibraryPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5898312260E91F0036AD6E /* PhotoLibraryPromise.swift */; };
 		0A5F60B62227FF4600EABDAF /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F60B52227FF4600EABDAF /* UITableViewExtensions.swift */; };
+		0A5FA4A8226C5B9800F47FB2 /* TaxonScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FA4A7226C5B9800F47FB2 /* TaxonScore.swift */; };
+		0A5FA4AA226C5C1300F47FB2 /* CommonAncestor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FA4A9226C5C1300F47FB2 /* CommonAncestor.swift */; };
 		0A62579F222DB78800812C5D /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A62579E222DB78800812C5D /* UIViewExtensions.swift */; };
 		0A6624E022660E5C00EB2747 /* UITextViewPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6624DF22660E5C00EB2747 /* UITextViewPlaceholder.swift */; };
 		0A7788A22264F3CD00A471F1 /* AddObservationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7788A12264F3CD00A471F1 /* AddObservationTableViewController.swift */; };
@@ -191,6 +193,8 @@
 		0A5898302260E91F0036AD6E /* CLLocationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLLocationExtensions.swift; sourceTree = "<group>"; };
 		0A5898312260E91F0036AD6E /* PhotoLibraryPromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibraryPromise.swift; sourceTree = "<group>"; };
 		0A5F60B52227FF4600EABDAF /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
+		0A5FA4A7226C5B9800F47FB2 /* TaxonScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxonScore.swift; sourceTree = "<group>"; };
+		0A5FA4A9226C5C1300F47FB2 /* CommonAncestor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAncestor.swift; sourceTree = "<group>"; };
 		0A62579E222DB78800812C5D /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		0A6624DF22660E5C00EB2747 /* UITextViewPlaceholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewPlaceholder.swift; sourceTree = "<group>"; };
 		0A7788A12264F3CD00A471F1 /* AddObservationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddObservationTableViewController.swift; sourceTree = "<group>"; };
@@ -524,6 +528,8 @@
 				0ABA9C5E22101D9E0099F774 /* User.swift */,
 				0A4D5D69223FDF8D00B2EB0E /* Observer.swift */,
 				0AF3C65E2269B4A900BF257A /* GeoprivacyOptions.swift */,
+				0A5FA4A7226C5B9800F47FB2 /* TaxonScore.swift */,
+				0A5FA4A9226C5C1300F47FB2 /* CommonAncestor.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -852,6 +858,7 @@
 				0AD653EB2240134D007F315B /* LeadersTableViewCell.swift in Sources */,
 				0AD653F02240291B007F315B /* IndicateState.swift in Sources */,
 				0ABA9C762210A4790099F774 /* APIKeys.swift in Sources */,
+				0A5FA4AA226C5C1300F47FB2 /* CommonAncestor.swift in Sources */,
 				0A37F4EB2238316F0089FC09 /* ObservationDetailProtocol.swift in Sources */,
 				0A7788A22264F3CD00A471F1 /* AddObservationTableViewController.swift in Sources */,
 				0ADF8A4A222FD6F80047AC25 /* UICollectionViewExtensions.swift in Sources */,
@@ -922,6 +929,7 @@
 				0A9F8C8C22198F7800C299C8 /* AccessToken.swift in Sources */,
 				0A5898382260E91F0036AD6E /* DataExtensions.swift in Sources */,
 				0AD653E922401315007F315B /* LeadersTableViewController.swift in Sources */,
+				0A5FA4A8226C5B9800F47FB2 /* TaxonScore.swift in Sources */,
 				0A1D41652243A0B500718651 /* FullScreenViewController.swift in Sources */,
 				0A89205D22364D6E00900224 /* StackViewController.swift in Sources */,
 				0A58983A2260E91F0036AD6E /* CLLocationExtensions.swift in Sources */,

@@ -8,6 +8,7 @@
 
 import Moya
 import Result
+import CoreLocation
 
 typealias MoyaResult = Result<Moya.Response, Moya.MoyaError>
 
@@ -25,6 +26,7 @@ enum NatAPI: TargetType {
     case fave(id: ObservationId)
     case unfave(id: ObservationId)
     case observers(perPage: Int, page: Int, taxonId: TaxonId?, observationId: ObservationId?, userId: UserId?)
+    case scoreImage(image: Data, type: String, name: String, date: Date, location: CLLocationCoordinate2D?)
 
     var apiVersion: String {
         return "/v1"
@@ -66,6 +68,8 @@ enum NatAPI: TargetType {
             return "\(apiVersion)/observations/\(id)/unfave"
         case .observers:
             return "\(apiVersion)/observations/observers"
+        case .scoreImage:
+            return "\(apiVersion)/computervision/score_image"
         }
     }
     
@@ -89,6 +93,8 @@ enum NatAPI: TargetType {
             return .post
         case .unfave:
             return .delete
+        case .scoreImage:
+            return .post
         }
     }
     
@@ -146,6 +152,21 @@ enum NatAPI: TargetType {
             parameters["id"] = observationId
             parameters["user_id"] = userId
             return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
+        case .scoreImage(let image, let type, let name, let date, let location):
+            let mimeType = type.replacingOccurrences(of: "public.", with: "image/")
+            let imageFormData = MultipartFormData(provider: .data(image), name: "image", fileName: name, mimeType: mimeType)
+            let dateString = String(date.timeIntervalSince1970)
+            let dateFormData = MultipartFormData(provider: .data(dateString.data(using: .utf8)!), name: "observed_on")
+            var multpartData = [imageFormData, dateFormData]
+            if let location = location {
+                let latData = String(location.latitude).data(using: .utf8)!
+                let latFormData = MultipartFormData(provider: .data(latData), name: "lat")
+                multpartData.append(latFormData)
+                let lngData = String(location.longitude).data(using: .utf8)!
+                let lngFormData = MultipartFormData(provider: .data(lngData), name: "lng")
+                multpartData.append(lngFormData)
+            }
+            return .uploadCompositeMultipart(multpartData, urlParameters: [:])
         }
     }
     
@@ -163,9 +184,17 @@ enum NatAPI: TargetType {
             assigned["Authorization"] = "Bearer \(bearer)"
         case .currentUser,
              .fave,
-             .unfave:
+             .unfave,
+             .scoreImage:
             assigned["Authorization"] = KeychainService.shared[.apiToken]
-        default:
+        case .searchObservations,
+             .searchTaxonBounds,
+             .getObservationsBox,
+             .searchTaxon,
+             .users,
+             .taxon,
+             .observation,
+             .observers:
             break
         }
         return assigned

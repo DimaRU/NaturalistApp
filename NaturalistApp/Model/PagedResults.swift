@@ -13,5 +13,6 @@ struct PagedResults<T: ResultsContent>: Decodable {
     let page: Int
     let perPage: Int
     let totalBounds: MapBounds?
+    let commonAncestor: CommonAncestor?
     let results: Content<T>
 }
