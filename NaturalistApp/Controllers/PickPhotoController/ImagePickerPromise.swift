@@ -27,7 +27,7 @@ extension UIViewController {
     
     public func pickImage(from source: UIImagePickerController.SourceType) -> Promise<[UIImagePickerController.InfoKey: Any]> {
         guard let vc = makeImagePickerController(for: source) else {
-            return Promise(error: PMKError.cancelled)
+            return Promise(error: InternalError.imagePick)
         }
         let proxy = UIImagePickerControllerProxy()
         vc.delegate = proxy
@@ -65,7 +65,7 @@ extension UIViewController {
         if (info[UIImagePickerController.InfoKey.originalImage] as? UIImage) != nil {
             seal.fulfill(info)
         } else {
-            seal.reject(PMKError.cancelled)
+            seal.reject(InternalError.imagePick)
         }
         retainCycle = nil
     }

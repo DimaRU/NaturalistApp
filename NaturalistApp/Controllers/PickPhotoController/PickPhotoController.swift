@@ -143,7 +143,7 @@ extension PickPhotoController: UICollectionViewDelegate {
             // From camera
             pickImage(from: .camera)
                 .then { info -> Promise<PHAsset> in
-                    guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { throw PMKError.cancelled }
+                    guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { throw InternalError.imagePick }
                     let metadata = info[UIImagePickerController.InfoKey.mediaMetadata] as? [AnyHashable: Any]
                     let data = image.JPEGDataRepresentation(withMetadata: metadata ?? [:], location: self.location)
                     return PHPhotoLibrary.shared().add(imageData: data, withLocation: self.location)
@@ -160,7 +160,7 @@ extension PickPhotoController: UICollectionViewDelegate {
             // From photo library
             pickImage(from: .photoLibrary)
                 .then { info -> Promise<(UIImage, PHAsset)> in
-                    guard let phasset = info[UIImagePickerController.InfoKey.phAsset] as? PHAsset else { throw PMKError.cancelled }
+                    guard let phasset = info[UIImagePickerController.InfoKey.phAsset] as? PHAsset else { throw InternalError.imagePick }
                     return PHImageManager.default().requestPreviewImage(for: phasset, itemSize: self.itemSize)
                 }.done {
                     let asset = Asset(asset: $0.1, selected: true, image: $0.0)

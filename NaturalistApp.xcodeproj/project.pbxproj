@@ -25,6 +25,7 @@
 		0A25DFA322367B1300DEB46E /* ObservationProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A25DFA222367B1300DEB46E /* ObservationProfileView.xib */; };
 		0A25DFA5223685B800DEB46E /* ObservationPhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A25DFA4223685B800DEB46E /* ObservationPhotoView.xib */; };
 		0A25DFA92236902F00DEB46E /* ObservationFaveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A25DFA82236902F00DEB46E /* ObservationFaveView.xib */; };
+		0A2D3023226E3F53004CDDBF /* InternalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D3022226E3F53004CDDBF /* InternalError.swift */; };
 		0A3139E4221AB315009D87F0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3139E3221AB315009D87F0 /* MapViewController.swift */; };
 		0A3139E6221ABCE9009D87F0 /* MKMapViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3139E5221ABCE9009D87F0 /* MKMapViewExtension.swift */; };
 		0A33CA37221F1F1B00BDD802 /* PromiseKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A33CA36221F1F1B00BDD802 /* PromiseKitExtensions.swift */; };
@@ -164,6 +165,7 @@
 		0A25DFA222367B1300DEB46E /* ObservationProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObservationProfileView.xib; sourceTree = "<group>"; };
 		0A25DFA4223685B800DEB46E /* ObservationPhotoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObservationPhotoView.xib; sourceTree = "<group>"; };
 		0A25DFA82236902F00DEB46E /* ObservationFaveView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObservationFaveView.xib; sourceTree = "<group>"; };
+		0A2D3022226E3F53004CDDBF /* InternalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalError.swift; sourceTree = "<group>"; };
 		0A3139E3221AB315009D87F0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0A3139E5221ABCE9009D87F0 /* MKMapViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKMapViewExtension.swift; sourceTree = "<group>"; };
 		0A33CA36221F1F1B00BDD802 /* PromiseKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseKitExtensions.swift; sourceTree = "<group>"; };
@@ -469,6 +471,7 @@
 				0A977B6F220E0B8C005D1DC2 /* LaunchScreen.storyboard */,
 				0A977B6D220E0B8C005D1DC2 /* Assets.xcassets */,
 				0A977B72220E0B8C005D1DC2 /* Info.plist */,
+				0A2D3022226E3F53004CDDBF /* InternalError.swift */,
 			);
 			path = NaturalistApp;
 			sourceTree = "<group>";
@@ -906,6 +909,7 @@
 				0A3DA670223EACFB002C8E89 /* MapBounds.swift in Sources */,
 				0A89205F22364E2100900224 /* NSLayoutConstraintExtensions.swift in Sources */,
 				0A3DA675223EB7D4002C8E89 /* TaxonMapViewController.swift in Sources */,
+				0A2D3023226E3F53004CDDBF /* InternalError.swift in Sources */,
 				0AD81CCA223A7D90003082BC /* DateExtensions.swift in Sources */,
 				0A47A1DC222838A3005B4AEB /* Globals.swift in Sources */,
 				0A47A1DE22283B00005B4AEB /* UIViewControllerExtensions.swift in Sources */,

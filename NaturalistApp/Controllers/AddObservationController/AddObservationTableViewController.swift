@@ -121,6 +121,7 @@ class AddObservationTableViewController: UITableViewController {
                 self.locationCell.textLabel?.text = placeGuess
             }.catch { error in
                 print(error)
+                self.locationCell.textLabel?.text = NSLocalizedString("Unable to find location name", comment: "place guess when we have lat/lng but it's not geocoded")
         }
 
     }

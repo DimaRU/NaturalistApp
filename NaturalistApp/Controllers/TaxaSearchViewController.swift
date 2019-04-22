@@ -43,7 +43,7 @@ class TaxaSearchViewController: UIViewController {
                 if uti == "public.heic" {
                     guard let image = UIImage(data: data),
                         let jpgData = image.jpegData(compressionQuality: 0.8) else {
-                        throw PMKError.cancelled
+                        throw InternalError.convertImage
                     }
                     return Promise.value((jpgData, "public.jpeg"))
                 } else {
@@ -51,7 +51,7 @@ class TaxaSearchViewController: UIViewController {
                 }
             }.then { (data, uti) -> Promise<PagedResults<TaxonScore>> in
                 guard let resource = PHAssetResource.assetResources(for: asset).first(where: { $0.type == .photo }) else {
-                    throw PMKError.cancelled
+                    throw InternalError.phasset
                 }
                 let endpoint = NatAPI.scoreImage(image: data,
                                                  type: uti,

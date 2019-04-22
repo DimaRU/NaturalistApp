@@ -21,7 +21,7 @@ extension PHImageManager {
                     seal.fulfill((image, asset))
                 } else {
                     let error = info?[PHImageErrorKey] as? NSError
-                    seal.reject(error ?? PMKError.cancelled)
+                    seal.reject(error ?? InternalError.phasset)
                 }
     
             }
@@ -35,7 +35,7 @@ extension PHImageManager {
                     seal.fulfill((image.fixOrientation(), data.GPSDictionary()))
                 } else {
                     let error = info?[PHImageErrorKey] as? NSError
-                    seal.reject(error ?? PMKError.cancelled)
+                    seal.reject(error ?? InternalError.phasset)
                 }
             }
         }
@@ -48,7 +48,7 @@ extension PHImageManager {
                     seal.fulfill((data, dataUTI))
                 } else {
                     let error = info?[PHImageErrorKey] as? NSError
-                    seal.reject(error ?? PMKError.cancelled)
+                    seal.reject(error ?? InternalError.phasset)
                 }
             }
         }
