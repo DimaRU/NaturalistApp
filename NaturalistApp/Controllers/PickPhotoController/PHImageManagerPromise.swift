@@ -41,11 +41,11 @@ extension PHImageManager {
         }
     }
 
-    func requestImageData(for asset: PHAsset) -> Promise<Data> {
+    func requestImageData(for asset: PHAsset) -> Promise<(Data, String)> {
         return Promise { seal in
             requestImageData(for: asset, options: .none) { (data, dataUTI, orientation, info) in
-                if let data = data {
-                    seal.fulfill(data)
+                if let data = data, let dataUTI = dataUTI {
+                    seal.fulfill((data, dataUTI))
                 } else {
                     let error = info?[PHImageErrorKey] as? NSError
                     seal.reject(error ?? PMKError.cancelled)

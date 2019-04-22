@@ -13,7 +13,6 @@ import PromiseKit
 
 class AddObservationTableViewController: UITableViewController {
 
-    @IBOutlet weak var emptyTaxaCell: UITableViewCell!
     @IBOutlet weak var taxaCell: AddObservationTaxaTableViewCell!
     @IBOutlet weak var notesTextView: UITextView!
     @IBOutlet weak var dateCell: UITableViewCell!
@@ -24,9 +23,10 @@ class AddObservationTableViewController: UITableViewController {
     public var mainAsset: PHAsset? {
         didSet {
             setLocation(mainAsset?.location)
-            observationDate = mainAsset?.creationDate ?? Date()
+            observedOn = mainAsset?.creationDate ?? Date()
         }
     }
+    public var taxon: Taxon?
 
     enum ChooseBool: String, CaseIterable, Localizable {
         case no, yes
@@ -48,12 +48,12 @@ class AddObservationTableViewController: UITableViewController {
             captiveCell.valueLabel?.text = captive.localized
         }
     }
-    private var observationDate = Date() {
+    private var observedOn = Date() {
         didSet {
             let formater = DateFormatter()
             formater.dateStyle = .medium
             formater.timeStyle = .short
-            dateCell.textLabel?.text = formater.string(from: observationDate)
+            dateCell.textLabel?.text = formater.string(from: observedOn)
         }
     }
     private var observationLocation: CLLocation? {
@@ -67,7 +67,7 @@ class AddObservationTableViewController: UITableViewController {
 
         setupCells()
 
-        observationDate = Date()
+        observedOn = Date()
         geoprivacy = .open
         captive = .no
 
@@ -138,13 +138,13 @@ class AddObservationTableViewController: UITableViewController {
         switch cell {
         case dateCell:
             let datePickerView = UIDatePicker()
-            datePickerView.date = observationDate
-            datePickerView.minimumDate = Calendar.current.date(byAdding: .year, value: -1, to: observationDate)
-            datePickerView.maximumDate = Calendar.current.date(byAdding: .minute, value: 10, to: observationDate)
+            datePickerView.date = observedOn
+            datePickerView.minimumDate = Calendar.current.date(byAdding: .year, value: -1, to: observedOn)
+            datePickerView.maximumDate = Calendar.current.date(byAdding: .minute, value: 10, to: observedOn)
             datePickerView.minuteInterval = 10
             pickDate(title: "Select Date", datePicker: datePickerView)
                 .done {
-                    self.observationDate = $0
+                    self.observedOn = $0
                 }.ignoreErrors()
         case locationCell:
             print("EditLocationViewController")
@@ -169,6 +169,16 @@ class AddObservationTableViewController: UITableViewController {
         let destination = segue.destination
         if let taxaSearchViewController = destination as? TaxaSearchViewController {
             taxaSearchViewController.asset = mainAsset
+            taxaSearchViewController.location = observationLocation?.coordinate
+            taxaSearchViewController.observedOn = observedOn
+            taxaSearchViewController.delegate = self
         }
+    }
+}
+
+extension AddObservationTableViewController: TaxaSearchViewProtocol {
+    func selected(_ taxon: Taxon) {
+        taxaCell.setup(taxon: taxon)
+        self.taxon = taxon
     }
 }

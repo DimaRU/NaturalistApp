@@ -11,28 +11,53 @@ import Photos
 import CoreLocation
 import PromiseKit
 
-class TaxaSearchViewController: UITableViewController {
-    public var asset: PHAsset!
-    private var searchResults: PagedResults<TaxonScore>?
+protocol TaxaSearchViewProtocol {
+    func selected(_ taxon: Taxon)
+}
 
+class TaxaSearchViewController: UIViewController {
+    public var asset: PHAsset!
+    public var delegate: TaxaSearchViewProtocol?
+    public var observedOn: Date!
+    public var location: CLLocationCoordinate2D?
+    
+    @IBOutlet weak var taxonImage: UIImageView!
+    @IBOutlet weak var tableView: UITableView!
+    
+    private var searchResults: PagedResults<TaxonScore>?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         fetchComputerVision(for: asset)
     }
-
+    
     private func fetchComputerVision(for asset: PHAsset) {
+        let size = taxonImage.bounds.size
         firstly {
-            PHImageManager.default().requestImageData(for: asset)
-            }.then { data -> Promise<PagedResults<TaxonScore>> in
+            PHImageManager.default().requestPreviewImage(for: asset, itemSize: size)
+            }.then { (image, asset) -> Promise<(Data, String)> in
+                self.taxonImage.image = image
+                return PHImageManager.default().requestImageData(for: asset)
+            }.then { (data, uti) -> Promise<(Data, String)> in
+                if uti == "public.heic" {
+                    guard let image = UIImage(data: data),
+                        let jpgData = image.jpegData(compressionQuality: 0.8) else {
+                        throw PMKError.cancelled
+                    }
+                    return Promise.value((jpgData, "public.jpeg"))
+                } else {
+                    return Promise.value((data, uti))
+                }
+            }.then { (data, uti) -> Promise<PagedResults<TaxonScore>> in
                 guard let resource = PHAssetResource.assetResources(for: asset).first(where: { $0.type == .photo }) else {
                     throw PMKError.cancelled
                 }
                 let endpoint = NatAPI.scoreImage(image: data,
-                                                 type: resource.uniformTypeIdentifier,
+                                                 type: uti,
                                                  name: resource.originalFilename,
-                                                 date: asset.creationDate ?? Date(),
-                                                 location: asset.location?.coordinate)
+                                                 date: self.observedOn,
+                                                 location: self.location)
                 return NatProvider.shared.request(endpoint)
             }.done { result in
                 self.searchResults = result
@@ -41,25 +66,64 @@ class TaxaSearchViewController: UITableViewController {
                 print(error)
         }
     }
+}
 
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+// MARK: - Table view data source
+extension TaxaSearchViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return searchResults?.commonAncestor == nil ? 1: 2
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return searchResults?.results.content.count ?? 0
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let searchResults = searchResults else { return 0 }
+        switch section {
+        case 1:
+            return searchResults.commonAncestor == nil ? searchResults.results.content.count : 1
+        default:
+            return searchResults.results.content.count
+        }
     }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(of: AddObservationTaxaTableViewCell.self, for: indexPath)
-        let taxon = searchResults?.results.content[indexPath.row].taxon
-        cell.setup(taxon: taxon)
+        switch indexPath.section {
+        case 1:
+            if let taxon = searchResults?.commonAncestor?.taxon {
+                cell.setup(taxon: taxon)
+            } else {
+                fallthrough
+            }
+        default:
+            let taxon = searchResults?.results.content[indexPath.row].taxon
+            cell.setup(taxon: taxon)
+        }
         return cell
     }
-
-
-
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let taxon = getTaxon(for: indexPath)
+        delegate?.selected(taxon)
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        let taxon = getTaxon(for: indexPath)
+        let vc = TaxonDetailViewController()
+        vc.observationCoordinate = location
+        vc.taxon = taxon
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func getTaxon(for indexPath: IndexPath) -> Taxon {
+        switch indexPath.section {
+        case 1:
+            if let taxon = searchResults?.commonAncestor?.taxon {
+                return taxon
+            }
+            fallthrough
+        default:
+            return searchResults!.results.content[indexPath.row].taxon
+        }
+    }
 }
