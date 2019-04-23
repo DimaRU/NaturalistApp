@@ -55,6 +55,7 @@
 		0A5898392260E91F0036AD6E /* PHImageManagerPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A58982F2260E91F0036AD6E /* PHImageManagerPromise.swift */; };
 		0A58983A2260E91F0036AD6E /* CLLocationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5898302260E91F0036AD6E /* CLLocationExtensions.swift */; };
 		0A58983B2260E91F0036AD6E /* PhotoLibraryPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5898312260E91F0036AD6E /* PhotoLibraryPromise.swift */; };
+		0A5A5475226F5D1E00B9CA1F /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A5474226F5D1E00B9CA1F /* Identifier.swift */; };
 		0A5F60B62227FF4600EABDAF /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F60B52227FF4600EABDAF /* UITableViewExtensions.swift */; };
 		0A5FA4A8226C5B9800F47FB2 /* TaxonScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FA4A7226C5B9800F47FB2 /* TaxonScore.swift */; };
 		0A5FA4AA226C5C1300F47FB2 /* CommonAncestor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FA4A9226C5C1300F47FB2 /* CommonAncestor.swift */; };
@@ -196,6 +197,7 @@
 		0A58982F2260E91F0036AD6E /* PHImageManagerPromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHImageManagerPromise.swift; sourceTree = "<group>"; };
 		0A5898302260E91F0036AD6E /* CLLocationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLLocationExtensions.swift; sourceTree = "<group>"; };
 		0A5898312260E91F0036AD6E /* PhotoLibraryPromise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibraryPromise.swift; sourceTree = "<group>"; };
+		0A5A5474226F5D1E00B9CA1F /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
 		0A5F60B52227FF4600EABDAF /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		0A5FA4A7226C5B9800F47FB2 /* TaxonScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxonScore.swift; sourceTree = "<group>"; };
 		0A5FA4A9226C5C1300F47FB2 /* CommonAncestor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAncestor.swift; sourceTree = "<group>"; };
@@ -541,6 +543,7 @@
 				0ADC99A922292FD400034F49 /* TaxonPhoto.swift */,
 				0ABA9C5E22101D9E0099F774 /* User.swift */,
 				0A4D5D69223FDF8D00B2EB0E /* Observer.swift */,
+				0A5A5474226F5D1E00B9CA1F /* Identifier.swift */,
 				0AF3C65E2269B4A900BF257A /* GeoprivacyOptions.swift */,
 				0A5FA4A7226C5B9800F47FB2 /* TaxonScore.swift */,
 				0A5FA4A9226C5C1300F47FB2 /* CommonAncestor.swift */,
@@ -943,6 +946,7 @@
 				0AF1699A222E783200C1058B /* ImageCollectionViewCell.swift in Sources */,
 				0A21747B22255487007E4EFC /* UIImageExtensions.swift in Sources */,
 				0A9F8C8C22198F7800C299C8 /* AccessToken.swift in Sources */,
+				0A5A5475226F5D1E00B9CA1F /* Identifier.swift in Sources */,
 				0A5898382260E91F0036AD6E /* DataExtensions.swift in Sources */,
 				0AD653E922401315007F315B /* LeadersTableViewController.swift in Sources */,
 				0A5FA4A8226C5B9800F47FB2 /* TaxonScore.swift in Sources */,

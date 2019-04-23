@@ -25,10 +25,12 @@ class TaxaSearchViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private var searchResults: PagedResults<TaxonScore>?
-    
+    private var creditNames: [String] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        self.tableView.isHidden = true
         fetchComputerVision(for: asset)
     }
     
@@ -59,8 +61,27 @@ class TaxaSearchViewController: UIViewController {
                                                  date: self.observedOn,
                                                  location: self.location)
                 return NatProvider.shared.request(endpoint)
-            }.done { result in
+            }.then { result -> Promise<Void> in
                 self.searchResults = result
+                var taxonIds: [TaxonId] = result.results.content.map{ $0.taxon.id }
+                if let commonAncestor = result.commonAncestor {
+                    taxonIds.insert(commonAncestor.taxon.id, at: 0)
+                }
+                if Bool.random() {
+                    return NatProvider.shared.request(.observers(perPage: 3, page: 1, taxonIds: taxonIds, observationId: nil, userId: nil))
+                        .then { (pagedResult: PagedResults<Observer>) -> Promise<Void> in
+                            self.creditNames = pagedResult.results.content.map{ $0.user.name?.emptyToNil() ?? $0.user.login }
+                            return Promise.value(())
+                    }
+                } else {
+                    return NatProvider.shared.request(.identifiers(perPage: 3, page: 1, taxonIds: taxonIds, observationId: nil, userId: nil))
+                        .then { (pagedResult: PagedResults<Identifier>) -> Promise<Void> in
+                            self.creditNames = pagedResult.results.content.map{ $0.user.name?.emptyToNil() ?? $0.user.login }
+                            return Promise.value(())
+                    }
+                }
+            }.done {
+                self.tableView.isHidden = false
                 self.tableView.reloadData()
             }.catch { error in
                 print(error)
@@ -149,13 +170,12 @@ extension TaxaSearchViewController: UITableViewDataSource, UITableViewDelegate {
         if searchResults?.commonAncestor != nil, section == 0 {
             return nil
         } else {
-    return nil
-//            if creditNames && creditNames.count == 3 {
-//                let base = NSLocalizedString("Suggestions based on observations and identifications provided by the iNaturalist community, including %@, %@, %@, and many others.", comment: "")
-//                return String(format: base, creditNames[0], creditNames[1], creditNames[2])
-//            } else {
-//                return NSLocalizedString("Suggestions based on observations and identifications provided by the iNaturalist community.", comment: "")
-//            }
+            if !creditNames.isEmpty {
+                let base = NSLocalizedString("Suggestions based on observations and identifications provided by the iNaturalist community, including %@ and many others.", comment: "")
+                return String(format: base, creditNames.joined(separator: ", "))
+            } else {
+                return NSLocalizedString("Suggestions based on observations and identifications provided by the iNaturalist community.", comment: "")
+            }
         }
     }
 
