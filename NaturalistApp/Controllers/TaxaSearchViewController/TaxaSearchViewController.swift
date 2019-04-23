@@ -78,25 +78,28 @@ extension TaxaSearchViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let searchResults = searchResults else { return 0 }
         switch section {
-        case 1:
-            return searchResults.commonAncestor == nil ? searchResults.results.content.count : 1
+        case 0:
+            if searchResults.commonAncestor != nil {
+                return 1
+            }
+            fallthrough
         default:
             return searchResults.results.content.count
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(of: AddObservationTaxaTableViewCell.self, for: indexPath)
+        let cell = tableView.dequeueReusableCell(of: TaxaSearchTableViewCell.self, for: indexPath)
         switch indexPath.section {
-        case 1:
+        case 0:
             if let taxon = searchResults?.commonAncestor?.taxon {
-                cell.setup(taxon: taxon)
+                cell.setupTaxon(taxon: taxon)
             } else {
                 fallthrough
             }
         default:
-            let taxon = searchResults?.results.content[indexPath.row].taxon
-            cell.setup(taxon: taxon)
+            let taxonScore = searchResults!.results.content[indexPath.row]
+            cell.setupScore(taxonScore: taxonScore)
         }
         return cell
     }
@@ -117,7 +120,7 @@ extension TaxaSearchViewController: UITableViewDataSource, UITableViewDelegate {
     
     private func getTaxon(for indexPath: IndexPath) -> Taxon {
         switch indexPath.section {
-        case 1:
+        case 0:
             if let taxon = searchResults?.commonAncestor?.taxon {
                 return taxon
             }
@@ -126,4 +129,34 @@ extension TaxaSearchViewController: UITableViewDataSource, UITableViewDelegate {
             return searchResults!.results.content[indexPath.row].taxon
         }
     }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if let commonAncestor = searchResults?.commonAncestor {
+            if section == 0 {
+                let base = NSLocalizedString("We're pretty sure this is in the %1$@ %2$@.", comment: "comment for common ancestor suggestion. %1$@ is the rank name (order, family), whereas %2$@ is the actual rank (Animalia, Insecta)")
+                return String(format: base, commonAncestor.taxon.rankName, commonAncestor.taxon.scientificName)
+            } else {
+                return NSLocalizedString("Here are our top ten species suggestions:", comment: "")
+            }
+        } else if (searchResults?.results.content.count ?? 0) > 0 {
+            return NSLocalizedString("We're not confident enough to make a recommendation, but here are our top 10 suggestions.", comment: "")
+        }
+        return nil
+    }
+
+    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        guard (searchResults?.results.content.count ?? 0) > 0 else { return nil }
+        if searchResults?.commonAncestor != nil, section == 0 {
+            return nil
+        } else {
+    return nil
+//            if creditNames && creditNames.count == 3 {
+//                let base = NSLocalizedString("Suggestions based on observations and identifications provided by the iNaturalist community, including %@, %@, %@, and many others.", comment: "")
+//                return String(format: base, creditNames[0], creditNames[1], creditNames[2])
+//            } else {
+//                return NSLocalizedString("Suggestions based on observations and identifications provided by the iNaturalist community.", comment: "")
+//            }
+        }
+    }
+
 }

@@ -26,6 +26,7 @@
 		0A25DFA5223685B800DEB46E /* ObservationPhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A25DFA4223685B800DEB46E /* ObservationPhotoView.xib */; };
 		0A25DFA92236902F00DEB46E /* ObservationFaveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A25DFA82236902F00DEB46E /* ObservationFaveView.xib */; };
 		0A2D3023226E3F53004CDDBF /* InternalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D3022226E3F53004CDDBF /* InternalError.swift */; };
+		0A2D3025226F2EAE004CDDBF /* TaxaSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D3024226F2EAE004CDDBF /* TaxaSearchTableViewCell.swift */; };
 		0A3139E4221AB315009D87F0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3139E3221AB315009D87F0 /* MapViewController.swift */; };
 		0A3139E6221ABCE9009D87F0 /* MKMapViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3139E5221ABCE9009D87F0 /* MKMapViewExtension.swift */; };
 		0A33CA37221F1F1B00BDD802 /* PromiseKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A33CA36221F1F1B00BDD802 /* PromiseKitExtensions.swift */; };
@@ -166,6 +167,7 @@
 		0A25DFA4223685B800DEB46E /* ObservationPhotoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObservationPhotoView.xib; sourceTree = "<group>"; };
 		0A25DFA82236902F00DEB46E /* ObservationFaveView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObservationFaveView.xib; sourceTree = "<group>"; };
 		0A2D3022226E3F53004CDDBF /* InternalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalError.swift; sourceTree = "<group>"; };
+		0A2D3024226F2EAE004CDDBF /* TaxaSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxaSearchTableViewCell.swift; sourceTree = "<group>"; };
 		0A3139E3221AB315009D87F0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0A3139E5221ABCE9009D87F0 /* MKMapViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKMapViewExtension.swift; sourceTree = "<group>"; };
 		0A33CA36221F1F1B00BDD802 /* PromiseKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseKitExtensions.swift; sourceTree = "<group>"; };
@@ -316,6 +318,15 @@
 			path = PhotoViewController;
 			sourceTree = "<group>";
 		};
+		0A2D3026226F354A004CDDBF /* TaxaSearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0A85C3E4226A52930035A290 /* TaxaSearchViewController.swift */,
+				0A2D3024226F2EAE004CDDBF /* TaxaSearchTableViewCell.swift */,
+			);
+			path = TaxaSearchViewController;
+			sourceTree = "<group>";
+		};
 		0A3DA671223EB7D4002C8E89 /* TaxonMapViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,9 +349,9 @@
 				0AF16994222E75A500C1058B /* Profile */,
 				0A87BB4B2227415200150BE9 /* ObservationDetails */,
 				0A3DA671223EB7D4002C8E89 /* TaxonMapViewController */,
+				0A2D3026226F354A004CDDBF /* TaxaSearchViewController */,
 				0AD653EC22401366007F315B /* LeadersTableViewController */,
 				0A3F664A2219B750002452B0 /* AuthorizeViewController.swift */,
-				0A85C3E4226A52930035A290 /* TaxaSearchViewController.swift */,
 				0A4B5C9A226A6E84001E8C7E /* EditLocationViewController.swift */,
 				0A3139E3221AB315009D87F0 /* MapViewController.swift */,
 				0AF16999222E783200C1058B /* ImageCollectionViewCell.swift */,
@@ -906,6 +917,7 @@
 				0A87BB532227470B00150BE9 /* ObservationTaxaView.swift in Sources */,
 				0AD2C6E5222D2C4A003ECFD6 /* StoryboardInstantiable.swift in Sources */,
 				0A4B5C9B226A6E84001E8C7E /* EditLocationViewController.swift in Sources */,
+				0A2D3025226F2EAE004CDDBF /* TaxaSearchTableViewCell.swift in Sources */,
 				0A3DA670223EACFB002C8E89 /* MapBounds.swift in Sources */,
 				0A89205F22364E2100900224 /* NSLayoutConstraintExtensions.swift in Sources */,
 				0A3DA675223EB7D4002C8E89 /* TaxonMapViewController.swift in Sources */,

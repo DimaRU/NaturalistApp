@@ -83,3 +83,13 @@ struct Taxon: ResultsContent {
 //    let rankLevel: String?
     let wikipediaSummary: String?
 }
+
+extension Taxon {
+    var rankName: String {
+        return rank.rawValue
+    }
+
+    var scientificName: String {
+        return name
+    }
+}
