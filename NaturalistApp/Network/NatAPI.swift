@@ -119,29 +119,29 @@ enum NatAPI: TargetType {
             parameters["per_page"] = perPage
             parameters["page"] = page
             parameters["user_id"] = userId
-            parameters["photos"] = havePhoto?.description
-            parameters["popular"] = poular?.description
-            return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
+            parameters["photos"] = havePhoto
+            parameters["popular"] = poular
+            return .requestParameters(parameters: parameters, encoding: NatAPI.urlEncoding)
         case .searchTaxonBounds(let id):
             parameters["per_page"] = 1
             parameters["taxon_id"] = id
-            parameters["return_bounds"] = true.description
-            return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
+            parameters["return_bounds"] = true
+            return .requestParameters(parameters: parameters, encoding: NatAPI.urlEncoding)
         case .getObservationsBox(let perPage, let page, let nelat, let nelng, let swlat, let swlng):
             parameters["per_page"] = perPage
             parameters["page"] = page
-            parameters["mappable"] = true.description
-            parameters["verifiable"] = true.description
+            parameters["mappable"] = true
+            parameters["verifiable"] = true
             parameters["nelat"] = nelat
             parameters["nelng"] = nelng
             parameters["swlat"] = swlat
             parameters["swlng"] = swlng
-            return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
+            return .requestParameters(parameters: parameters, encoding: NatAPI.urlEncoding)
         case .searchTaxon(let perPage, let page, let name):
             parameters["per_page"] = perPage
             parameters["page"] = page
             parameters["q"] = name
-            return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
+            return .requestParameters(parameters: parameters, encoding: NatAPI.urlEncoding)
         case .currentUser,
              .users,
              .taxon,
@@ -156,7 +156,7 @@ enum NatAPI: TargetType {
             parameters["taxon_id"] = taxonIds.map{ String($0) }.joined(separator: ",").emptyToNil()
             parameters["id"] = observationId
             parameters["user_id"] = userId
-            return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
+            return .requestParameters(parameters: parameters, encoding: NatAPI.urlEncoding)
         case .scoreImage(let image, let type, let name, let date, let location):
             let mimeType = type.replacingOccurrences(of: "public.", with: "image/")
             let imageFormData = MultipartFormData(provider: .data(image), name: "image", fileName: name, mimeType: mimeType)
@@ -209,4 +209,6 @@ enum NatAPI: TargetType {
     public var sampleData: Data {
         return Data()
     }
+
+    static let urlEncoding = URLEncoding(destination: .methodDependent, arrayEncoding: .noBrackets, boolEncoding: .literal)
 }
