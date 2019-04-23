@@ -25,7 +25,8 @@ enum NatAPI: TargetType {
     case observation(id: ObservationId)
     case fave(id: ObservationId)
     case unfave(id: ObservationId)
-    case observers(perPage: Int, page: Int, taxonId: TaxonId?, observationId: ObservationId?, userId: UserId?)
+    case observers(perPage: Int, page: Int, taxonIds: [TaxonId], observationId: ObservationId?, userId: UserId?)
+    case identifiers(perPage: Int, page: Int, taxonIds: [TaxonId], observationId: ObservationId?, userId: UserId?)
     case scoreImage(image: Data, type: String, name: String, date: Date, location: CLLocationCoordinate2D?)
 
     var apiVersion: String {
@@ -68,6 +69,8 @@ enum NatAPI: TargetType {
             return "\(apiVersion)/observations/\(id)/unfave"
         case .observers:
             return "\(apiVersion)/observations/observers"
+        case .identifiers:
+            return "\(apiVersion)/observations/identifiers"
         case .scoreImage:
             return "\(apiVersion)/computervision/score_image"
         }
@@ -87,7 +90,8 @@ enum NatAPI: TargetType {
              .taxon,
              .observation,
              .searchTaxonBounds,
-             .observers:
+             .observers,
+             .identifiers:
             return .get
         case .fave:
             return .post
@@ -145,10 +149,11 @@ enum NatAPI: TargetType {
              .fave,
              .unfave:
             return .requestPlain
-        case .observers(let perPage, let page, let taxonId, let observationId, let userId):
+        case .observers(let perPage, let page, let taxonIds, let observationId, let userId),
+             .identifiers(let perPage, let page, let taxonIds, let observationId, let userId):
             parameters["per_page"] = perPage
             parameters["page"] = page
-            parameters["taxon_id"] = taxonId
+            parameters["taxon_id"] = taxonIds.map{ String($0) }.joined(separator: ",").emptyToNil()
             parameters["id"] = observationId
             parameters["user_id"] = userId
             return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
@@ -194,7 +199,8 @@ enum NatAPI: TargetType {
              .users,
              .taxon,
              .observation,
-             .observers:
+             .observers,
+             .identifiers:
             break
         }
         return assigned
