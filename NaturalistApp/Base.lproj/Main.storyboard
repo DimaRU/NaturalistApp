@@ -417,7 +417,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="tapButtonCenter:" destination="2Hw-Uv-fu8" eventType="touchUpInside" id="Ojp-Kq-kZ8"/>
-                                    <action selector="tapButtonMinus:" destination="2Hw-Uv-fu8" eventType="touchUpInside" id="45u-tu-7Bh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -794,22 +793,22 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nhy-Gf-B6c">
-                                                    <rect key="frame" x="80" y="1" width="282" height="64"/>
+                                                    <rect key="frame" x="80" y="1" width="294" height="64"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tn5-gZ-n0f">
-                                                            <rect key="frame" x="0.0" y="0.0" width="282" height="21"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="294" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3S-au-e8G">
-                                                            <rect key="frame" x="0.0" y="21" width="282" height="21.5"/>
+                                                            <rect key="frame" x="0.0" y="21" width="294" height="21.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYD-i4-V0S">
-                                                            <rect key="frame" x="0.0" y="42.5" width="282" height="21.5"/>
+                                                            <rect key="frame" x="0.0" y="42.5" width="294" height="21.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" name="GlobalTintColor"/>
                                                             <nil key="highlightedColor"/>
