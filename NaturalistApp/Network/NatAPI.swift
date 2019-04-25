@@ -29,6 +29,7 @@ enum NatAPI: TargetType {
     case identifiers(perPage: Int, page: Int, taxonIds: [TaxonId], observationId: ObservationId?, userId: UserId?)
     case scoreImage(image: Data, type: String, name: String, date: Date, location: CLLocationCoordinate2D?)
     case createObservation(taxonId: TaxonId, observedOn:Date, captive: Bool, geoprivacy: GeoprivacyOptions, location: CLLocation?, place: String?, description: String?)
+    case postPhoto(image: Data, observationId: ObservationId, type: String, position: Int)
 
     var apiVersion: String {
         return "/v1"
@@ -76,6 +77,8 @@ enum NatAPI: TargetType {
             return "\(apiVersion)/computervision/score_image"
         case .createObservation:
             return "\(apiVersion)/observations"
+        case .postPhoto:
+            return "\(apiVersion)/observation_photos"
         }
     }
     
@@ -103,6 +106,8 @@ enum NatAPI: TargetType {
         case .scoreImage:
             return .post
         case .createObservation:
+            return .post
+        case .postPhoto:
             return .post
         }
     }
@@ -198,7 +203,14 @@ enum NatAPI: TargetType {
             parameters["observation"] = observation
             parameters["ignore_photos"] = true
             return .requestCompositeParameters(bodyParameters: parameters, bodyEncoding: JSONEncoding.default, urlParameters: ["inat_site_id": 1])
-//            return .requestParameters(parameters: parameters, encoding: JSONEncoding.default)
+
+        case .postPhoto(let image, let observationId, let type, let position):
+            let mimeType = type.replacingOccurrences(of: "public.", with: "image/")
+            let imageFormData = MultipartFormData(provider: .data(image), name: "file", fileName: "original.jpg", mimeType: mimeType)
+            let idFormData = MultipartFormData(provider: .data("\(observationId)".data(using: .utf8)!), name: "observation_photo[observation_id]")
+            let uuidFormData = MultipartFormData(provider: .data(UUID().uuidString.data(using: .utf8)!), name: "observation_photo[uuid]")
+            let positionFormData = MultipartFormData(provider: .data("\(position)".data(using: .utf8)!), name: "observation_photo[position]")
+            return .uploadCompositeMultipart([imageFormData, idFormData, uuidFormData, positionFormData], urlParameters: [:])
         }
     }
     
@@ -218,7 +230,8 @@ enum NatAPI: TargetType {
              .fave,
              .unfave,
              .scoreImage,
-             .createObservation:
+             .createObservation,
+             .postPhoto:
             assigned["Authorization"] = KeychainService.shared[.apiToken]
         case .searchObservations,
              .searchTaxonBounds,

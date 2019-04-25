@@ -39,12 +39,37 @@ class AddObservationViewController: UIViewController, MainStoryboardInstantiable
             present(alert, animated: true)
             return
         }
-        guard let target = observationTableController.createRequest() else { return }
-        NatProvider.shared.request(target)
-            .done { (observation: Observation) in
+        let target = observationTableController.createRequest()
+        guard let target1 = target else { return }
+        NatProvider.shared.request(target1)
+            .then { (observation: Observation) -> Promise<[PhotoPost]> in
                 print(observation.id, observation.uuid)
+                let promises = (0..<self.assets.count).map { position in
+                    self.pushPhoto(asset: self.assets[position], id: observation.id, position: position)
+                }
+                return when(fulfilled: promises)
+            }.done { photos in
+                self.navigationController?.popViewController(animated: true)
+            }.ensure {
             }.catch { error in
-                print("Error")
+                print("Error:", error)
+        }
+    }
+
+    private func pushPhoto(asset: PHAsset, id: ObservationId, position: Int) -> Promise<PhotoPost> {
+        return PHImageManager.default().requestImageData(for: asset)
+            .then { (data, uti) -> Promise<(Data, String)> in
+                if uti == "public.heic" {
+                    guard let image = UIImage(data: data),
+                        let jpgData = image.jpegData(compressionQuality: 0.8) else {
+                            throw InternalError.convertImage
+                    }
+                    return Promise.value((jpgData, "public.jpeg"))
+                } else {
+                    return Promise.value((data, uti))
+                }
+            }.then { data, uti in
+                NatProvider.shared.request(NatAPI.postPhoto(image: data, observationId: id, type: uti, position: position))
         }
     }
 
