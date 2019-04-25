@@ -11,7 +11,7 @@ import UIKit
 class LeadersTableViewController: UIViewController, IndicateStateProtocol {
     @IBOutlet weak var tableView: UITableView!
     
-    public var taxonId: TaxonId!
+    public var taxonIds: [TaxonId] = []
     
     private var observers: [Observer] = []
     var activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
@@ -24,7 +24,7 @@ class LeadersTableViewController: UIViewController, IndicateStateProtocol {
     
     private func fetchPage() {
         showActivityIndicator()
-        let target = NatAPI.observers(perPage: 500, page: 1, taxonIds: [taxonId], observationId: nil, userId: nil)
+        let target = NatAPI.observers(perPage: 500, page: 1, taxonIds: taxonIds, observationId: nil, userId: nil)
         NatProvider.shared.request(target)
             .done { (pagedResult: PagedResults<Observer>) in
                 print(pagedResult.page, pagedResult.perPage, pagedResult.totalResults)
