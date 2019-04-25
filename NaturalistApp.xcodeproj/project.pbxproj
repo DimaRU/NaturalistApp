@@ -41,7 +41,7 @@
 		0A3DA674223EB7D4002C8E89 /* TaxonMapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A3DA672223EB7D4002C8E89 /* TaxonMapViewController.storyboard */; };
 		0A3DA675223EB7D4002C8E89 /* TaxonMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3DA673223EB7D4002C8E89 /* TaxonMapViewController.swift */; };
 		0A3DA677223EBE0A002C8E89 /* ObservationCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3DA676223EBE0A002C8E89 /* ObservationCoordinate.swift */; };
-		0A3F664B2219B750002452B0 /* AuthorizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3F664A2219B750002452B0 /* AuthorizeViewController.swift */; };
+		0A3F664B2219B750002452B0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3F664A2219B750002452B0 /* LoginViewController.swift */; };
 		0A451A812211B35400684AC4 /* FreeMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A451A802211B35400684AC4 /* FreeMethods.swift */; };
 		0A451A882211B5B000684AC4 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A451A872211B5B000684AC4 /* Animations.swift */; };
 		0A47A1DC222838A3005B4AEB /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A47A1DB222838A3005B4AEB /* Globals.swift */; };
@@ -67,6 +67,11 @@
 		0A6624E022660E5C00EB2747 /* UITextViewPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6624DF22660E5C00EB2747 /* UITextViewPlaceholder.swift */; };
 		0A7788A22264F3CD00A471F1 /* AddObservationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7788A12264F3CD00A471F1 /* AddObservationTableViewController.swift */; };
 		0A85C3E5226A52930035A290 /* TaxaSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A85C3E4226A52930035A290 /* TaxaSearchViewController.swift */; };
+		0A87254B227237A700A07CEC /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87254A227237A700A07CEC /* SplashViewController.swift */; };
+		0A87254D22723E4900A07CEC /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87254C22723E4900A07CEC /* UIImageViewExtensions.swift */; };
+		0A87254F2272438C00A07CEC /* fish.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0A87254E2272405000A07CEC /* fish.gif */; };
+		0A8725512272629A00A07CEC /* AuthorizePromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8725502272629A00A07CEC /* AuthorizePromise.swift */; };
+		0A8725532272661100A07CEC /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8725522272661100A07CEC /* LoginViewController.storyboard */; };
 		0A87BB4D2227419100150BE9 /* ObservationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB4C2227419100150BE9 /* ObservationDetailsViewController.swift */; };
 		0A87BB4F2227441300150BE9 /* ObservationProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB4E2227441300150BE9 /* ObservationProfileView.swift */; };
 		0A87BB512227461800150BE9 /* ObservationPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB502227461800150BE9 /* ObservationPhotoView.swift */; };
@@ -187,7 +192,7 @@
 		0A3DA672223EB7D4002C8E89 /* TaxonMapViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TaxonMapViewController.storyboard; sourceTree = "<group>"; };
 		0A3DA673223EB7D4002C8E89 /* TaxonMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxonMapViewController.swift; sourceTree = "<group>"; };
 		0A3DA676223EBE0A002C8E89 /* ObservationCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationCoordinate.swift; sourceTree = "<group>"; };
-		0A3F664A2219B750002452B0 /* AuthorizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizeViewController.swift; sourceTree = "<group>"; };
+		0A3F664A2219B750002452B0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0A451A802211B35400684AC4 /* FreeMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeMethods.swift; sourceTree = "<group>"; };
 		0A451A872211B5B000684AC4 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		0A47A1DB222838A3005B4AEB /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
@@ -213,6 +218,11 @@
 		0A6624DF22660E5C00EB2747 /* UITextViewPlaceholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewPlaceholder.swift; sourceTree = "<group>"; };
 		0A7788A12264F3CD00A471F1 /* AddObservationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddObservationTableViewController.swift; sourceTree = "<group>"; };
 		0A85C3E4226A52930035A290 /* TaxaSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxaSearchViewController.swift; sourceTree = "<group>"; };
+		0A87254A227237A700A07CEC /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		0A87254C22723E4900A07CEC /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
+		0A87254E2272405000A07CEC /* fish.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fish.gif; sourceTree = "<group>"; };
+		0A8725502272629A00A07CEC /* AuthorizePromise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizePromise.swift; sourceTree = "<group>"; };
+		0A8725522272661100A07CEC /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
 		0A87BB4C2227419100150BE9 /* ObservationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationDetailsViewController.swift; sourceTree = "<group>"; };
 		0A87BB4E2227441300150BE9 /* ObservationProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationProfileView.swift; sourceTree = "<group>"; };
 		0A87BB502227461800150BE9 /* ObservationPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationPhotoView.swift; sourceTree = "<group>"; };
@@ -373,7 +383,9 @@
 				0A3DA671223EB7D4002C8E89 /* TaxonMapViewController */,
 				0A2D3026226F354A004CDDBF /* TaxaSearchViewController */,
 				0AD653EC22401366007F315B /* LeadersTableViewController */,
-				0A3F664A2219B750002452B0 /* AuthorizeViewController.swift */,
+				0A8725542272671F00A07CEC /* LoginViewController */,
+				0A87254A227237A700A07CEC /* SplashViewController.swift */,
+				0A8725502272629A00A07CEC /* AuthorizePromise.swift */,
 				0A3139E3221AB315009D87F0 /* MapViewController.swift */,
 				0AF16999222E783200C1058B /* ImageCollectionViewCell.swift */,
 				0AA74C4A223137E700B824E8 /* NatTabBarController.swift */,
@@ -422,6 +434,15 @@
 				0A6624DF22660E5C00EB2747 /* UITextViewPlaceholder.swift */,
 			);
 			path = "Third Party";
+			sourceTree = "<group>";
+		};
+		0A8725542272671F00A07CEC /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0A3F664A2219B750002452B0 /* LoginViewController.swift */,
+				0A8725522272661100A07CEC /* LoginViewController.storyboard */,
+			);
+			path = LoginViewController;
 			sourceTree = "<group>";
 		};
 		0A87BB4B2227415200150BE9 /* ObservationDetails */ = {
@@ -498,12 +519,13 @@
 				0ABA9C722210A30C0099F774 /* Services */,
 				0A6624DE22660E2D00EB2747 /* Third Party */,
 				0A977B66220E0B8B005D1DC2 /* AppDelegate.swift */,
+				0A2D3022226E3F53004CDDBF /* InternalError.swift */,
 				0A451A802211B35400684AC4 /* FreeMethods.swift */,
 				0A977B6A220E0B8B005D1DC2 /* Main.storyboard */,
 				0A977B6F220E0B8C005D1DC2 /* LaunchScreen.storyboard */,
 				0A977B6D220E0B8C005D1DC2 /* Assets.xcassets */,
 				0A977B72220E0B8C005D1DC2 /* Info.plist */,
-				0A2D3022226E3F53004CDDBF /* InternalError.swift */,
+				0A87254E2272405000A07CEC /* fish.gif */,
 			);
 			path = NaturalistApp;
 			sourceTree = "<group>";
@@ -596,6 +618,7 @@
 				0ADF8A49222FD6F80047AC25 /* UICollectionViewExtensions.swift */,
 				0A2174802225821A007E4EFC /* UIColorExtensions.swift */,
 				0A21747A22255487007E4EFC /* UIImageExtensions.swift */,
+				0A87254C22723E4900A07CEC /* UIImageViewExtensions.swift */,
 				0AA8DB45222900C0003999B7 /* UIStoryboardExtensions.swift */,
 				0A5F60B52227FF4600EABDAF /* UITableViewExtensions.swift */,
 				0A47A1DD22283B00005B4AEB /* UIViewControllerExtensions.swift */,
@@ -775,9 +798,11 @@
 				0A25DFA322367B1300DEB46E /* ObservationProfileView.xib in Resources */,
 				0A25DFA92236902F00DEB46E /* ObservationFaveView.xib in Resources */,
 				0A25DFA5223685B800DEB46E /* ObservationPhotoView.xib in Resources */,
+				0A8725532272661100A07CEC /* LoginViewController.storyboard in Resources */,
 				0AD81CCD223A7D90003082BC /* ActivityViewController.storyboard in Resources */,
 				0AD81CCE223A7D90003082BC /* ObservationTaxaView.xib in Resources */,
 				0A17F8FA223D562A00B71E66 /* PhotoViewController.storyboard in Resources */,
+				0A87254F2272438C00A07CEC /* fish.gif in Resources */,
 				0A977B71220E0B8C005D1DC2 /* LaunchScreen.storyboard in Resources */,
 				0A5898352260E91F0036AD6E /* PickPhotoController.storyboard in Resources */,
 				0A977B6E220E0B8C005D1DC2 /* Assets.xcassets in Resources */,
@@ -890,7 +915,8 @@
 				0ABA9C65221029EE0099F774 /* Photo.swift in Sources */,
 				0AF3C65F2269B4A900BF257A /* GeoprivacyOptions.swift in Sources */,
 				0AF16998222E76BD00C1058B /* ProfileHeaderCollectionReusableView.swift in Sources */,
-				0A3F664B2219B750002452B0 /* AuthorizeViewController.swift in Sources */,
+				0A3F664B2219B750002452B0 /* LoginViewController.swift in Sources */,
+				0A8725512272629A00A07CEC /* AuthorizePromise.swift in Sources */,
 				0A2174812225821A007E4EFC /* UIColorExtensions.swift in Sources */,
 				0A9F8C88221961B200C299C8 /* NatProvider.swift in Sources */,
 				0AD653EB2240134D007F315B /* LeadersTableViewCell.swift in Sources */,
@@ -974,11 +1000,13 @@
 				0A5FA4A8226C5B9800F47FB2 /* TaxonScore.swift in Sources */,
 				0A1D41652243A0B500718651 /* FullScreenViewController.swift in Sources */,
 				0A89205D22364D6E00900224 /* StackViewController.swift in Sources */,
+				0A87254B227237A700A07CEC /* SplashViewController.swift in Sources */,
 				0A2C9B5A2271BFD1003DCDB3 /* AccuracyCircleView.swift in Sources */,
 				0A58983A2260E91F0036AD6E /* CLLocationExtensions.swift in Sources */,
 				0A89205A22364D2D00900224 /* NibInstantiable.swift in Sources */,
 				0A2C9B5D2271BFD1003DCDB3 /* EditLocationViewController.swift in Sources */,
 				0AD6037A22624B340099B90F /* AddObservationViewController.swift in Sources */,
+				0A87254D22723E4900A07CEC /* UIImageViewExtensions.swift in Sources */,
 				0A33CA37221F1F1B00BDD802 /* PromiseKitExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

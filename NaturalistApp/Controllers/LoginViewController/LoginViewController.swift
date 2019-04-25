@@ -1,5 +1,5 @@
 //
-//  AuthorizeViewController.swift
+//  LoginViewController.swift
 //
 //
 //  Created by Dmitriy Borovikov on 10/12/2018.
@@ -9,11 +9,12 @@
 import UIKit
 import PromiseKit
 
-class AuthorizeViewController: BasicViewController {
-
+class LoginViewController: UIViewController, StoryboardInstantiable {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+    
+    var errorMessage: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,24 +25,6 @@ class AuthorizeViewController: BasicViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        authSession()
-    }
-    
-    private func authSession() {
-        guard let bearer = KeychainService.shared[.bearer] else { return }
-        NatProvider.shared.request(.apiToken(bearer: bearer))
-            .then { (jwt: JWTToken) -> Promise<PagedResults<User>> in
-                KeychainService.shared[.apiToken] = jwt.apiToken
-                print(jwt.apiToken)
-                return NatProvider.shared.request(.currentUser)
-            }.done { (paged: PagedResults<User>) -> Void in
-                let user = paged.results.content.first!
-                Globals.setCurrentUser(user: user)
-                print(user.login, user.name ?? "")
-                self.performSegue(withIdentifier: "TabbarViewControllerSegue", sender: nil)
-            }.catch { error in
-                print(error)
-        }
     }
     
     @IBAction func unwindToAuthorizeViewController(segue: UIStoryboardSegue) {
@@ -57,16 +40,17 @@ class AuthorizeViewController: BasicViewController {
         
         let target = NatAPI.authorize(login: login, password: password)
         NatProvider.shared.request(target)
-            .done {
-                (result: AccessToken) -> Void in
+            .then { (result: AccessToken) -> Promise<Void> in
                 let bearer = result.accessToken
                 KeychainService.shared[.bearer] = bearer
-                self.authSession()
+                return authorizeSession()
+            }.done {
+                // All ok, dismiss
+                self.dismiss(animated: true)
             }.catch { error in
                 print(error)
+                self.errorMessage = error.localizedDescription
         }
-        
-
     }
     
     func keyboardDismiss() {
@@ -80,7 +64,7 @@ class AuthorizeViewController: BasicViewController {
 }
 
 
-extension AuthorizeViewController: UITextFieldDelegate {
+extension LoginViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let resultString = (textField.text! as NSString).replacingCharacters(in: range, with: string)
         var buttonOn = false

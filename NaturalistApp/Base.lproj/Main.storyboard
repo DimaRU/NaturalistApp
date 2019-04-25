@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yna-4j-b98">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qO1-K1-FYS">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -117,77 +117,6 @@
                 <exit id="sTn-Hu-A7n" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1634" y="18"/>
-        </scene>
-        <!--Authorize View Controller-->
-        <scene sceneID="QB0-Ww-Te7">
-            <objects>
-                <viewController id="yna-4j-b98" customClass="AuthorizeViewController" customModule="NaturalistApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ET7-HB-4Ln">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H8V-hs-skw">
-                                <rect key="frame" x="16" y="74" width="382" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="BtT-ne-7u5"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
-                                <connections>
-                                    <outlet property="delegate" destination="yna-4j-b98" id="2Rj-0D-lBb"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WtN-Q0-F11">
-                                <rect key="frame" x="16" y="122" width="382" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Kdn-6t-mQC"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="send" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
-                                <connections>
-                                    <outlet property="delegate" destination="yna-4j-b98" id="Lwj-Hf-MOb"/>
-                                </connections>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0rY-9L-STN">
-                                <rect key="frame" x="16" y="262" width="382" height="50"/>
-                                <color key="backgroundColor" name="GlobalTintColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="ZTF-XX-6Nn"/>
-                                </constraints>
-                                <state key="normal" title="Sign In">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="loginButtonTap:" destination="yna-4j-b98" eventType="touchUpInside" id="zge-FR-JN5"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="ECy-LV-GUg" firstAttribute="trailing" secondItem="H8V-hs-skw" secondAttribute="trailing" constant="16" id="18j-YI-zyc"/>
-                            <constraint firstItem="0rY-9L-STN" firstAttribute="leading" secondItem="ECy-LV-GUg" secondAttribute="leading" constant="16" id="58k-1G-nii"/>
-                            <constraint firstItem="H8V-hs-skw" firstAttribute="top" secondItem="ECy-LV-GUg" secondAttribute="top" constant="30" id="6Ed-5U-dt7"/>
-                            <constraint firstItem="WtN-Q0-F11" firstAttribute="top" secondItem="H8V-hs-skw" secondAttribute="bottom" constant="8" id="BLV-bG-TKu"/>
-                            <constraint firstItem="0rY-9L-STN" firstAttribute="top" secondItem="WtN-Q0-F11" secondAttribute="bottom" constant="100" id="UPJ-Aa-4Nu"/>
-                            <constraint firstItem="ECy-LV-GUg" firstAttribute="trailing" secondItem="0rY-9L-STN" secondAttribute="trailing" constant="16" id="fHI-Nd-Mi3"/>
-                            <constraint firstItem="WtN-Q0-F11" firstAttribute="leading" secondItem="ECy-LV-GUg" secondAttribute="leading" constant="16" id="kg0-jz-jS2"/>
-                            <constraint firstItem="H8V-hs-skw" firstAttribute="leading" secondItem="ECy-LV-GUg" secondAttribute="leading" constant="16" id="quX-45-E5P"/>
-                            <constraint firstItem="ECy-LV-GUg" firstAttribute="trailing" secondItem="WtN-Q0-F11" secondAttribute="trailing" constant="16" id="zNp-M0-zrG"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="ECy-LV-GUg"/>
-                    </view>
-                    <connections>
-                        <outlet property="loginButton" destination="0rY-9L-STN" id="7YY-bU-fcx"/>
-                        <outlet property="passwordTextField" destination="WtN-Q0-F11" id="3Y2-SE-6LH"/>
-                        <outlet property="usernameTextField" destination="H8V-hs-skw" id="Yr4-o4-PkZ"/>
-                        <segue destination="dNA-dv-uTw" kind="show" identifier="TabbarViewControllerSegue" id="2hi-PS-x0b"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="foq-Wt-sul" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1243" y="18"/>
         </scene>
         <!--Leaderboard-->
         <scene sceneID="feD-Ra-Mtd">
@@ -843,6 +772,38 @@
             </objects>
             <point key="canvasLocation" x="3949" y="817"/>
         </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="H5v-ct-VrC">
+            <objects>
+                <viewController id="qO1-K1-FYS" customClass="SplashViewController" customModule="NaturalistApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J6m-lJ-3fj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fish-first" translatesAutoresizingMaskIntoConstraints="NO" id="8Ze-yf-vrg">
+                                <rect key="frame" x="32" y="286.5" width="350" height="323"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="BFD-JN-1Pn"/>
+                                    <constraint firstAttribute="height" constant="323" id="aVW-9w-49n"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8Ze-yf-vrg" firstAttribute="centerY" secondItem="J6m-lJ-3fj" secondAttribute="centerY" id="JRy-ED-ETd"/>
+                            <constraint firstItem="8Ze-yf-vrg" firstAttribute="centerX" secondItem="J6m-lJ-3fj" secondAttribute="centerX" id="NAU-fU-BsF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EFR-4a-S30"/>
+                    </view>
+                    <connections>
+                        <outlet property="splashImageView" destination="8Ze-yf-vrg" id="aM2-c2-V1C"/>
+                        <segue destination="dNA-dv-uTw" kind="show" identifier="TabbarViewControllerSegue" id="R8b-OE-xbd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4C5-6h-vAz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1052" y="-13"/>
+        </scene>
         <!--Map-->
         <scene sceneID="ROk-N8-2mq">
             <objects>
@@ -989,6 +950,7 @@
         <image name="Globe" width="25" height="25"/>
         <image name="Leaders" width="25" height="25"/>
         <image name="LocationFrame-25" width="25" height="25"/>
+        <image name="fish-first" width="350" height="323"/>
         <image name="navigation" width="170.66667175292969" height="170.66667175292969"/>
         <image name="plus" width="25" height="25"/>
         <image name="profile" width="25" height="25"/>
