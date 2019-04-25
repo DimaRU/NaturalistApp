@@ -31,7 +31,21 @@ class AddObservationViewController: UIViewController, MainStoryboardInstantiable
     }
 
     @IBAction func shareButtonTap(_ sender: Any) {
-        print("Share")
+        guard !assets.isEmpty else {
+            let title = NSLocalizedString("No Photos", comment: "")
+            let msg = NSLocalizedString("Without at least one photo, this observation will be impossible for others to help identify.", comment: "")
+            let alert = UIAlertController(title: title, message: msg, preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .default))
+            present(alert, animated: true)
+            return
+        }
+        guard let target = observationTableController.createRequest() else { return }
+        NatProvider.shared.request(target)
+            .done { (observation: Observation) in
+                print(observation.id, observation.uuid)
+            }.catch { error in
+                print("Error")
+        }
     }
 
     private func authSession() {

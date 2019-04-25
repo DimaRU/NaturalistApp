@@ -27,6 +27,7 @@ class AddObservationTableViewController: UITableViewController {
         }
     }
     public var taxon: Taxon?
+    private var placeGuess: String?
 
     enum ChooseBool: String, CaseIterable, Localizable {
         case no, yes
@@ -147,8 +148,6 @@ class AddObservationTableViewController: UITableViewController {
                 .done {
                     self.observedOn = $0
                 }.ignoreErrors()
-        case locationCell:
-            print("EditLocationViewController")
         case geoPrivacyCell:
             let title = NSLocalizedString("Select Privacy", comment: "title for geoprivacy selector")
             pickValue(title: title, initial: geoprivacy)
@@ -180,6 +179,35 @@ class AddObservationTableViewController: UITableViewController {
         default:
             break
         }
+    }
+
+
+    func createRequest() -> NatAPI? {
+        var title: String?
+        var msg: String?
+        if taxon == nil {
+            title = NSLocalizedString("Missing Identification", comment: "")
+            msg = NSLocalizedString("Please identify", comment: "")
+        }
+        if observationLocation == nil {
+            title = NSLocalizedString("Missing Location", comment: "")
+            msg = NSLocalizedString("Without a location, this observation will be very hard for others to identify and will never attain research grade.", comment: "")
+        }
+        if let title = title, let msg = msg {
+            let alert = UIAlertController(title: title, message: msg, preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .default))
+            present(alert, animated: true)
+            return nil
+        }
+
+        let target = NatAPI.createObservation(taxonId: taxon!.id,
+                                              observedOn: observedOn,
+                                              captive: captive == .yes,
+                                              geoprivacy: geoprivacy,
+                                              location: observationLocation,
+                                              place: placeGuess,
+                                              description: notesTextView.text)
+        return target
     }
 }
 

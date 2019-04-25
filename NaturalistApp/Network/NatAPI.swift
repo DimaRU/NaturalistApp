@@ -28,6 +28,7 @@ enum NatAPI: TargetType {
     case observers(perPage: Int, page: Int, taxonIds: [TaxonId], observationId: ObservationId?, userId: UserId?)
     case identifiers(perPage: Int, page: Int, taxonIds: [TaxonId], observationId: ObservationId?, userId: UserId?)
     case scoreImage(image: Data, type: String, name: String, date: Date, location: CLLocationCoordinate2D?)
+    case createObservation(taxonId: TaxonId, observedOn:Date, captive: Bool, geoprivacy: GeoprivacyOptions, location: CLLocation?, place: String?, description: String?)
 
     var apiVersion: String {
         return "/v1"
@@ -73,6 +74,8 @@ enum NatAPI: TargetType {
             return "\(apiVersion)/observations/identifiers"
         case .scoreImage:
             return "\(apiVersion)/computervision/score_image"
+        case .createObservation:
+            return "\(apiVersion)/observations"
         }
     }
     
@@ -98,6 +101,8 @@ enum NatAPI: TargetType {
         case .unfave:
             return .delete
         case .scoreImage:
+            return .post
+        case .createObservation:
             return .post
         }
     }
@@ -172,6 +177,28 @@ enum NatAPI: TargetType {
                 multpartData.append(lngFormData)
             }
             return .uploadCompositeMultipart(multpartData, urlParameters: [:])
+        case .createObservation(let taxonId, let observedOn, let captive, let geoprivacy, let location, let place, let description):
+            var observation: [String : Any] = [:]
+            observation["uuid"] = UUID().uuidString
+            observation["taxon_id"] = taxonId
+            observation["id_please"] = false
+            let formatter = DateFormatter()
+            formatter.timeZone = TimeZone.current
+            formatter.locale = .init(identifier: "en_US")
+            formatter.dateFormat = "EEE MMM dd yyyy HH:mm:ss 'GMT'Z (zzz)"
+            observation["observed_on_string"] = formatter.string(from: observedOn)
+            observation["owners_identification_from_vision"] = true
+            observation["captive_flag"] = captive
+            observation["latitude"] = location?.coordinate.latitude
+            observation["longitude"] = location?.coordinate.longitude
+            observation["positional_accuracy"] = location?.horizontalAccuracy
+            observation["geoprivacy"] = geoprivacy.rawValue
+            observation["place_guess"] = place
+            observation["description"] = description
+            parameters["observation"] = observation
+            parameters["ignore_photos"] = true
+            return .requestCompositeParameters(bodyParameters: parameters, bodyEncoding: JSONEncoding.default, urlParameters: ["inat_site_id": 1])
+//            return .requestParameters(parameters: parameters, encoding: JSONEncoding.default)
         }
     }
     
@@ -190,7 +217,8 @@ enum NatAPI: TargetType {
         case .currentUser,
              .fave,
              .unfave,
-             .scoreImage:
+             .scoreImage,
+             .createObservation:
             assigned["Authorization"] = KeychainService.shared[.apiToken]
         case .searchObservations,
              .searchTaxonBounds,
