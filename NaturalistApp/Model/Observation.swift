@@ -14,6 +14,9 @@ struct Observation: ResultsContent {
     let id: ObservationId
     let user: User
     let location: SLocation?
+    let positionalAccuracy: Int?
+    let placeGuess: String?
+    let geoprivacy: GeoprivacyOptions?
     let timeZoneOffset: String
     let observedOn: String?
     let observedOnString: String?
@@ -27,7 +30,6 @@ struct Observation: ResultsContent {
     let identifications: [Identification]
     let identificationsSomeAgree: Bool
     let projectIdsWithoutCuratorId: [Int]
-    let placeGuess: String?
     let observationPhotos: [ObservationPhoto]
     let photos: [Photo]
     let communityTaxon: Taxon?
@@ -42,7 +44,6 @@ struct Observation: ResultsContent {
     let identificationsMostAgree: Bool
     let speciesGuess: String?
     let identificationsMostDisagree: Bool
-    let positionalAccuracy: Int?
     let commentsCount: Int
     let siteId: Int?
     let idPlease: Bool
@@ -63,7 +64,6 @@ struct Observation: ResultsContent {
     let identificationsCount: Int
     let obscured: Bool
     let numIdentificationDisagreements: Int
-    let geoprivacy: GeoprivacyOptions?
     let spam: Bool
 
     struct ObservationPhoto: Codable {
