@@ -18,14 +18,18 @@ class SplashViewController: UIViewController {
         splashImageView.animationFromGif(resource: "fish")
         splashImageView.animationDuration = 2
         splashImageView.startAnimating()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
         authSession()
     }
     
     private func authSession() {
         authorizeSession()
             .done {
-                self.splashImageView.stopAnimating()
                 self.performSegue(withIdentifier: "TabbarViewControllerSegue", sender: nil)
+            }.ensure {
+                self.splashImageView.stopAnimating()
             }.catch(on: nil, flags: nil, policy: .allErrors) { error in
                 let loginViewController = LoginViewController.instantiate()
                 if case PMKError.cancelled = error {
@@ -33,15 +37,20 @@ class SplashViewController: UIViewController {
                     print(error)
                     loginViewController.errorMessage = error.localizedDescription
                 }
+                loginViewController.delegate = self
                 self.present(loginViewController, animated: true)
         }
     }
-    
-    private func bearerPromise() -> Promise<String> {
-        if let bearer = KeychainService.shared[.bearer] {
-            return Promise.value(bearer)
-        } else {
-            return Promise(error: PMKError.cancelled)
-        }
+
+    @IBAction func unwindToLoginViewController(segue: UIStoryboardSegue) {
+        KeychainService.shared[.bearer] = nil
+        KeychainService.shared[.apiToken] = nil
+    }
+
+}
+
+extension SplashViewController: LoginViewControllerProtocol {
+    func loggedIn() {
+        self.performSegue(withIdentifier: "TabbarViewControllerSegue", sender: nil)
     }
 }

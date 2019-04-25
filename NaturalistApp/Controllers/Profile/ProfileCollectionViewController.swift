@@ -29,11 +29,6 @@ class ProfileCollectionViewController: UICollectionViewController, MainStoryboar
         }
     }
     
-    @IBAction func tapLogOutButton(_ sender: UIBarButtonItem) {
-        print("logout")
-        self.performSegue(withIdentifier: "unwindToAuthorizeSegue", sender: self)
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         self.fetchObservationsPage(page: 1)
     }

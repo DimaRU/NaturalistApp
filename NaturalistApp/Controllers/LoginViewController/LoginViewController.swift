@@ -9,12 +9,16 @@
 import UIKit
 import PromiseKit
 
+protocol LoginViewControllerProtocol {
+    func loggedIn()
+}
 class LoginViewController: UIViewController, StoryboardInstantiable {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-    
+
     var errorMessage: String?
+    var delegate: LoginViewControllerProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,11 +31,6 @@ class LoginViewController: UIViewController, StoryboardInstantiable {
         super.viewWillAppear(animated)
     }
     
-    @IBAction func unwindToAuthorizeViewController(segue: UIStoryboardSegue) {
-        KeychainService.shared[.bearer] = nil
-        KeychainService.shared[.apiToken] = nil
-    }
-
     @IBAction func loginButtonTap(_ sender: Any) {
         guard let login = usernameTextField.text,
             let password = passwordTextField.text,
@@ -46,7 +45,9 @@ class LoginViewController: UIViewController, StoryboardInstantiable {
                 return authorizeSession()
             }.done {
                 // All ok, dismiss
-                self.dismiss(animated: true)
+                self.dismiss(animated: true) {
+                    self.delegate?.loggedIn()
+                }
             }.catch { error in
                 print(error)
                 self.errorMessage = error.localizedDescription

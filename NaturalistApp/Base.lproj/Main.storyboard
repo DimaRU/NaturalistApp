@@ -105,7 +105,7 @@
                     <navigationItem key="navigationItem" title="Login" id="Djx-AH-L0m">
                         <barButtonItem key="rightBarButtonItem" title="Log out" id="yly-uY-eLc">
                             <connections>
-                                <action selector="tapLogOutButton:" destination="VJT-jc-fa5" id="e27-by-fG8"/>
+                                <segue destination="sTn-Hu-A7n" kind="unwind" unwindAction="unwindToLoginViewControllerWithSegue:" id="R7M-ml-fmF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -802,7 +802,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4C5-6h-vAz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1052" y="-13"/>
+            <point key="canvasLocation" x="-1370" y="19"/>
         </scene>
         <!--Map-->
         <scene sceneID="ROk-N8-2mq">

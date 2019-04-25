@@ -24,6 +24,7 @@ class NaturalistAppTests: XCTestCase {
         vc = ProfileCollectionViewController.instantiate()
         vc = TaxonMapViewController.instantiate()
         vc = NatTabBarController.instantiate()
+        vc = LoginViewController.instantiate()
         print(vc.description)
     }
 
