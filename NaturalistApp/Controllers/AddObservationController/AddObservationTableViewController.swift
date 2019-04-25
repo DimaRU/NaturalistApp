@@ -168,11 +168,17 @@ class AddObservationTableViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination = segue.destination
-        if let taxaSearchViewController = destination as? TaxaSearchViewController {
+        switch destination {
+        case let taxaSearchViewController as TaxaSearchViewController:
             taxaSearchViewController.asset = mainAsset
             taxaSearchViewController.location = observationLocation?.coordinate
             taxaSearchViewController.observedOn = observedOn
             taxaSearchViewController.delegate = self
+        case let editLocationViewController as EditLocationViewController:
+            editLocationViewController.delegate = self
+            editLocationViewController.currentLocation = observationLocation?.coordinate
+        default:
+            break
         }
     }
 }
@@ -181,5 +187,17 @@ extension AddObservationTableViewController: TaxaSearchViewProtocol {
     func selected(_ taxon: Taxon) {
         taxaCell.setup(taxon: taxon)
         self.taxon = taxon
+    }
+}
+
+extension AddObservationTableViewController: EditLocationViewControllerProtocol {
+    func setLocation(coordinate: CLLocationCoordinate2D, positionalAccuracy: Double) {
+        observationLocation = CLLocation(coordinate: coordinate,
+                   altitude: 0,
+                   horizontalAccuracy: positionalAccuracy,
+                   verticalAccuracy: 0,
+                   course: 0,
+                   speed: 0,
+                   timestamp: Date())
     }
 }

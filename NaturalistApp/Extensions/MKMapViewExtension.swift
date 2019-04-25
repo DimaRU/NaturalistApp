@@ -71,7 +71,6 @@ extension MKMapView
     {
         // clamp large numbers to 28
         let zoomLevel = min(zoomLevel, 20)
-        print("zoom level: \(zoomLevel)")
         // use the zoom level to compute the region
         let span = self.coordinateSpanWithCenterCoordinate(centerCoordinate: centerCoordinate, zoomLevel: zoomLevel)
         let region = MKCoordinateRegion(center: centerCoordinate, span: span)

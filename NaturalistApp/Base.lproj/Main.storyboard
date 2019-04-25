@@ -646,7 +646,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="cdX-IA-lCO" kind="show" id="2zA-To-lrV"/>
+                                            <segue destination="zae-tq-ZgL" kind="show" id="xHJ-Tj-RN3"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="50" id="Ywi-Lo-8Sl" customClass="TitleValueTableViewCell" customModule="NaturalistApp" customModuleProvider="target">
@@ -687,7 +687,7 @@
                                         <rect key="frame" x="0.0" y="296" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K9g-ii-hUc" id="Fng-SY-Vrt">
-                                            <rect key="frame" x="0.0" y="0.0" width="388" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Aquarium-25" translatesAutoresizingMaskIntoConstraints="NO" id="RXM-mP-nMG">
@@ -737,22 +737,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="naQ-zC-csh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3152.8000000000002" y="997.53694581280797"/>
-        </scene>
-        <!--Edit Location View Controller-->
-        <scene sceneID="Zmv-pi-x4J">
-            <objects>
-                <viewController id="cdX-IA-lCO" customClass="EditLocationViewController" customModule="NaturalistApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="roZ-xV-uwf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="byc-DX-2XZ"/>
-                    </view>
-                    <size key="freeformSize" width="375" height="500"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JNs-z5-kDQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3921" y="1197"/>
         </scene>
         <!--Taxa Search View Controller-->
         <scene sceneID="yjh-ub-rdF">
@@ -896,6 +880,104 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="neb-Vw-D4f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-337" y="-717"/>
+        </scene>
+        <!--Edit Location-->
+        <scene sceneID="g64-qc-T2J">
+            <objects>
+                <viewController storyboardIdentifier="EditLocationViewController" id="zae-tq-ZgL" customClass="EditLocationViewController" customModule="NaturalistApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nvE-Gb-ysj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="340"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" pitchEnabled="NO" showsUserLocation="YES" showsBuildings="NO" showsPointsOfInterest="NO" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vlY-49-7W8">
+                                <rect key="frame" x="0.0" y="44" width="414" height="296"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHh-PN-Sz7">
+                                <rect key="frame" x="376" y="135" width="30" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="0.33000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Pdd-Ws-nW6"/>
+                                    <constraint firstAttribute="width" constant="30" id="Xn6-jh-LVf"/>
+                                </constraints>
+                                <state key="normal" image="1474761840_add"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tapButtonPlus:" destination="zae-tq-ZgL" eventType="touchUpInside" id="ZxW-QG-ITa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNh-HN-aDI">
+                                <rect key="frame" x="376" y="175" width="30" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="0.33000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="S6V-0H-JUk"/>
+                                    <constraint firstAttribute="width" constant="30" id="wjH-LB-QvO"/>
+                                </constraints>
+                                <state key="normal" image="1474761917_sub"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tapButtonMinus:" destination="zae-tq-ZgL" eventType="touchUpInside" id="ZZA-yT-lr1"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1H6-jD-tTV">
+                                <rect key="frame" x="275" y="270" width="131" height="29"/>
+                                <color key="backgroundColor" white="1" alpha="0.33000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <segments>
+                                    <segment title="Hybrid"/>
+                                    <segment title="Sattelite"/>
+                                </segments>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="mapTypeChange:" destination="zae-tq-ZgL" eventType="valueChanged" id="HNm-VI-wmD"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PfE-xV-OjY" firstAttribute="trailing" secondItem="1H6-jD-tTV" secondAttribute="trailing" constant="8" id="1Zs-zU-XRK"/>
+                            <constraint firstItem="PfE-xV-OjY" firstAttribute="trailing" secondItem="KNh-HN-aDI" secondAttribute="trailing" constant="8" id="IuY-Yf-0uE"/>
+                            <constraint firstItem="1H6-jD-tTV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PfE-xV-OjY" secondAttribute="leading" constant="8" id="K0n-yi-3UQ"/>
+                            <constraint firstItem="vlY-49-7W8" firstAttribute="bottom" secondItem="nvE-Gb-ysj" secondAttribute="bottom" id="Ojg-nk-eNX"/>
+                            <constraint firstAttribute="trailing" secondItem="vlY-49-7W8" secondAttribute="trailing" id="Vhr-3Z-M5V"/>
+                            <constraint firstItem="vlY-49-7W8" firstAttribute="top" secondItem="PfE-xV-OjY" secondAttribute="top" id="YEP-C8-gsA"/>
+                            <constraint firstItem="vlY-49-7W8" firstAttribute="leading" secondItem="nvE-Gb-ysj" secondAttribute="leading" id="ar1-8w-bqR"/>
+                            <constraint firstItem="PfE-xV-OjY" firstAttribute="bottom" secondItem="1H6-jD-tTV" secondAttribute="bottom" constant="8" id="jRo-jq-odu"/>
+                            <constraint firstItem="KNh-HN-aDI" firstAttribute="centerY" secondItem="nvE-Gb-ysj" secondAttribute="centerY" constant="20" id="lOH-8a-lnH"/>
+                            <constraint firstItem="mHh-PN-Sz7" firstAttribute="centerY" secondItem="nvE-Gb-ysj" secondAttribute="centerY" constant="-20" id="yCh-NQ-7hy"/>
+                            <constraint firstItem="PfE-xV-OjY" firstAttribute="trailing" secondItem="mHh-PN-Sz7" secondAttribute="trailing" constant="8" id="yL1-WZ-Wyx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PfE-xV-OjY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit Location" id="pyz-aG-MeE">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="YJv-YZ-inW">
+                            <connections>
+                                <action selector="tapCancelButton:" destination="zae-tq-ZgL" id="emj-kH-7rQ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="UvP-jT-k2h">
+                            <connections>
+                                <action selector="tapDoneButton:" destination="zae-tq-ZgL" id="XZr-k7-g8z"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="vlY-49-7W8" id="Yj1-oE-kJr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A3l-F0-dZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3949" y="1130"/>
         </scene>
     </scenes>
     <resources>

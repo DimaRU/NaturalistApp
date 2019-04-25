@@ -25,6 +25,10 @@
 		0A25DFA322367B1300DEB46E /* ObservationProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A25DFA222367B1300DEB46E /* ObservationProfileView.xib */; };
 		0A25DFA5223685B800DEB46E /* ObservationPhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A25DFA4223685B800DEB46E /* ObservationPhotoView.xib */; };
 		0A25DFA92236902F00DEB46E /* ObservationFaveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A25DFA82236902F00DEB46E /* ObservationFaveView.xib */; };
+		0A2C9B5A2271BFD1003DCDB3 /* AccuracyCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2C9B572271BFC5003DCDB3 /* AccuracyCircleView.swift */; };
+		0A2C9B5B2271BFD1003DCDB3 /* CrossHairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2C9B592271BFC6003DCDB3 /* CrossHairView.swift */; };
+		0A2C9B5C2271BFD1003DCDB3 /* EditLocationOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2C9B582271BFC6003DCDB3 /* EditLocationOverlayView.swift */; };
+		0A2C9B5D2271BFD1003DCDB3 /* EditLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2C9B562271BFC5003DCDB3 /* EditLocationViewController.swift */; };
 		0A2D3023226E3F53004CDDBF /* InternalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D3022226E3F53004CDDBF /* InternalError.swift */; };
 		0A2D3025226F2EAE004CDDBF /* TaxaSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D3024226F2EAE004CDDBF /* TaxaSearchTableViewCell.swift */; };
 		0A3139E4221AB315009D87F0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3139E3221AB315009D87F0 /* MapViewController.swift */; };
@@ -41,7 +45,6 @@
 		0A451A882211B5B000684AC4 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A451A872211B5B000684AC4 /* Animations.swift */; };
 		0A47A1DC222838A3005B4AEB /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A47A1DB222838A3005B4AEB /* Globals.swift */; };
 		0A47A1DE22283B00005B4AEB /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A47A1DD22283B00005B4AEB /* UIViewControllerExtensions.swift */; };
-		0A4B5C9B226A6E84001E8C7E /* EditLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4B5C9A226A6E84001E8C7E /* EditLocationViewController.swift */; };
 		0A4D5D6A223FDF8D00B2EB0E /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4D5D69223FDF8D00B2EB0E /* Observer.swift */; };
 		0A5832332224118A0071DEE0 /* ObservationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5832322224118A0071DEE0 /* ObservationAnnotation.swift */; };
 		0A5898222260E7980036AD6E /* SheetViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A5898212260E7980036AD6E /* SheetViewController.storyboard */; };
@@ -167,6 +170,10 @@
 		0A25DFA222367B1300DEB46E /* ObservationProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObservationProfileView.xib; sourceTree = "<group>"; };
 		0A25DFA4223685B800DEB46E /* ObservationPhotoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObservationPhotoView.xib; sourceTree = "<group>"; };
 		0A25DFA82236902F00DEB46E /* ObservationFaveView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObservationFaveView.xib; sourceTree = "<group>"; };
+		0A2C9B562271BFC5003DCDB3 /* EditLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLocationViewController.swift; sourceTree = "<group>"; };
+		0A2C9B572271BFC5003DCDB3 /* AccuracyCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccuracyCircleView.swift; sourceTree = "<group>"; };
+		0A2C9B582271BFC6003DCDB3 /* EditLocationOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLocationOverlayView.swift; sourceTree = "<group>"; };
+		0A2C9B592271BFC6003DCDB3 /* CrossHairView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossHairView.swift; sourceTree = "<group>"; };
 		0A2D3022226E3F53004CDDBF /* InternalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalError.swift; sourceTree = "<group>"; };
 		0A2D3024226F2EAE004CDDBF /* TaxaSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxaSearchTableViewCell.swift; sourceTree = "<group>"; };
 		0A3139E3221AB315009D87F0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -183,7 +190,6 @@
 		0A451A872211B5B000684AC4 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		0A47A1DB222838A3005B4AEB /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		0A47A1DD22283B00005B4AEB /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
-		0A4B5C9A226A6E84001E8C7E /* EditLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditLocationViewController.swift; path = NaturalistApp/Controllers/EditLocationViewController.swift; sourceTree = SOURCE_ROOT; };
 		0A4D5D69223FDF8D00B2EB0E /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		0A5832322224118A0071DEE0 /* ObservationAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationAnnotation.swift; sourceTree = "<group>"; };
 		0A5898212260E7980036AD6E /* SheetViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SheetViewController.storyboard; sourceTree = "<group>"; };
@@ -320,6 +326,17 @@
 			path = PhotoViewController;
 			sourceTree = "<group>";
 		};
+		0A2C9B552271BFAF003DCDB3 /* EditLocationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0A2C9B562271BFC5003DCDB3 /* EditLocationViewController.swift */,
+				0A2C9B582271BFC6003DCDB3 /* EditLocationOverlayView.swift */,
+				0A2C9B572271BFC5003DCDB3 /* AccuracyCircleView.swift */,
+				0A2C9B592271BFC6003DCDB3 /* CrossHairView.swift */,
+			);
+			path = EditLocationViewController;
+			sourceTree = "<group>";
+		};
 		0A2D3026226F354A004CDDBF /* TaxaSearchViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,6 +358,7 @@
 		0A451A842211B4EC00684AC4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0A2C9B552271BFAF003DCDB3 /* EditLocationViewController */,
 				0A58983C2260EE4F0036AD6E /* AddObservationController */,
 				0A5898272260E8FD0036AD6E /* PickPhotoController */,
 				0A5898202260E7840036AD6E /* SheetViewController */,
@@ -354,7 +372,6 @@
 				0A2D3026226F354A004CDDBF /* TaxaSearchViewController */,
 				0AD653EC22401366007F315B /* LeadersTableViewController */,
 				0A3F664A2219B750002452B0 /* AuthorizeViewController.swift */,
-				0A4B5C9A226A6E84001E8C7E /* EditLocationViewController.swift */,
 				0A3139E3221AB315009D87F0 /* MapViewController.swift */,
 				0AF16999222E783200C1058B /* ImageCollectionViewCell.swift */,
 				0AA74C4A223137E700B824E8 /* NatTabBarController.swift */,
@@ -862,6 +879,7 @@
 				0A0B00A5221FD999008E17D9 /* Geojson.swift in Sources */,
 				0A62579F222DB78800812C5D /* UIViewExtensions.swift in Sources */,
 				0AD81CCF223A7D90003082BC /* ActivityTaxaTableViewCell.swift in Sources */,
+				0A2C9B5B2271BFD1003DCDB3 /* CrossHairView.swift in Sources */,
 				0A5F60B62227FF4600EABDAF /* UITableViewExtensions.swift in Sources */,
 				0A5898332260E91F0036AD6E /* PickPhotoCollectionViewCell.swift in Sources */,
 				0A5832332224118A0071DEE0 /* ObservationAnnotation.swift in Sources */,
@@ -919,13 +937,13 @@
 				0AD81CD2223A7D90003082BC /* ActivityViewController.swift in Sources */,
 				0A87BB532227470B00150BE9 /* ObservationTaxaView.swift in Sources */,
 				0AD2C6E5222D2C4A003ECFD6 /* StoryboardInstantiable.swift in Sources */,
-				0A4B5C9B226A6E84001E8C7E /* EditLocationViewController.swift in Sources */,
 				0A2D3025226F2EAE004CDDBF /* TaxaSearchTableViewCell.swift in Sources */,
 				0A3DA670223EACFB002C8E89 /* MapBounds.swift in Sources */,
 				0A89205F22364E2100900224 /* NSLayoutConstraintExtensions.swift in Sources */,
 				0A3DA675223EB7D4002C8E89 /* TaxonMapViewController.swift in Sources */,
 				0A2D3023226E3F53004CDDBF /* InternalError.swift in Sources */,
 				0AD81CCA223A7D90003082BC /* DateExtensions.swift in Sources */,
+				0A2C9B5C2271BFD1003DCDB3 /* EditLocationOverlayView.swift in Sources */,
 				0A47A1DC222838A3005B4AEB /* Globals.swift in Sources */,
 				0A47A1DE22283B00005B4AEB /* UIViewControllerExtensions.swift in Sources */,
 				0ABA9C6B2210498A0099F774 /* Fave.swift in Sources */,
@@ -952,8 +970,10 @@
 				0A5FA4A8226C5B9800F47FB2 /* TaxonScore.swift in Sources */,
 				0A1D41652243A0B500718651 /* FullScreenViewController.swift in Sources */,
 				0A89205D22364D6E00900224 /* StackViewController.swift in Sources */,
+				0A2C9B5A2271BFD1003DCDB3 /* AccuracyCircleView.swift in Sources */,
 				0A58983A2260E91F0036AD6E /* CLLocationExtensions.swift in Sources */,
 				0A89205A22364D2D00900224 /* NibInstantiable.swift in Sources */,
+				0A2C9B5D2271BFD1003DCDB3 /* EditLocationViewController.swift in Sources */,
 				0AD6037A22624B340099B90F /* AddObservationViewController.swift in Sources */,
 				0A33CA37221F1F1B00BDD802 /* PromiseKitExtensions.swift in Sources */,
 			);
