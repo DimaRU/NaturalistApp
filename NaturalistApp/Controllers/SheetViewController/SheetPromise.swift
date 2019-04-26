@@ -23,7 +23,8 @@ extension UIViewController {
         return promise
     }
 
-    public func pickValue<E: CaseIterable & Localizable>(title: String, initial: E?) -> Promise<E> {
+    public func pickValue<E>(title: String, initial: E?) -> Promise<E> where
+        E: CaseIterable, E: Localizable, E.AllCases.Index == Int {
         let (promise, seal) = Promise<E>.pending()
         let allCases = E.allCases.map{ $0.localized }
         let pickerView = UIPickerView()
@@ -34,13 +35,8 @@ extension UIViewController {
             pickerView.selectRow(allCases.firstIndex(of: initial.localized)!, inComponent: 0, animated: false)
         }
         let sheetViewController = SheetViewController.sheet(title: title, sheetView: pickerView, done: { pickerView in
-            var selected = (pickerView as! UIPickerView).selectedRow(inComponent: 0)
-            var iterator = E.allCases.makeIterator()
-            while selected > 0 {
-                let _ = iterator.next()
-                selected -= 1
-            }
-            seal.fulfill(iterator.next()!)
+            let selected = (pickerView as! UIPickerView).selectedRow(inComponent: 0)
+            seal.fulfill(E.allCases[selected])
             proxy.retainCycle = nil
         }) {
             seal.reject(PMKError.cancelled)
