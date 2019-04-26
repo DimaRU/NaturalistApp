@@ -24,15 +24,15 @@ extension UIViewController {
     }
 
     public func pickValue<E>(title: String, initial: E?) -> Promise<E> where
-        E: CaseIterable, E: Localizable, E.AllCases.Index == Int {
+        E: CaseIterable, E: Localizable, E.AllCases.Index == Int, E: Equatable {
         let (promise, seal) = Promise<E>.pending()
-        let allCases = E.allCases.map{ $0.localized }
         let pickerView = UIPickerView()
         pickerView.translatesAutoresizingMaskIntoConstraints = false
-        let proxy = UIPickerViewProxy(allCases: allCases)
+        let proxy = UIPickerViewProxy(E.self)
         pickerView.delegate = proxy
         if let initial = initial {
-            pickerView.selectRow(allCases.firstIndex(of: initial.localized)!, inComponent: 0, animated: false)
+            let index = E.allCases.firstIndex(where: { $0 == initial })!
+            pickerView.selectRow(index, inComponent: 0, animated: false)
         }
         let sheetViewController = SheetViewController.sheet(title: title, sheetView: pickerView, done: { pickerView in
             let selected = (pickerView as! UIPickerView).selectedRow(inComponent: 0)
@@ -47,12 +47,11 @@ extension UIViewController {
     }
 }
 
-class UIPickerViewProxy: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
-    let allCases: [String]
+class UIPickerViewProxy<E>: NSObject, UIPickerViewDelegate, UIPickerViewDataSource where
+E: CaseIterable, E: Localizable, E.AllCases.Index == Int {
     var retainCycle: AnyObject?
 
-    init(allCases: [String]) {
-        self.allCases = allCases
+    init(_ type: E.Type) {
         super.init()
         retainCycle = self
     }
@@ -62,10 +61,10 @@ class UIPickerViewProxy: NSObject, UIPickerViewDelegate, UIPickerViewDataSource 
     }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return allCases.count
+        return E.allCases.count
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return allCases[row]
+        return E.allCases[row].localized
     }
 }
