@@ -40,8 +40,10 @@ class TaxonDetailViewController: StackViewController {
                 self.fullTaxon = results.results.content.first
                 self.webContentView.setup(taxon: self.fullTaxon!, delegate: self)
                 if let taxonPhotos = self.fullTaxon?.taxonPhotos {
-                    self.photoViewController.photos = taxonPhotos.map{ $0.photo }
-                    self.photoViewController.captions = taxonPhotos.map{ $0.photo.attribution }
+                    self.photoViewController.photos = taxonPhotos.map{
+                        PhotoViewController.Photo(previewUrl: $0.photo.mediumUrl,
+                                                  fullSizeUrl: $0.photo.originalUrl,
+                                                  caption: $0.photo.attribution) }
                     self.photoViewController.refreshData()
                 }
             }.ignoreErrors()
@@ -50,8 +52,10 @@ class TaxonDetailViewController: StackViewController {
     private func setupUI() {
         photoViewController = PhotoViewController.instantiate()
         if let photo = taxon.defaultPhoto {
-            photoViewController.photos = [photo]
-            photoViewController.captions = [photo.attribution]
+            photoViewController.photos = [
+                PhotoViewController.Photo(previewUrl: photo.mediumUrl,
+                                          fullSizeUrl: photo.originalUrl,
+                                          caption: photo.attribution)]
         }
         photoViewController.imageContentMode = .scaleAspectFit
         add(photoViewController)

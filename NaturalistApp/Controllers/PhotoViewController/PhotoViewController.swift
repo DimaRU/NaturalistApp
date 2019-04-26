@@ -9,13 +9,17 @@
 import UIKit
 
 class PhotoViewController: UIViewController, StoryboardInstantiable {
+    public struct Photo {
+        let previewUrl: URL
+        let fullSizeUrl: URL?
+        let caption: String?
+    }
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     private var enablePageControlPaging = false
     private var autoscrollTimer: Timer?
     
     public var photos: [Photo] = []
-    public var captions: [String] = []
     public var imageContentMode = UIView.ContentMode.scaleAspectFit
     
     deinit {
@@ -111,8 +115,8 @@ extension PhotoViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCollectionViewCell", for: indexPath) as! PhotoCollectionViewCell
-        let caption = captions.count > indexPath.row ? captions[indexPath.row] : nil
-        cell.setup(url: photos[indexPath.row].mediumUrl, caption: caption, contentMode: imageContentMode)
+        let photo = photos[indexPath.row]
+        cell.setup(url: photo.previewUrl, caption: photo.caption, contentMode: imageContentMode)
         return cell
     }
 }
@@ -126,9 +130,10 @@ extension PhotoViewController: UICollectionViewDelegateFlowLayout {
 extension PhotoViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         stopAutoscroll()
+        guard let url = photos[indexPath.row].fullSizeUrl else { return }
         let vc = FullScreenViewController()
-        vc.photo = photos[indexPath.row]
-        let nc = FullScreenNavigationViewController(rootViewController: vc)
+        vc.photoUrl = url
+        let nc = UINavigationController(rootViewController: vc)
         present(nc, animated: true)
     }
 }

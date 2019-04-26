@@ -14,14 +14,14 @@ class FullScreenViewController: UIViewController, UIScrollViewDelegate {
     private let scrollView = UIScrollView()
     private let imageView = UIImageView()
     private let activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
-    var photo: Photo!
+    var photoUrl: URL!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .white
         scrollView.frame = view.bounds
         scrollView.contentInsetAdjustmentBehavior = .never
-        scrollView.backgroundColor = .white
         scrollView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view.addSubview(scrollView)
         scrollView.delegate = self
@@ -36,7 +36,7 @@ class FullScreenViewController: UIViewController, UIScrollViewDelegate {
         activityIndicator.hidesWhenStopped = true
         activityIndicator.startAnimating()
         
-        imageView.kf.setImage(with: photo.originalUrl) { result in
+        imageView.kf.setImage(with: photoUrl) { result in
             if case .success = result {
                 self.activityIndicator.stopAnimating()
                 self.imageView.sizeToFit()
@@ -93,10 +93,9 @@ class FullScreenViewController: UIViewController, UIScrollViewDelegate {
     }
     
     @objc func handleSingleTap(recognizer: UITapGestureRecognizer) {
-        navigationController?.navigationBar.isHidden.toggle()
-        let isHidden = navigationController?.navigationBar.isHidden ?? true
-        scrollView.backgroundColor = isHidden ? .black : .white
-        setNeedsStatusBarAppearanceUpdate()
+        let isHidden = !(navigationController?.navigationBar.isHidden ?? true)
+        navigationController?.setNavigationBarHidden(isHidden, animated: true)
+        view.backgroundColor = isHidden ? .black : .white
     }
     
     @objc func handleDoubleTap(recognizer: UITapGestureRecognizer) {

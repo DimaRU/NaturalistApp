@@ -81,7 +81,10 @@ class PickPhotoController: UIViewController {
         }
         switch sender.state {
         case .began:
-            guard let indexPath = indexPath else { return }
+            guard let indexPath = indexPath,
+                indexPath.item != (offset - 1),
+                indexPath.item != assets.count + offset else { return }
+
             collectionView.beginInteractiveMovementForItem(at: indexPath)
             animatePickingUpCell(cell: pickedUpCell)
         case .changed:
@@ -203,8 +206,8 @@ extension PickPhotoController: UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        let temp = assets.remove(at: sourceIndexPath.item)
-        assets.insert(temp, at: destinationIndexPath.item)
+        let temp = assets.remove(at: sourceIndexPath.item - offset)
+        assets.insert(temp, at: destinationIndexPath.item - offset)
         if temp.selected {
             delegate?.selected(assets: assets.filter{ $0.selected }.map{ $0.asset })
         }
