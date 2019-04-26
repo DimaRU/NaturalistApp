@@ -404,7 +404,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kr9-O7-pkm">
-                                <rect key="frame" x="0.0" y="88" width="414" height="386"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="380"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" secondItem="Kr9-O7-pkm" secondAttribute="width" multiplier="1:2" id="Aqj-tV-oOR"/>
                                 </constraints>
@@ -413,9 +413,9 @@
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3bj-9V-QzN">
-                                <rect key="frame" x="0.0" y="474" width="414" height="340"/>
+                                <rect key="frame" x="0.0" y="468" width="414" height="346"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" priority="750" constant="340" id="sKi-cc-uET"/>
+                                    <constraint firstAttribute="height" priority="750" constant="346" id="sKi-cc-uET"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="XiX-mV-x3a" kind="embed" id="wy1-V0-FG0"/>
@@ -482,7 +482,7 @@
             <objects>
                 <tableViewController id="XiX-mV-x3a" customClass="AddObservationTableViewController" customModule="NaturalistApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="10" sectionFooterHeight="10" id="vbG-Tx-CMb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="340"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="346"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <inset key="separatorInset" minX="56" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -616,7 +616,7 @@
                                         <rect key="frame" x="0.0" y="296" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K9g-ii-hUc" id="Fng-SY-Vrt">
-                                            <rect key="frame" x="0.0" y="0.0" width="388" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Aquarium-25" translatesAutoresizingMaskIntoConstraints="NO" id="RXM-mP-nMG">
@@ -672,7 +672,7 @@
             <objects>
                 <viewController id="q5m-Wn-fUT" customClass="TaxaSearchViewController" customModule="NaturalistApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WPi-QB-X1t">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="340"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="346"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bUO-A6-nyr">
@@ -683,7 +683,7 @@
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="66" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="VJy-Tk-u4b">
-                                <rect key="frame" x="0.0" y="176" width="414" height="164"/>
+                                <rect key="frame" x="0.0" y="176" width="414" height="170"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="FGZ-Wp-lJ0">
                                     <rect key="frame" x="0.0" y="139.5" width="414" height="1"/>
@@ -847,14 +847,14 @@
             <objects>
                 <viewController storyboardIdentifier="EditLocationViewController" id="zae-tq-ZgL" customClass="EditLocationViewController" customModule="NaturalistApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nvE-Gb-ysj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="340"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="346"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" pitchEnabled="NO" showsUserLocation="YES" showsBuildings="NO" showsPointsOfInterest="NO" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vlY-49-7W8">
-                                <rect key="frame" x="0.0" y="44" width="414" height="296"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="302"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHh-PN-Sz7">
-                                <rect key="frame" x="376" y="135" width="30" height="30"/>
+                                <rect key="frame" x="376" y="138" width="30" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.33000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Pdd-Ws-nW6"/>
@@ -871,7 +871,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNh-HN-aDI">
-                                <rect key="frame" x="376" y="175" width="30" height="30"/>
+                                <rect key="frame" x="376" y="178" width="30" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.33000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="S6V-0H-JUk"/>
@@ -888,7 +888,7 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1H6-jD-tTV">
-                                <rect key="frame" x="275" y="270" width="131" height="29"/>
+                                <rect key="frame" x="275" y="276" width="131" height="29"/>
                                 <color key="backgroundColor" white="1" alpha="0.33000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <segments>
                                     <segment title="Hybrid"/>
