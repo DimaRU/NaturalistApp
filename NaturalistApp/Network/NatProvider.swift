@@ -73,8 +73,6 @@ extension NatProvider {
                 print("Auth error")
                 let error = NatNetworkError.authorizationNeed(message: "Auth error")
                 request.reject(error)
-//                AuthenticationManager.shared.attemptAuthentication(
-//                    request: (request.target, { self.sendRequest(request) }, { self.handleServerError(request: request, response: moyaResponse) }))
             default:
                 handleServerError(request: request, response: moyaResponse)
             }
@@ -104,7 +102,9 @@ extension NatProvider {
             let object = try decoder.decode(T.self, from: data)
             seal.fulfill(object)
         } catch {
+            #if DEBUG
             print(error)
+            #endif
             let message = error.localizedDescription
             seal.reject(NatNetworkError.responceSyntaxError(message: message))
         }

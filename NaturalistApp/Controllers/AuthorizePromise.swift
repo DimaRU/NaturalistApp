@@ -19,7 +19,6 @@ public func authorizeSession() -> Promise<Void> {
         }.then { (paged: PagedResults<User>) -> Promise<Void> in
             let user = paged.results.content.first!
             Globals.setCurrentUser(user: user)
-            print(user.login, user.name ?? "")
             return Promise.value(())
     }
 }

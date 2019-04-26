@@ -42,7 +42,6 @@ class AddObservationViewController: UIViewController, MainStoryboardInstantiable
         guard let target1 = target else { return }
         NatProvider.shared.request(target1)
             .then { (observation: Observation) -> Promise<[PhotoPost]> in
-                print(observation.id, observation.uuid)
                 let promises = (0..<self.assets.count).map { position in
                     self.pushPhoto(asset: self.assets[position], id: observation.id, position: position)
                 }

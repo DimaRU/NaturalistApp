@@ -38,7 +38,7 @@ class ProfileCollectionViewController: UICollectionViewController, MainStoryboar
         let target = NatAPI.searchObservations(perPage: Params.perPage, page: page, userId: user?.id, havePhoto: true, poular: nil)
         NatProvider.shared.request(target)
             .done { (pagedResult: PagedResults<Observation>) in
-                print(pagedResult.page, pagedResult.perPage, pagedResult.totalResults)
+//                print(pagedResult.page, pagedResult.perPage, pagedResult.totalResults)
                 self.observations[pagedResult.page] = pagedResult.results.content
                 if self.totalResults != pagedResult.totalResults {
                     self.totalResults = pagedResult.totalResults

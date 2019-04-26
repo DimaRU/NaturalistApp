@@ -69,7 +69,7 @@ class MapViewController: BasicViewController {
                                                swlng: swCoord.longitude)
         NatProvider.shared.request(target)
             .done { (pagedResult: PagedResults<Observation>) in
-                print(pagedResult.page, pagedResult.perPage, pagedResult.totalResults)
+//                print(pagedResult.page, pagedResult.perPage, pagedResult.totalResults)
                 let observations = pagedResult.results.content
                 self.addAnnotations(for: observations)
                 guard self.mapView.visibleMapRect == mapRect else { return }
@@ -124,7 +124,7 @@ extension MapViewController: MKMapViewDelegate {
         
         delayMapChangeTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { [weak self] _ in
             guard let self = self else { return }
-            print("Start map change")
+            // Start map change
             self.fetchObservationsPage(page: 1, mapRect: self.mapView.visibleMapRect)
         }
     }

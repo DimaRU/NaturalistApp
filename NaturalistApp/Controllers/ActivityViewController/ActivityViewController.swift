@@ -90,7 +90,6 @@ extension ActivityViewController: UITableViewDataSource {
 
 extension ActivityViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Selected row:", indexPath.row)
         let row = indexPath.row / 3
         switch indexPath.row % 3 {
         case 0:

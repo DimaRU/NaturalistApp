@@ -27,7 +27,6 @@ class LeadersTableViewController: UIViewController, IndicateStateProtocol {
         let target = NatAPI.observers(perPage: 500, page: 1, taxonIds: taxonIds, observationId: nil, userId: nil)
         NatProvider.shared.request(target)
             .done { (pagedResult: PagedResults<Observer>) in
-                print(pagedResult.page, pagedResult.perPage, pagedResult.totalResults)
                 self.observers = pagedResult.results.content
                 self.tableView.isHidden = false
                 self.tableView.reloadData()
