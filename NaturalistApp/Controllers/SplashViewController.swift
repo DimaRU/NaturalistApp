@@ -38,7 +38,7 @@ class SplashViewController: UIViewController {
                     loginViewController.errorMessage = error.localizedDescription
                 }
                 loginViewController.delegate = self
-                self.present(loginViewController, animated: true)
+                self.present(loginViewController, animated: false)
         }
     }
 

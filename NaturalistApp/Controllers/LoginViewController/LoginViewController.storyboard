@@ -45,7 +45,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rli-HM-K8u">
                                 <rect key="frame" x="16" y="262" width="382" height="50"/>
-                                <color key="backgroundColor" name="GlobalTintColor"/>
+                                <color key="backgroundColor" name="LoginButtonUnactiveBg"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="zBh-AC-9hd"/>
                                 </constraints>
@@ -83,8 +83,8 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="GlobalTintColor">
-            <color red="0.44999998807907104" green="0.67000001668930054" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="LoginButtonUnactiveBg">
+            <color red="0.44999998807907104" green="0.67000001668930054" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

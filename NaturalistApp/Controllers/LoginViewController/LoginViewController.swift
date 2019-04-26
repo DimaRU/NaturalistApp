@@ -45,7 +45,7 @@ class LoginViewController: UIViewController, StoryboardInstantiable {
                 return authorizeSession()
             }.done {
                 // All ok, dismiss
-                self.dismiss(animated: true) {
+                self.dismiss(animated: false) {
                     self.delegate?.loggedIn()
                 }
             }.catch { error in
@@ -83,7 +83,7 @@ extension LoginViewController: UITextFieldDelegate {
         }
         
         loginButton.isEnabled = buttonOn
-        loginButton.backgroundColor = UIColor(named: buttonOn ? "LoginButtonBg" : "LoginButtonUnactiveBg")
+        loginButton.backgroundColor = UIColor(named: buttonOn ? "GlobalTintColor" : "LoginButtonUnactiveBg")
 
         return true
     }
