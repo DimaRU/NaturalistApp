@@ -15,10 +15,7 @@ protocol FaveChangeProtocol: AnyObject {
 
 class ObservationDetailsViewController: StackViewController, ObservationDetailProtocol {
     private let profileView = ObservationProfileView.instantiate()
-    private let taxaView = ObservationTaxaView.instantiate()
-    private let faveView = ObservationFaveView.instantiate()
-    private let descriptionView  = ObservationDescription.instantiate()
-    
+
     var observation: Observation!
     
     override func viewDidLoad() {
@@ -26,7 +23,7 @@ class ObservationDetailsViewController: StackViewController, ObservationDetailPr
         view.backgroundColor = UIColor(red:0.88, green:0.89, blue:0.90, alpha:1.00)
         spacing = 1
         setupUI()
-        loadFullObservation()
+//        loadFullObservation()
     }
 
     func setupUI() {
@@ -40,23 +37,9 @@ class ObservationDetailsViewController: StackViewController, ObservationDetailPr
             add(photoViewController)
         }
         
-        if observation.taxon != nil {
-            taxaView.setup(taxon: observation.taxon)
-            let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(taxaViewTapped(_:)))
-            taxaView.addGestureRecognizer(gestureRecognizer)
-            add(taxaView)
-        }
-        descriptionView.setup(description: observation.description)
-        add(descriptionView)
-        
-        faveView.setup(observation: observation, delegate: self)
-        add(faveView)
-        
-        if !(observation.identifications.isEmpty && observation.comments.isEmpty) {
-            let activityViewController = ActivityViewController.instantiate()
-            activityViewController.observation = observation
-            add(activityViewController)
-        }
+        let activityViewController = ActivityViewController.instantiate()
+        activityViewController.observation = observation
+        add(activityViewController)
     }
     
     func loadFullObservation() {
@@ -65,26 +48,8 @@ class ObservationDetailsViewController: StackViewController, ObservationDetailPr
             NatProvider.shared.request(.observation(id: observation.id))
             }.done { (pagedResult: PagedResults<Observation>) in
                 self.observation = pagedResult.results.content.first
-                self.descriptionView.setup(description: self.observation.description)
+//                self.descriptionView.setup(description: self.observation.description)
             }.ignoreErrors()
     }
 
-    @objc func taxaViewTapped(_ sender: Any) {
-        guard let taxon = observation.taxon else { return }
-        showTaxaDetails(taxon: taxon)
-    }
-}
-
-
-extension ObservationDetailsViewController: FaveChangeProtocol {
-    
-    func faveChange() {
-        let endpoint: NatAPI = observation.favedByMe ? .unfave(id: observation.id) : .fave(id: observation.id)
-        NatProvider.shared.request(endpoint)
-            .done { (observation: Observation) in
-                self.observation = observation
-                self.faveView.setup(observation: observation, delegate: self)
-            }.ignoreErrors()
-    }
-    
 }

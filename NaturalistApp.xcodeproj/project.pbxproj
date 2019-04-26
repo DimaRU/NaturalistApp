@@ -16,6 +16,8 @@
 		0A17F8FA223D562A00B71E66 /* PhotoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A17F8F7223D562900B71E66 /* PhotoViewController.storyboard */; };
 		0A17F8FB223D562A00B71E66 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A17F8F8223D562900B71E66 /* PhotoViewController.swift */; };
 		0A17F8FC223D562A00B71E66 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A17F8F9223D562900B71E66 /* PhotoCollectionViewCell.swift */; };
+		0A1A2F0C2273186600C4B847 /* ObservationFaveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A2F0B2273186600C4B847 /* ObservationFaveTableViewCell.swift */; };
+		0A1A2F0E2273199F00C4B847 /* ObservationDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A2F0D2273199F00C4B847 /* ObservationDescriptionTableViewCell.swift */; };
 		0A1D41632243A0A500718651 /* FullScreenNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1D41622243A0A500718651 /* FullScreenNavigationViewController.swift */; };
 		0A1D41652243A0B500718651 /* FullScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1D41642243A0B500718651 /* FullScreenViewController.swift */; };
 		0A21747B22255487007E4EFC /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A21747A22255487007E4EFC /* UIImageExtensions.swift */; };
@@ -165,6 +167,8 @@
 		0A17F8F7223D562900B71E66 /* PhotoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PhotoViewController.storyboard; sourceTree = "<group>"; };
 		0A17F8F8223D562900B71E66 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		0A17F8F9223D562900B71E66 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		0A1A2F0B2273186600C4B847 /* ObservationFaveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationFaveTableViewCell.swift; sourceTree = "<group>"; };
+		0A1A2F0D2273199F00C4B847 /* ObservationDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationDescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		0A1D41622243A0A500718651 /* FullScreenNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenNavigationViewController.swift; sourceTree = "<group>"; };
 		0A1D41642243A0B500718651 /* FullScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenViewController.swift; sourceTree = "<group>"; };
 		0A21747A22255487007E4EFC /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
@@ -650,6 +654,8 @@
 				0AD81CBD223A7D8E003082BC /* ActivityProfileTableViewCell.swift */,
 				0AD81CC4223A7D8F003082BC /* ActivityTaxaTableViewCell.swift */,
 				0AD81CC2223A7D8F003082BC /* ActivityViewController.storyboard */,
+				0A1A2F0B2273186600C4B847 /* ObservationFaveTableViewCell.swift */,
+				0A1A2F0D2273199F00C4B847 /* ObservationDescriptionTableViewCell.swift */,
 			);
 			path = ActivityViewController;
 			sourceTree = "<group>";
@@ -939,6 +945,7 @@
 				0A9F8C8E2219905500C299C8 /* JWTToken.swift in Sources */,
 				0A451A812211B35400684AC4 /* FreeMethods.swift in Sources */,
 				0A101032223E6C2400EB42C3 /* KeyedDecodingContainerExtensions.swift in Sources */,
+				0A1A2F0C2273186600C4B847 /* ObservationFaveTableViewCell.swift in Sources */,
 				0AD81CCB223A7D90003082BC /* ActivityCommentTableViewCell.swift in Sources */,
 				0ABA9C742210A3EC0099F774 /* KeychainService.swift in Sources */,
 				0AF3C65D2269B39400BF257A /* Localizable.swift in Sources */,
@@ -992,6 +999,7 @@
 				0A5FA4A8226C5B9800F47FB2 /* TaxonScore.swift in Sources */,
 				0A1D41652243A0B500718651 /* FullScreenViewController.swift in Sources */,
 				0A89205D22364D6E00900224 /* StackViewController.swift in Sources */,
+				0A1A2F0E2273199F00C4B847 /* ObservationDescriptionTableViewCell.swift in Sources */,
 				0A87254B227237A700A07CEC /* SplashViewController.swift in Sources */,
 				0A2C9B5A2271BFD1003DCDB3 /* AccuracyCircleView.swift in Sources */,
 				0A58983A2260E91F0036AD6E /* CLLocationExtensions.swift in Sources */,

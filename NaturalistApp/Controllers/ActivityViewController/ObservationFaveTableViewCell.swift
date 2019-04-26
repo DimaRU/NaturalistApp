@@ -1,14 +1,14 @@
 //
-//  ObservationFaveView.swift
+//  ObservationFaveTableViewCell.swift
 //  NaturalistApp
 //
-//  Created by Dmitriy Borovikov on 28/02/2019.
+//  Created by Dmitriy Borovikov on 26/04/2019.
 //  Copyright © 2019 Dmitriy Borovikov. All rights reserved.
 //
 
 import UIKit
 
-class ObservationFaveView: UIView, NibInstantiable {
+class ObservationFaveTableViewCell: UITableViewCell {
     @IBOutlet weak var favoritedLabel: UILabel!
     @IBOutlet weak var starImageView: UIImageView!
     weak var delegate: (FaveChangeProtocol & ObservationDetailProtocol)?

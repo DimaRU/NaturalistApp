@@ -18,16 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="20" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UiC-di-SbC">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="20" sectionHeaderHeight="1" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="UiC-di-SbC">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="17k-ZB-958"/>
                                 </constraints>
                                 <inset key="separatorInset" minX="62" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ActivityProfileTableViewCell" rowHeight="60" id="lYI-MP-hii" customClass="ActivityProfileTableViewCell" customModule="NaturalistApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lYI-MP-hii" id="qUG-y0-DCi">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="60"/>
@@ -107,7 +107,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ActivityTaxaTableViewCell" rowHeight="66" id="CR7-jv-um3" customClass="ActivityTaxaTableViewCell" customModule="NaturalistApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="88" width="375" height="66"/>
+                                        <rect key="frame" x="0.0" y="115.5" width="375" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CR7-jv-um3" id="D8Y-Y1-1tV">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="66"/>
@@ -151,7 +151,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SeparatorCell" rowHeight="30" id="ofs-IB-Nag">
-                                        <rect key="frame" x="0.0" y="154" width="375" height="30"/>
+                                        <rect key="frame" x="0.0" y="181.5" width="375" height="30"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ofs-IB-Nag" id="E6G-aD-g13">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
@@ -183,7 +183,7 @@
                                         <color key="backgroundColor" name="separatorColor" catalog="System" colorSpace="catalog"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActivityCommentTableViewCell" rowHeight="60" id="lNo-SD-nia" customClass="ActivityCommentTableViewCell" customModule="NaturalistApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="184" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="211.5" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lNo-SD-nia" id="G6z-SI-1Ol">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
@@ -239,6 +239,93 @@
                                             <outlet property="bodyTextView" destination="vfh-n1-3HT" id="FER-U2-yhG"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TaxaTableViewCell" rowHeight="67" id="9NO-xC-ClF" customClass="TaxaTableViewCell" customModule="NaturalistApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="271.5" width="375" height="67"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9NO-xC-ClF" id="2bs-UC-T9Z">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="67"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Pc-cw-luv" userLabel="separator">
+                                                    <rect key="frame" x="62" y="66" width="280" height="1"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="KSN-3m-6wY"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="4Pc-cw-luv" secondAttribute="trailing" id="Iwz-5e-ovB"/>
+                                                <constraint firstItem="4Pc-cw-luv" firstAttribute="leading" secondItem="2bs-UC-T9Z" secondAttribute="leading" constant="62" id="eaB-H9-OVC"/>
+                                                <constraint firstAttribute="bottom" secondItem="4Pc-cw-luv" secondAttribute="bottom" id="otY-8P-nAu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ObservationFaveTableViewCell" rowHeight="40" id="MBS-fd-fRh" customClass="ObservationFaveTableViewCell" customModule="NaturalistApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="338.5" width="375" height="40"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MBS-fd-fRh" id="GCd-nj-uCF">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favored: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fn6-ys-K7D">
+                                                    <rect key="frame" x="71" y="11.5" width="71" height="17"/>
+                                                    <gestureRecognizers/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IC Star Border 24px" translatesAutoresizingMaskIntoConstraints="NO" id="g4A-b0-LNT">
+                                                    <rect key="frame" x="15" y="8" width="24" height="24"/>
+                                                    <gestureRecognizers/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="4Ea-ow-zaf"/>
+                                                        <constraint firstAttribute="width" constant="24" id="vzn-Oh-bCT"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="fn6-ys-K7D" secondAttribute="trailing" id="6Kz-YB-qUw"/>
+                                                <constraint firstItem="g4A-b0-LNT" firstAttribute="leading" secondItem="GCd-nj-uCF" secondAttribute="leadingMargin" id="KnU-4B-APA"/>
+                                                <constraint firstItem="fn6-ys-K7D" firstAttribute="leading" secondItem="g4A-b0-LNT" secondAttribute="trailing" constant="32" id="Kvu-M5-Fna"/>
+                                                <constraint firstItem="g4A-b0-LNT" firstAttribute="centerY" secondItem="fn6-ys-K7D" secondAttribute="centerY" id="Lkk-8G-tUD"/>
+                                                <constraint firstItem="g4A-b0-LNT" firstAttribute="top" secondItem="GCd-nj-uCF" secondAttribute="top" constant="8" id="ZbW-g1-dhW"/>
+                                                <constraint firstAttribute="bottom" secondItem="g4A-b0-LNT" secondAttribute="bottom" constant="8" id="dOs-Bi-FOC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="favoritedLabel" destination="fn6-ys-K7D" id="hXh-b1-fng"/>
+                                            <outlet property="starImageView" destination="g4A-b0-LNT" id="lB6-b2-hcu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ObservationDescriptionTableViewCell" rowHeight="92" id="JZr-6w-6Hg" customClass="ObservationDescriptionTableViewCell" customModule="NaturalistApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="378.5" width="375" height="92"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JZr-6w-6Hg" id="7px-JQ-PCC">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="92"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Lorem ipsum" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yQu-0M-4k1">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="92"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="92" id="cx6-vv-mb9"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="yQu-0M-4k1" firstAttribute="leading" secondItem="7px-JQ-PCC" secondAttribute="leadingMargin" id="Ona-oj-5Ug"/>
+                                                <constraint firstAttribute="bottom" secondItem="yQu-0M-4k1" secondAttribute="bottom" id="WfC-rj-5UA"/>
+                                                <constraint firstItem="yQu-0M-4k1" firstAttribute="top" secondItem="7px-JQ-PCC" secondAttribute="top" id="ixu-I0-9vm"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="yQu-0M-4k1" secondAttribute="trailing" id="szq-5O-8AK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionTextView" destination="yQu-0M-4k1" id="dEQ-zG-0uk"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="Aja-3J-Ays" id="zK9-Rk-y9z"/>
@@ -265,4 +352,7 @@
             <point key="canvasLocation" x="476" y="-135.38230884557723"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="IC Star Border 24px" width="24" height="24"/>
+    </resources>
 </document>
