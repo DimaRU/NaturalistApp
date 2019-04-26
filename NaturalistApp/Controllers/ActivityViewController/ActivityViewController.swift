@@ -72,36 +72,34 @@ extension ActivityViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch Section(rawValue: section) {
-        case .taxon?:
+        switch Section(rawValue: section)! {
+        case .taxon:
             return observation.taxon == nil ? 0:1
-        case .description?:
+        case .description:
             return (observation.description?.isEmpty ?? true) ? 0:1
-        case .fave?:
+        case .fave:
             return 1
-        case .activity?:
+        case .activity:
             guard !activityFeed.isEmpty else { return 0 }
             return activityFeed.count * 3 - 1
-        case .none:
-            fatalError()
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch Section(rawValue: indexPath.section) {
-        case .taxon?:
+        switch Section(rawValue: indexPath.section)! {
+        case .taxon:
             let cell = tableView.dequeueReusableCell(of: TaxaTableViewCell.self, for: indexPath)
             cell.setup(taxon: observation.taxon)
             return cell
-        case .description?:
+        case .description:
             let cell = tableView.dequeueReusableCell(of: ObservationDescriptionTableViewCell.self, for: indexPath)
             cell.setup(description: observation.description)
             return cell
-        case .fave?:
+        case .fave:
             let cell = tableView.dequeueReusableCell(of: ObservationFaveTableViewCell.self, for: indexPath)
             cell.setup(observation: observation, delegate: self)
             return cell
-        case .activity?:
+        case .activity:
             let row = indexPath.row / 3
             switch indexPath.row % 3 {
             case 0:
@@ -124,23 +122,19 @@ extension ActivityViewController: UITableViewDataSource {
             default:
                 fatalError()
             }
-        case .none:
-            fatalError()
         }
     }
 
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        switch Section(rawValue: section) {
-        case .taxon?:
+        switch Section(rawValue: section)! {
+        case .taxon:
             return observation.taxon == nil ? zero: 2
-        case .description?:
+        case .description:
             return (observation.description?.isEmpty ?? true) ? zero: 2
-        case .fave?:
+        case .fave:
             return 2
-        case .activity?:
+        case .activity:
             return zero
-        case .none:
-            fatalError()
         }
     }
 
@@ -148,15 +142,15 @@ extension ActivityViewController: UITableViewDataSource {
 
 extension ActivityViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch Section(rawValue: indexPath.section) {
-        case .taxon?:
+        switch Section(rawValue: indexPath.section)! {
+        case .taxon:
             guard let taxon = observation.taxon else { return }
             showTaxaDetails(taxon: taxon)
-        case .description?:
+        case .description:
             break
-        case .fave?:
+        case .fave:
             break
-        case .activity?:
+        case .activity:
             let row = indexPath.row / 3
             switch indexPath.row % 3 {
             case 0:
@@ -169,8 +163,6 @@ extension ActivityViewController: UITableViewDelegate {
             default:
                 break
             }
-        case .none:
-            fatalError()
         }
     }
 }

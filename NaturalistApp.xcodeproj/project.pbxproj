@@ -10,8 +10,6 @@
 		0A0B00A5221FD999008E17D9 /* Geojson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0B00A4221FD999008E17D9 /* Geojson.swift */; };
 		0A0BE666223F72E9004E9AC4 /* TaxonWebContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0BE665223F72E9004E9AC4 /* TaxonWebContentView.swift */; };
 		0A0BE668223F7304004E9AC4 /* TaxonWebContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A0BE667223F7304004E9AC4 /* TaxonWebContentView.xib */; };
-		0A10102C223E408000EB42C3 /* ObservationDescription.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A10102B223E408000EB42C3 /* ObservationDescription.xib */; };
-		0A10102E223E40A500EB42C3 /* ObservationDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A10102D223E40A500EB42C3 /* ObservationDescription.swift */; };
 		0A101032223E6C2400EB42C3 /* KeyedDecodingContainerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A101031223E6C2400EB42C3 /* KeyedDecodingContainerExtensions.swift */; };
 		0A17F8FA223D562A00B71E66 /* PhotoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A17F8F7223D562900B71E66 /* PhotoViewController.storyboard */; };
 		0A17F8FB223D562A00B71E66 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A17F8F8223D562900B71E66 /* PhotoViewController.swift */; };
@@ -24,7 +22,6 @@
 		0A21747F22257828007E4EFC /* IconicTaxonName+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A21747E22257828007E4EFC /* IconicTaxonName+Color.swift */; };
 		0A2174812225821A007E4EFC /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2174802225821A007E4EFC /* UIColorExtensions.swift */; };
 		0A25DFA322367B1300DEB46E /* ObservationProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A25DFA222367B1300DEB46E /* ObservationProfileView.xib */; };
-		0A25DFA92236902F00DEB46E /* ObservationFaveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A25DFA82236902F00DEB46E /* ObservationFaveView.xib */; };
 		0A2C9B5A2271BFD1003DCDB3 /* AccuracyCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2C9B572271BFC5003DCDB3 /* AccuracyCircleView.swift */; };
 		0A2C9B5B2271BFD1003DCDB3 /* CrossHairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2C9B592271BFC6003DCDB3 /* CrossHairView.swift */; };
 		0A2C9B5C2271BFD1003DCDB3 /* EditLocationOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2C9B582271BFC6003DCDB3 /* EditLocationOverlayView.swift */; };
@@ -75,7 +72,6 @@
 		0A87BB4D2227419100150BE9 /* ObservationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB4C2227419100150BE9 /* ObservationDetailsViewController.swift */; };
 		0A87BB4F2227441300150BE9 /* ObservationProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB4E2227441300150BE9 /* ObservationProfileView.swift */; };
 		0A87BB532227470B00150BE9 /* ObservationTaxaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB522227470B00150BE9 /* ObservationTaxaView.swift */; };
-		0A87BB5522274A5F00150BE9 /* ObservationFaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB5422274A5F00150BE9 /* ObservationFaveView.swift */; };
 		0A89205A22364D2D00900224 /* NibInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A89205922364D2D00900224 /* NibInstantiable.swift */; };
 		0A89205D22364D6E00900224 /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A89205C22364D6E00900224 /* StackViewController.swift */; };
 		0A89205F22364E2100900224 /* NSLayoutConstraintExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A89205E22364E2100900224 /* NSLayoutConstraintExtensions.swift */; };
@@ -160,8 +156,6 @@
 		0A0B00A4221FD999008E17D9 /* Geojson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geojson.swift; sourceTree = "<group>"; };
 		0A0BE665223F72E9004E9AC4 /* TaxonWebContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxonWebContentView.swift; sourceTree = "<group>"; };
 		0A0BE667223F7304004E9AC4 /* TaxonWebContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaxonWebContentView.xib; sourceTree = "<group>"; };
-		0A10102B223E408000EB42C3 /* ObservationDescription.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObservationDescription.xib; sourceTree = "<group>"; };
-		0A10102D223E40A500EB42C3 /* ObservationDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationDescription.swift; sourceTree = "<group>"; };
 		0A101031223E6C2400EB42C3 /* KeyedDecodingContainerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyedDecodingContainerExtensions.swift; sourceTree = "<group>"; };
 		0A17F8F7223D562900B71E66 /* PhotoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PhotoViewController.storyboard; sourceTree = "<group>"; };
 		0A17F8F8223D562900B71E66 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
@@ -174,7 +168,6 @@
 		0A21747E22257828007E4EFC /* IconicTaxonName+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IconicTaxonName+Color.swift"; sourceTree = "<group>"; };
 		0A2174802225821A007E4EFC /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		0A25DFA222367B1300DEB46E /* ObservationProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObservationProfileView.xib; sourceTree = "<group>"; };
-		0A25DFA82236902F00DEB46E /* ObservationFaveView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObservationFaveView.xib; sourceTree = "<group>"; };
 		0A2C9B562271BFC5003DCDB3 /* EditLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLocationViewController.swift; sourceTree = "<group>"; };
 		0A2C9B572271BFC5003DCDB3 /* AccuracyCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccuracyCircleView.swift; sourceTree = "<group>"; };
 		0A2C9B582271BFC6003DCDB3 /* EditLocationOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLocationOverlayView.swift; sourceTree = "<group>"; };
@@ -225,7 +218,6 @@
 		0A87BB4C2227419100150BE9 /* ObservationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationDetailsViewController.swift; sourceTree = "<group>"; };
 		0A87BB4E2227441300150BE9 /* ObservationProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationProfileView.swift; sourceTree = "<group>"; };
 		0A87BB522227470B00150BE9 /* ObservationTaxaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationTaxaView.swift; sourceTree = "<group>"; };
-		0A87BB5422274A5F00150BE9 /* ObservationFaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationFaveView.swift; sourceTree = "<group>"; };
 		0A89205922364D2D00900224 /* NibInstantiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibInstantiable.swift; sourceTree = "<group>"; };
 		0A89205C22364D6E00900224 /* StackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
 		0A89205E22364E2100900224 /* NSLayoutConstraintExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintExtensions.swift; sourceTree = "<group>"; };
@@ -449,12 +441,8 @@
 				0A87BB4C2227419100150BE9 /* ObservationDetailsViewController.swift */,
 				0A87BB4E2227441300150BE9 /* ObservationProfileView.swift */,
 				0A87BB522227470B00150BE9 /* ObservationTaxaView.swift */,
-				0A10102D223E40A500EB42C3 /* ObservationDescription.swift */,
-				0A10102B223E408000EB42C3 /* ObservationDescription.xib */,
-				0A87BB5422274A5F00150BE9 /* ObservationFaveView.swift */,
 				0A25DFA222367B1300DEB46E /* ObservationProfileView.xib */,
 				0AD81CC3223A7D8F003082BC /* ObservationTaxaView.xib */,
-				0A25DFA82236902F00DEB46E /* ObservationFaveView.xib */,
 			);
 			path = ObservationDetails;
 			sourceTree = "<group>";
@@ -793,7 +781,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A25DFA322367B1300DEB46E /* ObservationProfileView.xib in Resources */,
-				0A25DFA92236902F00DEB46E /* ObservationFaveView.xib in Resources */,
 				0A8725532272661100A07CEC /* LoginViewController.storyboard in Resources */,
 				0AD81CCD223A7D90003082BC /* ActivityViewController.storyboard in Resources */,
 				0AD81CCE223A7D90003082BC /* ObservationTaxaView.xib in Resources */,
@@ -804,7 +791,6 @@
 				0A977B6E220E0B8C005D1DC2 /* Assets.xcassets in Resources */,
 				0A977B6C220E0B8B005D1DC2 /* Main.storyboard in Resources */,
 				0AA39830223F7F6400AF2A62 /* TaxonMapheaderView.xib in Resources */,
-				0A10102C223E408000EB42C3 /* ObservationDescription.xib in Resources */,
 				0A0BE668223F7304004E9AC4 /* TaxonWebContentView.xib in Resources */,
 				0A3DA674223EB7D4002C8E89 /* TaxonMapViewController.storyboard in Resources */,
 				0A5898222260E7980036AD6E /* SheetViewController.storyboard in Resources */,
@@ -976,7 +962,6 @@
 				0A977B67220E0B8B005D1DC2 /* AppDelegate.swift in Sources */,
 				0AA74C4B223137E700B824E8 /* NatTabBarController.swift in Sources */,
 				0A58983B2260E91F0036AD6E /* PhotoLibraryPromise.swift in Sources */,
-				0A10102E223E40A500EB42C3 /* ObservationDescription.swift in Sources */,
 				0AA5CDAF222044CD000A80BE /* SLocation.swift in Sources */,
 				0A9F8C8A221969E600C299C8 /* NatNetworkError.swift in Sources */,
 				0A5898362260E91F0036AD6E /* PickPhotoController.swift in Sources */,
@@ -984,7 +969,6 @@
 				0AA3982E223F7F2900AF2A62 /* TaxonMapheaderView.swift in Sources */,
 				0A3DA677223EBE0A002C8E89 /* ObservationCoordinate.swift in Sources */,
 				0A5898392260E91F0036AD6E /* PHImageManagerPromise.swift in Sources */,
-				0A87BB5522274A5F00150BE9 /* ObservationFaveView.swift in Sources */,
 				0ABA9C5F22101D9E0099F774 /* User.swift in Sources */,
 				0AF1699A222E783200C1058B /* ImageCollectionViewCell.swift in Sources */,
 				0A21747B22255487007E4EFC /* UIImageExtensions.swift in Sources */,
