@@ -440,8 +440,8 @@
 				0A37F4EA2238316F0089FC09 /* ObservationDetailProtocol.swift */,
 				0A87BB4C2227419100150BE9 /* ObservationDetailsViewController.swift */,
 				0A87BB4E2227441300150BE9 /* ObservationProfileView.swift */,
-				0A87BB522227470B00150BE9 /* ObservationTaxaView.swift */,
 				0A25DFA222367B1300DEB46E /* ObservationProfileView.xib */,
+				0A87BB522227470B00150BE9 /* ObservationTaxaView.swift */,
 				0AD81CC3223A7D8F003082BC /* ObservationTaxaView.xib */,
 			);
 			path = ObservationDetails;

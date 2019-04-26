@@ -14,22 +14,9 @@ class ObservationProfileView: UIView, NibInstantiable {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var observationDateLabel: UILabel!
     @IBOutlet weak var observationsCountLabel: UILabel!
-    weak var delegate: ObservationDetailProtocol?
-    var user: User!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        let recognizer = UITapGestureRecognizer(target: self, action: #selector(viewTap))
-        self.addGestureRecognizer(recognizer)
-    }
-    
-    @objc func viewTap() {
-        delegate?.showUserProfile(user: user)
-    }
-    
-    func setup(observation: Observation, delegate: ObservationDetailProtocol) {
-        user = observation.user
-        self.delegate = delegate
+    func setup(observation: Observation) {
+        let user = observation.user
         avatarImageView.kf.setImage(with: user.icon,
                                     placeholder: UIImage(named: "IC Account Circle 24px")?.maskWith(color: .lightGray))
         userNameLabel.text = user.login

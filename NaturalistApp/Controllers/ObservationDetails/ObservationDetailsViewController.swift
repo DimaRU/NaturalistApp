@@ -27,7 +27,10 @@ class ObservationDetailsViewController: StackViewController, ObservationDetailPr
     }
 
     func setupUI() {
-        profileView.setup(observation: observation, delegate: self)
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(profileViewTap(_:)))
+        profileView.addGestureRecognizer(recognizer)
+        profileView.setup(observation: observation)
+
         add(profileView)
         
         if !observation.photos.isEmpty {
@@ -45,7 +48,11 @@ class ObservationDetailsViewController: StackViewController, ObservationDetailPr
         activityViewController.observation = observation
         add(activityViewController)
     }
-    
+
+    @objc func profileViewTap(_ sender: Any) {
+        showUserProfile(user: observation.user)
+    }
+
     func loadFullObservation() {
         firstly {
             // start
