@@ -13,7 +13,7 @@ import PromiseKit
 
 class AddObservationTableViewController: UITableViewController {
 
-    @IBOutlet weak var taxaCell: AddObservationTaxaTableViewCell!
+    @IBOutlet weak var taxaCell: TaxaTableViewCell!
     @IBOutlet weak var notesTextView: UITextView!
     @IBOutlet weak var dateCell: UITableViewCell!
     @IBOutlet weak var locationCell: UITableViewCell!

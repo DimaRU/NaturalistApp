@@ -489,7 +489,7 @@
                         <sections>
                             <tableViewSection headerTitle=" " footerTitle=" " id="6qq-9h-l94">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="66" id="OaE-ZL-obs" customClass="AddObservationTaxaTableViewCell" customModule="NaturalistApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="66" id="OaE-ZL-obs" customClass="TaxaTableViewCell" customModule="NaturalistApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="10" width="414" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OaE-ZL-obs" id="dTk-mV-oOQ">

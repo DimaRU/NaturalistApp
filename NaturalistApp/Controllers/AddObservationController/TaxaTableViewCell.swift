@@ -1,5 +1,5 @@
 //
-//  AddObservationTaxaTableViewCell.swift
+//  TaxaTableViewCell.swift
 //  NaturalistApp
 //
 //  Created by Dmitriy Borovikov on 18/04/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddObservationTaxaTableViewCell: UITableViewCell {
+class TaxaTableViewCell: UITableViewCell {
     var taxaView: ObservationTaxaView!
 
     override func awakeFromNib() {

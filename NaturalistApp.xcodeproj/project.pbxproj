@@ -23,7 +23,6 @@
 		0A21747F22257828007E4EFC /* IconicTaxonName+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A21747E22257828007E4EFC /* IconicTaxonName+Color.swift */; };
 		0A2174812225821A007E4EFC /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2174802225821A007E4EFC /* UIColorExtensions.swift */; };
 		0A25DFA322367B1300DEB46E /* ObservationProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A25DFA222367B1300DEB46E /* ObservationProfileView.xib */; };
-		0A25DFA5223685B800DEB46E /* ObservationPhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A25DFA4223685B800DEB46E /* ObservationPhotoView.xib */; };
 		0A25DFA92236902F00DEB46E /* ObservationFaveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A25DFA82236902F00DEB46E /* ObservationFaveView.xib */; };
 		0A2C9B5A2271BFD1003DCDB3 /* AccuracyCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2C9B572271BFC5003DCDB3 /* AccuracyCircleView.swift */; };
 		0A2C9B5B2271BFD1003DCDB3 /* CrossHairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2C9B592271BFC6003DCDB3 /* CrossHairView.swift */; };
@@ -74,7 +73,6 @@
 		0A8725532272661100A07CEC /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8725522272661100A07CEC /* LoginViewController.storyboard */; };
 		0A87BB4D2227419100150BE9 /* ObservationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB4C2227419100150BE9 /* ObservationDetailsViewController.swift */; };
 		0A87BB4F2227441300150BE9 /* ObservationProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB4E2227441300150BE9 /* ObservationProfileView.swift */; };
-		0A87BB512227461800150BE9 /* ObservationPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB502227461800150BE9 /* ObservationPhotoView.swift */; };
 		0A87BB532227470B00150BE9 /* ObservationTaxaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB522227470B00150BE9 /* ObservationTaxaView.swift */; };
 		0A87BB5522274A5F00150BE9 /* ObservationFaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A87BB5422274A5F00150BE9 /* ObservationFaveView.swift */; };
 		0A89205A22364D2D00900224 /* NibInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A89205922364D2D00900224 /* NibInstantiable.swift */; };
@@ -134,7 +132,7 @@
 		0AF16996222E75CE00C1058B /* ProfileCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF16995222E75CE00C1058B /* ProfileCollectionViewController.swift */; };
 		0AF16998222E76BD00C1058B /* ProfileHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF16997222E76BD00C1058B /* ProfileHeaderCollectionReusableView.swift */; };
 		0AF1699A222E783200C1058B /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF16999222E783200C1058B /* ImageCollectionViewCell.swift */; };
-		0AF3C6592268CBAB00BF257A /* AddObservationTaxaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF3C6582268CBAB00BF257A /* AddObservationTaxaTableViewCell.swift */; };
+		0AF3C6592268CBAB00BF257A /* TaxaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF3C6582268CBAB00BF257A /* TaxaTableViewCell.swift */; };
 		0AF3C65D2269B39400BF257A /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF3C65C2269B39400BF257A /* Localizable.swift */; };
 		0AF3C65F2269B4A900BF257A /* GeoprivacyOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF3C65E2269B4A900BF257A /* GeoprivacyOptions.swift */; };
 		9F0E766902695A23BFDCB8DF /* Pods_NaturalistApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EFE921A4D01CA1E7FCDC7D1 /* Pods_NaturalistApp.framework */; };
@@ -174,7 +172,6 @@
 		0A21747E22257828007E4EFC /* IconicTaxonName+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IconicTaxonName+Color.swift"; sourceTree = "<group>"; };
 		0A2174802225821A007E4EFC /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		0A25DFA222367B1300DEB46E /* ObservationProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObservationProfileView.xib; sourceTree = "<group>"; };
-		0A25DFA4223685B800DEB46E /* ObservationPhotoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObservationPhotoView.xib; sourceTree = "<group>"; };
 		0A25DFA82236902F00DEB46E /* ObservationFaveView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObservationFaveView.xib; sourceTree = "<group>"; };
 		0A2C9B562271BFC5003DCDB3 /* EditLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLocationViewController.swift; sourceTree = "<group>"; };
 		0A2C9B572271BFC5003DCDB3 /* AccuracyCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccuracyCircleView.swift; sourceTree = "<group>"; };
@@ -225,7 +222,6 @@
 		0A8725522272661100A07CEC /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
 		0A87BB4C2227419100150BE9 /* ObservationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationDetailsViewController.swift; sourceTree = "<group>"; };
 		0A87BB4E2227441300150BE9 /* ObservationProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationProfileView.swift; sourceTree = "<group>"; };
-		0A87BB502227461800150BE9 /* ObservationPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationPhotoView.swift; sourceTree = "<group>"; };
 		0A87BB522227470B00150BE9 /* ObservationTaxaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationTaxaView.swift; sourceTree = "<group>"; };
 		0A87BB5422274A5F00150BE9 /* ObservationFaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationFaveView.swift; sourceTree = "<group>"; };
 		0A89205922364D2D00900224 /* NibInstantiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibInstantiable.swift; sourceTree = "<group>"; };
@@ -291,7 +287,7 @@
 		0AF16995222E75CE00C1058B /* ProfileCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewController.swift; sourceTree = "<group>"; };
 		0AF16997222E76BD00C1058B /* ProfileHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		0AF16999222E783200C1058B /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
-		0AF3C6582268CBAB00BF257A /* AddObservationTaxaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddObservationTaxaTableViewCell.swift; sourceTree = "<group>"; };
+		0AF3C6582268CBAB00BF257A /* TaxaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxaTableViewCell.swift; sourceTree = "<group>"; };
 		0AF3C65C2269B39400BF257A /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		0AF3C65E2269B4A900BF257A /* GeoprivacyOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoprivacyOptions.swift; sourceTree = "<group>"; };
 		4EFE921A4D01CA1E7FCDC7D1 /* Pods_NaturalistApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NaturalistApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -422,7 +418,7 @@
 			children = (
 				0AD6037922624B340099B90F /* AddObservationViewController.swift */,
 				0A7788A12264F3CD00A471F1 /* AddObservationTableViewController.swift */,
-				0AF3C6582268CBAB00BF257A /* AddObservationTaxaTableViewCell.swift */,
+				0AF3C6582268CBAB00BF257A /* TaxaTableViewCell.swift */,
 				0AEB410D22678213008BD357 /* TitleValueTableViewCell.swift */,
 			);
 			path = AddObservationController;
@@ -451,13 +447,11 @@
 				0A37F4EA2238316F0089FC09 /* ObservationDetailProtocol.swift */,
 				0A87BB4C2227419100150BE9 /* ObservationDetailsViewController.swift */,
 				0A87BB4E2227441300150BE9 /* ObservationProfileView.swift */,
-				0A87BB502227461800150BE9 /* ObservationPhotoView.swift */,
 				0A87BB522227470B00150BE9 /* ObservationTaxaView.swift */,
 				0A10102D223E40A500EB42C3 /* ObservationDescription.swift */,
 				0A10102B223E408000EB42C3 /* ObservationDescription.xib */,
 				0A87BB5422274A5F00150BE9 /* ObservationFaveView.swift */,
 				0A25DFA222367B1300DEB46E /* ObservationProfileView.xib */,
-				0A25DFA4223685B800DEB46E /* ObservationPhotoView.xib */,
 				0AD81CC3223A7D8F003082BC /* ObservationTaxaView.xib */,
 				0A25DFA82236902F00DEB46E /* ObservationFaveView.xib */,
 			);
@@ -797,7 +791,6 @@
 			files = (
 				0A25DFA322367B1300DEB46E /* ObservationProfileView.xib in Resources */,
 				0A25DFA92236902F00DEB46E /* ObservationFaveView.xib in Resources */,
-				0A25DFA5223685B800DEB46E /* ObservationPhotoView.xib in Resources */,
 				0A8725532272661100A07CEC /* LoginViewController.storyboard in Resources */,
 				0AD81CCD223A7D90003082BC /* ActivityViewController.storyboard in Resources */,
 				0AD81CCE223A7D90003082BC /* ObservationTaxaView.xib in Resources */,
@@ -899,7 +892,7 @@
 			files = (
 				0A21747F22257828007E4EFC /* IconicTaxonName+Color.swift in Sources */,
 				0AD2C6E7222D2C86003ECFD6 /* BasicViewController.swift in Sources */,
-				0AF3C6592268CBAB00BF257A /* AddObservationTaxaTableViewCell.swift in Sources */,
+				0AF3C6592268CBAB00BF257A /* TaxaTableViewCell.swift in Sources */,
 				0AD653EE2240290C007F315B /* IndicateStateProtocol.swift in Sources */,
 				0A3885B7223D8FB4003A63E8 /* PhotoActivityIndicator.swift in Sources */,
 				0ABA9C6722102B210099F774 /* Taxon.swift in Sources */,
@@ -989,7 +982,6 @@
 				0A3DA677223EBE0A002C8E89 /* ObservationCoordinate.swift in Sources */,
 				0A5898392260E91F0036AD6E /* PHImageManagerPromise.swift in Sources */,
 				0A87BB5522274A5F00150BE9 /* ObservationFaveView.swift in Sources */,
-				0A87BB512227461800150BE9 /* ObservationPhotoView.swift in Sources */,
 				0ABA9C5F22101D9E0099F774 /* User.swift in Sources */,
 				0AF1699A222E783200C1058B /* ImageCollectionViewCell.swift in Sources */,
 				0A21747B22255487007E4EFC /* UIImageExtensions.swift in Sources */,
