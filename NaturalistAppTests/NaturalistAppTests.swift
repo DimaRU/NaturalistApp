@@ -20,8 +20,10 @@ class NaturalistAppTests: XCTestCase {
     func testViewControllersInstantiable() {
         var vc: UIViewController
         vc = ActivityViewController.instantiate()
+        vc = AddObservationViewController.instantiate()
         vc = PhotoViewController.instantiate()
         vc = ProfileCollectionViewController.instantiate()
+        vc = SheetViewController.instantiate()
         vc = TaxonMapViewController.instantiate()
         vc = NatTabBarController.instantiate()
         vc = LoginViewController.instantiate()
@@ -31,10 +33,7 @@ class NaturalistAppTests: XCTestCase {
     func testViewNibInstantiable() {
         var view: UIView
         view = ObservationProfileView.instantiate()
-        view = ObservationPhotoView.instantiate()
         view = ObservationTaxaView.instantiate()
-        view = ObservationDescription.instantiate()
-        view = ObservationFaveView.instantiate()
         view = TaxonWebContentView.instantiate()
         view = TaxonMapheaderView.instantiate()
         print(view.description)
