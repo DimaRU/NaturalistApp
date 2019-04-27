@@ -13,4 +13,8 @@ extension UICollectionView {
         let indexPathsIntersection = Set(self.indexPathsForVisibleItems).intersection(indexPaths)
         return Array(indexPathsIntersection)
     }
+
+    func dequeueReusableCell<T: UICollectionViewCell>(of type: T.Type, for indexPath: IndexPath) -> T {
+        return self.dequeueReusableCell(withReuseIdentifier: String(describing: T.self), for: indexPath) as! T
+    }
 }

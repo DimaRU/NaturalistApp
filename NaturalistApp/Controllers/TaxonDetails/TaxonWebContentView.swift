@@ -34,7 +34,7 @@ class TaxonWebContentView: UIView, NibInstantiable {
         scientificNameLabel.text = taxon.name
 
         guard var webContent = taxon.wikipediaSummary, !webContent.isEmpty else { return }
-        let annotation = "(Source: Wikipedia)"
+        let annotation = NSLocalizedString("(Source: Wikipedia)", comment: "")
         webContent += " \(annotation.localizedString)"
         guard let data = webContent.data(using: .utf8), !data.isEmpty else { return }
         guard let body = try? NSMutableAttributedString(data: data,

@@ -21,9 +21,9 @@ class ActivityProfileTableViewCell: UITableViewCell {
         let suffix: String
         switch activity {
         case .ident:
-            suffix = "suggested an ID"
+            suffix = NSLocalizedString("suggested an ID", comment: "")
         case .comment:
-            suffix = "commented"
+            suffix = NSLocalizedString("commented", comment: "")
         }
         
         let labelText = NSMutableAttributedString(string: user.login, attributes: [.font: UIFont.boldSystemFont(ofSize: 14)])

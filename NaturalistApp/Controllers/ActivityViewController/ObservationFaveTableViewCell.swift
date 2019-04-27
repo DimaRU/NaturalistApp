@@ -38,7 +38,7 @@ class ObservationFaveTableViewCell: UITableViewCell {
     
     func setup(observation: Observation, delegate: (FaveChangeProtocol & ObservationDetailProtocol)) {
         self.delegate = delegate
-        favoritedLabel.text = "Favored: " + String(observation.favesCount)
+        favoritedLabel.text = NSLocalizedString("Favored: ", comment: "") + String(observation.favesCount)
         favedByMe = observation.favedByMe
     }
 }
