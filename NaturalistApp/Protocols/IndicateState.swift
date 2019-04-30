@@ -9,24 +9,19 @@
 import UIKit
 
 extension IndicateStateProtocol where Self: UIViewController {
-    func showActivityIndicator() {
-        activityIndicator.backgroundColor = UIColor.black.withAlphaComponent(0.7)
-        activityIndicator.hidesWhenStopped = true
-        activityIndicator.isHidden = false
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            guard !self.activityIndicator.isHidden else { return }
-            self.activityIndicator.frame = self.view.frame
-            self.view.addSubview(self.activityIndicator)
-            self.activityIndicator.startAnimating()
+    func startActivityIndicator(message: String? = nil) {
+        if activityIndicator == nil {
+            activityIndicator = GIFIndicator()
         }
+        guard let activityIndicator = activityIndicator else { return }
+        activityIndicator.frame = view.frame
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating(message: message)
     }
     
-    func removeActivityIndicator() {
-        activityIndicator.isHidden = true
+    func stopActivityIndicator() {
+        guard let activityIndicator = activityIndicator else { return }
         activityIndicator.stopAnimating()
-        if activityIndicator.superview != nil {
-            activityIndicator.removeFromSuperview()
-        }
+        activityIndicator.removeFromSuperview()
     }
 }

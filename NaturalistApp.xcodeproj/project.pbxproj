@@ -107,6 +107,8 @@
 		0ABA9C7122109EA60099F774 /* DefaultCaseRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABA9C7022109EA60099F774 /* DefaultCaseRepresentable.swift */; };
 		0ABA9C742210A3EC0099F774 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABA9C732210A3C80099F774 /* KeychainService.swift */; };
 		0ABA9C762210A4790099F774 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABA9C752210A4790099F774 /* APIKeys.swift */; };
+		0AD0F2452278B7280077FE00 /* animated-tree.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0AD0F2442278B7280077FE00 /* animated-tree.gif */; };
+		0AD0F2472278B7C80077FE00 /* GIFIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD0F2462278B7C80077FE00 /* GIFIndicator.swift */; };
 		0AD2C6E5222D2C4A003ECFD6 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2C6E4222D2C4A003ECFD6 /* StoryboardInstantiable.swift */; };
 		0AD2C6E7222D2C86003ECFD6 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2C6E6222D2C86003ECFD6 /* BasicViewController.swift */; };
 		0AD6037A22624B340099B90F /* AddObservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD6037922624B340099B90F /* AddObservationViewController.swift */; };
@@ -259,6 +261,8 @@
 		0ABA9C7022109EA60099F774 /* DefaultCaseRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCaseRepresentable.swift; sourceTree = "<group>"; };
 		0ABA9C732210A3C80099F774 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		0ABA9C752210A4790099F774 /* APIKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		0AD0F2442278B7280077FE00 /* animated-tree.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "animated-tree.gif"; sourceTree = "<group>"; };
+		0AD0F2462278B7C80077FE00 /* GIFIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFIndicator.swift; sourceTree = "<group>"; };
 		0AD2C6E4222D2C4A003ECFD6 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
 		0AD2C6E6222D2C86003ECFD6 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 		0AD6037922624B340099B90F /* AddObservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddObservationViewController.swift; sourceTree = "<group>"; };
@@ -508,6 +512,7 @@
 				0A977B6F220E0B8C005D1DC2 /* LaunchScreen.storyboard */,
 				0A977B6D220E0B8C005D1DC2 /* Assets.xcassets */,
 				0A977B72220E0B8C005D1DC2 /* Info.plist */,
+				0AD0F2442278B7280077FE00 /* animated-tree.gif */,
 				0A87254E2272405000A07CEC /* fish.gif */,
 			);
 			path = NaturalistApp;
@@ -614,6 +619,7 @@
 		0ABA9C722210A30C0099F774 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0AD0F2462278B7C80077FE00 /* GIFIndicator.swift */,
 				0A451A872211B5B000684AC4 /* Animations.swift */,
 				0ABA9C732210A3C80099F774 /* KeychainService.swift */,
 				0ABA9C752210A4790099F774 /* APIKeys.swift */,
@@ -791,6 +797,7 @@
 				0A977B6E220E0B8C005D1DC2 /* Assets.xcassets in Resources */,
 				0A977B6C220E0B8B005D1DC2 /* Main.storyboard in Resources */,
 				0AA39830223F7F6400AF2A62 /* TaxonMapheaderView.xib in Resources */,
+				0AD0F2452278B7280077FE00 /* animated-tree.gif in Resources */,
 				0A0BE668223F7304004E9AC4 /* TaxonWebContentView.xib in Resources */,
 				0A3DA674223EB7D4002C8E89 /* TaxonMapViewController.storyboard in Resources */,
 				0A5898222260E7980036AD6E /* SheetViewController.storyboard in Resources */,
@@ -939,6 +946,7 @@
 				0ABA9C7122109EA60099F774 /* DefaultCaseRepresentable.swift in Sources */,
 				0AD81CC8223A7D90003082BC /* ActivityProfileTableViewCell.swift in Sources */,
 				0AF16996222E75CE00C1058B /* ProfileCollectionViewController.swift in Sources */,
+				0AD0F2472278B7C80077FE00 /* GIFIndicator.swift in Sources */,
 				0AA9F17A2221CB43008A67D5 /* MKMapRectExtensions.swift in Sources */,
 				0ABA9C6E22105FAB0099F774 /* NatAPI.swift in Sources */,
 				0A93539922207E700067E197 /* CLLocationCoordinate2DExtensions.swift in Sources */,

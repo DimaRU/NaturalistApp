@@ -8,8 +8,8 @@
 
 import UIKit
 
-protocol IndicateStateProtocol {
-    var activityIndicator: UIActivityIndicatorView { get }
-    func showActivityIndicator()
-    func removeActivityIndicator()
+protocol IndicateStateProtocol: AnyObject {
+    var activityIndicator: GIFIndicator? { get set }
+    func startActivityIndicator(message: String?)
+    func stopActivityIndicator()
 }

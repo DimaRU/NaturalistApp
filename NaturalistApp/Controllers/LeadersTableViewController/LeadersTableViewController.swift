@@ -9,21 +9,23 @@
 import UIKit
 
 class LeadersTableViewController: UIViewController, IndicateStateProtocol {
+    var activityIndicator: GIFIndicator?
     @IBOutlet weak var tableView: UITableView!
-    
     public var taxonIds: [TaxonId] = []
-    
     private var observers: [Observer] = []
-    var activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.isHidden = true
         fetchPage()
+        tableView.refreshControl = UIRefreshControl()
+        tableView.refreshControl?.addTarget(self, action: #selector(fetchPage), for: .valueChanged)
     }
     
-    private func fetchPage() {
-        showActivityIndicator()
+    @objc private func fetchPage() {
+        tableView.isHidden = true
+        if tableView.refreshControl?.isRefreshing ?? false {
+            startActivityIndicator(message: NSLocalizedString("Loading...", comment: ""))
+        }
         let target = NatAPI.observers(perPage: 500, page: 1, taxonIds: taxonIds, observationId: nil, userId: nil)
         NatProvider.shared.request(target)
             .done { (pagedResult: PagedResults<Observer>) in
@@ -31,7 +33,11 @@ class LeadersTableViewController: UIViewController, IndicateStateProtocol {
                 self.tableView.isHidden = false
                 self.tableView.reloadData()
             }.ensure {
-                self.removeActivityIndicator()
+                if self.tableView.refreshControl?.isRefreshing ?? false {
+                    self.stopActivityIndicator()
+                } else {
+                    self.tableView.refreshControl?.endRefreshing()
+                }
             }
             .ignoreErrors()
     }
