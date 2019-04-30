@@ -29,7 +29,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ActivityProfileTableViewCell" rowHeight="60" id="lYI-MP-hii" customClass="ActivityProfileTableViewCell" customModule="NaturalistApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.5" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lYI-MP-hii" id="qUG-y0-DCi">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lYI-MP-hii" id="qUG-y0-DCi">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -51,8 +51,8 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nwA-O7-FkJ">
-                                                    <rect key="frame" x="30" y="54" width="4" height="6"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nwA-O7-FkJ">
+                                                    <rect key="frame" x="30" y="52" width="4" height="8"/>
                                                     <color key="backgroundColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="4" id="JPG-V6-KSn"/>
@@ -70,7 +70,7 @@
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LAo-PH-h59" userLabel="separator">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LAo-PH-h59" userLabel="separator">
                                                     <rect key="frame" x="62" y="59" width="280" height="1"/>
                                                     <color key="backgroundColor" name="separatorColor" catalog="System" colorSpace="catalog"/>
                                                     <constraints>
@@ -87,6 +87,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="LAo-PH-h59" secondAttribute="bottom" id="ULF-zO-kUP"/>
                                                 <constraint firstItem="jIu-Xx-dnB" firstAttribute="centerY" secondItem="s9l-rt-XQP" secondAttribute="centerY" id="Uhv-3u-d8q"/>
                                                 <constraint firstItem="nwA-O7-FkJ" firstAttribute="top" secondItem="jIu-Xx-dnB" secondAttribute="bottom" constant="2" id="VhV-Rg-8wt"/>
+                                                <constraint firstItem="LAo-PH-h59" firstAttribute="top" secondItem="s9l-rt-XQP" secondAttribute="bottom" constant="24.5" id="Vyy-Gd-tqQ"/>
                                                 <constraint firstItem="hed-PQ-vdh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="s9l-rt-XQP" secondAttribute="trailing" constant="8" id="dBE-7Z-uBH"/>
                                                 <constraint firstItem="nwA-O7-FkJ" firstAttribute="bottom" secondItem="qUG-y0-DCi" secondAttribute="bottom" id="eUn-H2-1eq"/>
                                                 <constraint firstItem="jIu-Xx-dnB" firstAttribute="top" secondItem="qUG-y0-DCi" secondAttribute="top" constant="2" id="meO-nk-h06"/>
