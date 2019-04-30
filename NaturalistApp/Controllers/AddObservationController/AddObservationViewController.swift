@@ -10,7 +10,8 @@ import UIKit
 import Photos
 import PromiseKit
 
-class AddObservationViewController: UIViewController, MainStoryboardInstantiable {
+class AddObservationViewController: UIViewController, MainStoryboardInstantiable, IndicateStateProtocol {
+    var activityIndicator: GIFIndicator?
     private var assets: [PHAsset] = []
     private var mainAsset: PHAsset?
     private var pickPhotoController: PickPhotoController!
@@ -23,7 +24,8 @@ class AddObservationViewController: UIViewController, MainStoryboardInstantiable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        activityIndicator = GIFIndicator()
+        activityIndicator?.backgroundColor = UIColor.white.withAlphaComponent(0.7)
         pickPhotoController = (children.first as! PickPhotoController)
         observationTableController = (children.last as! AddObservationTableViewController)
         pickPhotoController.delegate = self
@@ -40,6 +42,7 @@ class AddObservationViewController: UIViewController, MainStoryboardInstantiable
         }
         let target = observationTableController.createRequest()
         guard let target1 = target else { return }
+        startActivityIndicator(message: "Upload observation...")
         NatProvider.shared.request(target1)
             .then { (observation: Observation) -> Promise<[PhotoPost]> in
                 let promises = (0..<self.assets.count).map { position in
@@ -49,7 +52,7 @@ class AddObservationViewController: UIViewController, MainStoryboardInstantiable
             }.done { photos in
                 self.dismiss(animated: true)
             }.ensure {
-                print("End")
+                self.stopActivityIndicator()
             }.catch { error in
                 print("Error:", error)
         }

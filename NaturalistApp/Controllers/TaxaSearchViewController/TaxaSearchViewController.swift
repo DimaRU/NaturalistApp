@@ -15,7 +15,8 @@ protocol TaxaSearchViewProtocol {
     func selected(_ taxon: Taxon)
 }
 
-class TaxaSearchViewController: UIViewController {
+class TaxaSearchViewController: UIViewController, IndicateStateProtocol {
+    var activityIndicator: GIFIndicator?
     public var asset: PHAsset!
     public var delegate: TaxaSearchViewProtocol?
     public var observedOn: Date!
@@ -35,6 +36,7 @@ class TaxaSearchViewController: UIViewController {
     }
     
     private func fetchComputerVision(for asset: PHAsset) {
+        startActivityIndicator(message: "Load iNaturalist suggestions...")
         let size = taxonImage.bounds.size
         firstly {
             PHImageManager.default().requestPreviewImage(for: asset, itemSize: size)
@@ -83,6 +85,8 @@ class TaxaSearchViewController: UIViewController {
             }.done {
                 self.tableView.isHidden = false
                 self.tableView.reloadData()
+            }.ensure {
+                self.stopActivityIndicator()
             }.catch { error in
                 print(error)
         }
