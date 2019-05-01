@@ -16,13 +16,19 @@ class LeadersTableViewController: UIViewController, IndicateStateProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchPage()
+        tableView.isHidden = true
         tableView.refreshControl = UIRefreshControl()
         tableView.refreshControl?.addTarget(self, action: #selector(fetchPage), for: .valueChanged)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if tableView.isHidden {
+            fetchPage()
+        }
+    }
+
     @objc private func fetchPage() {
-        tableView.isHidden = true
         if !(tableView.refreshControl?.isRefreshing ?? false) {
             startActivityIndicator(message: NSLocalizedString("Loading...", comment: ""))
         }
