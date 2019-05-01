@@ -77,7 +77,8 @@ extension NatProvider {
                 handleServerError(request: request, response: moyaResponse)
             }
         case .failure:
-            handleNetworkFailure(request: request)
+            request.reject(NatNetworkError.unaviable)
+//            handleNetworkFailure(request: request)
         }
     }
     
@@ -87,11 +88,11 @@ extension NatProvider {
         request.reject(error)
     }
     
-    private func handleNetworkFailure(request: RequestFuture) {
-        delay(1) {
-            self.sendRequest(request)
-        }
-    }
+//    private func handleNetworkFailure(request: RequestFuture) {
+//        delay(1) {
+//            self.sendRequest(request)
+//        }
+//    }
     
     fileprivate func parseData<T: Decodable>(data: Data, seal: Resolver<T>, target: NatAPI) {
         let decoder = JSONDecoder()

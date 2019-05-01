@@ -13,6 +13,7 @@ enum NatNetworkError: Error {
     case notFound(message: String)
     case responceSyntaxError(message: String)
     case serverError(code: Int)
+    case unaviable
     
     func message() -> String {
         switch self {
@@ -23,6 +24,8 @@ enum NatNetworkError: Error {
             return message
         case .serverError(let code):
             return "code \(code)"
+        case .unaviable:
+            return ""
         }
     }
 }
@@ -31,13 +34,15 @@ extension NatNetworkError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .authorizationNeed:
-            return NSLocalizedString("Unsucessful authorisation", comment: "Netwok error")
+            return NSLocalizedString("Unsucessful authorisation", comment: "Network error")
         case .notFound:
-            return NSLocalizedString("Resource not found", comment: "Netwok error")
+            return NSLocalizedString("Resource not found", comment: "Network error")
         case .responceSyntaxError:
-            return NSLocalizedString("Responce syntax error", comment: "Netwok error")
+            return NSLocalizedString("Responce syntax error", comment: "Network error")
         case .serverError:
-            return NSLocalizedString("Server error", comment: "Netwok error")
+            return NSLocalizedString("Server error", comment: "Network error")
+        case .unaviable:
+            return NSLocalizedString("Network unaviable", comment: "Network error")
         }
     }
     
