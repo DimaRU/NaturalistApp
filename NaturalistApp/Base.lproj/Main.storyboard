@@ -265,7 +265,7 @@
             </objects>
             <point key="canvasLocation" x="636" y="18"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Observations map-->
         <scene sceneID="xN8-Qb-Lhm">
             <objects>
                 <viewController id="2Hw-Uv-fu8" customClass="MapViewController" customModule="NaturalistApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -367,7 +367,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RSs-BX-ucP"/>
                     </view>
-                    <navigationItem key="navigationItem" id="czm-Le-uxk"/>
+                    <navigationItem key="navigationItem" title="Observations map" id="czm-Le-uxk"/>
                     <connections>
                         <outlet property="mapView" destination="LAO-Mw-Wvb" id="dYs-FL-YgQ"/>
                     </connections>
@@ -586,7 +586,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Earth-25" translatesAutoresizingMaskIntoConstraints="NO" id="wR4-zv-koU">
-                                                    <rect key="frame" x="20" y="17" width="16" height="16"/>
+                                                    <rect key="frame" x="20" y="12.5" width="25" height="25"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geoprivacy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yGl-qh-jx3">
                                                     <rect key="frame" x="56" y="14.5" width="87" height="21"/>
@@ -620,7 +620,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Aquarium-25" translatesAutoresizingMaskIntoConstraints="NO" id="RXM-mP-nMG">
-                                                    <rect key="frame" x="20" y="17" width="16" height="16"/>
+                                                    <rect key="frame" x="20" y="12.5" width="25" height="25"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Captive/Cultivated" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtG-cl-Jx8">
                                                     <rect key="frame" x="56" y="14.5" width="141" height="21"/>
