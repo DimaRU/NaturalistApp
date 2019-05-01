@@ -12,16 +12,19 @@ import PromiseKit
 protocol LoginViewControllerProtocol {
     func loggedIn()
 }
-class LoginViewController: UIViewController, StoryboardInstantiable {
+class LoginViewController: UIViewController, StoryboardInstantiable, IndicateStateProtocol {
+    var activityIndicator: GIFIndicator?
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-
+    @IBOutlet weak var errorLabel: UILabel!
+    
     var errorMessage: String?
     var delegate: LoginViewControllerProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        errorLabel.text = errorMessage
         usernameTextField.becomeFirstResponder()
         loginButton.backgroundColor = UIColor(named: "LoginButtonUnactiveBg")
         loginButton.isEnabled = false
@@ -37,6 +40,7 @@ class LoginViewController: UIViewController, StoryboardInstantiable {
             !login.isEmpty,
             !password.isEmpty else { return }
         
+        startActivityIndicator()
         let target = NatAPI.authorize(login: login, password: password)
         NatProvider.shared.request(target)
             .then { (result: AccessToken) -> Promise<Void> in
@@ -48,9 +52,11 @@ class LoginViewController: UIViewController, StoryboardInstantiable {
                 self.dismiss(animated: false) {
                     self.delegate?.loggedIn()
                 }
+            }.ensure {
+                self.stopActivityIndicator()
             }.catch { error in
                 print(error)
-                self.errorMessage = error.localizedDescription
+                self.errorLabel.text = error.localizedDescription
         }
     }
     

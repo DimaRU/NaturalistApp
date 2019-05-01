@@ -56,12 +56,21 @@
                                     <action selector="loginButtonTap:" destination="4B4-Zp-SbQ" eventType="touchUpInside" id="gtz-5P-4Vf"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDu-dG-ejZ">
+                                <rect key="frame" x="16" y="202" width="382" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="fDu-dG-ejZ" firstAttribute="top" secondItem="gvM-t4-bsv" secondAttribute="bottom" constant="40" id="146-dI-vOm"/>
                             <constraint firstItem="N1A-fC-t8a" firstAttribute="leading" secondItem="sVD-Wq-1WU" secondAttribute="leading" constant="16" id="3Ve-fN-7WG"/>
                             <constraint firstItem="rli-HM-K8u" firstAttribute="top" secondItem="gvM-t4-bsv" secondAttribute="bottom" constant="100" id="Ho3-Le-Eao"/>
                             <constraint firstItem="N1A-fC-t8a" firstAttribute="top" secondItem="sVD-Wq-1WU" secondAttribute="top" constant="30" id="OhV-Oi-qx7"/>
+                            <constraint firstItem="sVD-Wq-1WU" firstAttribute="trailing" secondItem="fDu-dG-ejZ" secondAttribute="trailing" constant="16" id="TiJ-Np-aV0"/>
+                            <constraint firstItem="fDu-dG-ejZ" firstAttribute="leading" secondItem="sVD-Wq-1WU" secondAttribute="leading" constant="16" id="UTP-it-KIg"/>
                             <constraint firstItem="sVD-Wq-1WU" firstAttribute="trailing" secondItem="gvM-t4-bsv" secondAttribute="trailing" constant="16" id="Vj2-xw-Flh"/>
                             <constraint firstItem="gvM-t4-bsv" firstAttribute="top" secondItem="N1A-fC-t8a" secondAttribute="bottom" constant="8" id="WdI-6T-WNs"/>
                             <constraint firstItem="sVD-Wq-1WU" firstAttribute="trailing" secondItem="rli-HM-K8u" secondAttribute="trailing" constant="16" id="Xsx-lg-bKq"/>
@@ -72,6 +81,7 @@
                         <viewLayoutGuide key="safeArea" id="sVD-Wq-1WU"/>
                     </view>
                     <connections>
+                        <outlet property="errorLabel" destination="fDu-dG-ejZ" id="qG0-00-9Nc"/>
                         <outlet property="loginButton" destination="rli-HM-K8u" id="29o-CU-kmZ"/>
                         <outlet property="passwordTextField" destination="gvM-t4-bsv" id="PA4-Xq-ajR"/>
                         <outlet property="usernameTextField" destination="N1A-fC-t8a" id="Jud-jF-by0"/>
