@@ -50,6 +50,7 @@ class ObservationDetailsViewController: StackViewController, ObservationDetailPr
     }
 
     @objc func profileViewTap(_ sender: Any) {
+        guard Globals.currentUserId != observation.user.id else { return }
         showUserProfile(user: observation.user)
     }
 

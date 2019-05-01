@@ -23,7 +23,7 @@ class LeadersTableViewController: UIViewController, IndicateStateProtocol {
     
     @objc private func fetchPage() {
         tableView.isHidden = true
-        if tableView.refreshControl?.isRefreshing ?? false {
+        if !(tableView.refreshControl?.isRefreshing ?? false) {
             startActivityIndicator(message: NSLocalizedString("Loading...", comment: ""))
         }
         let target = NatAPI.observers(perPage: 500, page: 1, taxonIds: taxonIds, observationId: nil, userId: nil)
@@ -34,12 +34,13 @@ class LeadersTableViewController: UIViewController, IndicateStateProtocol {
                 self.tableView.reloadData()
             }.ensure {
                 if self.tableView.refreshControl?.isRefreshing ?? false {
-                    self.stopActivityIndicator()
-                } else {
                     self.tableView.refreshControl?.endRefreshing()
+                } else {
+                    self.stopActivityIndicator()
                 }
+            }.catch{ error in
+                print(error)
             }
-            .ignoreErrors()
     }
 
 }
