@@ -9,11 +9,7 @@
 import UIKit
 import PromiseKit
 
-protocol ProfileDelegateProtocol: AnyObject {
-    
-}
-
-class ProfileCollectionViewController: UICollectionViewController, MainStoryboardInstantiable, ProfileDelegateProtocol {
+class ProfileCollectionViewController: UICollectionViewController, MainStoryboardInstantiable {
 
     var user: User?
     private var observations: [Int:[Observation]] = [:]
@@ -57,8 +53,9 @@ class ProfileCollectionViewController: UICollectionViewController, MainStoryboar
                 }
             }.ensure {
                 self.downloadingPages.remove(page)
+            }.catch { error in
+                print(error)
             }
-            .ignoreErrors()
     }
     
     private func checkFetchPage(for indexPath: IndexPath) {
@@ -99,7 +96,7 @@ class ProfileCollectionViewController: UICollectionViewController, MainStoryboar
                                                                    for: indexPath) as! ProfileHeaderCollectionReusableView
         if let user = user {
             view.isHidden = false
-            view.configureData(user: user, delegate: self)
+            view.configureData(user: user)
         } else {
             view.isHidden = true
         }

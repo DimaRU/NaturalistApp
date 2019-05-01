@@ -15,21 +15,14 @@ class ProfileHeaderCollectionReusableView: UICollectionReusableView {
     @IBOutlet weak var observationsCountLabel: UILabel!
     @IBOutlet weak var identificationsCountLabel: UILabel!
 
-    private weak var delegate: ProfileDelegateProtocol?
     private var user: User!
-    
-    private func addTapReognizer(for view: UIView, action: Selector?) {
-        let recognizer = UITapGestureRecognizer(target: self, action: action)
-        view.addGestureRecognizer(recognizer)
-    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    public func configureData(user: User, delegate: ProfileDelegateProtocol) {
+    public func configureData(user: User) {
         self.user = user
-        self.delegate = delegate
         avatarImageView.kf.setImage(with: user.icon,
                                     placeholder: UIImage(named: "IC Account Circle 24px")?.maskWith(color: .lightGray))
         userNameLabel.text = user.name ?? user.login
