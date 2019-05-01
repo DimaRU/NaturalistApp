@@ -114,11 +114,11 @@ class AddObservationTableViewController: UITableViewController {
         CLGeocoder().reverseGeocode(location: location)
             .done { placemarks in
                 let placemark = placemarks.first!
-                let name = placemark.name ?? ""
-                let locality = placemark.locality ?? ""
-                let administrativeArea = placemark.administrativeArea ?? ""
-                let isoCountryCode = placemark.isoCountryCode ?? ""
-                let placeGuess = [name, locality, administrativeArea, isoCountryCode].joined(separator: ", ")
+                let name = placemark.name
+                let locality = placemark.locality
+                let administrativeArea = placemark.administrativeArea
+                let isoCountryCode = placemark.isoCountryCode
+                let placeGuess = [name, locality, administrativeArea, isoCountryCode].compactMap{ $0 }.joined(separator: ", ")
                 self.locationCell.textLabel?.text = placeGuess
             }.catch { error in
                 self.locationCell.textLabel?.text = NSLocalizedString("Unable to find location name", comment: "place guess when we have lat/lng but it's not geocoded")
