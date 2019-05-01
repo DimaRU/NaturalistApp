@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ActivityViewController: UIViewController, ObservationDetailProtocol, StoryboardInstantiable {
+class ActivityViewController: UIViewController, ObservationDetailProtocol, StoryboardInstantiable, IndicateStateProtocol {
+    var activityIndicator: GIFIndicator?
     let zero = CGFloat.leastNonzeroMagnitude
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableSizeConstaint: NSLayoutConstraint!
@@ -175,7 +176,9 @@ extension ActivityViewController: FaveChangeProtocol {
                 self.observation = observation
                 let indexPath = IndexPath(row: 0, section: 2)
                 self.tableView.reloadRows(at: [indexPath], with: .automatic)
-            }.ignoreErrors()
+            }.catch { error in
+                self.showAlert(error: error)
+        }
     }
 
 }

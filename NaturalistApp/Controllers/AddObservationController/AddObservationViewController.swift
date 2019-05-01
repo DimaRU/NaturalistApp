@@ -54,7 +54,7 @@ class AddObservationViewController: UIViewController, MainStoryboardInstantiable
             }.ensure {
                 self.stopActivityIndicator()
             }.catch { error in
-                print("Error:", error)
+                self.showAlert(error: error)
         }
     }
 

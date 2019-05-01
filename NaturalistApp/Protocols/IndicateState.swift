@@ -24,4 +24,16 @@ extension IndicateStateProtocol where Self: UIViewController {
         activityIndicator.stopAnimating()
         activityIndicator.removeFromSuperview()
     }
+    
+    func showAlert(error: Error, completion: (() -> Void)? = nil) {
+        let alertController = UIAlertController(title: error.localizedDescription,
+                                                message: nil,
+                                                preferredStyle: .actionSheet)
+        let action = UIAlertAction(title: "Dismiss", style: .default) { _ in
+            completion?()
+        }
+        alertController.addAction(action)
+        self.present(alertController, animated: true)
+    }
+
 }

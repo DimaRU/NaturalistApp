@@ -55,7 +55,6 @@ class LoginViewController: UIViewController, StoryboardInstantiable, IndicateSta
             }.ensure {
                 self.stopActivityIndicator()
             }.catch { error in
-                print(error)
                 self.errorLabel.text = error.localizedDescription
         }
     }

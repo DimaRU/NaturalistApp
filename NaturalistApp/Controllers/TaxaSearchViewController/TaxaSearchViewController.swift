@@ -88,7 +88,9 @@ class TaxaSearchViewController: UIViewController, IndicateStateProtocol {
             }.ensure {
                 self.stopActivityIndicator()
             }.catch { error in
-                print(error)
+                self.showAlert(error: error) {
+                    self.navigationController?.popViewController(animated: true)
+                }
         }
     }
 }

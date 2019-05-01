@@ -94,7 +94,7 @@ class AddObservationTableViewController: UITableViewController {
                 }
             }.done { locations in
                 self.observationLocation = locations.last!
-            }.catch { error in
+            }.catch { _ in
                 self.observationLocation = nil
         }
     }
@@ -121,7 +121,6 @@ class AddObservationTableViewController: UITableViewController {
                 let placeGuess = [name, locality, administrativeArea, isoCountryCode].joined(separator: ", ")
                 self.locationCell.textLabel?.text = placeGuess
             }.catch { error in
-                print(error)
                 self.locationCell.textLabel?.text = NSLocalizedString("Unable to find location name", comment: "place guess when we have lat/lng but it's not geocoded")
         }
 

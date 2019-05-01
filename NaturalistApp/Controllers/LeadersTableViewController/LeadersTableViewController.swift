@@ -39,7 +39,7 @@ class LeadersTableViewController: UIViewController, IndicateStateProtocol {
                     self.stopActivityIndicator()
                 }
             }.catch{ error in
-                print(error)
+                self.showAlert(error: error)
             }
     }
 

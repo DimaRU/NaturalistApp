@@ -9,8 +9,8 @@
 import UIKit
 import PromiseKit
 
-class ProfileCollectionViewController: UICollectionViewController, MainStoryboardInstantiable {
-
+class ProfileCollectionViewController: UICollectionViewController, MainStoryboardInstantiable, IndicateStateProtocol {
+    var activityIndicator: GIFIndicator?
     var user: User?
     private var observations: [Int:[Observation]] = [:]
     private var totalResults = 0
@@ -54,8 +54,8 @@ class ProfileCollectionViewController: UICollectionViewController, MainStoryboar
             }.ensure {
                 self.downloadingPages.remove(page)
             }.catch { error in
-                print(error)
-            }
+                self.showAlert(error: error)
+        }
     }
     
     private func checkFetchPage(for indexPath: IndexPath) {

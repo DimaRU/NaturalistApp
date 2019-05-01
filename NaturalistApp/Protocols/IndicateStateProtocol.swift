@@ -12,4 +12,5 @@ protocol IndicateStateProtocol: AnyObject {
     var activityIndicator: GIFIndicator? { get set }
     func startActivityIndicator(message: String?)
     func stopActivityIndicator()
+    func showAlert(error: Error, completion: (() -> Void)?)
 }
