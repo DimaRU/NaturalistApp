@@ -22,7 +22,7 @@ class PickPhotoController: UIViewController {
         var image: UIImage?
     }
     @IBOutlet weak var collectionView: UICollectionView!
-    
+
     private var location: CLLocation?
     private var assets: [Asset] = []
     private let offset = (UIImagePickerController.isSourceTypeAvailable(.camera) &&
@@ -34,7 +34,7 @@ class PickPhotoController: UIViewController {
         }
     }
     public var delegate: PickPhotoControllerProtocol?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         let collectionViewLayout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
@@ -55,7 +55,7 @@ class PickPhotoController: UIViewController {
             }
         }
     }
-    
+
     private func fetchImages() {
         let options = PHFetchOptions()
         options.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
@@ -70,11 +70,11 @@ class PickPhotoController: UIViewController {
                 self.collectionView.reloadData()
             }.ignoreErrors()
     }
-    
+
     @IBAction func longPress(_ sender: UILongPressGestureRecognizer) {
         let location = sender.location(in: collectionView)
         let indexPath = collectionView.indexPathForItem(at: location)
-        
+
         var pickedUpCell: UICollectionViewCell? = nil
         if let indexPath = indexPath {
             pickedUpCell = collectionView.cellForItem(at: indexPath)
@@ -108,7 +108,7 @@ class PickPhotoController: UIViewController {
             cell?.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
         })
     }
-    
+
     func animatePuttingDownCell(cell: UICollectionViewCell?) {
         UIView.animate(withDuration: 0.1, delay: 0.0, options: [.allowUserInteraction, .beginFromCurrentState], animations: { () -> Void in
             cell?.alpha = 1.0
@@ -122,7 +122,7 @@ extension PickPhotoController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return assets.count + offset + 1
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.item {
         case offset - 1:
@@ -146,7 +146,7 @@ extension PickPhotoController: UICollectionViewDelegate {
             // From camera
             pickImage(from: .camera)
                 .then { info -> Promise<PHAsset> in
-                    guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { throw InternalError.imagePick }
+                    guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { throw PMKError.cancelled }
                     let metadata = info[UIImagePickerController.InfoKey.mediaMetadata] as? [AnyHashable: Any]
                     let data = image.JPEGDataRepresentation(withMetadata: metadata ?? [:], location: self.location)
                     return PHPhotoLibrary.shared().add(imageData: data, withLocation: self.location)
@@ -172,15 +172,28 @@ extension PickPhotoController: UICollectionViewDelegate {
                     self.delegate?.selected(assets: self.assets.filter{ $0.selected }.map{ $0.asset })
                 }.ignoreErrors()
         default:
-            // Select image
+            // Select/deselect image
             let index = indexPath.item - offset
-            assets[index].selected.toggle()
-            self.collectionView.reloadItems(at: [indexPath])
-            delegate?.selected(assets: assets.filter{ $0.selected }.map{ $0.asset })
+            if assets[index].selected {
+                // deselect
+                assets[index].selected.toggle()
+                self.collectionView.reloadItems(at: [indexPath])
+                delegate?.selected(assets: assets.filter{ $0.selected }.map{ $0.asset })
+            } else {
+                let fullViewController = FullScreenAssetViewController()
+                fullViewController.asset = assets[index].asset
+                fullViewController.delegate = self
+                if let navigationController = navigationController {
+                    navigationController.pushViewController(fullViewController, animated: true)
+                } else {
+                    let navigationController = UINavigationController(rootViewController: fullViewController)
+                    present(navigationController, animated: true)
+                }
+            }
         }
     }
-    
-    
+
+
     func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
         switch indexPath.item {
         case offset - 1:
@@ -191,7 +204,7 @@ extension PickPhotoController: UICollectionViewDelegate {
             return true
         }
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, targetIndexPathForMoveFromItemAt originalIndexPath: IndexPath, toProposedIndexPath proposedIndexPath: IndexPath) -> IndexPath {
         var item = proposedIndexPath.item
         switch item {
@@ -204,13 +217,23 @@ extension PickPhotoController: UICollectionViewDelegate {
         }
         return IndexPath(item: item, section: proposedIndexPath.section)
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let temp = assets.remove(at: sourceIndexPath.item - offset)
         assets.insert(temp, at: destinationIndexPath.item - offset)
         if temp.selected {
             delegate?.selected(assets: assets.filter{ $0.selected }.map{ $0.asset })
         }
+    }
+}
+
+extension PickPhotoController: FullScreenAssetViewControllerProtocol {
+    func selectPhoto(asset: PHAsset) {
+        guard let index = assets.firstIndex(where: { $0.asset == asset }) else { return }
+        assets[index].selected.toggle()
+        let indexPath = IndexPath(item: index + offset, section: 0)
+        self.collectionView.reloadItems(at: [indexPath])
+        delegate?.selected(assets: assets.filter{ $0.selected }.map{ $0.asset })
     }
 }
 
@@ -224,10 +247,10 @@ extension PickPhotoController {
 class ReorderableFlowLayout : UICollectionViewFlowLayout {
     override func layoutAttributesForInteractivelyMovingItem(at indexPath: IndexPath, withTargetPosition position: CGPoint) -> UICollectionViewLayoutAttributes {
         let attributes = super.layoutAttributesForInteractivelyMovingItem(at: indexPath as IndexPath, withTargetPosition: position)
-        
+
         attributes.alpha = 0.7
         attributes.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
-        
+
         return attributes
     }
 }

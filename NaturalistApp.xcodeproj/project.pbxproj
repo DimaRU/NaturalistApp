@@ -44,6 +44,7 @@
 		0A47A1DC222838A3005B4AEB /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A47A1DB222838A3005B4AEB /* Globals.swift */; };
 		0A47A1DE22283B00005B4AEB /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A47A1DD22283B00005B4AEB /* UIViewControllerExtensions.swift */; };
 		0A4D5D6A223FDF8D00B2EB0E /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4D5D69223FDF8D00B2EB0E /* Observer.swift */; };
+		0A5741F5227B0EB80082FE99 /* FullScreenAssetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5741F4227B0EB80082FE99 /* FullScreenAssetViewController.swift */; };
 		0A5832332224118A0071DEE0 /* ObservationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5832322224118A0071DEE0 /* ObservationAnnotation.swift */; };
 		0A5898222260E7980036AD6E /* SheetViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A5898212260E7980036AD6E /* SheetViewController.storyboard */; };
 		0A5898242260E7A60036AD6E /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5898232260E7A60036AD6E /* SheetViewController.swift */; };
@@ -192,6 +193,7 @@
 		0A47A1DB222838A3005B4AEB /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		0A47A1DD22283B00005B4AEB /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		0A4D5D69223FDF8D00B2EB0E /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
+		0A5741F4227B0EB80082FE99 /* FullScreenAssetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenAssetViewController.swift; sourceTree = "<group>"; };
 		0A5832322224118A0071DEE0 /* ObservationAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationAnnotation.swift; sourceTree = "<group>"; };
 		0A5898212260E7980036AD6E /* SheetViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SheetViewController.storyboard; sourceTree = "<group>"; };
 		0A5898232260E7A60036AD6E /* SheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
@@ -406,6 +408,7 @@
 				0A5898292260E91E0036AD6E /* PickPhotoCollectionViewCell.swift */,
 				0A58982B2260E91F0036AD6E /* PickPhotoController.storyboard */,
 				0A58982C2260E91F0036AD6E /* PickPhotoController.swift */,
+				0A5741F4227B0EB80082FE99 /* FullScreenAssetViewController.swift */,
 			);
 			path = PickPhotoController;
 			sourceTree = "<group>";
@@ -966,6 +969,7 @@
 				0A2C9B5C2271BFD1003DCDB3 /* EditLocationOverlayView.swift in Sources */,
 				0A47A1DC222838A3005B4AEB /* Globals.swift in Sources */,
 				0A47A1DE22283B00005B4AEB /* UIViewControllerExtensions.swift in Sources */,
+				0A5741F5227B0EB80082FE99 /* FullScreenAssetViewController.swift in Sources */,
 				0ABA9C6B2210498A0099F774 /* Fave.swift in Sources */,
 				0A977B67220E0B8B005D1DC2 /* AppDelegate.swift in Sources */,
 				0AA74C4B223137E700B824E8 /* NatTabBarController.swift in Sources */,
