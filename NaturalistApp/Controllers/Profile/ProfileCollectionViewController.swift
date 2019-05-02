@@ -128,7 +128,7 @@ extension ProfileCollectionViewController: UICollectionViewDataSourcePrefetching
 extension ProfileCollectionViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let itemWidth = UIScreen.main.bounds.width / CGFloat(Params.elementsPerRow)
+        let itemWidth = floor(UIScreen.main.bounds.width / CGFloat(Params.elementsPerRow))
         return CGSize(width: itemWidth, height: itemWidth)
     }
     
