@@ -18,6 +18,8 @@ class ProfileCollectionViewController: UICollectionViewController, MainStoryboar
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.refreshControl = UIRefreshControl()
+        collectionView?.refreshControl?.addTarget(self, action: #selector(refresh), for: .valueChanged)
         collectionView.prefetchDataSource = self
         navigationItem.title = user?.login
             if user?.id != Globals.currentUserId {
@@ -26,6 +28,10 @@ class ProfileCollectionViewController: UICollectionViewController, MainStoryboar
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.fetchObservationsPage(page: 1)
+    }
+
+    @objc private func refresh() {
         self.fetchObservationsPage(page: 1)
     }
 
@@ -53,6 +59,7 @@ class ProfileCollectionViewController: UICollectionViewController, MainStoryboar
                 }
             }.ensure {
                 self.downloadingPages.remove(page)
+                self.collectionView?.refreshControl?.endRefreshing()
             }.catch { error in
                 self.showAlert(error: error)
         }
