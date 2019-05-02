@@ -48,7 +48,7 @@ class AddObservationViewController: UIViewController, MainStoryboardInstantiable
                 let promises = (0..<self.assets.count).map { position in
                     self.pushPhoto(asset: self.assets[position], id: observation.id, position: position)
                 }
-                return when(fulfilled: promises)
+                return when(fulfilled: promises.makeIterator(), concurrently: 1)
             }.done { photos in
                 self.dismiss(animated: true)
             }.ensure {
