@@ -1,9 +1,6 @@
-//
-//  EditLocationViewController.swift
-//  MapTest
-//
-//  Created by Dmitriy Borovikov on 20/02/2019.
-//  Copyright © 2019 Dmitriy Borovikov. All rights reserved.
+/////
+////  EditLocationViewController.swift
+///   Copyright © 2019 Dmitriy Borovikov. All rights reserved.
 //
 
 import UIKit

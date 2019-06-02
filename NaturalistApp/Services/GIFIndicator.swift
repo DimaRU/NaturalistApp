@@ -1,9 +1,6 @@
-//
-//  GIFIndicator.swift
-//  TestActivityIndicator
-//
-//  Created by Dmitriy Borovikov on 29/04/2019.
-//  Copyright © 2019 Dmitriy Borovikov. All rights reserved.
+/////
+////  GIFIndicator.swift
+///   Copyright © 2019 Dmitriy Borovikov. All rights reserved.
 //
 
 import UIKit

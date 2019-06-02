@@ -1,9 +1,6 @@
-//
-//  ImagePickerPromise.swift
-//  TestPickerView
-//
-//  Created by Dmitriy Borovikov on 28/03/2019.
-//  Copyright © 2019 Dmitriy Borovikov. All rights reserved.
+/////
+////  ImagePickerPromise.swift
+///   Copyright © 2019 Dmitriy Borovikov. All rights reserved.
 //
 
 import UIKit

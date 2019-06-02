@@ -1,9 +1,6 @@
-//
-//  FullScreenViewController.swift
-//  FullScreenViewController
-//
-//  Created by Joyce Echessa on 6/3/15.
-//  Copyright (c) 2015 Appcoda. All rights reserved.
+/////
+////  FullScreenViewController.swift
+///   Copyright © 2019 Dmitriy Borovikov. All rights reserved.
 //
 
 import UIKit

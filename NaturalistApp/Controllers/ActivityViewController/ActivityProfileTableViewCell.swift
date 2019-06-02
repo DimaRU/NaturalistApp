@@ -1,9 +1,6 @@
-//
-//  ActivityProfileTableViewCell.swift
-//  HorizontalScroll
-//
-//  Created by Dmitriy Borovikov on 13/03/2019.
-//  Copyright © 2019 Dmitriy Borovikov. All rights reserved.
+/////
+////  ActivityProfileTableViewCell.swift
+///   Copyright © 2019 Dmitriy Borovikov. All rights reserved.
 //
 
 import UIKit

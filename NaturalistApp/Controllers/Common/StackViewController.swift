@@ -1,9 +1,6 @@
-//
-//  StackViewController.swift
-//  NaturalistApp
-//
-//  Created by Dmitriy Borovikov on 10/03/2019.
-//  Copyright © 2019 Dmitriy Borovikov. All rights reserved.
+/////
+////  StackViewController.swift
+///   Copyright © 2019 Dmitriy Borovikov. All rights reserved.
 //
 
 import UIKit

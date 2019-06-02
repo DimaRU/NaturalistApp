@@ -1,9 +1,6 @@
-//
-//  LoginViewController.swift
-//
-//
-//  Created by Dmitriy Borovikov on 10/12/2018.
-//  Copyright © 2018 Dmitriy Borovikov. All rights reserved.
+/////
+////  LoginViewController.swift
+///   Copyright © 2019 Dmitriy Borovikov. All rights reserved.
 //
 
 import UIKit

@@ -1,9 +1,6 @@
-//
-//  TaxaTableViewCell.swift
-//  NaturalistApp
-//
-//  Created by Dmitriy Borovikov on 18/04/2019.
-//  Copyright © 2019 Dmitriy Borovikov. All rights reserved.
+/////
+////  TaxaTableViewCell.swift
+///   Copyright © 2019 Dmitriy Borovikov. All rights reserved.
 //
 
 import UIKit

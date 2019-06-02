@@ -1,9 +1,6 @@
-//
-//  NSLayoutConstraintExtensions.swift
-//  NaturalistApp
-//
-//  Created by Dmitriy Borovikov on 11/03/2019.
-//  Copyright © 2019 Dmitriy Borovikov. All rights reserved.
+/////
+////  NSLayoutConstraintExtensions.swift
+///   Copyright © 2019 Dmitriy Borovikov. All rights reserved.
 //
 
 import UIKit

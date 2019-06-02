@@ -1,9 +1,6 @@
-//
-//  Animations.swift
-//  githubApp
-//
-//  Created by Dmitriy Borovikov on 19/12/2018.
-//  Copyright © 2018 Dmitriy Borovikov. All rights reserved.
+/////
+////  Animations.swift
+///   Copyright © 2019 Dmitriy Borovikov. All rights reserved.
 //
 
 import UIKit

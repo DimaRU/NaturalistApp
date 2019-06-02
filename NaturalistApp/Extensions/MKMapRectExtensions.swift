@@ -1,9 +1,6 @@
-//
-//  MKMapRectExtensions.swift
-//  NaturalistApp
-//
-//  Created by Dmitriy Borovikov on 23/02/2019.
-//  Copyright © 2019 Dmitriy Borovikov. All rights reserved.
+/////
+////  MKMapRectExtensions.swift
+///   Copyright © 2019 Dmitriy Borovikov. All rights reserved.
 //
 
 import MapKit

@@ -1,9 +1,6 @@
-//
-//  LeadersTableViewCell.swift
-//  NaturalistApp
-//
-//  Created by Dmitriy Borovikov on 18/03/2019.
-//  Copyright © 2019 Dmitriy Borovikov. All rights reserved.
+/////
+////  LeadersTableViewCell.swift
+///   Copyright © 2019 Dmitriy Borovikov. All rights reserved.
 //
 
 import UIKit

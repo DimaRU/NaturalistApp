@@ -1,9 +1,6 @@
-//
-//  EditLocationOverlayView.swift
-//  MapTest
-//
-//  Created by Dmitriy Borovikov on 24/04/2019.
-//  Copyright © 2019 Dmitriy Borovikov. All rights reserved.
+/////
+////  EditLocationOverlayView.swift
+///   Copyright © 2019 Dmitriy Borovikov. All rights reserved.
 //
 
 import UIKit

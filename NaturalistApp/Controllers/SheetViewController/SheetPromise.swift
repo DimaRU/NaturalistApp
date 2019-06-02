@@ -1,9 +1,6 @@
-//
-//  SheetPromise.swift
-//  ActionSheetTest
-//
-//  Created by Dmitriy Borovikov on 04/04/2019.
-//  Copyright © 2019 Dmitriy Borovikov. All rights reserved.
+/////
+////  SheetPromise.swift
+///   Copyright © 2019 Dmitriy Borovikov. All rights reserved.
 //
 
 import UIKit

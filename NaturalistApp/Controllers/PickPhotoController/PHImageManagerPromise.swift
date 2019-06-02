@@ -1,9 +1,6 @@
-//
-//  PHImageManagerPromise.swift
-//  TestPickerView
-//
-//  Created by Dmitriy Borovikov on 08/04/2019.
-//  Copyright © 2019 Dmitriy Borovikov. All rights reserved.
+/////
+////  PHImageManagerPromise.swift
+///   Copyright © 2019 Dmitriy Borovikov. All rights reserved.
 //
 
 import Photos

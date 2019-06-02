@@ -1,9 +1,6 @@
-//
-//  ObsAnnotation.swift
-//  NaturalistApp
-//
-//  Created by Dmitriy Borovikov on 25/02/2019.
-//  Copyright © 2019 Dmitriy Borovikov. All rights reserved.
+/////
+////  ObservationAnnotation.swift
+///   Copyright © 2019 Dmitriy Borovikov. All rights reserved.
 //
 
 import MapKit

@@ -1,9 +1,6 @@
-//
-//  PhotoLibraryPromise.swift
-//  TestPickerView
-//
-//  Created by Dmitriy Borovikov on 02/04/2019.
-//  Copyright © 2019 Dmitriy Borovikov. All rights reserved.
+/////
+////  PhotoLibraryPromise.swift
+///   Copyright © 2019 Dmitriy Borovikov. All rights reserved.
 //
 
 import UIKit

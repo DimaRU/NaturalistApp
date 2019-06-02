@@ -1,9 +1,6 @@
-//
-//  ProfileCollectionViewController.swift
-//  NaturalistApp
-//
-//  Created by Dmitriy Borovikov on 05/03/2019.
-//  Copyright © 2019 Dmitriy Borovikov. All rights reserved.
+/////
+////  ProfileCollectionViewController.swift
+///   Copyright © 2019 Dmitriy Borovikov. All rights reserved.
 //
 
 import UIKit

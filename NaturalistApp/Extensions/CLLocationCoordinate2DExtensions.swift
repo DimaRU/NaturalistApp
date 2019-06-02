@@ -1,9 +1,6 @@
-//
-//  CLLocationCoordinate2DExtensions.swift
-//  NaturalistApp
-//
-//  Created by Dmitriy Borovikov on 22/02/2019.
-//  Copyright © 2019 Dmitriy Borovikov. All rights reserved.
+/////
+////  CLLocationCoordinate2DExtensions.swift
+///   Copyright © 2019 Dmitriy Borovikov. All rights reserved.
 //
 
 import MapKit

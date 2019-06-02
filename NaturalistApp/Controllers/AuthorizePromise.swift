@@ -1,9 +1,6 @@
-//
-//  AuthorizePromise.swift
-//  NaturalistApp
-//
-//  Created by Dmitriy Borovikov on 26/04/2019.
-//  Copyright © 2019 Dmitriy Borovikov. All rights reserved.
+/////
+////  AuthorizePromise.swift
+///   Copyright © 2019 Dmitriy Borovikov. All rights reserved.
 //
 
 import Foundation

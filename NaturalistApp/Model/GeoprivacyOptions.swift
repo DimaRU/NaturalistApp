@@ -1,9 +1,6 @@
-//
-//  GeoprivacyOptions.swift
-//  NaturalistApp
-//
-//  Created by Dmitriy Borovikov on 19/04/2019.
-//  Copyright © 2019 Dmitriy Borovikov. All rights reserved.
+/////
+////  GeoprivacyOptions.swift
+///   Copyright © 2019 Dmitriy Borovikov. All rights reserved.
 //
 
 import Foundation

@@ -1,9 +1,6 @@
-//
-//  MKMapViewExtension.swift
-//  AutocompleteTextfieldSwift
-//
-//  Created by Mylene Bayan on 2/22/15.
-//  Copyright (c) 2015 MaiLin. All rights reserved.
+/////
+////  MKMapViewExtension.swift
+///   Copyright © 2019 Dmitriy Borovikov. All rights reserved.
 //
 
 import Foundation

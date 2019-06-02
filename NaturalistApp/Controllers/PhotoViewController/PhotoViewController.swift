@@ -1,9 +1,6 @@
-//
-//  PhotoViewController.swift
-//  PhotoViewController
-//
-//  Created by Dmitriy Borovikov on 15/03/2019.
-//  Copyright © 2019 Dmitriy Borovikov. All rights reserved.
+/////
+////  PhotoViewController.swift
+///   Copyright © 2019 Dmitriy Borovikov. All rights reserved.
 //
 
 import UIKit

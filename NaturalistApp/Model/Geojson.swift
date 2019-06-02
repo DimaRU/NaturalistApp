@@ -1,9 +1,6 @@
-//
-//  Geojson.swift
-//  NaturalistApp
-//
-//  Created by Dmitriy Borovikov on 22/02/2019.
-//  Copyright © 2019 Dmitriy Borovikov. All rights reserved.
+/////
+////  Geojson.swift
+///   Copyright © 2019 Dmitriy Borovikov. All rights reserved.
 //
 
 import Foundation

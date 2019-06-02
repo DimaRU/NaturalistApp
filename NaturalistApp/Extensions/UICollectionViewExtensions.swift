@@ -1,9 +1,6 @@
-//
-//  UICollectionViewExtensions.swift
-//  NaturalistApp
-//
-//  Created by Dmitriy Borovikov on 06/03/2019.
-//  Copyright © 2019 Dmitriy Borovikov. All rights reserved.
+/////
+////  UICollectionViewExtensions.swift
+///   Copyright © 2019 Dmitriy Borovikov. All rights reserved.
 //
 
 import UIKit

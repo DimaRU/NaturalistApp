@@ -1,9 +1,6 @@
-//
-//  SplashViewController.swift
-//  NaturalistApp
-//
-//  Created by Dmitriy Borovikov on 25/04/2019.
-//  Copyright © 2019 Dmitriy Borovikov. All rights reserved.
+/////
+////  SplashViewController.swift
+///   Copyright © 2019 Dmitriy Borovikov. All rights reserved.
 //
 
 import UIKit

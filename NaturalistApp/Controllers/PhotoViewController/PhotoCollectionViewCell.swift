@@ -1,9 +1,6 @@
-//
-//  PhotoCollectionViewCell.swift
-//  PhotoViewController
-//
-//  Created by Dmitriy Borovikov on 16/03/2019.
-//  Copyright © 2019 Dmitriy Borovikov. All rights reserved.
+/////
+////  PhotoCollectionViewCell.swift
+///   Copyright © 2019 Dmitriy Borovikov. All rights reserved.
 //
 
 import UIKit

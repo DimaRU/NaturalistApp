@@ -1,5 +1,6 @@
-////
-///  PromiseKitExtensions.swift
+/////
+////  PromiseKitExtensions.swift
+///   Copyright © 2019 Dmitriy Borovikov. All rights reserved.
 //
 
 import PromiseKit

@@ -1,9 +1,6 @@
-//
-//  TaxaSearchViewController.swift
-//  NaturalistApp
-//
-//  Created by Dmitriy Borovikov on 20/04/2019.
-//  Copyright © 2019 Dmitriy Borovikov. All rights reserved.
+/////
+////  TaxaSearchViewController.swift
+///   Copyright © 2019 Dmitriy Borovikov. All rights reserved.
 //
 
 import UIKit

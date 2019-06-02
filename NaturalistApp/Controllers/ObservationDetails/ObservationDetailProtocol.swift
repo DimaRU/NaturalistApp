@@ -1,9 +1,6 @@
-//
-//  ObservationDetailProtocol.swift
-//  HorizontalScroll
-//
-//  Created by Dmitriy Borovikov on 12/03/2019.
-//  Copyright © 2019 Dmitriy Borovikov. All rights reserved.
+/////
+////  ObservationDetailProtocol.swift
+///   Copyright © 2019 Dmitriy Borovikov. All rights reserved.
 //
 
 import UIKit

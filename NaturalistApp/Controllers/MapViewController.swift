@@ -1,9 +1,6 @@
-//
-//  MapViewController.swift
-//  NaturalistApp
-//
-//  Created by Dmitriy Borovikov on 18/02/2019.
-//  Copyright © 2019 Dmitriy Borovikov. All rights reserved.
+/////
+////  MapViewController.swift
+///   Copyright © 2019 Dmitriy Borovikov. All rights reserved.
 //
 
 import UIKit
